@@ -1,0 +1,2 @@
+source /home/issaimaru/esp/2025-SSR-Team5/Firmware/src/chassis/build/gdbinit/symbols
+source /home/issaimaru/esp/2025-SSR-Team5/Firmware/src/chassis/build/gdbinit/connect
