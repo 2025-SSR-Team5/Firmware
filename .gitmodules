@@ -1,0 +1,3 @@
+[submodule "components/Chassis"]
+	path = components/Chassis
+	url = https://github.com/teruyamato0731/Chassis.git

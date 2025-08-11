@@ -1,0 +1,8 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32s3
+NOTICE: Processing 2 dependencies:
+NOTICE: [1/2] espressif/bdc_motor (0.1.0)
+NOTICE: [2/2] idf (5.4.1)
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+/usr/bin/cmake --regenerate-during-build -S/home/issaimaru/esp/2025-SSR-Team5/Firmware/src/chassis -B/home/issaimaru/esp/2025-SSR-Team5/Firmware/src/chassis/build
