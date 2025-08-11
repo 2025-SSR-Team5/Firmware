@@ -1,6 +1,13 @@
 {
     "configurations": [
         {
+            "name": "ESP-IDF",
+            "defines": [
+                "ESP_PLATFORM=1",
+                "ESP32=1",
+                "IDF_VER=\"v5.4\"",
+                "_GNU_SOURCE"
+            ],
             "includePath": [
                 "${workspaceFolder}/**",
                 "${env:IDF_PATH}/components/esp_driver_gpio/include/",
