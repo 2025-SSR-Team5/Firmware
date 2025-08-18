@@ -1,0 +1,38 @@
+/*
+ * initial_operation.c
+ *
+ *  Created on: Aug 15, 2025
+ *      Author: takeu
+ */
+
+
+#include "main.h"
+
+HAL_StatusTypeDef Check_I2C_to_ESP32(uint8_t status){
+	uint8_t message[10];
+	HAL_StatisTypeDef status;
+	if(status = HAL_I2C_Slave_Receive(&hi2c1, buf, sizeof(buf), HAL_MAX_DELAY) == HAL_OK){
+		if(strcmp(message,"Check_STM")){
+
+		}else{
+
+			return status;
+		}
+	}
+	uint16_t dev_id = DBGMCU->IDCODE & 0x0FFF;
+	uint16_t rev_id = (DBGMCU->IDCODE >> 16);
+
+	uint8_t buf[5];
+
+	buf[0] = status;
+	if (status == 0) {
+		buf[1] = dev_id & 0xFF;
+		buf[2] = dev_id >> 8;
+		buf[3] = rev_id & 0xFF;
+		buf[4] = rev_id >> 8;
+	}else{
+		for(int i=1;i < sizeof(buf);i++) buf[i] = '';
+	}
+
+	return HAL_I2C_Slave_Transmit(&hi2c1, buf, sizeof(buf), HAL_MAX_DELAY);
+}

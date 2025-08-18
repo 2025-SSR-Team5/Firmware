@@ -1,0 +1,26 @@
+/*
+ * connection.c
+ *
+ *  Created on: Aug 15, 2025
+ *      Author: takeu
+ */
+
+#include "initial_operation.h"
+
+void do_instruction(uint8_t devstat){
+	uint8_t instruction;
+
+	if(HAL_I2C_Slave_Receive(&hi2c1,instruction, 1, HAL_MAX_DELAY) == HAL_OK){
+		switch (instruction){
+		case 0x00 :
+			// デバイス情報を渡す
+			Check_I2C_to_ESP32(devstat);
+			break;
+		case 0x01 :
+			//ここにステッピングモーターの制御を記述
+			break;
+		}
+
+	}
+
+}

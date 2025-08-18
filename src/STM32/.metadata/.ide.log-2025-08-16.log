@@ -1,0 +1,55 @@
+2025-08-16 12:15:50,728 [INFO] WebApp:194 - Connection lost
+2025-08-16 12:16:12,754 [INFO] WebApp:191 - Connection restablished
+2025-08-16 12:23:26,631 [INFO] I2cTimingTraitement:330 - 0x00402D41
+2025-08-16 12:24:46,759 [INFO] I2cTimingTraitement:330 - 0x00402D41
+2025-08-16 12:24:47,153 [INFO] I2cTimingTraitement:330 - 0x00402D41
+2025-08-16 12:24:57,818 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-08-16 12:24:58,185 [INFO] I2cTimingTraitement:330 - 0x00402D41
+2025-08-16 12:25:02,199 [INFO] I2cTimingTraitement:330 - 0x00402D41
+2025-08-16 12:25:02,466 [INFO] I2cTimingTraitement:330 - 0x00402D41
+2025-08-16 12:25:38,539 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 677179064 Bytes (1073741824)
+2025-08-16 12:25:41,277 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 689955976 Bytes (1073741824)
+2025-08-16 12:25:43,189 [ERROR] LocalSettings:60 - For input string: ""
+2025-08-16 12:25:46,600 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 691810896 Bytes (1073741824)
+2025-08-16 12:25:47,476 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-08-16 12:25:47,477 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-08-16 12:25:47,478 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DEBUG
+2025-08-16 12:25:47,480 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-08-16 12:25:47,481 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-08-16 12:25:47,481 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: I2C
+2025-08-16 12:25:47,541 [INFO] CodeGenerator:882 - code generatio: config db path: C:\ST\STM32CubeIDE_1.18.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.14.1.202504091515\\db\
+2025-08-16 12:25:47,808 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\MXTmpFiles\license.tmp_save
+2025-08-16 12:25:48,930 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\MXTmpFiles\license.tmp
+2025-08-16 12:25:49,677 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\MXTmpFiles\gpio.tmp_save
+2025-08-16 12:25:50,046 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\MXTmpFiles\gpio.tmp
+2025-08-16 12:25:50,671 [WARN] IPConfigManager:103 - WARNING: Missing Config File for DEBUG ip!!
+2025-08-16 12:26:01,555 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\MXTmpFiles\cortex.tmp_save
+2025-08-16 12:26:01,872 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\MXTmpFiles\cortex.tmp
+2025-08-16 12:26:01,909 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\Core\Src\stm32c0xx_it.c_save
+2025-08-16 12:26:05,163 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\Core\Src\stm32c0xx_it.c
+2025-08-16 12:26:05,180 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\Core\Inc\stm32c0xx_it.h_save
+2025-08-16 12:26:05,287 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\Core\Inc\stm32c0xx_it.h
+2025-08-16 12:26:05,566 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\Core\Src\stm32c0xx_hal_msp.c_save
+2025-08-16 12:26:05,741 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\Core\Src\stm32c0xx_hal_msp.c
+2025-08-16 12:26:05,779 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\MXTmpFiles\system.tmp_save
+2025-08-16 12:26:05,914 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\MXTmpFiles\system.tmp
+2025-08-16 12:26:05,969 [INFO] CodeEngine:319 - oldGeneratedFile, D:\Firmware\src\STM32\main\Core\Inc\stm32c0xx_hal_conf.h_save
+2025-08-16 12:26:06,060 [INFO] CodeEngine:343 - Generated code: D:\Firmware\src\STM32\main\Core\Inc\stm32c0xx_hal_conf.h
+2025-08-16 12:26:06,147 [WARN] IPConfigManager:3217 - Warning: the RefConfig RCC_PClockConfig is not available in your config.xml file
+2025-08-16 12:26:06,150 [WARN] IPConfigManager:3217 - Warning: the RefConfig RCC_interrupt_Time_SYSTICK_Config is not available in your config.xml file
+2025-08-16 12:26:06,293 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\Core\Inc\main.h_save
+2025-08-16 12:26:06,453 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\Core\Inc\main.h
+2025-08-16 12:26:06,465 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\Core\Src\main.c_save
+2025-08-16 12:26:09,178 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\Core\Src\main.c
+2025-08-16 12:26:11,506 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 665mS.
+2025-08-16 12:26:11,614 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-08-16 12:26:12,331 [INFO] ConfigFileManager:1590 - The Die is : DIE443
+2025-08-16 12:26:23,002 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 11388mS.
+2025-08-16 12:26:23,003 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2025-08-16 12:26:23,008 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-08-16 15:04:17,353 [INFO] WebApp:194 - Connection lost
+2025-08-16 15:04:18,701 [INFO] WebApp:191 - Connection restablished
+2025-08-16 15:06:23,690 [INFO] WebApp:194 - Connection lost
+2025-08-16 15:06:23,934 [INFO] WebApp:191 - Connection restablished
+2025-08-16 18:56:27,736 [INFO] WebApp:194 - Connection lost
+2025-08-16 18:56:44,176 [INFO] WebApp:191 - Connection restablished

@@ -1,0 +1,24 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.7.0 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_init[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x400d9913: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x400d9cd8: [0;33mtask_wdt_isr[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40082ec9: [0;33m_xt_lowint1[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x400d79fa: [0;33mapp_main[0m[0m at [0;32mD:/Firmware/src/ESP32/main/main.cpp[0m[0m:[1;31m14[0m
+[0m--- 0x400e7418: [0;33mmain_task[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x40087525: [0;33mvPortTaskWrapper[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x400d9913: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x400d9cd8: [0;33mtask_wdt_isr[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40082ec9: [0;33m_xt_lowint1[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x400d79fa: [0;33mapp_main[0m[0m at [0;32mD:/Firmware/src/ESP32/main/main.cpp[0m[0m:[1;31m14[0m
+[0m--- 0x400e7418: [0;33mmain_task[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x40087525: [0;33mvPortTaskWrapper[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m--- 0x400d9913: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m434[0m
+[0m--- 0x400d9cd8: [0;33mtask_wdt_isr[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m507[0m
+[0m--- 0x40082ec9: [0;33m_xt_lowint1[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x400d79fa: [0;33mapp_main[0m[0m at [0;32mD:/Firmware/src/ESP32/main/main.cpp[0m[0m:[1;31m14[0m
+[0m--- 0x400e7418: [0;33mmain_task[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x40087525: [0;33mvPortTaskWrapper[0m[0m at [0;32mD:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m134[0m
+[0m
