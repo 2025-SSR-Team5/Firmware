@@ -1,0 +1,66 @@
+2025-08-17 14:23:34,030 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Exception in thread "Thread-7581" java.lang.ArithmeticException: Value cannot fit in an int: -65362691082
+2025-08-17 14:23:34,456 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.joda.time.field.FieldUtils.safeToInt(FieldUtils.java:229)
+2025-08-17 14:23:34,462 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.joda.time.field.BaseDurationField.getDifference(BaseDurationField.java:141)
+2025-08-17 14:23:34,466 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.joda.time.chrono.ZonedChronology$ZonedDurationField.getDifference(ZonedChronology.java:343)
+2025-08-17 14:23:34,469 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.joda.time.base.BaseSingleFieldPeriod.between(BaseSingleFieldPeriod.java:72)
+2025-08-17 14:23:34,470 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.joda.time.Days.daysBetween(Days.java:118)
+2025-08-17 14:23:34,516 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.library.requestcontroller.RequestController.isSendRequestOverdue(RequestController.java:227)
+2025-08-17 14:23:34,519 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.library.requestcontroller.RequestController.notifyRequestController(RequestController.java:195)
+2025-08-17 14:23:34,521 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.library.analyticscore.AnalyticsContext.trackAnalyticsData(AnalyticsContext.java:571)
+2025-08-17 14:23:34,526 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+2025-08-17 14:23:34,528 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+2025-08-17 14:23:34,531 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.library.dynamicproxy.AnalyticsInvocationHandler.invoke(AnalyticsInvocationHandler.java:102)
+2025-08-17 14:23:34,533 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at jdk.proxy9/jdk.proxy9.$Proxy57.trackAnalyticsData(Unknown Source)
+2025-08-17 14:23:34,535 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.library.analyticscore.AnalyticsAPI.trackAnalyticsData(AnalyticsAPI.java:175)
+2025-08-17 14:23:34,637 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.microxplorer.plugins.analytics.AnalyticsPlugin.trackAnalyticsData(AnalyticsPlugin.java:1074)
+2025-08-17 14:23:34,652 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at com.st.microxplorer.plugins.analytics.AnalyticsPlugin$2.run(AnalyticsPlugin.java:846)
+2025-08-17 14:23:34,653 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-08-17 14:23:35,180 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\MXTmpFiles\license.tmp
+2025-08-17 14:23:36,978 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\MXTmpFiles\gpio.tmp_save
+2025-08-17 14:23:37,414 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\MXTmpFiles\gpio.tmp
+2025-08-17 14:23:38,433 [WARN] IPConfigManager:103 - WARNING: Missing Config File for DEBUG ip!!
+2025-08-17 14:23:41,328 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\MXTmpFiles\cortex.tmp_save
+2025-08-17 14:23:41,478 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\MXTmpFiles\cortex.tmp
+2025-08-17 14:23:41,496 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\Core\Src\stm32c0xx_it.c_save
+2025-08-17 14:23:41,891 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\Core\Src\stm32c0xx_it.c
+2025-08-17 14:23:41,904 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\Core\Inc\stm32c0xx_it.h_save
+2025-08-17 14:23:43,086 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\Core\Inc\stm32c0xx_it.h
+2025-08-17 14:23:45,162 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\Core\Src\stm32c0xx_hal_msp.c_save
+2025-08-17 14:23:45,522 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\Core\Src\stm32c0xx_hal_msp.c
+2025-08-17 14:23:45,557 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\MXTmpFiles\system.tmp_save
+2025-08-17 14:23:45,839 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\MXTmpFiles\system.tmp
+2025-08-17 14:23:45,888 [INFO] CodeEngine:319 - oldGeneratedFile, D:\Firmware\src\STM32\main\Core\Inc\stm32c0xx_hal_conf.h_save
+2025-08-17 14:23:47,024 [INFO] CodeEngine:343 - Generated code: D:\Firmware\src\STM32\main\Core\Inc\stm32c0xx_hal_conf.h
+2025-08-17 14:23:47,058 [WARN] IPConfigManager:3217 - Warning: the RefConfig RCC_PClockConfig is not available in your config.xml file
+2025-08-17 14:23:47,059 [WARN] IPConfigManager:3217 - Warning: the RefConfig RCC_interrupt_Time_SYSTICK_Config is not available in your config.xml file
+2025-08-17 14:23:47,116 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\Core\Inc\main.h_save
+2025-08-17 14:23:47,307 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\Core\Inc\main.h
+2025-08-17 14:23:47,342 [INFO] CodeEngine:263 - oldGeneratedFile, D:\Firmware\src\STM32\main\Core\Src\main.c_save
+2025-08-17 14:23:47,571 [INFO] CodeEngine:287 - Generated code: D:\Firmware\src\STM32\main\Core\Src\main.c
+2025-08-17 14:23:49,319 [INFO] ProjectBuilder:3324 - Time for Copy HAL[1] : 748mS.
+2025-08-17 14:23:49,362 [INFO] ProjectBuilder:4912 - Project Generator version: 4.6.0.1-B1
+2025-08-17 14:23:49,631 [INFO] ConfigFileManager:1590 - The Die is : DIE443
+2025-08-17 14:23:56,593 [INFO] ProjectBuilder:5191 - Time for Generating toolchain IDE Files: 7231mS.
+2025-08-17 14:23:56,597 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 1mS.
+2025-08-17 14:23:56,611 [INFO] ProjectBuilder:3181 - Time for Copy CMSIS : 0mS.
+2025-08-17 14:24:00,028 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2025-08-17 18:23:12,800 [INFO] WebApp:194 - Connection lost
+2025-08-17 18:23:18,760 [INFO] WebApp:191 - Connection restablished
+2025-08-17 21:27:48,563 [INFO] WebApp:194 - Connection lost
+2025-08-17 21:38:02,461 [INFO] WebApp:191 - Connection restablished
+2025-08-17 22:19:11,642 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2025-08-17 22:19:11,655 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2025-08-17 22:19:11,655 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2025-08-17 22:19:11,714 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2025-08-17 22:19:11,715 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2025-08-17 22:19:11,716 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2025-08-17 22:19:38,712 [INFO] WebApp:194 - Connection lost
+2025-08-17 22:26:27,449 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2025-08-17 22:26:27,451 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2025-08-17 22:26:27,451 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2025-08-17 22:26:27,686 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2025-08-17 22:26:27,686 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2025-08-17 22:26:27,686 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2025-08-17 22:38:48,794 [INFO] WebApp:191 - Connection restablished
+2025-08-17 22:39:53,200 [INFO] WebApp:194 - Connection lost
+2025-08-17 22:40:11,878 [INFO] WebApp:191 - Connection restablished

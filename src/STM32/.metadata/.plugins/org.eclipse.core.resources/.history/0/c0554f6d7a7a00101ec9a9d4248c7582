@@ -1,0 +1,23 @@
+/*
+ * initial_operation.h
+ *
+ *  Created on: Aug 15, 2025
+ *      Author: takeu
+ */
+
+#ifndef INC_INITIAL_OPERATION_H_
+#define INC_INITIAL_OPERATION_H_
+
+#include "main.h"
+
+#define CHECK_MAX_DELAY 5000 // 5 seconds
+
+HAL_StatusTypeDef Check_I2C_to_ESP32(uint8_t devstat);
+/*
+ * devstat=0 : 正常
+ * devstat=1 ： 異常
+ * devstat=2 ： スリープモード
+ * devstat=3 : ユーザー定義
+ */
+
+#endif /* INC_INITIAL_OPERATION_H_ */
