@@ -1,3 +1,7 @@
 [submodule "components/Chassis"]
 	path = components/Chassis
 	url = https://github.com/teruyamato0731/Chassis.git
+[submodule "components/esp32-I2Cbus"]
+	path = components/esp32-I2Cbus
+	url = https://github.com/2025-SSR-Team5/esp32-I2Cbus
+	branch = master
