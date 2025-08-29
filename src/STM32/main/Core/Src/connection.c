@@ -7,31 +7,43 @@
 
 #include "initial_operation.h"
 #include "connection.h"
+#include "stepper.h"
+
+#define STEP_PER_REV 5120
+
 extern I2C_HandleTypeDef hi2c1;
+
+int nack_count = 0;
 
 HAL_StatusTypeDef do_instruction(uint8_t devstat){
 	uint8_t instruction;
 	HAL_StatusTypeDef result = HAL_ERROR;
 
-	HAL_Delay(100);
 	if(HAL_I2C_Slave_Receive(&hi2c1,&instruction, 1, HAL_MAX_DELAY) == HAL_OK){
 		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);
 		switch (instruction){
 		case 0x00 :
-			// デバイス情報を渡す
 			result = Check_I2C_to_ESP32(devstat);
-			if(result != HAL_OK){
-				HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_11);
-			}else{
-				HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_12);
-			}
 			break;
 		case 0x01 :
-			//ここにステッピングモーターの制御を記述
+			//if(HAL_GPIO_ReadPin (GPIOA, GPIO_PIN_4) == GPIO_PIN_SET){
+				HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_11);
+				move_clockwise(STEP_PER_REV,500);
+				HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_11);
+			//}
+			break;
+		case 0x02 :
+			//if(HAL_GPIO_ReadPin (GPIOA, GPIO_PIN_5) == GPIO_PIN_SET){
+				HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_12);
+				move_anticlockwise(STEP_PER_REV,500);
+				HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_12);
+			//}
 			break;
 		default:
 			break;
 		}
+	}else{
+		nack_count++;
 	}
 
 	return result;

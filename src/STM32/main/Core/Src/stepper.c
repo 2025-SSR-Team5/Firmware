@@ -8,12 +8,12 @@
 #include "main.h"
 #include "stepper.h"
 
-extern TIM_HandleTypeDef htim1;
+extern TIM_HandleTypeDef htim3;
 
 void microDelay (uint16_t delay)
 {
-  __HAL_TIM_SET_COUNTER(&htim1, 0);
-  while (__HAL_TIM_GET_COUNTER(&htim1) < delay);
+  __HAL_TIM_SET_COUNTER(&htim3, 0);
+  while (__HAL_TIM_GET_COUNTER(&htim3) < delay);
 }
 
 void move_anticlockwise (int steps, uint16_t delay)

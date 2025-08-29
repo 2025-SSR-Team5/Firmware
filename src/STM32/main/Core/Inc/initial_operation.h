@@ -8,6 +8,10 @@
 #ifndef INC_INITIAL_OPERATION_H_
 #define INC_INITIAL_OPERATION_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "main.h"
 
 HAL_StatusTypeDef Check_I2C_to_ESP32(uint8_t devstat);
@@ -17,5 +21,10 @@ HAL_StatusTypeDef Check_I2C_to_ESP32(uint8_t devstat);
  * devstat=2 ： スリープモード
  * devstat=3 : ユーザー定義
  */
+
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* INC_INITIAL_OPERATION_H_ */

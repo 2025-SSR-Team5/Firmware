@@ -81,5 +81,5 @@ void ESP_init(i2c_master_bus_handle_t *bus_handle){
     };
     ESP_ERROR_CHECK(i2c_master_bus_add_device(*bus_handle, &dev_cfg, &dev_STM32));
 
-    hello_STM32(dev_STM32);
+    //hello_STM32(dev_STM32);
 }
