@@ -1,5 +1,214 @@
-[1/4] cmd.exe /C "cd /D D:\Firmware\src\ESP32\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.3_py3.12_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Firmware/src/ESP32/build/partition_table/partition-table.bin D:/Firmware/src/ESP32/build/esp32.bin"
-esp32.bin binary size 0x3b5e0 bytes. Smallest app partition is 0x100000 bytes. 0xc4a20 bytes (77%) free.
-[2/4] Performing build step for 'bootloader'
-[1/1] cmd.exe /C "cd /D D:\Firmware\src\ESP32\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.3_py3.12_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Firmware/src/ESP32/build/bootloader/bootloader.bin"
-Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 16 2025 15:58:15[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c1e4h ( 49636) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001c20c vaddr=3ffb0000 size=02364h (  9060) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0001e578 vaddr=40080000 size=01aa0h (  6816) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=19674h (104052) map[0m
+[0;32mI (172) esp_image: segment 4: paddr=0003969c vaddr=40081aa0 size=0c39ch ( 50076) load[0m
+[0;32mI (199) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (199) boot: Disabling RNG early entropy source...[0m
+[0;32mI (211) cpu_start: Multicore app[0m
+[0;32mI (219) cpu_start: Pro cpu start user code[0m
+[0;32mI (219) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (219) app_init: Application information:[0m
+[0;32mI (222) app_init: Project name:     esp32[0m
+[0;32mI (227) app_init: App version:      3986907-dirty[0m
+[0;32mI (232) app_init: Compile time:     Aug 19 2025 11:09:02[0m
+[0;32mI (238) app_init: ELF file SHA256:  550c91ce3...[0m
+[0;32mI (243) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (249) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (253) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (258) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (263) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (270) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFB2C48 len 0002D3B8 (180 KiB): DRAM[0m
+[0;32mI (283) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (295) heap_init: At 4008DE3C len 000121C4 (72 KiB): IRAM[0m
+[0;32mI (303) spi_flash: detected chip: generic[0m
+[0;32mI (306) spi_flash: flash io: dio[0m
+[0;33mW (310) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (324) main_task: Started on CPU0[0m
+[0;32mI (334) main_task: Calling app_main()[0m
+
+   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$        /$$$$$$   /$$$$$$ 
+  /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$__  $$|_  $$_/       /$$__  $$ /$$__  $$ 
+ | $$  \__/| $$  \ $$| $$  \__/| $$  \ $$| $$  \ $$  | $$        | $$  \ $$| $$  \__/ 
+ |  $$$$$$ | $$$$$$$$|  $$$$$$ | $$  | $$| $$$$$$$/  | $$        | $$  | $$|  $$$$$$  
+  \____  $$| $$__  $$ \____  $$| $$  | $$| $$__  $$  | $$        | $$  | $$ \____  $$ 
+  /$$  \ $$| $$  | $$ /$$  \ $$| $$  | $$| $$  \ $$  | $$        | $$  | $$ /$$  \ $$ 
+ |  $$$$$$/| $$  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$      |  $$$$$$/|  $$$$$$/ 
+  \______/ |__/  |__/ \______/  \______/ |__/  |__/|______/       \______/  \______/                                                                                    
+[0;33mW (504) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (514) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (534) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+
+>> STM32 scanning ...[0m
+[0;31mE (544) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (544) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (554) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (554) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (574) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (584) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;31mE (584) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (594) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (594) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (614) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (624) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+distance:0
+distance:0
+distance:22
+distance:22
+distance:22
+distance:25
+distance:23
+distance:23
+distance:20
+distance:22
+distance:20
+distance:22
+distance:21
+distance:22
+distance:22
+distance:22
+distance:22
+distance:24
+distance:23
+distance:20
+distance:23
+distance:22
+distance:24
+distance:25
+distance:20
+distance:22
+distance:24
+distance:25
+distance:25
+distance:24
+distance:23
+distance:23
+distance:25
+distance:25
+distance:21
+distance:21
+distance:25
+distance:23
+distance:22
+distance:23
+distance:19
+distance:25
+distance:25
+distance:21
+distance:24
+distance:23
+distance:19
+distance:19
+distance:23
+distance:23
+distance:24
+distance:25
+distance:22
+distance:22
+distance:25
+distance:26
+distance:23
+distance:27
+distance:20
+distance:23
+distance:23
+distance:21
+distance:22
+distance:22
+distance:25
+distance:23
+distance:23
+distance:24
+distance:24
+distance:21
+distance:23
+distance:23
+distance:23
+distance:23
+distance:23
+distance:25
+distance:23
+distance:25
+distance:24
+distance:22
+distance:23
+distance:24
+distance:22
+distance:21
+distance:21
+distance:20
+distance:23
+distance:24
+distance:24
+distance:24
+distance:23
+distance:22
+distance:25
+distance:23
+distance:24
+distance:22
+distance:23
+distance:24
+distance:21
+distance:21
+distance:24
+distance:23
+distance:23
+distance:20
+distance:22
+distance:22
+distance:22
+distance:22
+distance:23
+distance:21
+distance:21
+distance:23
+distance:24
+distance:23
+distance:23
+distance:18
+distance:22
+distance:23
+distance:25
+distance:21
+distance:23
+distance:24
+distance:24
+distance:21
+distance:23
+distance:25
+distance:23
+distance:22
+distance:23
+distance:22
+distance:20
+distance:22

@@ -13,3 +13,6 @@
 [submodule "components/ps3_controller_host"]
 	path = components/ps3_controller_host
 	url = https://github.com/2025-SSR-Team5/ps3_controller_host.git
+[submodule "components/ESP32Servo"]
+	path = components/ESP32Servo
+	url = https://github.com/2025-SSR-Team5/ESP32Servo.git

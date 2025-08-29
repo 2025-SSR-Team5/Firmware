@@ -51,6 +51,7 @@ D:/Firmware/src/ESP32/build/esp-idf/esp_netif/libesp_netif.a
 D:/Firmware/src/ESP32/build/esp-idf/wpa_supplicant/libwpa_supplicant.a
 D:/Firmware/src/ESP32/build/esp-idf/esp_coex/libesp_coex.a
 D:/Firmware/src/ESP32/build/esp-idf/esp_wifi/libesp_wifi.a
+D:/Firmware/src/ESP32/build/esp-idf/bt/libbt.a
 D:/Firmware/src/ESP32/build/esp-idf/unity/libunity.a
 D:/Firmware/src/ESP32/build/esp-idf/cmock/libcmock.a
 D:/Firmware/src/ESP32/build/esp-idf/console/libconsole.a
@@ -79,4 +80,8 @@ D:/Firmware/src/ESP32/build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a
 D:/Firmware/src/ESP32/build/esp-idf/perfmon/libperfmon.a
 D:/Firmware/src/ESP32/build/esp-idf/spiffs/libspiffs.a
 D:/Firmware/src/ESP32/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
+D:/Firmware/src/ESP32/build/esp-idf/vl53l1x-arduino/libvl53l1x-arduino.a
 D:/Firmware/src/ESP32/build/esp-idf/main/libmain.a
+D:/Firmware/src/ESP32/build/esp-idf/Chassis/libChassis.a
+D:/Firmware/src/ESP32/build/esp-idf/ESP32-SG90/libESP32-SG90.a
+D:/Firmware/src/ESP32/build/esp-idf/ps3_controller_host/libps3_controller_host.a
