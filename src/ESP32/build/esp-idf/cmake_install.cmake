@@ -539,12 +539,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Firmware/src/ESP32/build/esp-idf/vl53l1x-arduino/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("D:/Firmware/src/ESP32/build/esp-idf/main/cmake_install.cmake")
+  include("D:/Firmware/src/ESP32/build/esp-idf/ps3_controller_host/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -554,11 +549,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Firmware/src/ESP32/build/esp-idf/ESP32-SG90/cmake_install.cmake")
+  include("D:/Firmware/src/ESP32/build/esp-idf/vl53l1x-arduino/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Firmware/src/ESP32/build/esp-idf/ps3_controller_host/cmake_install.cmake")
+  include("D:/Firmware/src/ESP32/build/esp-idf/ESP32Servo/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("D:/Firmware/src/ESP32/build/esp-idf/main/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("D:/Firmware/src/ESP32/build/esp-idf/ESP32-SG90/cmake_install.cmake")
 endif()
 
