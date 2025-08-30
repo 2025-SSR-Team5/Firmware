@@ -1,3 +1,3 @@
-idf_component_register(SRCS "chassis.cpp"
-                    INCLUDE_DIRS "." "../../../../components/Chassis/src"
-                    REQUIRES esp_driver_gpio esp_driver_ledc)
+idf_component_register(SRCS "chassis.cpp" "../../../../components/ps3_controller_host/src/Ps3Controller.cpp" "../../../../components/ps3_controller_host/src/ps3.c" "../../../../components/ps3_controller_host/src/ps3_spp.c" "../../../../components/ps3_controller_host/src/ps3_parser.c" "../../../../components/ps3_controller_host/src/ps3_l2cap.c"
+                    INCLUDE_DIRS "." "../../../../components/Chassis/src" "../../../../components/ps3_controller_host/src"
+                    REQUIRES esp_driver_gpio esp_driver_ledc bt nvs_flash)

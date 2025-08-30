@@ -1,0 +1,6108 @@
+�x�xxx�x�x��x�xxx�x�x�xx���ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 16 2025 15:58:15[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c1e4h ( 49636) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001c20c vaddr=3ffb0000 size=02364h (  9060) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0001e578 vaddr=40080000 size=01aa0h (  6816) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=19674h (104052) map[0m
+[0;32mI (172) esp_image: segment 4: paddr=0003969c vaddr=40081aa0 size=0c39ch ( 50076) load[0m
+[0;32mI (199) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (199) boot: Disabling RNG early entropy source...[0m
+[0;32mI (211) cpu_start: Multicore app[0m
+[0;32mI (219) cpu_start: Pro cpu start user code[0m
+[0;32mI (219) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (219) app_init: Application information:[0m
+[0;32mI (222) app_init: Project name:     esp32[0m
+[0;32mI (227) app_init: App version:      3986907-dirty[0m
+[0;32mI (232) app_init: Compile time:     Aug 19 2025 11:09:02[0m
+[0;32mI (238) app_init: ELF file SHA256:  ee4dd68b9...[0m
+[0;32mI (243) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (249) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (253) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (258) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (263) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (270) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFB2C48 len 0002D3B8 (180 KiB): DRAM[0m
+[0;32mI (283) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (295) heap_init: At 4008DE3C len 000121C4 (72 KiB): IRAM[0m
+[0;32mI (303) spi_flash: detected chip: generic[0m
+[0;32mI (306) spi_flash: flash io: dio[0m
+[0;33mW (310) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (324) main_task: Started on CPU0[0m
+[0;32mI (334) main_task: Calling app_main()[0m
+
+   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$        /$$$$$$   /$$$$$$ 
+  /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$__  $$|_  $$_/       /$$__  $$ /$$__  $$ 
+ | $$  \__/| $$  \ $$| $$  \__/| $$  \ $$| $$  \ $$  | $$        | $$  \ $$| $$  \__/ 
+ |  $$$$$$ | $$$$$$$$|  $$$$$$ | $$  | $$| $$$$$$$/  | $$        | $$  | $$|  $$$$$$  
+  \____  $$| $$__  $$ \____  $$| $$  | $$| $$__  $$  | $$        | $$  | $$ \____  $$ 
+  /$$  \ $$| $$  | $$ /$$  \ $$| $$  | $$| $$  \ $$  | $$        | $$  | $$ /$$  \ $$ 
+ |  $$$$$$/| $$  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$      |  $$$$$$/|  $$$$$$/ 
+  \______/ |__/  |__/ \______/  \______/ |__/  |__/|______/       \______/  \______/                                                                                    
+[0;33mW (504) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (514) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (534) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+
+>> STM32 scanning ...[0m
+[0;31mE (544) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (544) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (554) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (554) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (574) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (584) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;31mE (584) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (594) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (594) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (614) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (624) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (624) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+[0;31mE (634) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (634) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (644) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (654) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (664) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (674) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (684) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (684) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (694) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (704) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (714) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (724) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (724) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (734) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (744) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (754) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (764) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (764) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (774) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (794) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (794) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (804) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (804) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (814) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (834) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (834) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (844) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (844) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (854) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (864) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (884) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (884) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (894) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (894) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (904) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (924) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (924) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (934) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (934) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (944) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (954) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (964) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (974) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (984) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (984) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (994) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1004) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1014) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1024) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1024) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1034) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1034) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1054) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1064) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1074) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1074) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1084) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1094) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1104) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1114) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1114) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1124) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1134) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1144) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1154) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1154) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1164) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1184) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1184) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1194) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1204) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1204) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1224) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1224) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1234) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1244) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1244) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1254) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1274) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1274) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1284) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1284) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1294) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1314) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1324) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1324) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1334) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1334) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1344) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1364) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1364) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1374) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1374) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1384) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1404) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1404) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1414) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1424) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1424) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1434) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1444) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1454) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1464) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1464) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1474) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1494) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1494) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1504) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1514) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1514) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1534) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1534) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1544) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1554) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1564) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1564) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1574) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1584) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1594) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1604) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1604) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1624) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1624) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1634) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1644) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1644) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1664) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1674) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1674) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1684) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1684) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1694) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1714) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1714) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1724) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1724) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1734) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1754) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1764) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1764) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1774) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1774) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1794) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1804) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1814) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1814) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1814) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1824) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1844) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1854) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1854) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1864) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1864) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1884) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1894) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1894) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1904) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1914) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1914) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1934) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1934) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1944) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (1954) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1954) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1974) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (1974) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1984) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (1994) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2004) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2014) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2024) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2024) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2034) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2044) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2054) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2064) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2064) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2074) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2084) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2084) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2104) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2114) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2114) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2124) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2134) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2144) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2154) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2154) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2164) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2174) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2174) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2194) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2204) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2204) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2214) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2214) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2234) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2244) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2254) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2254) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2264) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2274) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2284) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2294) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2294) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2304) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2304) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2324) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2334) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2334) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2344) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2354) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2364) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2374) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2374) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2384) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2394) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2404) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2414) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2424) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2424) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2434) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2454) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2454) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2464) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2464) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2474) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2484) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2504) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2504) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2504) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2514) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2524) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2544) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2544) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2554) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2554) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2564) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2574) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2584) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2594) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2604) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2604) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2614) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2624) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2634) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2644) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2644) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2654) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2664) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2674) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2684) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2694) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2694) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2704) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2714) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2724) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2734) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2744) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2744) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2754) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2764) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2774) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2784) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2784) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2804) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2804) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2814) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2824) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2824) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2844) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2854) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2854) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2864) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2864) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2874) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2894) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2894) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2904) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2904) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2914) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2934) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2944) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2944) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2954) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (2954) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2964) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2984) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (2994) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2994) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2994) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3004) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3024) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3024) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3034) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3044) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3044) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3064) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3074) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3074) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3084) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3084) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3094) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3114) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3114) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3124) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3134) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3134) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3154) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3154) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3164) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3174) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3184) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3194) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3204) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3204) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3214) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3224) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3234) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3244) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3244) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3254) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3264) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3264) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3284) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3294) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3294) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3304) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3304) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3324) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3334) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3334) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3344) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3354) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3354) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3374) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3384) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3384) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3394) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3394) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3414) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3424) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3434) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3434) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3444) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3444) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3464) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3474) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3474) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3484) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3484) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3504) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3514) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3514) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3524) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3534) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3544) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3554) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3554) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3564) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3574) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3584) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3594) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3604) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3604) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3614) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3634) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3634) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3644) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3644) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3654) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3664) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3684) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3684) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3684) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3694) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3704) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3724) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3724) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3734) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3734) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3744) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3754) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3764) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3774) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3784) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3784) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3794) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3804) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3814) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3824) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3824) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3834) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3834) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3854) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3864) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3874) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3874) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3884) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3894) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3904) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3914) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3924) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3924) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3934) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3944) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (3954) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (3954) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (3964) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3984) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3984) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (3994) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4004) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4004) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4024) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4034) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4034) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4044) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4044) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4054) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4074) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4074) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4084) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4084) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4094) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4114) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4124) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4124) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4134) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4134) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4144) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4164) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4164) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4174) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4174) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4184) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4204) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4204) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4214) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4224) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4224) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4234) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4254) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4254) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4264) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4264) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4274) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4294) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4294) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4304) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4314) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4314) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4334) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4334) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4344) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4354) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4364) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4364) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4384) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4384) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4394) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4404) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4404) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4424) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4424) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4434) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4444) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4444) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4464) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4474) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4474) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4484) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4484) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4494) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4514) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4514) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4524) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4534) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4534) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4554) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4564) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4564) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4574) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4574) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4594) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4604) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4614) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4614) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4614) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4624) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4644) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4654) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4654) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4664) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4664) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4684) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4694) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4694) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4704) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4714) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4714) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4734) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4734) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4744) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4754) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4754) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4774) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4774) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4784) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4794) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4804) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4814) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4824) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4824) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4834) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4844) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4864) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4864) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4864) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4874) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4884) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4894) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4904) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4914) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4914) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4924) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4934) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4944) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (4954) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4964) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4964) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (4974) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (4974) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (4994) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5004) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5004) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5014) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5014) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5034) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5044) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5054) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5054) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5064) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5074) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5084) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5094) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5104) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5104) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5104) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5124) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5134) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5134) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5144) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5154) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5164) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5174) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5184) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5184) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5194) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5204) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5214) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5224) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5224) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5234) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5254) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5254) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5264) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5264) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5274) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5284) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5304) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5304) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5314) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5314) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5324) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5344) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5344) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5354) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5354) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5364) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5374) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5384) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5394) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5404) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5404) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5414) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5424) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5434) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5444) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5444) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5454) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5474) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5474) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5484) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5494) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5494) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5504) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5514) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5524) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5534) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5544) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5544) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5564) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5564) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5574) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5584) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5584) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5604) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5604) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5614) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5624) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5624) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5644) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5654) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5654) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5664) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5664) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5674) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5694) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5694) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5704) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5714) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5714) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5734) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5744) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5744) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5754) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5754) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5764) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5784) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5794) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5794) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5794) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5804) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5824) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5834) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5834) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5844) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5844) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5854) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5874) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5874) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5884) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5894) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5894) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5914) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5914) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5924) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5934) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5934) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5954) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (5954) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5964) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (5974) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (5984) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5994) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6004) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6004) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6014) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6024) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6044) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6044) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6044) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6054) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6064) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6064) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6084) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6094) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6094) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6104) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6114) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6124) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6134) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6134) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6144) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6154) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6154) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6174) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6184) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6184) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6194) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6194) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6214) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6224) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6234) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6234) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6244) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6244) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6264) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6274) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6274) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6284) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6284) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6304) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6314) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6314) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6324) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6334) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6344) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6354) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6364) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6364) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6374) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6384) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6394) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6404) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6404) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6414) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6434) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6434) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6444) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6444) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6454) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6464) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6484) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6484) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6494) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6494) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6504) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6524) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6524) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6534) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6534) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6544) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6554) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6564) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6574) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6584) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6584) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6594) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6604) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6614) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6624) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6624) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6634) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6644) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6654) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6664) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6674) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6674) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6684) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6694) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6704) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6714) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6724) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6724) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6734) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6744) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6754) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6764) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6764) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6784) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6784) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6794) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6804) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6804) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6814) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6834) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6834) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6844) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6844) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6854) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6874) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6874) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6884) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6884) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6894) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6904) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6924) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6924) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6934) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6934) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6944) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (6964) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (6974) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6974) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6974) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (6984) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7004) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7014) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (7014) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7024) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7024) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (7034) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7054) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7054) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (7064) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7074) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7074) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (7094) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7094) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7104) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (7114) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7114) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7134) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (7134) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7144) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7154) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (7164) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7164) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7184) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (7184) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7194) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7204) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (7204) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7224) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7224) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (7234) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7244) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7244) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (7264) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7274) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7274) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (7284) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7294) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7294) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (7314) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7314) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7324) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (7334) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7334) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7354) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (7364) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7364) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7374) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (7374) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7394) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7404) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (7414) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7414) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7424) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (7424) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7444) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7454) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (7454) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7464) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7464) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (7484) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7494) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7494) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (7504) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7514) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7514) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (7534) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7534) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7544) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (7554) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7554) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7574) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (7584) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7584) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7594) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Failed to detect and initialize sensor!
+[0;31mE (7604) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7614) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7624) i2c.master: s_i2c_synchronous_transaction(872): I2C transaction failed[0m
+[0;32mI (7624) gpio: GPIO[21]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7634) gpio: GPIO[22]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (7644) i2c.master: i2c_master_transmit(1074): I2C transaction failed[0m
+Faildistance:0
+distance:0
+distance:10
+distance:22
+distance:22
+distance:21
+distance:19
+distance:23
+distance:20
+distance:22
+distance:23
+distance:23
+distance:22
+distance:23
+distance:27
+distance:27
+distance:25
+distance:23
+distance:19
+distance:24
+distance:24
+distance:22
+distance:23
+distance:20
+distance:21
+distance:20
+distance:24
+distance:22
+distance:20
+distance:22
+distance:23
+distance:23
+distance:25
+distance:22
+distance:24
+distance:25
+distance:25
+distance:21
+distance:24
+distance:25
+distance:23
+distance:22
+distance:20
+distance:23
+distance:22
+distance:24
+distance:22
+distance:24
+distance:23
+distance:19
+distance:21
+distance:22
+distance:22
+distance:27
+distance:21
+distance:24
+distance:26
+distance:21
+distance:23
+distance:22
+distance:24
+distance:23
+distance:24
+distance:22
+distance:25
+distance:22
+distance:23
+distance:23
+distance:20
+distance:23
+distance:23
+distance:24
+distance:21
+distance:26
+distance:19
+distance:23
+distance:25
+distance:23
+distance:21
+distance:22
+distance:24
+distance:24
+distance:23
+distance:20
+distance:21
+distance:24
+distance:25
+distance:23
+distance:24
+distance:25
+distance:22
+distance:25
+distance:21
+distance:20
+distance:22
+distance:21
+distance:22
+distance:25
+distance:23
+distance:23
+distance:22
+distance:24
+distance:22
+distance:23
+distance:23
+distance:24
+distance:21
+distance:23
+distance:22
+distance:23
+distance:21
+distance:25
+distance:18
+distance:21
+distance:24
+distance:23
+distance:21
+distance:21
+distance:26
+distance:23
+distance:26
+distance:23
+distance:24
+distance:21
+distance:23
+distance:20
+distance:25
+distance:23
+distance:23
+distance:24
+distance:24
+distance:22
+distance:22
+distance:24
+distance:25
+distance:24
+distance:22
+distance:21
+distance:24
+distance:24
+distance:22
+distance:22
+distance:24
+distance:23
+distance:22
+distance:23
+distance:26
+distance:19
+distance:23
+distance:23
+distance:26
+distance:24
+distance:23
+distance:22
+distance:20
+distance:23
+distance:25
+distance:26
+distance:25
+distance:21
+distance:26
+distance:25
+distance:22
+distance:24
+distance:26
+distance:25
+distance:21
+distance:21
+distance:21
+distance:22
+distance:20
+distance:24
+distance:23
+distance:20
+distance:22
+distance:22
+distance:27
+distance:21
+distance:24
+distance:22
+distance:21
+distance:24
+distance:25
+distance:18
+distance:23
+distance:25
+distance:24
+distance:22
+distance:20
+distance:24
+distance:21
+distance:23
+distance:21
+distance:24
+distance:25
+distance:26
+distance:20
+distance:24
+distance:19
+distance:26
+distance:20
+distance:24
+distance:22
+distance:22
+distance:22
+distance:22
+distance:20
+distance:24
+distance:24
+distance:22
+distance:27
+distance:22
+distance:24
+distance:27
+distance:20
+distance:25
+distance:22
+distance:22
+distance:21
+distance:23
+distance:21
+distance:21
+distance:20
+distance:21
+distance:22
+distance:21
+distance:23
+distance:25
+distance:23
+distance:20
+distance:20
+distance:22
+distance:18
+distance:24
+distance:22
+distance:22
+distance:23
+distance:22
+distance:22
+distance:20
+distance:22
+distance:25
+distance:24
+distance:21
+distance:24
+distance:27
+distance:22
+distance:24
+distance:25
+distance:24
+distance:20
+distance:23
+distance:25
+distance:19
+distance:24
+distance:21
+distance:23
+distance:22
+distance:23
+distance:24
+distance:23
+distance:23
+distance:25
+distance:25
+distance:20
+distance:21
+distance:25
+distance:26
+distance:23
+distance:25
+distance:20
+distance:22
+distance:24
+distance:23
+distance:25
+distance:22
+distance:21
+distance:26
+distance:23
+distance:22
+distance:24
+distance:23
+distance:25
+distance:22
+distance:23
+distance:24
+distance:21
+distance:25
+distance:24
+distance:21
+distance:25
+distance:23
+distance:22
+distance:22
+distance:20
+distance:21
+distance:23
+distance:22
+distance:23
+distance:26
+distance:23
+distance:23
+distance:24
+distance:24
+distance:24
+distance:25
+distance:27
+distance:25
+distance:23
+distance:21
+distance:18
+distance:24
+distance:20
+distance:23
+distance:22
+distance:21
+distance:25
+distance:24
+distance:19
+distance:25
+distance:23
+distance:20
+distance:24
+distance:24
+distance:24
+distance:21
+distance:26
+distance:20
+distance:22
+distance:24
+distance:23
+distance:22
+distance:24
+distance:25
+distance:20
+distance:21
+distance:24
+distance:21
+distance:23
+distance:20
+distance:22
+distance:21
+distance:22
+distance:23
+distance:22
+distance:20
+distance:22
+distance:21
+distance:23
+distance:22
+distance:21
+distance:22
+distance:21
+distance:23
+distance:26
+distance:21
+distance:22
+distance:26
+distance:22
+distance:21
+distance:23
+distance:25
+distance:20
+distance:23
+distance:25
+distance:22
+distance:26
+distance:25
+distance:24
+distance:24
+distance:20
+distance:21
+distance:23
+distance:25
+distance:22
+distance:25
+distance:21
+distance:22
+distance:21
+distance:21
+distance:25
+distance:23
+distance:21
+distance:27
+distance:23
+distance:25
+distance:22
+distance:23
+distance:22
+distance:22
+distance:23
+distance:23
+distance:26
+distance:20
+distance:24
+distance:23
+distance:26
+distance:23
+distance:22
+distance:25
+distance:23
+distance:22
+distance:22
+distance:26
+distance:22
+distance:22
+distance:23
+distance:23
+distance:24
+distance:22
+distance:20
+distance:24
+distance:26
+distance:24
+distance:21
+distance:23
+distance:23
+distance:25
+distance:21
+distance:22
+distance:22
+distance:23
+distance:23
+distance:20
+distance:20
+distance:25
+distance:26
+distance:23
+distance:26
+distance:25
+distance:25
+distance:20
+distance:24
+distance:22
+distance:24
+distance:21
+distance:21
+distance:22
+distance:23
+distance:24
+distance:26
+distance:21
+distance:24
+distance:22
+distance:22
+distance:24
+distance:23
+distance:23
+distance:23
+distance:21
+distance:23
+distance:24
+distance:24
+distance:24
+distance:22
+distance:23
+distance:21
+distance:21
+distance:22
+distance:24
+distance:23
+distance:19
+distance:23
+distance:26
+distance:22
+distance:25
+distance:25
+distance:24
+distance:21
+distance:25
+distance:22
+distance:24
+distance:23
+distance:24
+distance:24
+distance:23
+distance:22
+distance:22
+distance:21
+distance:25
+distance:24
+distance:22
+distance:24
+distance:25
+distance:23
+distance:21
+distance:22
+distance:22
+distance:24
+distance:25
+distance:21
+distance:23
+distance:24
+distance:24
+distance:22
+distance:24
+distance:25
+distance:23
+distance:24
+distance:24
+distance:23
+distance:21
+distance:22
+distance:24
+distance:23
+distance:23
+distance:22
+distance:22
+distance:20
+distance:23
+distance:23
+distance:22
+distance:26
+distance:26
+distance:24
+distance:25
+distance:24
+distance:23
+distance:23
+distance:24
+distance:23
+distance:22
+distance:25
+distance:21
+distance:21
+distance:26
+distance:19
+distance:27
+distance:22
+distance:23
+distance:23
+distance:22
+distance:22
+distance:21
+distance:22
+distance:23
+distance:26
+distance:23
+distance:23
+distance:22
+distance:24
+distance:26
+distance:24
+distance:24
+distance:24
+distance:25
+distance:24
+distance:23
+distance:21
+distance:24
+distance:24
+distance:25
+distance:25
+distance:25
+distance:25
+distance:25
+distance:23
+distance:26
+distance:24
+distance:25
+distance:21
+distance:24
+distance:22
+distance:25
+distance:23
+distance:24
+distance:22
+distance:25
+distance:20
+distance:25
+distance:23
+distance:22
+distance:25
+distance:25
+distance:24
+distance:24
+distance:24
+distance:24
+distance:20
+distance:22
+distance:21
+distance:25
+distance:24
+distance:24
+distance:26
+distance:26
+distance:20
+distance:25
+distance:27
+distance:21
+distance:24
+distance:21
+distance:22
+distance:21
+distance:21
+distance:26
+distance:24
+distance:22
+distance:22
+distance:24
+distance:21
+distance:25
+distance:25
+distance:20
+distance:25
+distance:21
+distance:22
+distance:21
+distance:22
+distance:25
+distance:26
+distance:24
+distance:20
+distance:21
+distance:20
+distance:24
+distance:24
+distance:25
+distance:24
+distance:21
+distance:26
+distance:21
+distance:22
+distance:23
+distance:25
+distance:25
+distance:24
+distance:24
+distance:19
+distance:23
+distance:24
+distance:24
+distance:24
+distance:25
+distance:22
+distance:21
+distance:20
+distance:22
+distance:25
+distance:22
+distance:22
+distance:23
+distance:24
+distance:23
+distance:22
+distance:23
+distance:23
+distance:25
+distance:26
+distance:22
+distance:24
+distance:21
+distance:22
+distance:21
+distance:22
+distance:23
+distance:22
+distance:22
+distance:24
+distance:23
+distance:21
+distance:25
+distance:23
+distance:25
+distance:24
+distance:25
+distance:21
+distance:24
+distance:24
+distance:25
+distance:21
+distance:26
+distance:23
+distance:24
+distance:23
+distance:21
+distance:19
+distance:24
+distance:25
+distance:20
+distance:20
+distance:23
+distance:23
+distance:24
+distance:25
+distance:25
+distance:24
+distance:24
+distance:22
+distance:21
+distance:22
+distance:23
+distance:26
+distance:23
+distance:24
+distance:24
+distance:24
+distance:24
+distance:24
+distance:24
+distance:22
+distance:24
+distance:26
+distance:23
+distance:21
+distance:26
+distance:23
+distance:20
+distance:23
+distance:22
+distance:25
+distance:23
+distance:22
+distance:24
+distance:22
+distance:24
+distance:25
+distance:24
+distance:24
+distance:24
+distance:20
+distance:21
+distance:23
+distance:22
+distance:22
+distance:20
+distance:24
+distance:22
+distance:22
+distance:23
+distance:22
+distance:25
+distance:20
+distance:23
+distance:25
+distance:23
+distance:20
+distance:22
+distance:25
+distance:25
+distance:21
+distance:23
+distance:20
+distance:23
+distance:24
+distance:23
+distance:24
+distance:22
+distance:21
+distance:22
+distance:22
+distance:24
+distance:22
+distance:22
+distance:23
+distance:22
+distance:25
+distance:24
+distance:24
+distance:24
+distance:23
+distance:23
+distance:22
+distance:23
+distance:20
+distance:26
+distance:19
+distance:22
+distance:23
+distance:24
+distance:27
+distance:20
+distance:19
+distance:23
+distance:25
+distance:24
+distance:22
+distance:22
+distance:22
+distance:25
+distance:23
+distance:25
+distance:24
+distance:23
+distance:22
+distance:22
+distance:21
+distance:25
+distance:23
+distance:23
+distance:21
+distance:25
+distance:22
+distance:23
+distance:21
+distance:25
+distance:23
+distance:21
+distance:24
+distance:23
+distance:24
+distance:22
+distance:24
+distance:23
+distance:23
+distance:22
+distance:22
+distance:24
+distance:23
+distance:24
+distance:25
+distance:20
+distance:24
+distance:23
+distance:21
+distance:23
+distance:25
+distance:26
+distance:25
+distance:23
+distance:25
+distance:27
+distance:22
+distance:24
+distance:26
+distance:20
+distance:22
+distance:24
+distance:24
+distance:25
+distance:22
+distance:27
+distance:24
+distance:22
+distance:26
+distance:24
+distance:23
+distance:23
+distance:25
+distance:22
+distance:24
+distance:24
+distance:24
+distance:24
+distance:24
+distance:24
+distance:25
+distance:23
+distance:22
+distance:25
+distance:23
+distance:25
+distance:25
+distance:24
+distance:24
+distance:23
+distance:22
+distance:23
+distance:22
+distance:24
+distance:23
+distance:25
+distance:26
+distance:21
+distance:22
+distance:26
+distance:24
+distance:20
+distance:25
+distance:23
+distance:22
+distance:22
+distance:23
+distance:24
+distance:22
+distance:24
+distance:24
+distance:26
+distance:26
+distance:24
+distance:20
+distance:22
+distance:23
+distance:25
+distance:25
+distance:24
+distance:22
+distance:26
+distance:23
+distance:23
+distance:24
+distance:25
+distance:24
+distance:24
+distance:24
+distance:22
+distance:21
+distance:22
+distance:24
+distance:25
+distance:20
+distance:23
+distance:21
+distance:26
+distance:22
+distance:25
+distance:24
+distance:20
+distance:23
+distance:22
+distance:23
+distance:26
+distance:23
+distance:23
+distance:22
+distance:23
+distance:24
+distance:20
+distance:22
+distance:21
+distance:23
+distance:23
+distance:24
+distance:25
+distance:20
+distance:22
+distance:26
+distance:24
+distance:23
+distance:22
+distance:21
+distance:23
+distance:21
+distance:23
+distance:26
+distance:23
+distance:23
+distance:22
+distance:22
+distance:25
+distance:22
+distance:21
+distance:21
+distance:22
+distance:25
+distance:24
+distance:23
+distance:24
+distance:23
+distance:23
+distance:24
+distance:22
+distance:23
+distance:25
+distance:23
+distance:24
+distance:23
+distance:24
+distance:24
+distance:24
+distance:24
+distance:21
+distance:23
+distance:26
+distance:23
+distance:23
+distance:24
+distance:23
+distance:25
+distance:25
+distance:25
+distance:25
+distance:27
+distance:20
+distance:24
+distance:25
+distance:21
+distance:22
+distance:23
+distance:25
+distance:23
+distance:24
+distance:27
+distance:21
+distance:23
+distance:24
+distance:24
+distance:24
+distance:25
+distance:25
+distance:25
+distance:24
+distance:20
+distance:27
+distance:22
+distance:25
+distance:23
+distance:23
+distance:23
+distance:23
+distance:23
+distance:24
+distance:23
+distance:23
+distance:22
+distance:26
+distance:23
+distance:21
+distance:22
+distance:23
+distance:23
+distance:21
+distance:25
+distance:24
+distance:22
+distance:21
+distance:27
+distance:21
+distance:22
+distance:23
+distance:24
+distance:26
+distance:23
+distance:22
+distance:23
+distance:22
+distance:25
+distance:22
+distance:25
+distance:23
+distance:24
+distance:21
+distance:22
+distance:22
+distance:21
+distance:23
+distance:24
+distance:22
+distance:25
+distance:26
+distance:25
+distance:23
+distance:23
+distance:21
+distance:22
+distance:27
+distance:20
+distance:24
+distance:21
+distance:21
+distance:22
+distance:25
+distance:21
+distance:23
+distance:21
+distance:20
+distance:26
+distance:24
+distance:22
+distance:22
+distance:23
+distance:22
+distance:20
+distance:23
+distance:25
+distance:25
+distance:22
+distance:20
+distance:25
+distance:22
+distance:22
+distance:21
+distance:22
+distance:23
+distance:23
+distance:23
+distance:20
+distance:23
+distance:26
+distance:23
+distance:23
+distance:24
+distance:24
+distance:22
+distance:24
+distance:21
+distance:24
+distance:24
+distance:23
+distance:21
+distance:22
+distance:23
+distance:23
+distance:21
+distance:23
+distance:25
+distance:24
+distance:23
+distance:22
+distance:21
+distance:23
+distance:24
+distance:25
+distance:22
+distance:22
+distance:23
+distance:25
+distance:26
+distance:21
+distance:23
+distance:24
+distance:19
+distance:20
+distance:22
+distance:23
+distance:23
+distance:24
+distance:24
+distance:24
+distance:23
+distance:21
+distance:22
+distance:22
+distance:21
+distance:22
+distance:22
+distance:22
+distance:23
+distance:23
+distance:24
+distance:22
+distance:25
+distance:24
+distance:24
+distance:26
+distance:22
+distance:24
+distance:25
+distance:24
+distance:25
+distance:25
+distance:25
+distance:23
+distance:23
+distance:22
+distance:22
+distance:21
+distance:24
+distance:25
+distance:24
+distance:25
+distance:24
+distance:22
+distance:26
+distance:25
+distance:26
+distance:24
+distance:22
+distance:23
+distance:24
+distance:23
+distance:21
+distance:23
+distance:19
+distance:21
+distance:25
+distance:22
+distance:21
+distance:21
+distance:23
+distance:25
+distance:24
+distance:21
+distance:24
+distance:22
+distance:23
+distance:22
+distance:25
+distance:26
+distance:24
+distance:23
+distance:25
+distance:24
+distance:27
+distance:25
+distance:24
+distance:21
+distance:23
+distance:24
+distance:22
+distance:24
+distance:22
+distance:23
+distance:22
+distance:22
+distance:23
+distance:22
+distance:23
+distance:23
+distance:25
+distance:23
+distance:24
+distance:25
+distance:24
+distance:24
+distance:23
+distance:20
+distance:26
+distance:24
+distance:23
+distance:22
+distance:22
+distance:23
+distance:24
+distance:23
+distance:25
+distance:21
+distance:23
+distance:20
+distance:24
+distance:24
+distance:23
+distance:23
+distance:25
+distance:22
+distance:23
+distance:24
+distance:23
+distance:23
+distance:24
+distance:22
+distance:21
+distance:22
+distance:23
+distance:20
+distance:24
+distance:26
+distance:25
+distance:22
+distance:23
+distance:23
+distance:23
+distance:22
+distance:23
+distance:24
+distance:23
+distance:27
+distance:21
+distance:24
+distance:25
+distance:25
+distance:25
+distance:24
+distance:23
+distance:22
+distance:21
+distance:23
+distance:22
+distance:23
+distance:22
+distance:26
+distance:23
+distance:23
+distance:24
+distance:23
+distance:24
+distance:24
+distance:22
+distance:25
+distance:23
+distance:25
+distance:21
+distance:20
+distance:23
+distance:24
+distance:20
+distance:25
+distance:24
+distance:25
+distance:21
+distance:26
+distance:23
+distance:22
+distance:23
+distance:22
+distance:24
+distance:24
+distance:23
+distance:25
+distance:26
+distance:25
+distance:22
+distance:22
+distance:21
+distance:24
+distance:21
+distance:24
+distance:23
+distance:27
+distance:21
+distance:22
+distance:19
+distance:22
+distance:23
+distance:22
+distance:23
+distance:22
+distance:25
+distance:23
+distance:23
+distance:22
+distance:25
+distance:24
+distance:23
+distance:23
+distance:22
+distance:22
+distance:21
+distance:23
+distance:23
+distance:23
+distance:23
+distance:22
+distance:24
+distance:20
+distance:23
+distance:25
+distance:24
+distance:23
+distance:26
+distance:25
+distance:25
+distance:20
+distance:25
+distance:23
+distance:22
+distance:25
+distance:23
+distance:24
+distance:23
+distance:25
+distance:24
+distance:22
+distance:22
+distance:22
+distance:21
+distance:26
+distance:21
+distance:24
+distance:26
+distance:25
+distance:22
+distance:23
+distance:24
+distance:23
+distance:27
+distance:24
+distance:24
+distance:20
+distance:25
+distance:21
+distance:27
+distance:24
+distance:27
+distance:24
+distance:21
+distance:24
+distance:23
+distance:23
+distance:21
+distance:22
+distance:22
+distance:20
+distance:22
+distance:24
+distance:24
+distance:22
+distance:21
+distance:22
+distance:28
+distance:22
+distance:22
+distance:25
+distance:24
+distance:23
+distance:24
+distance:23
+distance:23
+distance:22
+distance:24
+distance:25
+distance:23
+distance:22
+distance:21
+distance:20
+distance:24
+distance:21
+distance:23
+distance:21
+distance:23
+distance:22
+distance:23
+distance:23
+distance:22
+distance:24
+distance:27
+distance:25
+distance:24
+distance:23
+distance:25
+distance:22
+distance:23
+distance:22
+distance:24
+distance:22
+distance:27
+distance:22
+distance:27
+distance:25
+distance:24
+distance:27
+distance:22
+distance:20
+distance:22
+distance:22
+distance:22
+distance:24
+distance:24
+distance:23
+distance:23
+distance:23
+distance:22
+distance:22
+distance:24
+distance:23
+distance:18
+distance:24
+distance:23
+distance:26
+distance:21
+distance:25
+distance:23
+distance:26
+distance:22
+distance:23
+distance:25
+distance:24
+distance:25
+distance:21
+distance:24
+distance:24
+distance:23
+distance:21
+distance:22
+distance:23
+distance:25
+distance:23
+distance:23
+distance:20
+distance:23
+distance:25
+distance:23
+distance:23
+distance:23
+distance:22
+distance:25
+distance:21
+distance:23
+distance:25
+distance:23
+distance:23
+distance:20
+distance:23
+distance:22
+distance:26
+distance:23
+distance:23
+distance:22
+distance:23
+distance:24
+distance:25
+distance:22
+distance:22
+distance:19
+distance:24
+distance:22
+distance:25
+distance:24
+distance:23
+distance:22
+distance:22
+distance:23
+distance:22
+distance:22
+distance:26
+distance:23
+distance:23
+distance:22
+distance:24
+distance:23
+distance:23
+distance:25
+distance:21
+distance:22
+distance:25
+distance:22
+distance:25
+distance:22
+distance:25
+distance:22
+distance:24
+distance:23
+distance:23
+distance:22
+distance:25
+distance:21
+distance:19
+distance:25
+distance:24
+distance:21
+distance:25
+distance:24
+distance:23
+distance:24
+distance:26
+distance:21
+distance:21
+distance:24
+distance:20
+distance:22
+distance:23
+distance:22
+distance:24
+distance:23
+distance:23
+distance:27
+distance:22
+distance:24
+distance:22
+distance:24
+distance:20
+distance:23
+distance:24
+distance:25
+distance:23
+distance:23
+distance:22
+distance:24
+distance:24
+distance:20
+distance:23
+distance:20
+distance:22
+distance:24
+distance:21
+distance:24
+distance:25
+distance:20
+distance:23
+distance:23
+distance:22
+distance:22
+distance:21
+distance:25
+distance:21
+distance:23
+distance:24
+distance:22
+distance:25
+distance:21
+distance:23
+distance:23
+distance:26
+distance:24
+distance:24
+distance:23
+distance:24
+distance:23
+distance:25
+distance:19
+distance:23
+distance:25
+distance:26
+distance:21
+distance:24
+distance:25
+distance:22
+distance:23
+distance:19
+distance:22
+distance:23
+distance:23
+distance:23
+distance:25
+distance:22
+distance:23
+distance:22
+distance:25
+distance:23
+distance:19
+distance:23
+distance:21
+distance:24
+distance:20
+distance:22
+distance:26
+distance:22
+distance:22
+distance:25
+distance:22
+distance:27
+distance:22
+distance:23
+distance:23
+distance:27
+distance:25
+distance:21
+distance:26
+distance:22
+distance:26
+distance:24
+distance:25
+distance:22
+distance:23
+distance:22
+distance:22
+distance:24
+distance:22
+distance:23
+distance:23
+distance:25
+distance:23
+distance:22
+distance:27
+distance:25
+distance:21
+distance:24
+distance:24
+distance:23
+distance:24
+distance:23
+distance:20
+distance:24
+distance:22
+distance:24
+distance:25
+distance:21
+distance:25
+distance:26
+distance:22
+distance:24
+distance:24
+distance:22
+distance:24
+distance:24
+distance:22
+distance:20
+distance:20
+distance:23
+distance:24
+distance:20
+distance:22
+distance:25
+distance:27
+distance:21
+distance:23
+distance:21
+distance:22
+distance:21
+distance:24
+distance:22
+distance:23
+distance:25
+distance:22
+distance:24
+distance:20
+distance:23
+distance:22
+distance:22
+distance:20
+distance:27
+distance:22
+distance:24
+distance:24
+distance:24
+distance:23
+distance:23
+distance:26
+distance:25
+distance:21
+distance:25
+distance:21
+distance:23
+distance:24
+distance:24
+distance:23
+distance:26
+distance:27
+distance:22
+distance:23
+distance:21
+distance:24
+distance:25
+distance:19
+distance:24
+distance:22
+distance:24
+distance:21
+distance:19
+distance:25
+distance:27
+distance:22
+distance:22
+distance:24
+distance:21
+distance:22
+distance:22
+distance:25
+distance:23
+distance:22
+distance:21
+distance:25
+distance:22
+distance:24
+distance:24
+distance:23
+distance:23
+distance:24
+distance:21
+distance:25
+distance:23
+distance:24
+distance:21
+distance:24
+distance:22
+distance:24
+distance:19
+distance:26
+distance:24
+distance:26
+distance:24
+distance:20
+distance:24
+distance:25
+distance:22
+distance:21
+distance:23
+distance:23
+distance:22
+distance:24
+distance:24
+distance:24
+distance:25
+distance:23
+distance:21
+distance:23
+distance:27
+distance:22
+distance:23
+distance:22
+distance:25
+distance:25
+distance:24
+distance:22
+distance:25
+distance:21
+distance:23
+distance:23
+distance:22
+distance:22
+distance:26
+distance:21
+distance:22
+distance:27
+distance:25
+distance:25
+distance:20
+distance:24
+distance:25
+distance:22
+distance:24
+distance:24
+distance:22
+distance:24
+distance:22
+distance:27
+distance:19
+distance:23
+distance:27
+distance:23
+distance:24
+distance:24
+distance:24
+distance:22
+distance:25
+distance:24
+distance:22
+distance:22
+distance:22
+distance:24
+distance:24
+distance:24
+distance:22
+distance:23
+distance:23
+distance:22
+distance:23
+distance:21
+distance:24
+distance:22
+distance:22
+distance:22
+distance:21
+distance:23
+distance:26
+distance:25
+distance:22
+distance:23
+distance:24
+distance:22
+distance:22
+distance:22
+distance:22
+distance:26
+distance:21
+distance:22
+distance:21
+distance:22
+distance:22
+distance:22
+distance:21
+distance:21
+distance:21
+distance:21
+distance:24
+distance:23
+distance:26
+distance:24
+distance:21
+distance:24
+distance:26
+distance:24
+distance:23
+distance:25
+distance:20
+distance:23
+distance:24
+distance:20
+distance:23
+distance:21
+distance:23
+distance:23
+distance:23
+distance:22
+distance:22
+distance:21
+distance:23
+distance:22
+distance:22
+distance:23
+distance:24
+distance:24
+distance:23
+distance:26
+distance:23
+distance:24
+distance:21
+distance:24
+distance:24
+distance:21
+distance:23
+distance:23
+distance:25
+distance:21
+distance:23
+distance:23
+distance:23
+distance:25
+distance:23
+distance:19
+distance:21
+distance:24
+distance:21
+distance:21
+distance:22
+distance:25
+distance:20
+distance:22
+distance:26
+distance:23
+distance:25
+distance:24
+distance:20
+distance:20
+distance:25
+distance:24
+distance:25
+distance:25
+distance:24
+distance:25
+distance:24
+distance:23
+distance:23
+distance:25
+distance:24
+distance:24
+distance:22
+distance:23
+distance:24
+distance:19
+distance:23
+distance:20
+distance:22
+distance:23
+distance:19
+distance:19
+distance:26
+distance:25
+distance:23
+distance:25
+distance:22
+distance:23
+distance:21
+distance:24
+distance:21
+distance:22
+distance:24
+distance:25
+distance:25
+distance:25
+distance:24
+distance:24
+distance:25
+distance:27
+distance:21
+distance:21
+distance:26
+distance:24
+distance:23
+distance:22
+distance:23
+distance:23
+distance:20
+distance:21
+distance:21
+distance:22
+distance:26
+distance:25
+distance:24
+distance:26
+distance:23
+distance:27
+distance:24
+distance:20
+distance:23
+distance:26
+distance:24
+distance:22
+distance:21
+distance:24
+distance:24
+distance:27
+distance:25
+distance:22
+distance:25
+distance:20
+distance:21
+distance:25
+distance:21
+distance:22
+distance:23
+distance:19
+distance:24
+distance:25
+distance:25
+distance:24
+distance:23
+distance:23
+distance:24
+distance:24
+distance:25
+distance:25
+distance:25
+distance:25
+distance:24
+distance:26
+distance:20
+distance:25
+distance:22
+distance:24
+distance:23
+distance:20
+distance:23
+distance:20
+distance:20
+distance:25
+distance:23
+distance:26
+distance:22
+distance:21
+distance:21
+distance:25
+distance:22
+distance:22
+distance:22
+distance:22
+distance:22
+distance:21
+distance:25
+distance:22
+distance:23
+distance:23
+distance:21
+distance:20
+distance:23
+distance:23
+distance:20
+distance:27
+distance:23
+distance:21
+distance:23
+distance:24
+distance:25
+distance:25
+distance:24
+distance:23
+distance:25
+distance:25
+distance:20
+distance:21
+distance:23
+distance:22
+distance:24
+distance:21
+distance:24
+distance:19
+distance:25
+distance:23
+distance:24
+distance:27
+distance:24
+distance:20
+distance:23
+distance:22
+distance:24
+distance:24
+distance:24
+distance:24
+distance:20
+distance:22
+distance:22
+distance:22
+distance:25
+distance:22
+distance:23
+distance:22
+distance:22
+distance:20
+distance:26
+distance:20
+distance:23
+distance:24
+distance:23
+distance:23
+distance:22
+distance:21
+distance:22
+distance:23
+distance:20
+distance:24
+distance:23
+distance:23
+distance:25
+distance:25
+distance:23
+distance:25
+distance:26
+distance:19
+distance:24
+distance:23
+distance:24
+distance:25
+distance:21
+distance:23
+distance:25
+distance:24
+distance:23
+distance:22
+distance:24
+distance:19
+distance:22
+distance:21
+distance:21
+distance:22
+distance:23
+distance:24
+distance:26
+distance:19
+distance:25
+distance:22
+distance:22
+distance:23
+distance:22
+distance:24
+distance:20
+distance:21
+distance:23
+distance:23
+distance:26
+distance:24
+distance:22
+distance:23
+distance:26
+distance:25
+distance:23
+distance:23
+distance:21
+distance:22
+distance:23
+distance:25
+distance:21
+distance:25
+distance:23
+distance:22
+distance:21
+distance:24
+distance:23
+distance:24
+distance:24
+distance:23
+distance:22
+distance:24
+distance:25
+distance:20
+distance:21
+distance:22
+distance:24
+distance:24
+distance:24
+distance:21
+distance:23
+distance:23
+distance:22
+distance:21
+distance:23
+distance:24
+distance:21
+distance:24
+distance:26
+distance:23
+distance:25
+distance:20
+distance:22
+distance:24
+distance:24
+distance:26
+distance:23
+distance:25
+distance:24
+distance:26
+distance:22
+distance:23
+distance:24
+distance:21
+distance:25
+distance:25
+distance:23
+distance:20
+distance:26
+distance:24
+distance:24
+distance:22
+distance:24
+distance:25
+distance:25
+distance:22
+distance:22
+distance:25
+distance:21
+distance:25
+distance:26
+distance:24
+distance:24
+distance:23
+distance:26
+distance:20
+distance:22
+distance:23
+distance:24
+distance:23
+distance:25
+distance:23
+distance:22
+distance:25
+distance:24
+distance:21
+distance:23
+distance:24
+distance:23
+distance:26
+distance:21
+distance:22
+distance:26
+distance:22
+distance:24
+distance:23
+distance:24
+distance:27
+distance:24
+distance:23
+distance:26
+distance:24
+distance:24
+distance:22
+distance:22
+distance:23
+distance:24
+distance:23
+distance:24
+distance:22
+distance:25
+distance:22
+distance:23
+distance:24
+distance:21
+distance:22
+distance:23
+distance:24
+distance:24
+distance:26
+distance:25
+distance:22
+distance:23
+distance:24
+distance:23
+distance:24
+distance:23
+distance:23
+distance:21
+distance:22
+distance:23
+distance:27
+distance:23
+distance:27
+distance:23
+distance:25
+distance:24
+distance:22
+distance:23
+distance:24
+distance:22
+distance:24
+distance:26
+distance:24
+distance:23
+distance:20
+distance:24
+distance:24
+distance:20
+distance:23
+distance:23
+distance:20
+distance:22
+distance:23
+distance:23
+distance:22
+distance:22
+distance:23
+distance:23
+distance:22
+distance:23
+distance:22
+distance:23
+distance:24
+distance:21
+distance:22
+distance:21
+distance:23
+distance:24
+distance:26
+distance:21
+distance:24
+distance:25
+distance:24
+distance:23
+distance:24
+distance:23
+distance:21
+distance:25
+distance:25
+distance:23
+distance:24
+distance:23
+distance:23
+distance:23
+distance:22
+distance:22
+distance:23
+distance:23
+distance:26
+distance:24
+distance:24
+distance:22
+distance:23
+distance:23
+distance:24
+distance:24
+distance:22
+distance:23
+distance:24
+distance:22
+distance:22
+distance:24
+distance:23
+distance:21
+distance:21
+distance:22
+distance:24
+distance:24
+distance:21
+distance:25
+distance:22
+distance:23
+distance:21
+distance:24
+distance:23
+distance:24
+distance:23
+distance:25
+distance:19
+distance:22
+distance:24
+distance:25
+distance:24
+distance:24
+distance:22
+distance:21
+distance:23
+distance:24
+distance:22
+distance:20
+distance:22
+distance:22
+distance:23
+distance:20
+distance:22
+distance:23
+distance:22
+distance:23
+distance:22
+distance:20
+distance:23
+distance:19
+distance:21
+distance:23
+distance:23
+distance:21
+distance:23
+distance:22
+distance:24
+distance:21
+distance:19
+distance:20
+distance:24
+distance:24
+distance:22
+distance:22
+distance:23
+distance:20
+distance:24
+distance:23
+distance:22
+distance:23
+distance:24
+distance:23
+distance:22
+distance:22
+distance:21
+distance:23
+distance:21
+distance:24
+distance:22
+distance:23
+distance:22
+distance:26
+distance:20
+distance:24
+distance:25
+distance:22
+distance:24
+distance:19
+distance:21
+distance:23
+distance:23
+distance:20
+distance:24
+distance:20
+distance:21
+distance:21
+distance:22
+distance:23
+distance:20
+distance:21
+distance:23
+distance:23
+distance:25
+distance:22
+distance:21
+distance:23
+distance:22
+distance:24
+distance:24
+distance:22
+distance:22
+distance:25
+distance:22
+distance:24
+distance:21
+distance:21
+distance:19
+distance:23
+distance:24
+distance:24
+distance:22
+distance:22
+distance:24
+distance:23
+distance:25
+distance:24
+distance:20
+distance:25
+distance:26
+distance:19
+distance:22
+distance:21
+distance:24
+distance:24
+distance:25
+distance:23
+distance:23
+distance:25
+distance:22
+distance:19
+distance:20
+distance:23
+distance:22
+distance:21
+distance:24
+distance:24
+distance:24
+distance:20
+distance:23
+distance:23
+distance:21
+distance:24
+distance:21
+distance:22
+distance:23
+distance:23
+distance:24
+distance:22
+distance:24
+distance:20
+distance:23
+distance:23
+distance:23
+distance:21
+distance:22
+distance:20
+distance:21
+distance:22
+distance:22
+distance:23
+distance:22
+distance:22
+distance:22
+distance:22
+distance:21
+distance:23
+distance:21
+distance:25
+distance:22
+distance:22
+distance:23
+distance:22
+distance:23
+distance:22
+distance:20
+distance:22
+distance:25
+distance:22
+distance:22
+distance:21
+distance:27
+distance:23
+distance:24
+distance:23
+distance:23
+distance:22
+distance:22
+distance:23
+distance:21
+distance:22
+distance:22
+distance:23
+distance:21
+distance:25
+distance:23
+distance:23
+distance:23
+distance:23
+distance:23
+distance:24
+distance:22
+distance:22
+distance:23
+distance:22
+distance:19
+distance:22
+distance:21
+distance:25
+distance:22
+distance:21
+distance:23
+distance:21
+distance:22
+distance:22
+distance:22
+distance:24
+distance:21
+distance:21
+distance:25
+distance:23
+distance:22
+distance:21
+distance:25
+distance:23
+distance:25
+distance:19
+distance:24
+distance:23
+distance:25
+distance:24
+distance:23
+distance:23
+distance:22
+distance:23
+distance:22
+distance:23
+distance:20
+distance:26
+distance:26
+distance:23
+distance:23
+distance:24
+distance:24
+distance:24
+distance:21
+distance:21
+distance:23
+distance:26
+distance:21
+distance:24
+distance:23
+distance:21
+distance:24
+distance:23
+distance:22
+distance:24
+distance:21
+distance:21
+distance:23
+distance:22
+distance:21
+distance:22
+distance:22
+distance:23
+distance:23
+distance:24
+distance:21
+distance:23
+distance:23
+distance:25
+distance:25
+distance:20
+distance:19
+distance:21
+distance:24
+distance:23
+distance:24
+distance:26
+distance:23
+distance:23
+distance:21
+distance:23
+distance:21
+distance:24
+distance:23
+distance:24
+distance:20
+distance:23
+distance:24
+distance:21
+distance:23
+distance:22
+distance:23
+distance:24
+distance:21
+distance:23
+distance:23
+distance:19
+distance:25
+distance:22
+distance:20
+distance:21
+distance:21
+distance:22
+distance:23
+distance:20
+distance:22
+distance:22
+distance:24
+distance:23
+distance:25
+distance:22
+distance:23
+distance:24
+distance:22
+distance:21
+distance:23
+distance:20
+distance:21
+distance:21
+distance:20
+distance:21
+distance:22
+distance:20
+distance:21
+distance:22
+distance:22
+distance:22
+distance:25
+distance:25
+distance:18
+distance:21
+distance:22
+distance:21
+distance:22
+distance:21
+distance:18
+distance:19
+distance:20
+distance:21
+distance:23
+distance:23
+distance:21
+distance:23
+distance:22
+distance:22
+distance:23
+distance:23
+distance:23
+distance:22
+distance:25
+distance:21
+distance:21
+distance:23
+distance:19
+distance:21
+distance:19
+distance:23
+distance:22
+distance:22
+distance:20
+distance:21
+distance:23
+distance:22
+distance:21
+distance:22
+distance:26
+distance:23
+distance:20
+distance:20
+distance:19
+distance:21
+distance:23
+distance:22
+distance:19
+distance:20
+distance:22
+distance:20
+distance:22
+distance:24
+distance:22
+distance:20
+distance:23
+distance:26
+distance:25
+distance:19
+distance:22
+distance:21
+distance:22
+distance:24
+distance:22
+distance:17
+distance:21
+distance:23
+distance:24
+distance:22
+distance:19
+distance:19
+distance:22
+distance:22
+distance:22
+distance:20
+distance:23
+distance:22
+distance:23
+distance:21
+distance:22
+distance:24
+distance:24
+distance:23
+distance:19
+distance:19
+distance:22
+distance:21
+distance:22
+distance:21
+distance:21
+distance:23
+distance:22
+distance:23
+distance:21
+distance:24
+distance:20
+distance:21
+distance:21
+distance:23
+distance:21
+distance:22
+distance:22
+distance:24
+distance:21
+distance:25
+distance:22
+distance:22
+distance:22
+distance:20
+distance:23
+distance:20
+distance:19
+distance:22
+distance:22
+distance:24
+distance:22
+distance:21
+distance:20
+distance:23
+distance:25
+distance:23
+distance:22
+distance:21
+distance:24
+distance:23
+distance:25
+distance:22
+distance:23
+distance:23
+distance:21
+distance:21
+distance:23
+distance:22
+distance:19
+distance:20
+distance:26
+distance:23
+distance:23
+distance:25
+distance:21
+distance:22
+distance:21
+distance:20
+distance:24
+distance:25
+distance:21
+distance:23
+distance:18
+distance:23
+distance:25
+distance:22
+distance:21
+distance:22
+distance:23
+distance:24
+distance:21
+distance:24
+distance:25
+distance:23
+distance:23
+distance:19
+distance:23
+distance:23
+distance:23
+distance:22
+distance:22
+distance:23
+distance:22
+distance:24
+distance:25
+distance:23
+distance:22
+distance:21
+distance:23
+distance:25
+distance:20
+distance:23
+distance:21
+distance:25
+distance:22
+distance:22
+distance:22
+distance:25
+distance:20
+distance:23
+distance:23
+distance:22
+distance:19
+distance:25
+distance:24
+distance:22
+distance:22
+distance:22
+distance:20
+distance:23
+distance:24
+distance:22
+distance:20
+distance:19
+distance:23
+distance:23
+distance:21
+distance:22
+distance:22
+distance:23
+distance:25
+distance:23
+distance:23
+distance:23
+distance:21
+distance:24
+distance:23
+distance:21
+distance:22
+distance:25
+distance:24
+distance:24
+distance:23
+distance:21
+distance:24
+distance:24
+distance:21
+distance:24
+distance:23
+distance:21
+distance:21
+distance:20
+distance:19
+distance:23
+distance:23
+distance:24
+distance:21
+distance:22
+distance:25
+distance:24
+distance:21
+distance:24
+distance:22
+distance:21
+distance:21
+distance:20
+distance:25
+distance:23
+distance:23
+distance:23
+distance:20
+distance:19
+distance:21
+distance:24
+distance:25
+distance:21
+distance:22
+distance:20
+distance:23
+distance:24
+distance:21
+distance:23
+distance:25
+distance:22
+distance:22
+distance:22
+distance:20
+distance:23
+distance:27
+distance:23
+distance:20
+distance:22
+distance:21
+distance:20
+distance:22
+distance:22
+distance:19
+distance:24
+distance:21
+distance:21
+distance:21
+distance:20
+distance:20
+distance:21
+distance:24
+distance:21
+distance:25
+distance:23
+distance:21
+distance:20
+distance:19
+distance:21
+distance:20
+distance:20
+distance:24
+distance:21
+distance:23
+distance:25
+distance:23
+distance:25
+distance:21
+distance:25
+distance:20
+distance:24
+distance:20
+distance:24
+distance:21
+distance:22
+distance:24
+distance:23
+distance:20
+distance:20
+distance:21
+distance:24
+distance:23
+distance:21
+distance:22
+distance:22
+distance:22
+distance:23
+distance:24
+distance:20
+distance:22
+distance:21
+distance:24
+distance:24
+distance:23
+distance:22
+distance:25
+distance:22
+distance:22
+distance:21
+distance:23
+distance:23
+distance:22
+distance:24
+distance:23
+distance:24
+distance:19
+distance:22
+distance:24
+distance:20
+distance:22
+distance:18
+distance:21
+distance:23
+distance:21
+distance:22
+distance:22
+distance:25
+distance:23
+distance:21
+distance:24
+distance:23
+distance:26
+distance:24
+distance:22
+distance:21
+distance:23
+distance:21
+distance:22
+distance:20
+distance:17
+distance:23
+distance:20
+distance:18
+distance:23
+distance:21
+distance:22
+distance:24
+distance:22
+distance:21
+distance:22
+distance:21
+distance:22
+distance:25
+distance:23
+distance:23
+distance:22
+distance:22
+distance:25
+distance:22
+distance:24
+distance:18
+distance:23
+distance:23
+distance:21
+distance:22
+distance:26
+distance:21
+distance:23
+distance:20
+distance:23
+distance:24
+distance:22
+distance:21
+distance:22
+distance:24
+distance:21
+distance:26
+distance:22
+distance:23
+distance:22
+distance:26
+distance:24
+distance:23
+distance:23
+distance:24
+distance:22
+distance:25
+distance:20
+distance:22
+distance:24
+distance:21
+distance:21
+distance:21
+distance:26
+distance:23
+distance:20
+distance:21
+distance:26
+distance:23
+distance:23
+distance:22
+distance:23
+distance:23
+distance:26
+distance:23
+distance:22
+distance:24
+distance:21
+distance:23
+distance:21
+distance:19
+distance:21
+distance:22
+distance:19
+distance:24
+distance:24
+distance:22
+distance:22
+distance:24
+distance:21
+distance:23
+distance:21
+distance:23
+distance:23
+distance:22
+distance:22
+distance:20
+distance:22
+distance:23
+distance:22
+distance:21
+distance:26
+distance:20
+distance:21
+distance:19
+distance:22
+distance:26
+distance:20
+distance:25
+distance:21
+distance:21
+distance:22
+distance:21
+distance:23
+distance:20
+distance:24
+distance:26
+distance:22
+distance:25
+distance:23
+distance:24
+distance:22
+distance:24
+distance:22
+distance:23
+distance:23
+distance:22
+distance:23
+distance:23
+distance:25
+distance:24
+distance:22
+distance:22
+distance:22
+distance:21
+distance:27
+distance:22
+distance:22
+distance:21
+distance:23
+distance:23
+distance:23
+distance:22
+distance:23
+distance:25
+distance:22
+distance:25
+distance:22
+distance:22
+distance:22
+distance:25
+distance:22
+distance:23
+distance:24
+distance:23
+distance:23
+distance:23
+distance:22
+distance:28
+distance:23
+distance:21
+distance:23
+distance:22
+distance:23
+distance:25
+distance:22
+distance:23
+distance:23
+distance:21
+distance:22
+distance:25
+distance:23
+distance:21
+distance:22
+distance:25
+distance:19
+distance:23
+distance:24
+distance:21
+distance:22
+distance:24
+distance:22
+distance:21
+distance:24
+distance:22
+distance:22
+distance:23
+distance:21
+distance:20
+distance:21
+distance:21
+distance:23
+distance:22
+distance:27
+distance:24
+distance:22
+distance:22
+distance:22
+distance:22
+distance:25
+distance:25
+distance:22
+distance:24
+distance:21
+distance:26
+distance:24
+distance:24
+distance:22
+distance:21
+distance:23
+distance:23
+distance:25
+distance:22
+distance:20
+distance:24
+distance:21
+distance:25
+distance:21
+distance:22
+distance:23
+distance:22
+distance:24
+distance:23
+distance:24
+distance:24
+distance:21
+distance:23
+distance:23
+distance:22
+distance:22
+distance:20
+distance:24
+distance:23
+distance:22
+distance:23
+distance:22
+distance:23
+distance:24
+distance:22
+distance:24
+distance:20
+distance:21
+distance:24
+distance:25
+distance:26
+distance:22
+distance:25
+distance:22
+distance:22
+distance:21
+distance:20
+distance:22
+distance:23
+distance:22
+distance:24
+distance:21
+distance:21
+distance:24
+distance:22
+distance:24
+distance:22
+distance:24
+distance:23
+distance:25
+distance:23
+distance:23
+distance:23
+distance:21
+distance:23
+distance:23
+distance:22
+distance:23
+distance:23
+distance:21
+distance:19
+distance:19
+distance:22
+distance:24
+distance:24
+distance:23
+distance:24
+distance:23
+distance:22
+distance:24
+distance:21
+distance:20
+distance:20
+distance:25
+distance:22
+distance:21
+distance:25
+distance:22
+distance:23
+distance:22
+distance:23
+distance:23
+distance:22
+distance:23
+distance:24
+distance:22
+distance:24
+distance:21
+distance:22
+distance:23
+distance:22
+distance:21
+distance:21
+distance:22
+distance:21
+distance:19
+distance:22
+distance:25
+distance:24
+distance:23
+distance:22
+distance:25
+distance:22
+distance:20
+distance:24
+distance:23
+distance:22
+distance:22
+distance:22
+distance:23
+distance:21
+distance:23
+distance:26
+distance:22
+distance:24
+distance:24
+distance:25
+distance:22
+distance:22
+distance:24
+distance:24
+distance:24
+distance:25
+distance:23
+distance:21
+distance:25
+distance:23
+distance:21
+distance:21
+distance:25
+distance:23
+distance:23
+distance:23
+distance:23
+distance:24
+distance:24
+distance:24
+distance:21
+distance:23
+distance:25
+distance:25
+distance:24
+distance:21
+distance:22
+distance:22
+distance:23
+distance:21
+distance:22
+distance:20
+distance:23
+distance:24
+distance:23
+distance:25
+distance:22
+distance:23
+distance:21
+distance:23
+distance:22
+distance:24
+distance:24
+distance:23
+distance:24
+distance:22
+distance:23
+distance:22
+distance:26
+distance:22
+distance:22
+distance:20
+distance:20
+distance:24
+distance:26
+distance:26
+distance:19
+distance:22
+distance:25
+distance:23
+distance:22
+distance:22
+distance:20
+distance:25
+distance:21
+distance:23
+distance:23
+distance:19
+distance:21
+distance:23
+distance:24
+distance:24
+distance:22
+distance:23
+distance:22
+distance:22
+distance:24
+distance:23
+distance:24
+distance:22
+distance:22
+distance:22
+distance:23
+distance:23
+distance:22
+distance:23
+distance:23
+distance:23
+distance:20
+distance:24
+distance:27
+distance:23
+distance:23
+distance:22
+distance:22
+distance:23
+distance:22
+distance:22
+distance:23
+distance:19
+distance:25
+distance:24
+distance:21
+distance:23
+distance:23
+distance:23
+distance:21
+distance:24
+distance:23
+distance:24
+distance:24
+distance:25
+distance:25
+distance:22
+distance:23
+distance:27
+distance:24
+distance:24
+distance:21
+distance:20
+distance:21
+distance:21
+distance:22
+distance:19
+distance:23
+distance:21
+distance:21
+distance:26
+distance:23
+distance:20
+distance:22
+distance:22
+distance:22
+distance:23
+distance:24
+distance:22
+distance:24
+distance:21
+distance:24
+distance:23
+distance:24
+distance:23
+distance:25
+distance:22
+distance:22
+distance:21
+distance:25
+distance:24
+distance:22
+distance:22
+distance:26
+distance:24
+distance:20
+distance:24
+distance:25
+distance:21
+distance:20
+distance:21
+distance:25
+distance:22
+distance:22
+distance:25
+distance:23
+distance:24
+distance:24
+distance:24
+distance:19
+distance:23
+distance:21
+distance:22
+distance:21
+distance:23
+distance:21
+distance:24
+distance:24
+distance:23
+distance:22
+distance:25
+distance:24
+distance:21
+distance:24
+distance:24
+distance:24
+distance:21
+distance:24
+distance:22
+distance:24
+distance:24
+distance:23
+distance:23
+distance:25
+distance:20
+distance:21
+distance:23
+distance:22
+distance:21
+distance:22
+distance:26
+distance:23
+distance:21
+distance:22
+distance:21
+distance:22
+distance:24
+distance:22
+distance:24
+distance:23
+distance:22
+distance:23
+distance:22
+distance:21
+distance:24
+distance:23
+distance:23
+distance:21
+distance:26
+distance:22
+distance:24
+distance:24
+distance:24
+distance:22
+distance:24
+distance:19
+distance:21
+distance:25
+distance:24
+distance:22
+distance:22
+distance:26
+distance:23
+distance:22
+distance:21
+distance:19
+distance:24
+distance:20
+distance:25
+distance:21
+distance:25
+distance:23
+distance:23
+distance:23
+distance:23
+distance:24
+distance:23
+distance:24
+distance:24
+distance:20
+distance:23
+distance:22
+distance:22
+distance:24
+distance:22
+distance:24
+distance:23
+distance:22
+distance:21
+distance:27
+distance:21
+distance:24
+distance:19
+distance:22
+distance:21
+distance:22
+distance:24
+distance:25
+distance:22
+distance:22
+distance:19
+distance:23
+distance:22
+distance:22
+distance:21
+distance:21
+distance:23
+distance:21
+distance:24
+distance:21
+distance:22
+distance:24
+distance:22
+distance:23
+distance:21
+distance:24
+distance:23
+distance:22
+distance:22
+distance:24
+distance:21
+distance:22
+distance:19
+distance:23
+distance:23
+distance:24
+distance:24
+distance:20
+distance:24
+distance:21
+distance:25
+distance:25
+distance:23
+distance:20
+distance:19
+distance:25
+distance:24
+distance:23
+distance:23
+distance:22
+distance:22
+distance:23
+distance:21
+distance:23
+distance:21
+distance:24
+distance:23
+distance:24
+distance:22
+distance:24
+distance:24
+distance:23
+distance:23
+distance:24
+distance:21
+distance:24
+distance:21
+distance:24
+distance:19
+distance:24
+distance:26
+distance:24
+distance:21
+distance:21
+distance:23
+distance:23
+distance:25
+distance:24
+distance:23
+distance:24
+distance:18
+distance:24
+distance:24
+distance:23
+distance:24
+distance:26
+distance:19
+distance:23
+distance:24
+distance:25
+distance:22
+distance:21
+distance:21
+distance:21
+distance:21
+distance:24
+distance:24
+distance:23
+distance:25
+distance:22
+distance:24
+distance:24
+distance:22
+distance:21
+distance:24
+distance:24
+distance:24
+distance:23
+distance:25
+distance:22
+distance:22
+distance:23
+distance:25
+distance:23
+distance:24
+distance:23
+distance:23
+distance:18
+distance:25
+distance:21
+distance:25
+distance:26
+distance:23
+distance:21
+distance:19
+distance:25
+distance:22
+distance:26
+distance:20
+distance:24
+distance:23
+distance:23
+distance:23
+distance:21
+distance:23
+distance:22
+distance:27
+distance:23
+distance:21
+distance:23
+distance:25
+distance:27
+distance:21
+distance:24
+distance:22
+distance:22
+distance:22
+distance:20
+distance:20
+distance:24
+distance:21
+distance:24
+distance:22
+distance:25
+distance:23
+distance:25
+distance:23
+distance:25
+distance:22
+distance:22
+distance:22
+distance:25
+distance:24
+distance:20
+distance:24
+distance:22
+distance:20
+distance:25
+distance:24
+distance:24
+distance:21
+distance:22
+distance:20
+distance:23
+distance:26
+distance:22
+distance:21
+distance:24
+distance:25
+distance:23
+distance:23
+distance:23
+distance:20
+distance:26
+distance:22
+distance:22
+distance:23
+distance:21
+distance:21
+distance:24
+distance:23
+distance:24
+distance:24
+distance:22
+distance:22
+distance:25
+distance:25
+distance:23
+distance:23
+distance:25
+distance:21
+distance:27
+distance:21
+distance:24
+distance:20
+distance:24
+distance:22
+distance:25
+distance:26
+distance:23
+distance:25
+distance:27
+distance:25
+distance:21
+distance:22
+distance:21
+distance:25
+distance:23
+distance:22
+distance:23
+distance:23
+distance:22
+distance:20
+distance:19
+distance:21
+distance:26
+distance:24
+distance:23
+distance:23
+distance:22
+distance:22
+distance:24
+distance:20
+distance:23
+distance:23
+distance:24
+distance:20
+distance:21
+distance:25
+distance:22
+distance:22
+distance:22
+distance:20
+distance:23
+distance:25
+distance:24
+distance:22
+distance:26
+distance:23
+distance:24
+distance:22
+distance:26
+distance:23
+distance:23
+distance:25
+distance:26
+distance:21
+distance:22
+distance:21
+distance:26
+distance:22
+distance:23
+distance:22
+distance:22
+distance:24
+distance:24
+distance:24
+distance:23
+distance:24
+distance:23
+distance:24
+distance:24
+distance:27
+distance:23
+distance:25
+distance:25
+distance:23
+distance:21
+distance:21
+distance:24
+distance:23
+distance:26
+distance:25
+distance:22
+distance:23
+distance:21
+distance:22
+distance:23
+distance:23
+distance:24
+distance:22
+distance:23
+distance:23
+distance:22
+distance:24
+distance:22
+distance:24
+distance:24
+distance:23
+distance:22
+distance:25
+distance:26
+distance:25
+distance:22
+distance:22
+distance:21
+distance:24
+distance:22
+distance:23
+distance:24
+distance:22
+distance:23
+distance:25
+distance:24
+distance:25
+distance:24
+distance:23
+distance:23
+distance:21
+distance:24
+distance:22
+distance:22
+distance:25
+distance:22
+distance:26
+distance:23
+distance:24
+distance:25
+distance:23
+distance:23
+distance:18
+distance:22
+distance:24
+distance:24
+distance:20
+distance:24
+distance:23
+distance:25
+distance:21
+distance:25
+distance:24
+distance:24
+distance:23
+distance:19
+distance:22
+distance:23
+distance:23
+distance:23
+distance:20
+distance:25
+distance:25
+distance:24
+distance:20
+distance:24
+distance:25
+distance:20
+distance:22
+distance:22
+distance:23
+distance:22
+distance:23
+distance:24
+distance:22
+distance:24
+distance:26
+distance:23
+distance:22
+distance:22
+distance:25
+distance:22
+distance:25
+distance:24
+distance:23
+distance:23
+distance:24
+distance:22
+distance:26
+distance:22
+distance:25
+distance:23
+distance:22
+distance:22
+distance:23
+distance:23
+distance:24
+distance:23
+distance:23
+distance:21
+distance:23
+distance:26
+distance:22
+distance:25
+distance:22
+distance:20
+distance:27
+distance:23
+distance:27
+distance:23
+distance:23
+distance:25
+distance:26
+distance:20
+distance:23
+distance:23
+distance:24
+distance:23
+distance:23
+distance:24
+distance:22
+distance:22
+distance:23
+distance:24
+distance:21
+distance:22
+distance:25
+distance:21
+distance:23
+distance:23
+distance:22
+distance:21
+distance:24
+distance:23
+distance:21
+distance:20
+distance:23
+distance:25
+distance:24
+distance:24
+distance:22
+distance:23
+distance:23
+distance:21
+distance:21
+distance:22
+distance:25
+distance:24
+distance:23
+distance:20
+distance:21
+distance:20
+distance:22
+distance:20
+distance:26
+distance:23
+distance:23
+distance:22
+distance:23
+distance:22
+distance:22
+distance:25
+distance:20
+distance:22
+distance:20
+distance:23
+distance:22
+distance:24
+distance:25
+distance:23
+distance:22
+distance:20
+distance:21
+distance:23
+distance:22
+distance:24
+distance:24
+distance:23
+distance:22
+distance:22
+distance:26
+distance:25
+distance:21
+distance:26
+distance:24
+distance:22
+distance:21
+distance:22
+distance:22
+distance:22
+distance:22
+distance:23
+distance:23
+distance:21
+distance:23
+distance:25
+distance:19
+distance:24
+distance:23
+distance:22
+distance:22
+distance:25
+distance:23
+distance:24
+distance:21
+distance:23
+distance:21
+distance:23
+distance:22
+distance:22
+distance:22
+distance:24
+distance:23
+distance:24
+distance:24
+distance:22
+distance:20
+distance:24
+distance:21
+distance:24
+distance:20
+distance:21
+distance:24
+distance:24
+distance:23
+distance:27
+distance:24
+distance:23
+distance:24
+distance:23
+distance:25
+distance:23
+distance:24
+distance:21
+distance:23
+distance:21
+distance:20
+distance:22
+distance:24
+distance:25
+distance:23
+distance:22
+distance:25
+distance:18
+distance:25
+distance:24
+distance:23
+distance:25
+distance:24
+distance:21
+distance:23
+distance:24
+distance:21
+distance:25
+distance:21
+distance:23
+distance:23
+distance:22
+distance:24
+distance:20
+distance:24
+distance:19
+distance:25
+distance:23
+distance:21
+distance:23
+distance:23
+distance:20
+distance:24
+distance:21
+distance:22
+distance:18
+distance:22
+distance:22
+distance:24
+distance:23
+distance:21
+distance:22
+distance:24
+distance:19
+distance:22
+distance:21
+distance:23
+distance:22
+distance:23
+distance:23
+distance:23
+distance:25
+distance:23
+distance:24
+distance:23
+distance:21
+distance:24
+distance:25
+distance:20
+distance:24
+distance:24
+distance:22
+distance:22
+distance:26
+distance:24
+distance:23
+distance:20
+distance:24
+distance:22
+distance:21
+distance:24
+distance:24
+distance:22
+distance:22
+distance:20
+distance:24
+distance:19
+distance:25
+distance:23
+distance:20
+distance:21
+distance:24
+distance:25
+distance:22
+distance:22
+distance:19
+distance:23
+distance:21
+distance:24
+distance:25
+distance:21
+distance:23
+distance:21
+distance:21
+distance:22
+distance:22
+distance:23
+distance:21
+distance:23
+distance:22
+distance:24
+distance:24
+distance:19
+distance:23
+distance:25
+distance:23
+distance:22
+distance:23
+distance:23
+distance:23
+distance:24
+distance:23
+distance:25
+distance:22
+distance:22
+distance:22
+distance:22
+distance:24
+distance:22
+distance:21
+distance:23
+distance:20
+distance:21
+distance:24
+distance:25
+distance:25
+distance:20
+distance:22
+distance:24
+distance:21
+distance:24
+distance:24
+distance:21
+distance:22
+distance:21
+distance:26
+distance:21
+distance:21
+distance:22
+distance:26
+distance:18
+distance:22
+distance:21
+distance:21
+distance:24
+distance:22
+distance:27
+distance:23
+distance:23
+distance:21
+distance:18
+distance:25
+distance:23
+distance:22
+distance:21
+distance:24
+distance:20
+distance:24
+distance:20
+distance:24
+distance:24
+distance:23
+distance:25
+distance:23
+distance:21
+distance:24
+distance:22
+distance:20
+distance:20
+distance:22
+distance:22
+distance:23
+distance:21
+distance:23
+distance:21
+distance:22
+distance:23
+distance:23
+distance:23
+distance:23
+distance:22
+distance:21
+distance:26
+distance:24
+distance:22
+distance:24
+distance:23
+distance:22
+distance:23
+distance:25
+distance:26
+distance:19
+distance:24
+distance:24
+distance:22
+distance:19
+distance:22
+distance:24
+distance:24
+distance:25
+distance:20
+distance:24
+distance:20
+distance:20
+distance:22
+distance:24
+distance:20
+distance:24
+distance:23
+distance:23
+distance:22
+distance:26
+distance:22
+distance:20
+distance:24
+distance:21
+distance:24
+distance:27
+distance:22
+distance:24
+distance:24
+distance:26
+distance:22
+distance:24
+distance:21
+distance:25
+distance:24
+distance:23
+distance:23
+distance:21
+distance:23
+distance:24
+distance:23
+distance:21
+distance:20
+distance:25
+distance:22
+distance:20
+distance:25
+distance:19
+distance:26
+distance:21
+distance:24
+distance:24
+distance:21
+distance:23
+distance:21
+distance:22
+distance:24
+distance:23
+distance:24
+distance:22
+distance:20
+distance:22
+distance:23
+distance:27
+distance:21
+distance:21
+distance:23
+distance:21
+distance:25
+distance:25
+distance:24
+distance:22
+distance:23
+distance:23
+distance:22
+distance:24
+distance:23
+distance:23
+distance:24
+distance:20
+distance:24
+distance:26
+distance:24
+distance:23
+distance:25
+distance:24
+distance:24
+distance:23
+distance:23
+distance:21
+distance:21
+distance:20
+distance:23
+distance:24
+distance:21
+distance:22
+distance:22
+distance:24
+distance:26
+distance:23
+distance:22
+distance:22
+distance:23
+distance:22
+distance:24
+distance:24
+distance:21
+distance:25
+distance:23
+distance:24
+distance:26
+distance:22
+distance:23
+distance:21
+distance:24
+distance:21
+distance:23
+distance:21
+distance:20
+distance:24
+distance:22
+distance:22
+distance:21
+distance:22
+distance:21
+distance:21
+distance:21
+distance:23
+distance:20
+distance:23
+distance:25
+distance:23
+distance:24
+distance:20
+distance:23
+distance:23
+distance:22
+distance:27
+distance:26
+distance:22
+distance:24
+distance:23
+distance:20
+distance:25
+distance:22
+distance:24
+distance:23
+distance:21
+distance:23
+distance:21
+distance:23
+distance:20
+distance:22
+distance:22
+distance:23
+distance:22
+distance:22
+distance:22
+distance:23
+distance:21
+distance:25
+distance:23
+distance:23
+distance:23
+distance:24
+distance:25
+distance:24
+distance:22
+distance:20
+distance:21
+distance:18
+distance:23
+distance:25
+distance:18
+distance:20
+distance:22
+distance:25
+distance:22
+distance:21
+distance:19
+distance:26
+distance:21
+distance:22
+distance:20
+distance:19
+distance:21
+distance:22
+distance:22
+distance:25
+distance:20
+distance:24
+distance:23
+distance:18
+distance:23
+distance:23
+distance:21
+distance:23
+distance:26
+distance:20
+distance:22
+distance:23
+distance:22
+distance:26
+distance:27
+distance:24
+distance:22
+distance:22
+distance:24
+distance:23
+distance:22
+distance:22
+distance:21
+distance:23
+distance:20
+distance:24
+distance:16
+distance:22
+distance:26
+distance:22
+distance:23
+distance:21
+distance:24
+distance:22
+distance:24
+distance:22
+distance:20
+distance:24
+distance:21
+distance:20
+distance:23
+distance:23
+distance:24
+distance:18
+distance:24
+distance:23
+distance:21
+distance:22
+distance:22
+distance:20
+distance:24
+distance:22
+distance:22
+distance:21
+distance:23
+distance:22
+distance:22
+distance:22
+distance:23
+distance:24
+distance:26
+distance:23
+distance:20
+distance:25
+distance:24
+distance:24
+distance:23
+distance:24
+distance:21
+distance:21
+distance:22
+distance:22
+distance:22
+distance:21
+distance:25
+distance:24
+distance:26
+distance:24
+distance:23
+distance:19
+distance:22
+distance:25
+distance:25
+distance:18
+distance:23
+distance:22
+distance:25
+distance:25
+distance:20
+distance:25
+distance:27
+distance:23
+distance:25
+distance:26
+distance:25
+distance:19
+distance:26
+distance:22
+distance:21
+distance:21
+distance:20
+distance:26
+distance:23
+distance:22
+distance:24
+distance:24
+distance:22
+distance:22
+distance:23
+distance:22
+distance:27
+distance:23
+distance:23
+distance:25
+distance:23
+distance:23
+distance:21
+distance:25
+distance:23
+distance:20
+distance:21
+distance:25
+distance:20
+distance:21
+distance:23
+distance:24
+distance:24
+distance:20
+distance:23
+distance:21
+distance:23
+distance:23
+distance:23
+distance:23
+distance:23
+distance:22
+distance:21
+distance:25
+distance:25
+distance:23
+distance:24
+distance:21
+distance:22
+distance:21
+distance:24
+distance:21
+distance:23
+distance:23
+distance:22
+distance:22
+distance:25
+distance:19
+distance:22
+distance:20
+distance:24
+distance:19
+distance:24
+distance:23
+distance:24
+distance:20
+distance:22
+distance:22
+distance:24
+distance:24
+distance:26
+distance:23
+distance:24
+distance:21
+distance:20
+distance:19
+distance:24
+distance:26
+distance:23
+distance:23
+distance:20
+distance:23
+distance:23
+distance:19
+distance:24
+distance:22
+distance:20
+distance:23
+distance:23
+distance:23
+distance:23
+distance:20
+distance:22
+distance:21
+distance:23
+distance:23
+distance:20
+distance:23
+distance:22
+distance:23
+distance:25
+distance:24
+distance:23
+distance:22
+distance:26
+distance:22
+distance:27
+distance:22
+distance:24
+distance:26
+distance:23
+distance:23
+distance:24
+distance:24
+distance:22
+distance:22
+distance:23
+distance:25
+distance:25
+distance:23
+distance:23
+distance:23
+distance:22
+distance:21
+distance:23
+distance:23
+distance:24
+distance:21
+distance:20
+distance:23
+distance:24
+distance:22
+distance:24
+distance:25
+distance:25
+distance:20
+distance:23
+distance:24
+distance:23
+distance:23
+distance:24
+distance:23
+distance:24
+distance:22
+distance:24
+distance:20
+distance:25
+distance:22
+distance:24
+distance:23
+distance:24
+distance:20
+distance:24
+distance:21
+distance:21
+distance:23
+distance:22
+distance:25
+distance:23
+distance:25
+distance:21
+distance:22
+distance:21
+distance:22
+distance:22
+distance:22
+distance:22
+distance:23
+distance:24
+distance:21
+distance:26
+distance:20
+distance:23
+distance:22
+distance:24
+distance:21
+distance:23
+distance:21
+distance:20
+distance:22
+distance:22
+distance:22
+distance:22
+distance:22
+distance:19
+distance:23
+distance:22
+distance:20
+distance:24
+distance:20
+distance:20
+distance:22
+distance:22
+distance:21
+distance:24
+distance:22
+distance:24
+distance:24
+distance:23
+distance:24
+distance:22
+distance:22
+distance:23
+distance:22
+distance:21
+distance:22
+distance:23
+distance:22
+distance:22
+distance:20
+distance:24
+distance:22
+distance:21
+distance:21
+distance:25
+distance:24
+distance:22
+distance:19
+distance:21
+distance:22
+distance:23
+distance:24
+distance:22
+distance:23
+distance:27
+distance:23
+distance:25
+distance:20
+distance:26
+distance:20
+distance:20
+distance:23
+distance:25
+distance:23
+distance:26
+distance:22
+distance:23
+distance:24
+distance:24
+distance:23
+distance:24
+distance:26
+distance:21
+distance:23
+distance:20
+distance:21
+distance:23
+distance:21
+distance:27
+distance:23
+distance:23
+distance:26
+distance:21
+distance:24
+distance:22
+distance:26
+distance:22
+distance:25
+distance:22
+distance:24
+distance:23
+distance:21
+distance:20
+distance:23
+distance:24
+distance:22
+distance:25
+distance:22
+distance:22
+distance:22
+distance:22
+distance:22
+distance:24
+distance:21
+distance:23
+distance:22
+distance:22
+distance:23
+distance:24
+distance:22
+distance:24
+distance:26
+distance:23
+distance:24
+distance:23
+distance:24
+distance:23
+distance:25
+distance:20
+distance:23
+distance:21
+distance:21
+distance:26
+distance:25
+distance:23
+distance:25
+distance:21
+distance:20
+distance:23
+distance:25
+distance:21
+distance:23
+distance:21
+distance:22
+distance:24
+distance:22
+distance:25
+distance:22
+distance:25
+distance:23
+distance:25
+distance:22
+distance:22
+distance:24
+distance:23
+distance:23
+distance:24
+distance:21
+distance:24
+distance:21
+distance:24
+distance:24
+distance:23
+distance:25
+distance:24
+distance:21
+distance:20
+distance:22
+distance:22
+distance:19
+distance:24
+distance:24
+distance:18
+distance:24
+distance:26
+distance:23
+distance:24
+distance:22
+distance:21
+distance:23
+distance:23
+distance:27
+distance:24
+distance:22
+distance:23
+distance:22
+distance:26
+distance:24
+distance:24
+distance:22
+distance:21
+distance:24
+distance:22
+distance:26
+distance:25
+distance:20
+distance:22
+distance:26
+distance:23
+distance:20
+distance:24
+distance:22
+distance:24
+distance:24
+distance:21
+distance:25
+distance:22
+distance:23
+distance:26
+distance:21
+distance:24
+distance:24
+distance:20
+distance:22
+distance:23
+distance:22
+distance:20
+distance:26
+distance:24
+distance:22
+distance:20
+distance:23
+distance:23
+distance:25
+distance:22
+distance:21
+distance:24
+distance:22
+distance:24
+distance:25
+distance:22
+distance:24
+distance:21
+distance:24
+distance:22
+distance:25
+distance:26
+distance:22
+distance:17
+distance:22
+distance:23
+distance:24
+distance:23
+distance:23
+distance:23
+distance:23
+distance:23
+distance:22
+distance:24
+distance:23
+distance:24
+distance:23
+distance:23
+distance:25
+distance:23
+distance:24
+distance:24
+distance:22
+distance:26
+distance:25
+distance:25
+distance:22
+distance:23
+distance:22
+distance:20
+distance:22
+distance:21
+distance:20
+distance:25
+distance:21
+distance:24
+distance:25
+distance:24
+distance:22
+distance:26
+distance:23
+distance:23
+distance:23
+distance:23
+distance:20
+distance:23
+distance:22
+distance:24
+distance:23
+distance:21
+distance:24
+distance:27
+distance:22
+distance:21
+distance:23

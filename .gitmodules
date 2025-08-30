@@ -1,7 +1,18 @@
 [submodule "components/Chassis"]
 	path = components/Chassis
 	url = https://github.com/teruyamato0731/Chassis.git
-[submodule "components/esp32-I2Cbus"]
-	path = components/esp32-I2Cbus
-	url = https://github.com/2025-SSR-Team5/esp32-I2Cbus
-	branch = master
+[submodule "components/Stepper-STM32"]
+	path = components/Stepper-STM32
+	url = https://github.com/2025-SSR-Team5/Stepper-STM32.git
+[submodule "components/ESP32-SG90"]
+	path = components/ESP32-SG90
+	url = https://github.com/2025-SSR-Team5/Esp32_Sg90.git
+[submodule "components/vl53l1x-arduino"]
+	path = components/vl53l1x-arduino
+	url = https://github.com/2025-SSR-Team5/vl53l1x-arduino.git
+[submodule "components/ps3_controller_host"]
+	path = components/ps3_controller_host
+	url = https://github.com/2025-SSR-Team5/ps3_controller_host.git
+[submodule "components/ESP32Servo"]
+	path = components/ESP32Servo
+	url = https://github.com/2025-SSR-Team5/ESP32Servo.git

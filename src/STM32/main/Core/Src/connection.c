@@ -6,6 +6,7 @@
  */
 
 #include "initial_operation.h"
+#include "connection.h"
 extern I2C_HandleTypeDef hi2c1;
 
 HAL_StatusTypeDef do_instruction(uint8_t devstat){
