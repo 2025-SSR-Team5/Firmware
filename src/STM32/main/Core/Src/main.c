@@ -118,10 +118,10 @@ int main(void)
 	  HAL_Delay(100);
 	  */
 	  do_instruction(0);
-	  if(nack_count >= 10){
-		  HAL_NVIC_SystemReset();
-	  }
-	  //HAL_Delay(10);
+	  //if(nack_count >= 10){
+		  //HAL_NVIC_SystemReset();
+	  //}
+	  HAL_Delay(10);
 
     /* USER CODE END WHILE */
 

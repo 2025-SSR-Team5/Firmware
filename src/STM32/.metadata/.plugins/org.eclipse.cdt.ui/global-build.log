@@ -604,3 +604,106 @@ Finished building: default.size.stdout
  
 Finished building: main.list
  
+15:16:11 **** Incremental Build of configuration Debug for project main ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/connection.c" -mcpu=cortex-m0plus -DDEBUG -DSTM32C011x4 -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -I../Core/Src -I"D:/Firmware/src/STM32/main/Core/Src" -I"D:/Firmware/src/STM32/main/Core/Inc" -include../Core/Inc/connection.h -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/connection.d" -MT"Core/Src/connection.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/connection.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -DDEBUG -DSTM32C011x4 -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -I../Core/Src -I"D:/Firmware/src/STM32/main/Core/Src" -I"D:/Firmware/src/STM32/main/Core/Inc" -include../Core/Inc/connection.h -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stepper.c" -mcpu=cortex-m0plus -DDEBUG -DSTM32C011x4 -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -I../Core/Src -I"D:/Firmware/src/STM32/main/Core/Src" -I"D:/Firmware/src/STM32/main/Core/Inc" -include../Core/Inc/connection.h -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stepper.d" -MT"Core/Src/stepper.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stepper.o"
+arm-none-eabi-gcc "../Core/Src/stm32c0xx_hal_msp.c" -mcpu=cortex-m0plus -DDEBUG -DSTM32C011x4 -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -I../Core/Src -I"D:/Firmware/src/STM32/main/Core/Src" -I"D:/Firmware/src/STM32/main/Core/Inc" -include../Core/Inc/connection.h -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32c0xx_hal_msp.d" -MT"Core/Src/stm32c0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32c0xx_hal_msp.o"
+arm-none-eabi-gcc -o "main.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\Firmware\src\STM32\main\STM32C011F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-size  main.elf 
+arm-none-eabi-objdump -h -S main.elf  > "main.list"
+   text	   data	    bss	    dec	    hex	filename
+  14792	     92	   2124	  17008	   4270	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+15:16:33 **** Incremental Build of configuration Debug for project main ****
+make -j8 all 
+arm-none-eabi-size  main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14792	     92	   2124	  17008	   4270	main.elf
+Finished building: default.size.stdout
+ 
+15:19:50 **** Incremental Build of configuration Debug for project main ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -DDEBUG -DSTM32C011x4 -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -I../Core/Src -I"D:/Firmware/src/STM32/main/Core/Src" -I"D:/Firmware/src/STM32/main/Core/Inc" -include../Core/Inc/connection.h -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "main.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\Firmware\src\STM32\main\STM32C011F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-size  main.elf 
+arm-none-eabi-objdump -h -S main.elf  > "main.list"
+   text	   data	    bss	    dec	    hex	filename
+  14748	     92	   2124	  16964	   4244	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+15:24:43 **** Incremental Build of configuration Debug for project main ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/connection.c" -mcpu=cortex-m0plus -DDEBUG -DSTM32C011x4 -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -I../Core/Src -I"D:/Firmware/src/STM32/main/Core/Src" -I"D:/Firmware/src/STM32/main/Core/Inc" -include../Core/Inc/connection.h -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/connection.d" -MT"Core/Src/connection.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/connection.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -DDEBUG -DSTM32C011x4 -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -I../Core/Src -I"D:/Firmware/src/STM32/main/Core/Src" -I"D:/Firmware/src/STM32/main/Core/Inc" -include../Core/Inc/connection.h -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "main.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\Firmware\src\STM32\main\STM32C011F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-size  main.elf 
+arm-none-eabi-objdump -h -S main.elf  > "main.list"
+   text	   data	    bss	    dec	    hex	filename
+  14760	     92	   2124	  16976	   4250	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+15:26:52 **** Incremental Build of configuration Debug for project main ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/connection.c" -mcpu=cortex-m0plus -DDEBUG -DSTM32C011x4 -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -I../Core/Src -I"D:/Firmware/src/STM32/main/Core/Src" -I"D:/Firmware/src/STM32/main/Core/Inc" -include../Core/Inc/connection.h -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/connection.d" -MT"Core/Src/connection.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/connection.o"
+arm-none-eabi-gcc -o "main.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\Firmware\src\STM32\main\STM32C011F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-size  main.elf 
+arm-none-eabi-objdump -h -S main.elf  > "main.list"
+   text	   data	    bss	    dec	    hex	filename
+  14756	     92	   2124	  16972	   424c	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+15:31:07 **** Incremental Build of configuration Debug for project main ****
+make -j8 all 
+arm-none-eabi-g++ "../Core/Src/connection.c" -mcpu=cortex-m0plus -DDEBUG -DSTM32C011x4 -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -I../Core/Src -I"D:/Firmware/src/STM32/main/Core/Src" -I"D:/Firmware/src/STM32/main/Core/Inc" -include../Core/Inc/connection.h -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/connection.d" -MT"Core/Src/connection.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/connection.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -DDEBUG -DSTM32C011x4 -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -I../Core/Src -I"D:/Firmware/src/STM32/main/Core/Src" -I"D:/Firmware/src/STM32/main/Core/Inc" -include../Core/Inc/connection.h -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "main.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\Firmware\src\STM32\main\STM32C011F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-size  main.elf 
+arm-none-eabi-objdump -h -S main.elf  > "main.list"
+   text	   data	    bss	    dec	    hex	filename
+  14760	     92	   2124	  16976	   4250	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+15:40:40 **** Incremental Build of configuration Debug for project main ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -DDEBUG -DSTM32C011x4 -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -I../Core/Src -I"D:/Firmware/src/STM32/main/Core/Src" -I"D:/Firmware/src/STM32/main/Core/Inc" -include../Core/Inc/connection.h -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "main.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\Firmware\src\STM32\main\STM32C011F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: main.elf
+ 
+arm-none-eabi-size  main.elf 
+arm-none-eabi-objdump -h -S main.elf  > "main.list"
+   text	   data	    bss	    dec	    hex	filename
+  14760	     92	   2124	  16976	   4250	main.elf
+Finished building: default.size.stdout
+ 
+Finished building: main.list
+ 
+15:41:53 **** Incremental Build of configuration Debug for project main ****
+make -j8 all 
+arm-none-eabi-size  main.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14760	     92	   2124	  16976	   4250	main.elf
+Finished building: default.size.stdout
+ 

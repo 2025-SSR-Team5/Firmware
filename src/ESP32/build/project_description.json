@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "esp32",
-    "project_version":    "a4e874f-dirty",
+    "project_version":    "4000970-dirty",
     "project_path":       "D:/Firmware/src/ESP32",
     "idf_path":           "D:/Espressif/frameworks/esp-idf-v5.3.1",
     "build_dir":          "D:/Firmware/src/ESP32/build",

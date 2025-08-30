@@ -18,9 +18,9 @@ int nack_count = 0;
 HAL_StatusTypeDef do_instruction(uint8_t devstat){
 	uint8_t instruction;
 	HAL_StatusTypeDef result = HAL_ERROR;
+	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);
 
 	if(HAL_I2C_Slave_Receive(&hi2c1,&instruction, 1, HAL_MAX_DELAY) == HAL_OK){
-		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);
 		switch (instruction){
 		case 0x00 :
 			result = Check_I2C_to_ESP32(devstat);

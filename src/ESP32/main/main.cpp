@@ -108,8 +108,8 @@ extern "C" void app_main() {
     init_ps3();
     ESP_init(&bus_handle);
 
-    servo[0].attach(SERVO_A_PIN, 500, 2400, LEDC_CHANNEL_3, LEDC_TIMER_0);
-    servo[1].attach(SERVO_B_PIN, 500, 2400, LEDC_CHANNEL_4, LEDC_TIMER_0);
+    servo[0].attach(SERVO_A_PIN, 500, 2400, LEDC_CHANNEL_6, LEDC_TIMER_0);
+    servo[1].attach(SERVO_B_PIN, 500, 2400, LEDC_CHANNEL_7, LEDC_TIMER_0);
 
     servo[0].write(90);
     servo[1].write(90);
