@@ -1,9 +1,0 @@
--- Component directory D:/Firmware/components/I2C does not contain a CMakeLists.txt file. No component will be added
--- Component directory D:/Firmware/components/Stepper-STM32 does not contain a CMakeLists.txt file. No component will be added
--- ccache will be used for faster recompilation
--- Building ESP-IDF components for target esp32
--- Configuring incomplete, errors occurred!
-See also "D:/Firmware/src/ESP32/build/CMakeFiles/CMakeOutput.log".
-[0/1] Re-running CMake...
-FAILED: build.ninja 
-D:\Espressif\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -SD:\Firmware\src\ESP32 -BD:\Firmware\src\ESP32\build

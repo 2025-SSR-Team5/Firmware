@@ -1,0 +1,99 @@
+Command: ninja flash
+[1/11] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\GitHub\Firmware\src\ESP32\build\bootloader\esp-idf\esptool_py && C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/takeu/esp/v5.5/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/GitHub/Firmware/src/ESP32/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Completed 'bootloader'
+[4/11] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/bleserver.cpp.obj
+In file included from C:/GitHub/Firmware/src/ESP32/main/bleserver.cpp:1:
+C:/GitHub/Firmware/src/ESP32/main/bleserver.hpp:52:9: warning: missing initializer for member 'esp_ble_adv_params_t::peer_addr' [-Wmissing-field-initializers]
+   52 |         };
+      |         ^
+C:/GitHub/Firmware/src/ESP32/main/bleserver.hpp:52:9: warning: missing initializer for member 'esp_ble_adv_params_t::peer_addr_type' [-Wmissing-field-initializers]
+[5/11] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj
+In file included from C:/GitHub/Firmware/src/ESP32/main/main.cpp:7:
+C:/GitHub/Firmware/src/ESP32/main/bleserver.hpp:52:9: warning: missing initializer for member 'esp_ble_adv_params_t::peer_addr' [-Wmissing-field-initializers]
+   52 |         };
+      |         ^
+C:/GitHub/Firmware/src/ESP32/main/bleserver.hpp:52:9: warning: missing initializer for member 'esp_ble_adv_params_t::peer_addr_type' [-Wmissing-field-initializers]
+[6/11] Linking C static library esp-idf\main\libmain.a
+[7/11] Generating esp-idf/esp_system/ld/sections.ld
+[8/11] Linking CXX executable esp32.elf
+[9/11] Generating binary image from built executable
+esptool.py v4.10.dev2
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/GitHub/Firmware/src/ESP32/build/esp32.bin
+[10/11] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\GitHub\Firmware\src\ESP32\build\esp-idf\esptool_py && C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/takeu/esp/v5.5/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/GitHub/Firmware/src/ESP32/build/partition_table/partition-table.bin C:/GitHub/Firmware/src/ESP32/build/esp32.bin"
+esp32.bin binary size 0xf1b90 bytes. Smallest app partition is 0x100000 bytes. 0xe470 bytes (6%) free.
+[10/11] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\takeu\esp\v5.5\esp-idf\components\esptool_py && C:\Users\takeu\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/takeu/esp/v5.5/esp-idf -D SERIAL_TOOL=C:/Users/takeu/.espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;;C:/Users/takeu/esp/v5.5/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/GitHub/Firmware/src/ESP32/build -P C:/Users/takeu/esp/v5.5/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM6 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 esp32.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.dev2
+Serial port COM6
+Connecting.........
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: ec:e3:34:90:d8:ec
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00101fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26240 bytes to 16487...
+Writing at 0x00001000... (50 %)
+Writing at 0x000075fb... (100 %)
+Wrote 26240 bytes (16487 compressed) at 0x00001000 in 0.7 seconds (effective 291.2 kbit/s)...
+Hash of data verified.
+Compressed 990096 bytes to 575340...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001ede7... (5 %)
+Writing at 0x0002f3ee... (8 %)
+Writing at 0x00039cd6... (11 %)
+Writing at 0x00043824... (13 %)
+Writing at 0x0004914b... (16 %)
+Writing at 0x0004f4e3... (19 %)
+Writing at 0x0005515c... (22 %)
+Writing at 0x0005ad67... (25 %)
+Writing at 0x0006097e... (27 %)
+Writing at 0x000665e0... (30 %)
+Writing at 0x0006c4da... (33 %)
+Writing at 0x000731d4... (36 %)
+Writing at 0x000790a1... (38 %)
+Writing at 0x0007f308... (41 %)
+Writing at 0x000855f7... (44 %)
+Writing at 0x0008ba6c... (47 %)
+Writing at 0x00091a06... (50 %)
+Writing at 0x00097953... (52 %)
+Writing at 0x0009da0b... (55 %)
+Writing at 0x000a3b63... (58 %)
+Writing at 0x000a9d1f... (61 %)
+Writing at 0x000af7b7... (63 %)
+Writing at 0x000b52c9... (66 %)
+Writing at 0x000baeea... (69 %)
+Writing at 0x000c08b8... (72 %)
+Writing at 0x000c6124... (75 %)
+Writing at 0x000cbc97... (77 %)
+Writing at 0x000d5472... (80 %)
+Writing at 0x000dc6c3... (83 %)
+Writing at 0x000e3094... (86 %)
+Writing at 0x000e9a3c... (88 %)
+Writing at 0x000ef369... (91 %)
+Writing at 0x000f4944... (94 %)
+Writing at 0x000fa90a... (97 %)
+Writing at 0x00100d0e... (100 %)
+Wrote 990096 bytes (575340 compressed) at 0x00010000 in 13.5 seconds (effective 585.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 540.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

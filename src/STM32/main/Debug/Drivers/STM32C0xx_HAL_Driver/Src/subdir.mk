@@ -61,7 +61,7 @@ C_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Drivers/STM32C0xx_HAL_Driver/Src/%.o Drivers/STM32C0xx_HAL_Driver/Src/%.su Drivers/STM32C0xx_HAL_Driver/Src/%.cyclo: ../Drivers/STM32C0xx_HAL_Driver/Src/%.c Drivers/STM32C0xx_HAL_Driver/Src/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m0plus -DDEBUG -DSTM32C011x4 -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -I../Core/Src -I"D:/Firmware/src/STM32/main/Core/Src" -I"D:/Firmware/src/STM32/main/Core/Inc" -include../Core/Inc/connection.h -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m0plus -DDEBUG -DSTM32C011x4 -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -I../Core/Src -I"C:/GitHub/Firmware/src/STM32/main/Core/Src" -I"C:/GitHub/Firmware/src/STM32/main/Core/Inc" -include../Core/Inc/connection.h -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
 
 clean: clean-Drivers-2f-STM32C0xx_HAL_Driver-2f-Src
 

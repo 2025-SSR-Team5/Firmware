@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/GitHub/Firmware/src/ExampleCode/BLE/build/CMakeFiles/bootloader
+C:/GitHub/Firmware/src/ExampleCode/BLE/build/CMakeFiles/bootloader.rule
+C:/GitHub/Firmware/src/ExampleCode/BLE/build/CMakeFiles/bootloader-complete.rule
+C:/GitHub/Firmware/src/ExampleCode/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/GitHub/Firmware/src/ExampleCode/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/GitHub/Firmware/src/ExampleCode/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/GitHub/Firmware/src/ExampleCode/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/GitHub/Firmware/src/ExampleCode/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/GitHub/Firmware/src/ExampleCode/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/GitHub/Firmware/src/ExampleCode/BLE/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

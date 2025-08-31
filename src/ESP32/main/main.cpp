@@ -4,10 +4,25 @@
 #include <../../../../components/ESP32Servo/include/servoControl.h>
 
 #include <initial_operation.hpp>
+#include <bleserver.hpp>
 #include <stdio.h>
 #include <string.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+
+extern "C" {
+#include <stdio.h>
+#include <string.h>
+#include "esp_log.h"
+#include "esp_err.h"
+#include "esp_bt.h"
+#include "esp_bt_main.h"
+#include "esp_gatts_api.h"
+#include "esp_gap_ble_api.h"
+#include "esp_bt_defs.h"
+#include "esp_bt_device.h"
+#include "nvs_flash.h"
+}
 
 //ピック機構を正面としたときの配置であり，基板シルク上のABCとは(現在は)対応していません
 #define MOTOR_A_PWM GPIO_NUM_19
@@ -97,14 +112,54 @@ void onConnect() {
   Ps3.setPlayer(1);
 }
 
+void bluetooth_init() {
+    const char* TAG = "BT_INIT";
+
+    esp_err_t ret = nvs_flash_init();
+    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+        ESP_ERROR_CHECK(nvs_flash_erase());
+        ret = nvs_flash_init();
+    }
+    ESP_ERROR_CHECK(ret);
+
+    esp_bt_controller_config_t bt_cfg = BT_CONTROLLER_INIT_CONFIG_DEFAULT();
+    if (esp_bt_controller_get_status() == ESP_BT_CONTROLLER_STATUS_IDLE) {
+        ret = esp_bt_controller_init(&bt_cfg);
+        ESP_ERROR_CHECK(ret);
+    } else {
+        ESP_LOGW(TAG, "BT controller already initialized");
+    }
+
+    ret = esp_bt_controller_enable(ESP_BT_MODE_BTDM);
+    ESP_ERROR_CHECK(ret);
+
+    ret = esp_bluedroid_init();
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "bluedroid_init failed: %s", esp_err_to_name(ret));
+        return;
+    }
+    ret = esp_bluedroid_enable();
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "bluedroid_enable failed: %s", esp_err_to_name(ret));
+        return;
+    }
+
+
+    ESP_LOGI(TAG, "Bluetooth initialized successfully in dual mode.");
+}
 
 bool last_button_up = false;
 bool last_button_down = false;
 
 extern "C" void app_main() {
     i2c_master_bus_handle_t bus_handle;
+    
+    BleServer bleServer;
+    bluetooth_init();
 
     vTaskDelay(pdMS_TO_TICKS(10));
+
+    bleServer.init();
     init_ps3();
     ESP_init(&bus_handle);
 

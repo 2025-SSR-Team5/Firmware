@@ -14,7 +14,7 @@ extern "C" {
 
 #include "main.h"
 
-HAL_StatusTypeDef do_instruction(uint8_t devstat);
+HAL_StatusTypeDef do_instruction(uint8_t devstat, uint8_t instruction);
 
 #ifdef __cplusplus
 }

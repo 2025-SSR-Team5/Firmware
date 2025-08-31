@@ -1,0 +1,1697 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ExampleCode\BLE\build\ble.elf C:\GitHub\Firmware\src\ExampleCode\BLE\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 31 2025 15:42:51[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1dee4h (122596) map[0m
+[0;32mI (130) esp_image: segment 1: paddr=0002df0c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (130) esp_image: segment 2: paddr=0002df34 vaddr=3ffbdb60 size=020e4h (  8420) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7c0bch (508092) map[0m
+[0;32mI (315) esp_image: segment 4: paddr=000ac0e4 vaddr=3ffbfc44 size=027d4h ( 10196) load[0m
+[0;32mI (319) esp_image: segment 5: paddr=000ae8c0 vaddr=40080000 size=1a02ch (106540) load[0m
+[0;32mI (373) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (373) boot: Disabling RNG early entropy source...[0m
+[0;32mI (383) cpu_start: Multicore app[0m
+[0;32mI (392) cpu_start: Pro cpu start user code[0m
+[0;32mI (392) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (392) app_init: Application information:[0m
+[0;32mI (392) app_init: Project name:     ble[0m
+[0;32mI (396) app_init: App version:      ad2818d-dirty[0m
+[0;32mI (400) app_init: Compile time:     Aug 31 2025 16:15:16[0m
+[0;32mI (405) app_init: ELF file SHA256:  9e99cf2fc...[0m
+[0;32mI (409) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (413) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (417) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (421) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (425) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (431) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (436) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (441) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (446) heap_init: At 3FFC6C00 len 00019400 (101 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (457) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 4009A02C len 00005FD4 (23 KiB): IRAM[0m
+[0;32mI (469) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (474) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (488) coexist: coex firmware version: 831ec70[0m
+[0;32mI (492) main_task: Started on CPU0[0m
+[0;32mI (502) main_task: Calling app_main()[0m
+[0;32mI (512) BTDM_INIT: BT controller compile version [b992c7d][0m
+[0;32mI (512) BTDM_INIT: Bluetooth MAC: ec:e3:34:90:d8:ee[0m
+[0;32mI (512) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (582) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (1212) BLE_HANDLER: create_service requested[0m
+[0;32mI (1212) BLE_HANDLER: Service created, handle=40[0m
+[0;32mI (1212) BLE_HANDLER: start_service ok[0m
+[0;32mI (1212) BLE_HANDLER: add_char requested[0m
+[0;32mI (1212) BLE_HANDLER: GATT service started[0m
+[0;32mI (1222) BLE_HANDLER: BLE advertising started[0m
+[0;32mI (1222) BLE_HANDLER: CHAR added: handle=42 (prop=0x0a)[0m
+[0;32mI (1232) BLE_HANDLER: BLE GATT server init done[0m
+[0;32mI (1232) main_task: Returned from app_main()[0m
+[0;32mI (9302) BLE_HANDLER: Client connected, conn_id=0[0m
+[0;32mI (10232) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (10232) BLE_HANDLER: Received roll=0.953 pitch=-3.085 azimuth=122.618 (len=12)[0m
+[0;32mI (10232) BLE_HANDLER: Sending response to client[0m
+[0;32mI (10262) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (10262) BLE_HANDLER: Received roll=0.954 pitch=-3.084 azimuth=122.618 (len=12)[0m
+[0;32mI (10262) BLE_HANDLER: Sending response to client[0m
+[0;32mI (10322) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (10332) BLE_HANDLER: Received roll=0.951 pitch=-3.083 azimuth=122.626 (len=12)[0m
+[0;32mI (10332) BLE_HANDLER: Sending response to client[0m
+[0;32mI (10412) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (10422) BLE_HANDLER: Received roll=0.955 pitch=-3.083 azimuth=122.617 (len=12)[0m
+[0;32mI (10422) BLE_HANDLER: Sending response to client[0m
+[0;32mI (10502) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (10512) BLE_HANDLER: Received roll=0.956 pitch=-3.088 azimuth=122.605 (len=12)[0m
+[0;32mI (10512) BLE_HANDLER: Sending response to client[0m
+[0;32mI (10592) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (10602) BLE_HANDLER: Received roll=0.952 pitch=-3.087 azimuth=122.613 (len=12)[0m
+[0;32mI (10602) BLE_HANDLER: Sending response to client[0m
+[0;32mI (10682) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (10692) BLE_HANDLER: Received roll=0.951 pitch=-3.086 azimuth=122.616 (len=12)[0m
+[0;32mI (10692) BLE_HANDLER: Sending response to client[0m
+[0;32mI (10772) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (10782) BLE_HANDLER: Received roll=0.952 pitch=-3.085 azimuth=122.618 (len=12)[0m
+[0;32mI (10782) BLE_HANDLER: Sending response to client[0m
+[0;32mI (10862) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (10872) BLE_HANDLER: Received roll=0.956 pitch=-3.082 azimuth=122.619 (len=12)[0m
+[0;32mI (10872) BLE_HANDLER: Sending response to client[0m
+[0;32mI (10962) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (10962) BLE_HANDLER: Received roll=0.952 pitch=-3.084 azimuth=122.620 (len=12)[0m
+[0;32mI (10962) BLE_HANDLER: Sending response to client[0m
+[0;32mI (11052) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (11052) BLE_HANDLER: Received roll=0.950 pitch=-3.080 azimuth=122.633 (len=12)[0m
+[0;32mI (11052) BLE_HANDLER: Sending response to client[0m
+[0;32mI (11132) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (11142) BLE_HANDLER: Received roll=0.943 pitch=-3.082 azimuth=122.641 (len=12)[0m
+[0;32mI (11142) BLE_HANDLER: Sending response to client[0m
+[0;32mI (11232) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (11232) BLE_HANDLER: Received roll=0.943 pitch=-3.079 azimuth=122.647 (len=12)[0m
+[0;32mI (11232) BLE_HANDLER: Sending response to client[0m
+[0;32mI (11322) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (11322) BLE_HANDLER: Received roll=0.942 pitch=-3.081 azimuth=122.644 (len=12)[0m
+[0;32mI (11322) BLE_HANDLER: Sending response to client[0m
+[0;32mI (11412) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (11412) BLE_HANDLER: Received roll=0.945 pitch=-3.078 azimuth=122.646 (len=12)[0m
+[0;32mI (11412) BLE_HANDLER: Sending response to client[0m
+[0;32mI (11502) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (11502) BLE_HANDLER: Received roll=0.948 pitch=-3.075 azimuth=122.649 (len=12)[0m
+[0;32mI (11502) BLE_HANDLER: Sending response to client[0m
+[0;32mI (11592) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (11592) BLE_HANDLER: Received roll=0.948 pitch=-3.076 azimuth=122.646 (len=12)[0m
+[0;32mI (11592) BLE_HANDLER: Sending response to client[0m
+[0;32mI (11682) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (11682) BLE_HANDLER: Received roll=0.943 pitch=-3.074 azimuth=122.660 (len=12)[0m
+[0;32mI (11682) BLE_HANDLER: Sending response to client[0m
+[0;32mI (11772) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (11772) BLE_HANDLER: Received roll=0.946 pitch=-3.080 azimuth=122.641 (len=12)[0m
+[0;32mI (11772) BLE_HANDLER: Sending response to client[0m
+[0;32mI (11862) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (11862) BLE_HANDLER: Received roll=0.945 pitch=-3.080 azimuth=122.640 (len=12)[0m
+[0;32mI (11862) BLE_HANDLER: Sending response to client[0m
+[0;32mI (11992) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (11992) BLE_HANDLER: Received roll=0.947 pitch=-3.079 azimuth=122.640 (len=12)[0m
+[0;32mI (11992) BLE_HANDLER: Sending response to client[0m
+[0;32mI (12082) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (12082) BLE_HANDLER: Received roll=0.949 pitch=-3.078 azimuth=122.641 (len=12)[0m
+[0;32mI (12082) BLE_HANDLER: Sending response to client[0m
+[0;32mI (12172) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (12172) BLE_HANDLER: Received roll=0.947 pitch=-3.076 azimuth=122.649 (len=12)[0m
+[0;32mI (12172) BLE_HANDLER: Sending response to client[0m
+[0;32mI (12262) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (12262) BLE_HANDLER: Received roll=0.948 pitch=-3.081 azimuth=122.634 (len=12)[0m
+[0;32mI (12262) BLE_HANDLER: Sending response to client[0m
+[0;32mI (12352) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (12352) BLE_HANDLER: Received roll=0.944 pitch=-3.081 azimuth=122.641 (len=12)[0m
+[0;32mI (12352) BLE_HANDLER: Sending response to client[0m
+[0;32mI (12442) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (12442) BLE_HANDLER: Received roll=0.948 pitch=-3.081 azimuth=122.634 (len=12)[0m
+[0;32mI (12442) BLE_HANDLER: Sending response to client[0m
+[0;32mI (12532) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (12532) BLE_HANDLER: Received roll=0.947 pitch=-3.080 azimuth=122.638 (len=12)[0m
+[0;32mI (12532) BLE_HANDLER: Sending response to client[0m
+[0;32mI (12622) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (12622) BLE_HANDLER: Received roll=0.945 pitch=-3.081 azimuth=122.639 (len=12)[0m
+[0;32mI (12622) BLE_HANDLER: Sending response to client[0m
+[0;32mI (12712) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (12712) BLE_HANDLER: Received roll=0.947 pitch=-3.083 azimuth=122.631 (len=12)[0m
+[0;32mI (12712) BLE_HANDLER: Sending response to client[0m
+[0;32mI (12802) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (12802) BLE_HANDLER: Received roll=0.948 pitch=-3.084 azimuth=122.628 (len=12)[0m
+[0;32mI (12802) BLE_HANDLER: Sending response to client[0m
+[0;32mI (12892) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (12892) BLE_HANDLER: Received roll=0.943 pitch=-3.081 azimuth=122.643 (len=12)[0m
+[0;32mI (12892) BLE_HANDLER: Sending response to client[0m
+[0;32mI (12982) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (12982) BLE_HANDLER: Received roll=0.944 pitch=-3.078 azimuth=122.648 (len=12)[0m
+[0;32mI (12982) BLE_HANDLER: Sending response to client[0m
+[0;32mI (13072) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (13072) BLE_HANDLER: Received roll=0.951 pitch=-3.078 azimuth=122.637 (len=12)[0m
+[0;32mI (13072) BLE_HANDLER: Sending response to client[0m
+[0;32mI (13162) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (13162) BLE_HANDLER: Received roll=0.950 pitch=-3.078 azimuth=122.639 (len=12)[0m
+[0;32mI (13162) BLE_HANDLER: Sending response to client[0m
+[0;32mI (13252) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (13252) BLE_HANDLER: Received roll=0.946 pitch=-3.076 azimuth=122.648 (len=12)[0m
+[0;32mI (13252) BLE_HANDLER: Sending response to client[0m
+[0;32mI (13342) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (13342) BLE_HANDLER: Received roll=0.945 pitch=-3.080 azimuth=122.642 (len=12)[0m
+[0;32mI (13342) BLE_HANDLER: Sending response to client[0m
+[0;32mI (13432) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (13432) BLE_HANDLER: Received roll=0.945 pitch=-3.081 azimuth=122.640 (len=12)[0m
+[0;32mI (13432) BLE_HANDLER: Sending response to client[0m
+[0;32mI (13522) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (13522) BLE_HANDLER: Received roll=0.942 pitch=-3.081 azimuth=122.643 (len=12)[0m
+[0;32mI (13522) BLE_HANDLER: Sending response to client[0m
+[0;32mI (13612) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (13612) BLE_HANDLER: Received roll=0.941 pitch=-3.078 azimuth=122.653 (len=12)[0m
+[0;32mI (13612) BLE_HANDLER: Sending response to client[0m
+[0;32mI (13702) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (13702) BLE_HANDLER: Received roll=0.944 pitch=-3.081 azimuth=122.641 (len=12)[0m
+[0;32mI (13702) BLE_HANDLER: Sending response to client[0m
+[0;32mI (13792) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (13792) BLE_HANDLER: Received roll=0.947 pitch=-3.078 azimuth=122.643 (len=12)[0m
+[0;32mI (13792) BLE_HANDLER: Sending response to client[0m
+[0;32mI (13882) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (13882) BLE_HANDLER: Received roll=0.942 pitch=-3.081 azimuth=122.644 (len=12)[0m
+[0;32mI (13882) BLE_HANDLER: Sending response to client[0m
+[0;32mI (13972) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (13972) BLE_HANDLER: Received roll=0.939 pitch=-3.080 azimuth=122.651 (len=12)[0m
+[0;32mI (13972) BLE_HANDLER: Sending response to client[0m
+[0;32mI (14062) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (14062) BLE_HANDLER: Received roll=0.937 pitch=-3.079 azimuth=122.655 (len=12)[0m
+[0;32mI (14062) BLE_HANDLER: Sending response to client[0m
+[0;32mI (14152) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (14152) BLE_HANDLER: Received roll=0.939 pitch=-3.077 azimuth=122.658 (len=12)[0m
+[0;32mI (14152) BLE_HANDLER: Sending response to client[0m
+[0;32mI (14242) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (14242) BLE_HANDLER: Received roll=0.941 pitch=-3.083 azimuth=122.641 (len=12)[0m
+[0;32mI (14242) BLE_HANDLER: Sending response to client[0m
+[0;32mI (14332) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (14332) BLE_HANDLER: Received roll=0.941 pitch=-3.083 azimuth=122.639 (len=12)[0m
+[0;32mI (14332) BLE_HANDLER: Sending response to client[0m
+[0;32mI (14422) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (14422) BLE_HANDLER: Received roll=0.942 pitch=-3.082 azimuth=122.641 (len=12)[0m
+[0;32mI (14422) BLE_HANDLER: Sending response to client[0m
+[0;32mI (14512) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (14512) BLE_HANDLER: Received roll=0.943 pitch=-3.081 azimuth=122.642 (len=12)[0m
+[0;32mI (14512) BLE_HANDLER: Sending response to client[0m
+[0;32mI (14602) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (14602) BLE_HANDLER: Received roll=0.943 pitch=-3.075 azimuth=122.657 (len=12)[0m
+[0;32mI (14602) BLE_HANDLER: Sending response to client[0m
+[0;32mI (14692) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (14692) BLE_HANDLER: Received roll=0.945 pitch=-3.079 azimuth=122.645 (len=12)[0m
+[0;32mI (14692) BLE_HANDLER: Sending response to client[0m
+[0;32mI (14782) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (14782) BLE_HANDLER: Received roll=0.943 pitch=-3.080 azimuth=122.645 (len=12)[0m
+[0;32mI (14782) BLE_HANDLER: Sending response to client[0m
+[0;32mI (14872) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (14872) BLE_HANDLER: Received roll=0.947 pitch=-3.084 azimuth=122.629 (len=12)[0m
+[0;32mI (14872) BLE_HANDLER: Sending response to client[0m
+[0;32mI (14962) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (14962) BLE_HANDLER: Received roll=0.940 pitch=-3.085 azimuth=122.637 (len=12)[0m
+[0;32mI (14962) BLE_HANDLER: Sending response to client[0m
+[0;32mI (15052) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (15052) BLE_HANDLER: Received roll=0.944 pitch=-3.090 azimuth=122.618 (len=12)[0m
+[0;32mI (15052) BLE_HANDLER: Sending response to client[0m
+[0;32mI (15142) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (15142) BLE_HANDLER: Received roll=0.948 pitch=-3.088 azimuth=122.616 (len=12)[0m
+[0;32mI (15142) BLE_HANDLER: Sending response to client[0m
+[0;32mI (15232) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (15232) BLE_HANDLER: Received roll=0.943 pitch=-3.087 azimuth=122.626 (len=12)[0m
+[0;32mI (15232) BLE_HANDLER: Sending response to client[0m
+[0;32mI (15322) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (15322) BLE_HANDLER: Received roll=0.944 pitch=-3.085 azimuth=122.632 (len=12)[0m
+[0;32mI (15322) BLE_HANDLER: Sending response to client[0m
+[0;32mI (15412) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (15412) BLE_HANDLER: Received roll=0.945 pitch=-3.083 azimuth=122.633 (len=12)[0m
+[0;32mI (15412) BLE_HANDLER: Sending response to client[0m
+[0;32mI (15502) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (15502) BLE_HANDLER: Received roll=0.944 pitch=-3.087 azimuth=122.625 (len=12)[0m
+[0;32mI (15502) BLE_HANDLER: Sending response to client[0m
+[0;32mI (15592) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (15592) BLE_HANDLER: Received roll=0.941 pitch=-3.089 azimuth=122.624 (len=12)[0m
+[0;32mI (15592) BLE_HANDLER: Sending response to client[0m
+[0;32mI (15682) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (15682) BLE_HANDLER: Received roll=0.938 pitch=-3.091 azimuth=122.626 (len=12)[0m
+[0;32mI (15682) BLE_HANDLER: Sending response to client[0m
+[0;32mI (15772) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (15772) BLE_HANDLER: Received roll=0.940 pitch=-3.087 azimuth=122.630 (len=12)[0m
+[0;32mI (15772) BLE_HANDLER: Sending response to client[0m
+[0;32mI (15862) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (15862) BLE_HANDLER: Received roll=0.939 pitch=-3.084 azimuth=122.641 (len=12)[0m
+[0;32mI (15862) BLE_HANDLER: Sending response to client[0m
+[0;32mI (15952) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (15952) BLE_HANDLER: Received roll=0.940 pitch=-3.089 azimuth=122.625 (len=12)[0m
+[0;32mI (15952) BLE_HANDLER: Sending response to client[0m
+[0;32mI (16042) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (16042) BLE_HANDLER: Received roll=0.939 pitch=-3.083 azimuth=122.643 (len=12)[0m
+[0;32mI (16042) BLE_HANDLER: Sending response to client[0m
+[0;32mI (16132) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (16132) BLE_HANDLER: Received roll=0.937 pitch=-3.080 azimuth=122.654 (len=12)[0m
+[0;32mI (16132) BLE_HANDLER: Sending response to client[0m
+[0;32mI (16222) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (16222) BLE_HANDLER: Received roll=0.940 pitch=-3.075 azimuth=122.664 (len=12)[0m
+[0;32mI (16222) BLE_HANDLER: Sending response to client[0m
+[0;32mI (16312) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (16312) BLE_HANDLER: Received roll=0.933 pitch=-3.077 azimuth=122.667 (len=12)[0m
+[0;32mI (16312) BLE_HANDLER: Sending response to client[0m
+[0;32mI (16402) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (16402) BLE_HANDLER: Received roll=0.941 pitch=-3.083 azimuth=122.641 (len=12)[0m
+[0;32mI (16402) BLE_HANDLER: Sending response to client[0m
+[0;32mI (16492) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (16492) BLE_HANDLER: Received roll=0.946 pitch=-3.082 azimuth=122.635 (len=12)[0m
+[0;32mI (16492) BLE_HANDLER: Sending response to client[0m
+[0;32mI (16582) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (16582) BLE_HANDLER: Received roll=0.944 pitch=-3.086 azimuth=122.627 (len=12)[0m
+[0;32mI (16582) BLE_HANDLER: Sending response to client[0m
+[0;32mI (16672) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (16672) BLE_HANDLER: Received roll=0.942 pitch=-3.082 azimuth=122.642 (len=12)[0m
+[0;32mI (16672) BLE_HANDLER: Sending response to client[0m
+[0;32mI (16762) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (16762) BLE_HANDLER: Received roll=0.938 pitch=-3.081 azimuth=122.651 (len=12)[0m
+[0;32mI (16762) BLE_HANDLER: Sending response to client[0m
+[0;32mI (16852) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (16852) BLE_HANDLER: Received roll=0.935 pitch=-3.077 azimuth=122.665 (len=12)[0m
+[0;32mI (16852) BLE_HANDLER: Sending response to client[0m
+[0;32mI (16942) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (16942) BLE_HANDLER: Received roll=0.937 pitch=-3.081 azimuth=122.653 (len=12)[0m
+[0;32mI (16942) BLE_HANDLER: Sending response to client[0m
+[0;32mI (17032) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (17032) BLE_HANDLER: Received roll=0.940 pitch=-3.077 azimuth=122.657 (len=12)[0m
+[0;32mI (17032) BLE_HANDLER: Sending response to client[0m
+[0;32mI (17162) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (17172) BLE_HANDLER: Received roll=0.932 pitch=-3.077 azimuth=122.670 (len=12)[0m
+[0;32mI (17172) BLE_HANDLER: Sending response to client[0m
+[0;32mI (17252) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (17262) BLE_HANDLER: Received roll=0.928 pitch=-3.072 azimuth=122.688 (len=12)[0m
+[0;32mI (17262) BLE_HANDLER: Sending response to client[0m
+[0;32mI (17342) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (17352) BLE_HANDLER: Received roll=0.930 pitch=-3.075 azimuth=122.677 (len=12)[0m
+[0;32mI (17352) BLE_HANDLER: Sending response to client[0m
+[0;32mI (17482) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (17482) BLE_HANDLER: Received roll=0.929 pitch=-3.072 azimuth=122.686 (len=12)[0m
+[0;32mI (17482) BLE_HANDLER: Sending response to client[0m
+[0;32mI (17572) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (17572) BLE_HANDLER: Received roll=0.929 pitch=-3.072 azimuth=122.686 (len=12)[0m
+[0;32mI (17572) BLE_HANDLER: Sending response to client[0m
+[0;32mI (17662) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (17662) BLE_HANDLER: Received roll=0.931 pitch=-3.072 azimuth=122.685 (len=12)[0m
+[0;32mI (17662) BLE_HANDLER: Sending response to client[0m
+[0;32mI (17752) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (17752) BLE_HANDLER: Received roll=0.933 pitch=-3.071 azimuth=122.682 (len=12)[0m
+[0;32mI (17752) BLE_HANDLER: Sending response to client[0m
+[0;32mI (17842) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (17842) BLE_HANDLER: Received roll=0.934 pitch=-3.067 azimuth=122.692 (len=12)[0m
+[0;32mI (17842) BLE_HANDLER: Sending response to client[0m
+[0;32mI (17932) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (17932) BLE_HANDLER: Received roll=0.936 pitch=-3.068 azimuth=122.685 (len=12)[0m
+[0;32mI (17932) BLE_HANDLER: Sending response to client[0m
+[0;32mI (18022) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (18022) BLE_HANDLER: Received roll=0.938 pitch=-3.069 azimuth=122.680 (len=12)[0m
+[0;32mI (18022) BLE_HANDLER: Sending response to client[0m
+[0;32mI (18112) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (18112) BLE_HANDLER: Received roll=0.935 pitch=-3.073 azimuth=122.674 (len=12)[0m
+[0;32mI (18112) BLE_HANDLER: Sending response to client[0m
+[0;32mI (18202) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (18202) BLE_HANDLER: Received roll=0.940 pitch=-3.076 azimuth=122.660 (len=12)[0m
+[0;32mI (18202) BLE_HANDLER: Sending response to client[0m
+[0;32mI (18292) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (18292) BLE_HANDLER: Received roll=0.941 pitch=-3.077 azimuth=122.655 (len=12)[0m
+[0;32mI (18292) BLE_HANDLER: Sending response to client[0m
+[0;32mI (18382) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (18382) BLE_HANDLER: Received roll=0.937 pitch=-3.080 azimuth=122.653 (len=12)[0m
+[0;32mI (18382) BLE_HANDLER: Sending response to client[0m
+[0;32mI (18472) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (18472) BLE_HANDLER: Received roll=0.940 pitch=-3.080 azimuth=122.649 (len=12)[0m
+[0;32mI (18472) BLE_HANDLER: Sending response to client[0m
+[0;32mI (18562) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (18562) BLE_HANDLER: Received roll=0.941 pitch=-3.080 azimuth=122.647 (len=12)[0m
+[0;32mI (18562) BLE_HANDLER: Sending response to client[0m
+[0;32mI (18652) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (18652) BLE_HANDLER: Received roll=0.937 pitch=-3.077 azimuth=122.661 (len=12)[0m
+[0;32mI (18652) BLE_HANDLER: Sending response to client[0m
+[0;32mI (18742) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (18742) BLE_HANDLER: Received roll=0.936 pitch=-3.074 azimuth=122.670 (len=12)[0m
+[0;32mI (18742) BLE_HANDLER: Sending response to client[0m
+[0;32mI (18832) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (18832) BLE_HANDLER: Received roll=0.935 pitch=-3.069 azimuth=122.684 (len=12)[0m
+[0;32mI (18832) BLE_HANDLER: Sending response to client[0m
+[0;32mI (18922) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (18922) BLE_HANDLER: Received roll=0.938 pitch=-3.074 azimuth=122.668 (len=12)[0m
+[0;32mI (18922) BLE_HANDLER: Sending response to client[0m
+[0;32mI (19012) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (19012) BLE_HANDLER: Received roll=0.939 pitch=-3.072 azimuth=122.671 (len=12)[0m
+[0;32mI (19012) BLE_HANDLER: Sending response to client[0m
+[0;32mI (19102) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (19102) BLE_HANDLER: Received roll=0.937 pitch=-3.070 azimuth=122.679 (len=12)[0m
+[0;32mI (19102) BLE_HANDLER: Sending response to client[0m
+[0;32mI (19192) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (19192) BLE_HANDLER: Received roll=0.940 pitch=-3.070 azimuth=122.675 (len=12)[0m
+[0;32mI (19192) BLE_HANDLER: Sending response to client[0m
+[0;32mI (19282) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (19282) BLE_HANDLER: Received roll=0.940 pitch=-3.070 azimuth=122.676 (len=12)[0m
+[0;32mI (19282) BLE_HANDLER: Sending response to client[0m
+[0;32mI (19372) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (19372) BLE_HANDLER: Received roll=0.947 pitch=-3.074 azimuth=122.653 (len=12)[0m
+[0;32mI (19372) BLE_HANDLER: Sending response to client[0m
+[0;32mI (19462) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (19462) BLE_HANDLER: Received roll=0.947 pitch=-3.070 azimuth=122.664 (len=12)[0m
+[0;32mI (19462) BLE_HANDLER: Sending response to client[0m
+[0;32mI (19552) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (19552) BLE_HANDLER: Received roll=0.948 pitch=-3.072 azimuth=122.657 (len=12)[0m
+[0;32mI (19552) BLE_HANDLER: Sending response to client[0m
+[0;32mI (19642) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (19642) BLE_HANDLER: Received roll=0.951 pitch=-3.075 azimuth=122.644 (len=12)[0m
+[0;32mI (19642) BLE_HANDLER: Sending response to client[0m
+[0;32mI (19732) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (19732) BLE_HANDLER: Received roll=0.949 pitch=-3.073 azimuth=122.653 (len=12)[0m
+[0;32mI (19732) BLE_HANDLER: Sending response to client[0m
+[0;32mI (19822) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (19822) BLE_HANDLER: Received roll=0.949 pitch=-3.077 azimuth=122.644 (len=12)[0m
+[0;32mI (19822) BLE_HANDLER: Sending response to client[0m
+[0;32mI (19912) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (19912) BLE_HANDLER: Received roll=0.949 pitch=-3.076 azimuth=122.647 (len=12)[0m
+[0;32mI (19912) BLE_HANDLER: Sending response to client[0m
+[0;32mI (20002) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (20002) BLE_HANDLER: Received roll=0.950 pitch=-3.076 azimuth=122.644 (len=12)[0m
+[0;32mI (20002) BLE_HANDLER: Sending response to client[0m
+[0;32mI (20132) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (20142) BLE_HANDLER: Received roll=0.950 pitch=-3.077 azimuth=122.642 (len=12)[0m
+[0;32mI (20142) BLE_HANDLER: Sending response to client[0m
+[0;32mI (20222) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (20232) BLE_HANDLER: Received roll=0.950 pitch=-3.077 azimuth=122.643 (len=12)[0m
+[0;32mI (20232) BLE_HANDLER: Sending response to client[0m
+[0;32mI (20312) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (20322) BLE_HANDLER: Received roll=0.946 pitch=-3.081 azimuth=122.638 (len=12)[0m
+[0;32mI (20322) BLE_HANDLER: Sending response to client[0m
+[0;32mI (20402) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (20412) BLE_HANDLER: Received roll=0.949 pitch=-3.079 azimuth=122.639 (len=12)[0m
+[0;32mI (20412) BLE_HANDLER: Sending response to client[0m
+[0;32mI (20492) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (20502) BLE_HANDLER: Received roll=0.950 pitch=-3.075 azimuth=122.647 (len=12)[0m
+[0;32mI (20502) BLE_HANDLER: Sending response to client[0m
+[0;32mI (20582) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (20592) BLE_HANDLER: Received roll=0.951 pitch=-3.072 azimuth=122.654 (len=12)[0m
+[0;32mI (20592) BLE_HANDLER: Sending response to client[0m
+[0;32mI (20672) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (20682) BLE_HANDLER: Received roll=0.955 pitch=-3.069 azimuth=122.654 (len=12)[0m
+[0;32mI (20682) BLE_HANDLER: Sending response to client[0m
+[0;32mI (20762) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (20772) BLE_HANDLER: Received roll=0.950 pitch=-3.068 azimuth=122.665 (len=12)[0m
+[0;32mI (20772) BLE_HANDLER: Sending response to client[0m
+[0;32mI (20852) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (20862) BLE_HANDLER: Received roll=0.953 pitch=-3.070 azimuth=122.655 (len=12)[0m
+[0;32mI (20862) BLE_HANDLER: Sending response to client[0m
+[0;32mI (20942) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (20952) BLE_HANDLER: Received roll=0.947 pitch=-3.070 azimuth=122.663 (len=12)[0m
+[0;32mI (20952) BLE_HANDLER: Sending response to client[0m
+[0;32mI (21032) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (21042) BLE_HANDLER: Received roll=0.948 pitch=-3.074 azimuth=122.651 (len=12)[0m
+[0;32mI (21042) BLE_HANDLER: Sending response to client[0m
+[0;32mI (21122) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (21132) BLE_HANDLER: Received roll=0.948 pitch=-3.066 azimuth=122.672 (len=12)[0m
+[0;32mI (21132) BLE_HANDLER: Sending response to client[0m
+[0;32mI (21212) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (21222) BLE_HANDLER: Received roll=0.949 pitch=-3.066 azimuth=122.670 (len=12)[0m
+[0;32mI (21222) BLE_HANDLER: Sending response to client[0m
+[0;32mI (21302) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (21312) BLE_HANDLER: Received roll=0.948 pitch=-3.068 azimuth=122.667 (len=12)[0m
+[0;32mI (21312) BLE_HANDLER: Sending response to client[0m
+[0;32mI (21392) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (21402) BLE_HANDLER: Received roll=0.945 pitch=-3.071 azimuth=122.663 (len=12)[0m
+[0;32mI (21402) BLE_HANDLER: Sending response to client[0m
+[0;32mI (21482) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (21492) BLE_HANDLER: Received roll=0.945 pitch=-3.073 azimuth=122.658 (len=12)[0m
+[0;32mI (21492) BLE_HANDLER: Sending response to client[0m
+[0;32mI (21622) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (21622) BLE_HANDLER: Received roll=0.949 pitch=-3.077 azimuth=122.642 (len=12)[0m
+[0;32mI (21622) BLE_HANDLER: Sending response to client[0m
+[0;32mI (21712) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (21712) BLE_HANDLER: Received roll=0.948 pitch=-3.071 azimuth=122.659 (len=12)[0m
+[0;32mI (21712) BLE_HANDLER: Sending response to client[0m
+[0;32mI (21802) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (21802) BLE_HANDLER: Received roll=0.942 pitch=-3.073 azimuth=122.663 (len=12)[0m
+[0;32mI (21802) BLE_HANDLER: Sending response to client[0m
+[0;32mI (21892) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (21892) BLE_HANDLER: Received roll=0.943 pitch=-3.076 azimuth=122.656 (len=12)[0m
+[0;32mI (21892) BLE_HANDLER: Sending response to client[0m
+[0;32mI (21982) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (21982) BLE_HANDLER: Received roll=0.942 pitch=-3.070 azimuth=122.671 (len=12)[0m
+[0;32mI (21982) BLE_HANDLER: Sending response to client[0m
+[0;32mI (22072) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (22072) BLE_HANDLER: Received roll=0.944 pitch=-3.072 azimuth=122.663 (len=12)[0m
+[0;32mI (22072) BLE_HANDLER: Sending response to client[0m
+[0;32mI (22162) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (22162) BLE_HANDLER: Received roll=0.940 pitch=-3.082 azimuth=122.643 (len=12)[0m
+[0;32mI (22162) BLE_HANDLER: Sending response to client[0m
+[0;32mI (22252) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (22252) BLE_HANDLER: Received roll=0.944 pitch=-3.080 azimuth=122.643 (len=12)[0m
+[0;32mI (22252) BLE_HANDLER: Sending response to client[0m
+[0;32mI (22342) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (22342) BLE_HANDLER: Received roll=0.941 pitch=-3.079 azimuth=122.651 (len=12)[0m
+[0;32mI (22342) BLE_HANDLER: Sending response to client[0m
+[0;32mI (22432) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (22432) BLE_HANDLER: Received roll=0.943 pitch=-3.083 azimuth=122.637 (len=12)[0m
+[0;32mI (22432) BLE_HANDLER: Sending response to client[0m
+[0;32mI (22522) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (22522) BLE_HANDLER: Received roll=0.939 pitch=-3.082 azimuth=122.646 (len=12)[0m
+[0;32mI (22522) BLE_HANDLER: Sending response to client[0m
+[0;32mI (22652) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (22662) BLE_HANDLER: Received roll=0.939 pitch=-3.083 azimuth=122.645 (len=12)[0m
+[0;32mI (22662) BLE_HANDLER: Sending response to client[0m
+[0;32mI (22742) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (22752) BLE_HANDLER: Received roll=0.938 pitch=-3.086 azimuth=122.638 (len=12)[0m
+[0;32mI (22752) BLE_HANDLER: Sending response to client[0m
+[0;32mI (22832) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (22842) BLE_HANDLER: Received roll=0.935 pitch=-3.083 azimuth=122.649 (len=12)[0m
+[0;32mI (22842) BLE_HANDLER: Sending response to client[0m
+[0;32mI (22922) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (22932) BLE_HANDLER: Received roll=0.933 pitch=-3.080 azimuth=122.660 (len=12)[0m
+[0;32mI (22932) BLE_HANDLER: Sending response to client[0m
+[0;32mI (23012) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (23022) BLE_HANDLER: Received roll=0.935 pitch=-3.076 azimuth=122.668 (len=12)[0m
+[0;32mI (23022) BLE_HANDLER: Sending response to client[0m
+[0;32mI (23102) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (23112) BLE_HANDLER: Received roll=0.938 pitch=-3.078 azimuth=122.657 (len=12)[0m
+[0;32mI (23112) BLE_HANDLER: Sending response to client[0m
+[0;32mI (23192) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (23202) BLE_HANDLER: Received roll=0.934 pitch=-3.076 azimuth=122.668 (len=12)[0m
+[0;32mI (23202) BLE_HANDLER: Sending response to client[0m
+[0;32mI (23282) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (23292) BLE_HANDLER: Received roll=0.931 pitch=-3.076 azimuth=122.672 (len=12)[0m
+[0;32mI (23292) BLE_HANDLER: Sending response to client[0m
+[0;32mI (23372) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (23382) BLE_HANDLER: Received roll=0.933 pitch=-3.073 azimuth=122.678 (len=12)[0m
+[0;32mI (23382) BLE_HANDLER: Sending response to client[0m
+[0;32mI (23462) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (23472) BLE_HANDLER: Received roll=0.930 pitch=-3.075 azimuth=122.678 (len=12)[0m
+[0;32mI (23472) BLE_HANDLER: Sending response to client[0m
+[0;32mI (23552) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (23562) BLE_HANDLER: Received roll=0.934 pitch=-3.074 azimuth=122.673 (len=12)[0m
+[0;32mI (23562) BLE_HANDLER: Sending response to client[0m
+[0;32mI (23642) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (23652) BLE_HANDLER: Received roll=0.932 pitch=-3.079 azimuth=122.666 (len=12)[0m
+[0;32mI (23652) BLE_HANDLER: Sending response to client[0m
+[0;32mI (23732) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (23742) BLE_HANDLER: Received roll=0.935 pitch=-3.075 azimuth=122.670 (len=12)[0m
+[0;32mI (23742) BLE_HANDLER: Sending response to client[0m
+[0;32mI (23822) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (23832) BLE_HANDLER: Received roll=0.934 pitch=-3.072 azimuth=122.681 (len=12)[0m
+[0;32mI (23832) BLE_HANDLER: Sending response to client[0m
+[0;32mI (23912) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (23922) BLE_HANDLER: Received roll=0.931 pitch=-3.074 azimuth=122.678 (len=12)[0m
+[0;32mI (23922) BLE_HANDLER: Sending response to client[0m
+[0;32mI (24002) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (24012) BLE_HANDLER: Received roll=0.933 pitch=-3.073 azimuth=122.677 (len=12)[0m
+[0;32mI (24012) BLE_HANDLER: Sending response to client[0m
+[0;32mI (24092) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (24102) BLE_HANDLER: Received roll=0.935 pitch=-3.071 azimuth=122.680 (len=12)[0m
+[0;32mI (24102) BLE_HANDLER: Sending response to client[0m
+[0;32mI (24232) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (24232) BLE_HANDLER: Received roll=0.939 pitch=-3.071 azimuth=122.673 (len=12)[0m
+[0;32mI (24232) BLE_HANDLER: Sending response to client[0m
+[0;32mI (24322) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (24322) BLE_HANDLER: Received roll=0.934 pitch=-3.073 azimuth=122.678 (len=12)[0m
+[0;32mI (24322) BLE_HANDLER: Sending response to client[0m
+[0;32mI (24412) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (24412) BLE_HANDLER: Received roll=0.932 pitch=-3.072 azimuth=122.683 (len=12)[0m
+[0;32mI (24412) BLE_HANDLER: Sending response to client[0m
+[0;32mI (24502) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (24502) BLE_HANDLER: Received roll=0.932 pitch=-3.069 azimuth=122.689 (len=12)[0m
+[0;32mI (24502) BLE_HANDLER: Sending response to client[0m
+[0;32mI (24592) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (24592) BLE_HANDLER: Received roll=0.935 pitch=-3.071 azimuth=122.681 (len=12)[0m
+[0;32mI (24592) BLE_HANDLER: Sending response to client[0m
+[0;32mI (24682) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (24682) BLE_HANDLER: Received roll=0.935 pitch=-3.069 azimuth=122.685 (len=12)[0m
+[0;32mI (24682) BLE_HANDLER: Sending response to client[0m
+[0;32mI (24772) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (24772) BLE_HANDLER: Received roll=0.932 pitch=-3.074 azimuth=122.677 (len=12)[0m
+[0;32mI (24772) BLE_HANDLER: Sending response to client[0m
+[0;32mI (24862) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (24862) BLE_HANDLER: Received roll=0.932 pitch=-3.072 azimuth=122.682 (len=12)[0m
+[0;32mI (24862) BLE_HANDLER: Sending response to client[0m
+[0;32mI (24952) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (24952) BLE_HANDLER: Received roll=0.934 pitch=-3.073 azimuth=122.677 (len=12)[0m
+[0;32mI (24952) BLE_HANDLER: Sending response to client[0m
+[0;32mI (25042) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (25042) BLE_HANDLER: Received roll=0.930 pitch=-3.072 azimuth=122.686 (len=12)[0m
+[0;32mI (25042) BLE_HANDLER: Sending response to client[0m
+[0;32mI (25132) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (25132) BLE_HANDLER: Received roll=0.932 pitch=-3.071 azimuth=122.685 (len=12)[0m
+[0;32mI (25132) BLE_HANDLER: Sending response to client[0m
+[0;32mI (25222) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (25222) BLE_HANDLER: Received roll=0.934 pitch=-3.065 azimuth=122.697 (len=12)[0m
+[0;32mI (25222) BLE_HANDLER: Sending response to client[0m
+[0;32mI (25312) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (25312) BLE_HANDLER: Received roll=0.933 pitch=-3.067 azimuth=122.693 (len=12)[0m
+[0;32mI (25312) BLE_HANDLER: Sending response to client[0m
+[0;32mI (25402) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (25402) BLE_HANDLER: Received roll=0.935 pitch=-3.066 azimuth=122.694 (len=12)[0m
+[0;32mI (25402) BLE_HANDLER: Sending response to client[0m
+[0;32mI (25492) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (25492) BLE_HANDLER: Received roll=0.939 pitch=-3.067 azimuth=122.683 (len=12)[0m
+[0;32mI (25492) BLE_HANDLER: Sending response to client[0m
+[0;32mI (25632) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (25632) BLE_HANDLER: Received roll=0.940 pitch=-3.073 azimuth=122.667 (len=12)[0m
+[0;32mI (25632) BLE_HANDLER: Sending response to client[0m
+[0;32mI (25722) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (25722) BLE_HANDLER: Received roll=0.941 pitch=-3.069 azimuth=122.676 (len=12)[0m
+[0;32mI (25722) BLE_HANDLER: Sending response to client[0m
+[0;32mI (25812) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (25812) BLE_HANDLER: Received roll=0.948 pitch=-3.073 azimuth=122.655 (len=12)[0m
+[0;32mI (25812) BLE_HANDLER: Sending response to client[0m
+[0;32mI (25902) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (25902) BLE_HANDLER: Received roll=0.947 pitch=-3.071 azimuth=122.660 (len=12)[0m
+[0;32mI (25902) BLE_HANDLER: Sending response to client[0m
+[0;32mI (25992) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (25992) BLE_HANDLER: Received roll=0.948 pitch=-3.076 azimuth=122.646 (len=12)[0m
+[0;32mI (25992) BLE_HANDLER: Sending response to client[0m
+[0;32mI (26082) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (26082) BLE_HANDLER: Received roll=0.949 pitch=-3.075 azimuth=122.648 (len=12)[0m
+[0;32mI (26082) BLE_HANDLER: Sending response to client[0m
+[0;32mI (26172) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (26172) BLE_HANDLER: Received roll=0.949 pitch=-3.078 azimuth=122.641 (len=12)[0m
+[0;32mI (26172) BLE_HANDLER: Sending response to client[0m
+[0;32mI (26262) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (26262) BLE_HANDLER: Received roll=0.950 pitch=-3.073 azimuth=122.650 (len=12)[0m
+[0;32mI (26262) BLE_HANDLER: Sending response to client[0m
+[0;32mI (26352) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (26352) BLE_HANDLER: Received roll=0.948 pitch=-3.068 azimuth=122.668 (len=12)[0m
+[0;32mI (26352) BLE_HANDLER: Sending response to client[0m
+[0;32mI (26442) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (26442) BLE_HANDLER: Received roll=0.945 pitch=-3.073 azimuth=122.659 (len=12)[0m
+[0;32mI (26442) BLE_HANDLER: Sending response to client[0m
+[0;32mI (26532) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (26532) BLE_HANDLER: Received roll=0.945 pitch=-3.077 azimuth=122.648 (len=12)[0m
+[0;32mI (26532) BLE_HANDLER: Sending response to client[0m
+[0;32mI (26622) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (26622) BLE_HANDLER: Received roll=0.946 pitch=-3.073 azimuth=122.656 (len=12)[0m
+[0;32mI (26622) BLE_HANDLER: Sending response to client[0m
+[0;32mI (26712) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (26712) BLE_HANDLER: Received roll=0.951 pitch=-3.072 azimuth=122.653 (len=12)[0m
+[0;32mI (26712) BLE_HANDLER: Sending response to client[0m
+[0;32mI (26802) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (26802) BLE_HANDLER: Received roll=0.953 pitch=-3.077 azimuth=122.638 (len=12)[0m
+[0;32mI (26802) BLE_HANDLER: Sending response to client[0m
+[0;32mI (26892) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (26892) BLE_HANDLER: Received roll=0.950 pitch=-3.075 azimuth=122.645 (len=12)[0m
+[0;32mI (26892) BLE_HANDLER: Sending response to client[0m
+[0;32mI (26982) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (26982) BLE_HANDLER: Received roll=0.945 pitch=-3.069 azimuth=122.669 (len=12)[0m
+[0;32mI (26982) BLE_HANDLER: Sending response to client[0m
+[0;32mI (27072) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (27072) BLE_HANDLER: Received roll=0.951 pitch=-3.071 azimuth=122.654 (len=12)[0m
+[0;32mI (27072) BLE_HANDLER: Sending response to client[0m
+[0;32mI (27162) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (27162) BLE_HANDLER: Received roll=0.947 pitch=-3.074 azimuth=122.654 (len=12)[0m
+[0;32mI (27162) BLE_HANDLER: Sending response to client[0m
+[0;32mI (27252) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (27252) BLE_HANDLER: Received roll=0.945 pitch=-3.076 azimuth=122.653 (len=12)[0m
+[0;32mI (27252) BLE_HANDLER: Sending response to client[0m
+[0;32mI (27342) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (27342) BLE_HANDLER: Received roll=0.944 pitch=-3.072 azimuth=122.664 (len=12)[0m
+[0;32mI (27342) BLE_HANDLER: Sending response to client[0m
+[0;32mI (27432) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (27432) BLE_HANDLER: Received roll=0.942 pitch=-3.073 azimuth=122.664 (len=12)[0m
+[0;32mI (27432) BLE_HANDLER: Sending response to client[0m
+[0;32mI (27522) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (27522) BLE_HANDLER: Received roll=0.937 pitch=-3.068 azimuth=122.684 (len=12)[0m
+[0;32mI (27522) BLE_HANDLER: Sending response to client[0m
+[0;32mI (27612) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (27612) BLE_HANDLER: Received roll=0.941 pitch=-3.074 azimuth=122.664 (len=12)[0m
+[0;32mI (27612) BLE_HANDLER: Sending response to client[0m
+[0;32mI (27702) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (27702) BLE_HANDLER: Received roll=0.940 pitch=-3.074 azimuth=122.664 (len=12)[0m
+[0;32mI (27702) BLE_HANDLER: Sending response to client[0m
+[0;32mI (27792) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (27792) BLE_HANDLER: Received roll=0.940 pitch=-3.074 azimuth=122.663 (len=12)[0m
+[0;32mI (27792) BLE_HANDLER: Sending response to client[0m
+[0;32mI (27922) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (27922) BLE_HANDLER: Received roll=0.938 pitch=-3.076 azimuth=122.662 (len=12)[0m
+[0;32mI (27922) BLE_HANDLER: Sending response to client[0m
+[0;32mI (28012) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (28012) BLE_HANDLER: Received roll=0.936 pitch=-3.071 azimuth=122.678 (len=12)[0m
+[0;32mI (28012) BLE_HANDLER: Sending response to client[0m
+[0;32mI (28102) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (28102) BLE_HANDLER: Received roll=0.935 pitch=-3.071 azimuth=122.679 (len=12)[0m
+[0;32mI (28102) BLE_HANDLER: Sending response to client[0m
+[0;32mI (28192) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (28192) BLE_HANDLER: Received roll=0.933 pitch=-3.077 azimuth=122.668 (len=12)[0m
+[0;32mI (28192) BLE_HANDLER: Sending response to client[0m
+[0;32mI (28282) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (28282) BLE_HANDLER: Received roll=0.932 pitch=-3.071 azimuth=122.684 (len=12)[0m
+[0;32mI (28282) BLE_HANDLER: Sending response to client[0m
+[0;32mI (28372) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (28372) BLE_HANDLER: Received roll=0.934 pitch=-3.074 azimuth=122.673 (len=12)[0m
+[0;32mI (28372) BLE_HANDLER: Sending response to client[0m
+[0;32mI (28462) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (28462) BLE_HANDLER: Received roll=0.929 pitch=-3.074 azimuth=122.682 (len=12)[0m
+[0;32mI (28462) BLE_HANDLER: Sending response to client[0m
+[0;32mI (28552) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (28552) BLE_HANDLER: Received roll=0.929 pitch=-3.071 azimuth=122.688 (len=12)[0m
+[0;32mI (28552) BLE_HANDLER: Sending response to client[0m
+[0;32mI (28642) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (28642) BLE_HANDLER: Received roll=0.932 pitch=-3.073 azimuth=122.680 (len=12)[0m
+[0;32mI (28642) BLE_HANDLER: Sending response to client[0m
+[0;32mI (28732) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (28732) BLE_HANDLER: Received roll=0.932 pitch=-3.072 azimuth=122.682 (len=12)[0m
+[0;32mI (28732) BLE_HANDLER: Sending response to client[0m
+[0;32mI (28822) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (28822) BLE_HANDLER: Received roll=0.932 pitch=-3.077 azimuth=122.669 (len=12)[0m
+[0;32mI (28822) BLE_HANDLER: Sending response to client[0m
+[0;32mI (28912) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (28912) BLE_HANDLER: Received roll=0.933 pitch=-3.076 azimuth=122.671 (len=12)[0m
+[0;32mI (28912) BLE_HANDLER: Sending response to client[0m
+[0;32mI (29002) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (29002) BLE_HANDLER: Received roll=0.939 pitch=-3.082 azimuth=122.644 (len=12)[0m
+[0;32mI (29002) BLE_HANDLER: Sending response to client[0m
+[0;32mI (29092) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (29092) BLE_HANDLER: Received roll=0.935 pitch=-3.083 azimuth=122.649 (len=12)[0m
+[0;32mI (29092) BLE_HANDLER: Sending response to client[0m
+[0;32mI (29182) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (29182) BLE_HANDLER: Received roll=0.929 pitch=-3.086 azimuth=122.651 (len=12)[0m
+[0;32mI (29182) BLE_HANDLER: Sending response to client[0m
+[0;32mI (29272) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (29272) BLE_HANDLER: Received roll=0.932 pitch=-3.078 azimuth=122.667 (len=12)[0m
+[0;32mI (29272) BLE_HANDLER: Sending response to client[0m
+[0;32mI (29362) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (29362) BLE_HANDLER: Received roll=0.931 pitch=-3.083 azimuth=122.656 (len=12)[0m
+[0;32mI (29362) BLE_HANDLER: Sending response to client[0m
+[0;32mI (29452) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (29452) BLE_HANDLER: Received roll=0.933 pitch=-3.083 azimuth=122.653 (len=12)[0m
+[0;32mI (29452) BLE_HANDLER: Sending response to client[0m
+[0;32mI (29542) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (29542) BLE_HANDLER: Received roll=0.929 pitch=-3.081 azimuth=122.663 (len=12)[0m
+[0;32mI (29542) BLE_HANDLER: Sending response to client[0m
+[0;32mI (29632) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (29632) BLE_HANDLER: Received roll=0.925 pitch=-3.079 azimuth=122.674 (len=12)[0m
+[0;32mI (29632) BLE_HANDLER: Sending response to client[0m
+[0;32mI (29722) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (29722) BLE_HANDLER: Received roll=0.935 pitch=-3.077 azimuth=122.664 (len=12)[0m
+[0;32mI (29722) BLE_HANDLER: Sending response to client[0m
+[0;32mI (29812) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (29812) BLE_HANDLER: Received roll=0.935 pitch=-3.085 azimuth=122.644 (len=12)[0m
+[0;32mI (29812) BLE_HANDLER: Sending response to client[0m
+[0;32mI (29902) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (29902) BLE_HANDLER: Received roll=0.939 pitch=-3.082 azimuth=122.645 (len=12)[0m
+[0;32mI (29902) BLE_HANDLER: Sending response to client[0m
+[0;32mI (29992) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (29992) BLE_HANDLER: Received roll=0.937 pitch=-3.081 azimuth=122.651 (len=12)[0m
+[0;32mI (29992) BLE_HANDLER: Sending response to client[0m
+[0;32mI (30132) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (30132) BLE_HANDLER: Received roll=0.934 pitch=-3.083 azimuth=122.651 (len=12)[0m
+[0;32mI (30132) BLE_HANDLER: Sending response to client[0m
+[0;32mI (30222) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (30222) BLE_HANDLER: Received roll=0.933 pitch=-3.081 azimuth=122.659 (len=12)[0m
+[0;32mI (30222) BLE_HANDLER: Sending response to client[0m
+[0;32mI (30312) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (30312) BLE_HANDLER: Received roll=0.931 pitch=-3.081 azimuth=122.662 (len=12)[0m
+[0;32mI (30312) BLE_HANDLER: Sending response to client[0m
+[0;32mI (30402) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (30402) BLE_HANDLER: Received roll=0.929 pitch=-3.078 azimuth=122.673 (len=12)[0m
+[0;32mI (30402) BLE_HANDLER: Sending response to client[0m
+[0;32mI (30492) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (30492) BLE_HANDLER: Received roll=0.949 pitch=-3.173 azimuth=122.638 (len=12)[0m
+[0;32mI (30492) BLE_HANDLER: Sending response to client[0m
+[0;32mI (30582) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (30582) BLE_HANDLER: Received roll=0.897 pitch=-3.229 azimuth=122.760 (len=12)[0m
+[0;32mI (30582) BLE_HANDLER: Sending response to client[0m
+[0;32mI (30672) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (30672) BLE_HANDLER: Received roll=0.686 pitch=-3.450 azimuth=123.592 (len=12)[0m
+[0;32mI (30672) BLE_HANDLER: Sending response to client[0m
+[0;32mI (30762) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (30762) BLE_HANDLER: Received roll=1.186 pitch=-3.028 azimuth=125.795 (len=12)[0m
+[0;32mI (30762) BLE_HANDLER: Sending response to client[0m
+[0;32mI (30852) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (30852) BLE_HANDLER: Received roll=1.115 pitch=-2.926 azimuth=126.064 (len=12)[0m
+[0;32mI (30852) BLE_HANDLER: Sending response to client[0m
+[0;32mI (30942) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (30942) BLE_HANDLER: Received roll=1.105 pitch=-2.885 azimuth=126.058 (len=12)[0m
+[0;32mI (30942) BLE_HANDLER: Sending response to client[0m
+[0;32mI (31032) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (31032) BLE_HANDLER: Received roll=1.058 pitch=-2.671 azimuth=126.033 (len=12)[0m
+[0;32mI (31032) BLE_HANDLER: Sending response to client[0m
+[0;32mI (31122) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (31122) BLE_HANDLER: Received roll=0.980 pitch=-2.417 azimuth=125.981 (len=12)[0m
+[0;32mI (31122) BLE_HANDLER: Sending response to client[0m
+[0;32mI (31212) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (31212) BLE_HANDLER: Received roll=0.937 pitch=-2.248 azimuth=125.970 (len=12)[0m
+[0;32mI (31212) BLE_HANDLER: Sending response to client[0m
+[0;32mI (31302) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (31302) BLE_HANDLER: Received roll=1.100 pitch=-2.709 azimuth=125.875 (len=12)[0m
+[0;32mI (31302) BLE_HANDLER: Sending response to client[0m
+[0;32mI (31392) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (31392) BLE_HANDLER: Received roll=1.185 pitch=-2.854 azimuth=125.225 (len=12)[0m
+[0;32mI (31392) BLE_HANDLER: Sending response to client[0m
+[0;32mI (31522) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (31522) BLE_HANDLER: Received roll=1.106 pitch=-3.012 azimuth=124.512 (len=12)[0m
+[0;32mI (31522) BLE_HANDLER: Sending response to client[0m
+[0;32mI (31662) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (31662) BLE_HANDLER: Received roll=1.110 pitch=-2.877 azimuth=123.909 (len=12)[0m
+[0;32mI (31662) BLE_HANDLER: Sending response to client[0m
+[0;32mI (31752) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (31752) BLE_HANDLER: Received roll=0.985 pitch=-2.985 azimuth=123.520 (len=12)[0m
+[0;32mI (31752) BLE_HANDLER: Sending response to client[0m
+[0;32mI (31842) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (31842) BLE_HANDLER: Received roll=0.967 pitch=-2.987 azimuth=123.549 (len=12)[0m
+[0;32mI (31842) BLE_HANDLER: Sending response to client[0m
+[0;32mI (31932) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (31932) BLE_HANDLER: Received roll=0.963 pitch=-2.922 azimuth=123.548 (len=12)[0m
+[0;32mI (31932) BLE_HANDLER: Sending response to client[0m
+[0;32mI (32062) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (32062) BLE_HANDLER: Received roll=0.938 pitch=-2.833 azimuth=123.554 (len=12)[0m
+[0;32mI (32062) BLE_HANDLER: Sending response to client[0m
+[0;32mI (32152) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (32152) BLE_HANDLER: Received roll=0.941 pitch=-2.856 azimuth=123.568 (len=12)[0m
+[0;32mI (32152) BLE_HANDLER: Sending response to client[0m
+[0;32mI (32242) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (32242) BLE_HANDLER: Received roll=0.952 pitch=-2.881 azimuth=123.552 (len=12)[0m
+[0;32mI (32242) BLE_HANDLER: Sending response to client[0m
+[0;32mI (32332) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (32332) BLE_HANDLER: Received roll=0.971 pitch=-2.973 azimuth=123.556 (len=12)[0m
+[0;32mI (32332) BLE_HANDLER: Sending response to client[0m
+[0;32mI (32422) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (32422) BLE_HANDLER: Received roll=0.948 pitch=-2.814 azimuth=123.538 (len=12)[0m
+[0;32mI (32422) BLE_HANDLER: Sending response to client[0m
+[0;32mI (32512) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (32512) BLE_HANDLER: Received roll=0.922 pitch=-2.719 azimuth=123.557 (len=12)[0m
+[0;32mI (32512) BLE_HANDLER: Sending response to client[0m
+[0;32mI (32602) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (32602) BLE_HANDLER: Received roll=0.936 pitch=-2.768 azimuth=123.570 (len=12)[0m
+[0;32mI (32602) BLE_HANDLER: Sending response to client[0m
+[0;32mI (32692) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (32692) BLE_HANDLER: Received roll=0.939 pitch=-2.780 azimuth=123.564 (len=12)[0m
+[0;32mI (32692) BLE_HANDLER: Sending response to client[0m
+[0;32mI (32782) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (32782) BLE_HANDLER: Received roll=0.924 pitch=-2.731 azimuth=-68.861 (len=12)[0m
+[0;32mI (32782) BLE_HANDLER: Sending response to client[0m
+[0;32mI (32962) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (32962) BLE_HANDLER: Received roll=0.947 pitch=-2.782 azimuth=-67.687 (len=12)[0m
+[0;32mI (32962) BLE_HANDLER: Sending response to client[0m
+[0;32mI (33052) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (33052) BLE_HANDLER: Received roll=0.959 pitch=-2.937 azimuth=-67.473 (len=12)[0m
+[0;32mI (33052) BLE_HANDLER: Sending response to client[0m
+[0;32mI (33142) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (33142) BLE_HANDLER: Received roll=0.964 pitch=-2.989 azimuth=-67.277 (len=12)[0m
+[0;32mI (33142) BLE_HANDLER: Sending response to client[0m
+[0;32mI (33232) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (33232) BLE_HANDLER: Received roll=0.895 pitch=-3.028 azimuth=-66.983 (len=12)[0m
+[0;32mI (33232) BLE_HANDLER: Sending response to client[0m
+[0;32mI (33322) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (33322) BLE_HANDLER: Received roll=0.964 pitch=-3.006 azimuth=-66.190 (len=12)[0m
+[0;32mI (33322) BLE_HANDLER: Sending response to client[0m
+[0;32mI (33462) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (33462) BLE_HANDLER: Received roll=0.917 pitch=-2.950 azimuth=-65.840 (len=12)[0m
+[0;32mI (33462) BLE_HANDLER: Sending response to client[0m
+[0;32mI (33552) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (33552) BLE_HANDLER: Received roll=1.163 pitch=-3.018 azimuth=-66.903 (len=12)[0m
+[0;32mI (33552) BLE_HANDLER: Sending response to client[0m
+[0;32mI (33682) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (33682) BLE_HANDLER: Received roll=1.141 pitch=-2.909 azimuth=-66.749 (len=12)[0m
+[0;32mI (33682) BLE_HANDLER: Sending response to client[0m
+[0;32mI (33772) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (33772) BLE_HANDLER: Received roll=1.050 pitch=-2.692 azimuth=-66.182 (len=12)[0m
+[0;32mI (33772) BLE_HANDLER: Sending response to client[0m
+[0;32mI (33862) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (33862) BLE_HANDLER: Received roll=0.979 pitch=-2.618 azimuth=-65.596 (len=12)[0m
+[0;32mI (33862) BLE_HANDLER: Sending response to client[0m
+[0;32mI (33952) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (33952) BLE_HANDLER: Received roll=1.004 pitch=-2.638 azimuth=-65.681 (len=12)[0m
+[0;32mI (33952) BLE_HANDLER: Sending response to client[0m
+[0;32mI (34042) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (34042) BLE_HANDLER: Received roll=1.010 pitch=-2.654 azimuth=-65.709 (len=12)[0m
+[0;32mI (34042) BLE_HANDLER: Sending response to client[0m
+[0;32mI (34182) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (34182) BLE_HANDLER: Received roll=0.983 pitch=-2.555 azimuth=-65.773 (len=12)[0m
+[0;32mI (34182) BLE_HANDLER: Sending response to client[0m
+[0;32mI (34272) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (34272) BLE_HANDLER: Received roll=0.940 pitch=-2.422 azimuth=-65.827 (len=12)[0m
+[0;32mI (34272) BLE_HANDLER: Sending response to client[0m
+[0;32mI (34362) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (34362) BLE_HANDLER: Received roll=0.740 pitch=-1.754 azimuth=-65.906 (len=12)[0m
+[0;32mI (34362) BLE_HANDLER: Sending response to client[0m
+[0;32mI (34452) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (34452) BLE_HANDLER: Received roll=0.735 pitch=-1.738 azimuth=-65.899 (len=12)[0m
+[0;32mI (34452) BLE_HANDLER: Sending response to client[0m
+[0;32mI (34582) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (34582) BLE_HANDLER: Received roll=0.724 pitch=-1.708 azimuth=-65.924 (len=12)[0m
+[0;32mI (34582) BLE_HANDLER: Sending response to client[0m
+[0;32mI (34672) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (34672) BLE_HANDLER: Received roll=0.640 pitch=-1.415 azimuth=-65.973 (len=12)[0m
+[0;32mI (34672) BLE_HANDLER: Sending response to client[0m
+[0;32mI (34762) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (34762) BLE_HANDLER: Received roll=0.631 pitch=-1.194 azimuth=-14.281 (len=12)[0m
+[0;32mI (34762) BLE_HANDLER: Sending response to client[0m
+[0;32mI (34852) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (34852) BLE_HANDLER: Received roll=0.563 pitch=-1.067 azimuth=-14.113 (len=12)[0m
+[0;32mI (34852) BLE_HANDLER: Sending response to client[0m
+[0;32mI (34942) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (34942) BLE_HANDLER: Received roll=0.538 pitch=-0.985 azimuth=-13.984 (len=12)[0m
+[0;32mI (34942) BLE_HANDLER: Sending response to client[0m
+[0;32mI (35032) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (35032) BLE_HANDLER: Received roll=0.517 pitch=-0.945 azimuth=-13.862 (len=12)[0m
+[0;32mI (35032) BLE_HANDLER: Sending response to client[0m
+[0;32mI (35122) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (35122) BLE_HANDLER: Received roll=0.461 pitch=-0.812 azimuth=-13.710 (len=12)[0m
+[0;32mI (35122) BLE_HANDLER: Sending response to client[0m
+[0;32mI (35212) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (35212) BLE_HANDLER: Received roll=0.471 pitch=-0.844 azimuth=-13.705 (len=12)[0m
+[0;32mI (35212) BLE_HANDLER: Sending response to client[0m
+[0;32mI (35302) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (35302) BLE_HANDLER: Received roll=0.501 pitch=-0.870 azimuth=-13.714 (len=12)[0m
+[0;32mI (35302) BLE_HANDLER: Sending response to client[0m
+[0;32mI (35392) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (35392) BLE_HANDLER: Received roll=0.512 pitch=-0.904 azimuth=-13.713 (len=12)[0m
+[0;32mI (35392) BLE_HANDLER: Sending response to client[0m
+[0;32mI (35482) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (35482) BLE_HANDLER: Received roll=0.517 pitch=-0.911 azimuth=-13.715 (len=12)[0m
+[0;32mI (35482) BLE_HANDLER: Sending response to client[0m
+[0;32mI (35572) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (35572) BLE_HANDLER: Received roll=0.530 pitch=-0.921 azimuth=-13.724 (len=12)[0m
+[0;32mI (35572) BLE_HANDLER: Sending response to client[0m
+[0;32mI (35662) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (35662) BLE_HANDLER: Received roll=0.494 pitch=-0.877 azimuth=-13.701 (len=12)[0m
+[0;32mI (35662) BLE_HANDLER: Sending response to client[0m
+[0;32mI (35752) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (35752) BLE_HANDLER: Received roll=0.466 pitch=-0.842 azimuth=-13.677 (len=12)[0m
+[0;32mI (35752) BLE_HANDLER: Sending response to client[0m
+[0;32mI (35842) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (35842) BLE_HANDLER: Received roll=0.453 pitch=-0.826 azimuth=14.385 (len=12)[0m
+[0;32mI (35842) BLE_HANDLER: Sending response to client[0m
+[0;32mI (35932) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (35932) BLE_HANDLER: Received roll=0.485 pitch=-0.872 azimuth=14.838 (len=12)[0m
+[0;32mI (35932) BLE_HANDLER: Sending response to client[0m
+[0;32mI (36022) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (36022) BLE_HANDLER: Received roll=0.583 pitch=-0.641 azimuth=14.490 (len=12)[0m
+[0;32mI (36022) BLE_HANDLER: Sending response to client[0m
+[0;32mI (36152) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (36162) BLE_HANDLER: Received roll=0.344 pitch=-0.346 azimuth=14.246 (len=12)[0m
+[0;32mI (36162) BLE_HANDLER: Sending response to client[0m
+[0;32mI (36242) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (36252) BLE_HANDLER: Received roll=0.274 pitch=-0.304 azimuth=14.388 (len=12)[0m
+[0;32mI (36252) BLE_HANDLER: Sending response to client[0m
+[0;32mI (36332) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (36342) BLE_HANDLER: Received roll=0.322 pitch=-0.293 azimuth=14.433 (len=12)[0m
+[0;32mI (36342) BLE_HANDLER: Sending response to client[0m
+[0;32mI (36422) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (36432) BLE_HANDLER: Received roll=0.327 pitch=-0.308 azimuth=14.439 (len=12)[0m
+[0;32mI (36432) BLE_HANDLER: Sending response to client[0m
+[0;32mI (36512) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (36522) BLE_HANDLER: Received roll=0.332 pitch=-0.301 azimuth=14.440 (len=12)[0m
+[0;32mI (36522) BLE_HANDLER: Sending response to client[0m
+[0;32mI (36602) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (36612) BLE_HANDLER: Received roll=0.326 pitch=-0.303 azimuth=14.447 (len=12)[0m
+[0;32mI (36612) BLE_HANDLER: Sending response to client[0m
+[0;32mI (36692) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (36702) BLE_HANDLER: Received roll=0.338 pitch=-0.324 azimuth=19.944 (len=12)[0m
+[0;32mI (36702) BLE_HANDLER: Sending response to client[0m
+[0;32mI (36782) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (36792) BLE_HANDLER: Received roll=0.331 pitch=-0.309 azimuth=24.121 (len=12)[0m
+[0;32mI (36792) BLE_HANDLER: Sending response to client[0m
+[0;32mI (36872) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (36882) BLE_HANDLER: Received roll=0.319 pitch=-0.296 azimuth=27.706 (len=12)[0m
+[0;32mI (36882) BLE_HANDLER: Sending response to client[0m
+[0;32mI (36962) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (36972) BLE_HANDLER: Received roll=0.329 pitch=-0.306 azimuth=29.272 (len=12)[0m
+[0;32mI (36972) BLE_HANDLER: Sending response to client[0m
+[0;32mI (37052) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (37062) BLE_HANDLER: Received roll=0.332 pitch=-0.304 azimuth=30.630 (len=12)[0m
+[0;32mI (37062) BLE_HANDLER: Sending response to client[0m
+[0;32mI (37142) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (37152) BLE_HANDLER: Received roll=0.325 pitch=-0.308 azimuth=31.405 (len=12)[0m
+[0;32mI (37152) BLE_HANDLER: Sending response to client[0m
+[0;32mI (37282) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (37282) BLE_HANDLER: Received roll=0.329 pitch=-0.322 azimuth=32.501 (len=12)[0m
+[0;32mI (37282) BLE_HANDLER: Sending response to client[0m
+[0;32mI (37372) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (37372) BLE_HANDLER: Received roll=0.321 pitch=-0.319 azimuth=32.975 (len=12)[0m
+[0;32mI (37372) BLE_HANDLER: Sending response to client[0m
+[0;32mI (37462) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (37462) BLE_HANDLER: Received roll=0.326 pitch=-0.317 azimuth=33.476 (len=12)[0m
+[0;32mI (37462) BLE_HANDLER: Sending response to client[0m
+[0;32mI (37552) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (37552) BLE_HANDLER: Received roll=0.322 pitch=-0.314 azimuth=33.829 (len=12)[0m
+[0;32mI (37552) BLE_HANDLER: Sending response to client[0m
+[0;32mI (37642) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (37642) BLE_HANDLER: Received roll=0.329 pitch=-0.314 azimuth=34.203 (len=12)[0m
+[0;32mI (37642) BLE_HANDLER: Sending response to client[0m
+[0;32mI (37732) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (37732) BLE_HANDLER: Received roll=0.331 pitch=-0.320 azimuth=34.455 (len=12)[0m
+[0;32mI (37732) BLE_HANDLER: Sending response to client[0m
+[0;32mI (37822) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (37822) BLE_HANDLER: Received roll=0.349 pitch=-0.342 azimuth=34.711 (len=12)[0m
+[0;32mI (37822) BLE_HANDLER: Sending response to client[0m
+[0;32mI (37912) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (37912) BLE_HANDLER: Received roll=0.350 pitch=-0.340 azimuth=34.841 (len=12)[0m
+[0;32mI (37912) BLE_HANDLER: Sending response to client[0m
+[0;32mI (38002) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (38002) BLE_HANDLER: Received roll=0.342 pitch=-0.312 azimuth=34.840 (len=12)[0m
+[0;32mI (38002) BLE_HANDLER: Sending response to client[0m
+[0;32mI (38092) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (38092) BLE_HANDLER: Received roll=0.314 pitch=-0.293 azimuth=34.841 (len=12)[0m
+[0;32mI (38092) BLE_HANDLER: Sending response to client[0m
+[0;32mI (38182) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (38182) BLE_HANDLER: Received roll=0.315 pitch=-0.295 azimuth=34.841 (len=12)[0m
+[0;32mI (38182) BLE_HANDLER: Sending response to client[0m
+[0;32mI (38272) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (38272) BLE_HANDLER: Received roll=0.319 pitch=-0.296 azimuth=34.841 (len=12)[0m
+[0;32mI (38272) BLE_HANDLER: Sending response to client[0m
+[0;32mI (38362) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (38362) BLE_HANDLER: Received roll=0.316 pitch=-0.297 azimuth=34.841 (len=12)[0m
+[0;32mI (38362) BLE_HANDLER: Sending response to client[0m
+[0;32mI (38452) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (38452) BLE_HANDLER: Received roll=0.324 pitch=-0.300 azimuth=34.841 (len=12)[0m
+[0;32mI (38452) BLE_HANDLER: Sending response to client[0m
+[0;32mI (38542) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (38542) BLE_HANDLER: Received roll=0.310 pitch=-0.293 azimuth=34.841 (len=12)[0m
+[0;32mI (38542) BLE_HANDLER: Sending response to client[0m
+[0;32mI (38632) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (38632) BLE_HANDLER: Received roll=0.313 pitch=-0.299 azimuth=34.842 (len=12)[0m
+[0;32mI (38632) BLE_HANDLER: Sending response to client[0m
+[0;32mI (38722) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (38722) BLE_HANDLER: Received roll=0.316 pitch=-0.318 azimuth=34.843 (len=12)[0m
+[0;32mI (38722) BLE_HANDLER: Sending response to client[0m
+[0;32mI (38812) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (38812) BLE_HANDLER: Received roll=0.343 pitch=-0.329 azimuth=34.841 (len=12)[0m
+[0;32mI (38812) BLE_HANDLER: Sending response to client[0m
+[0;32mI (38902) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (38902) BLE_HANDLER: Received roll=0.420 pitch=-0.363 azimuth=34.836 (len=12)[0m
+[0;32mI (38902) BLE_HANDLER: Sending response to client[0m
+[0;32mI (38992) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (38992) BLE_HANDLER: Received roll=0.335 pitch=-0.330 azimuth=34.745 (len=12)[0m
+[0;32mI (38992) BLE_HANDLER: Sending response to client[0m
+[0;32mI (39122) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (39132) BLE_HANDLER: Received roll=0.320 pitch=-0.318 azimuth=34.988 (len=12)[0m
+[0;32mI (39132) BLE_HANDLER: Sending response to client[0m
+[0;32mI (39212) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (39222) BLE_HANDLER: Received roll=0.307 pitch=-0.294 azimuth=35.100 (len=12)[0m
+[0;32mI (39222) BLE_HANDLER: Sending response to client[0m
+[0;32mI (39352) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (39352) BLE_HANDLER: Received roll=0.300 pitch=-0.272 azimuth=35.257 (len=12)[0m
+[0;32mI (39352) BLE_HANDLER: Sending response to client[0m
+[0;32mI (39442) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (39442) BLE_HANDLER: Received roll=0.305 pitch=-0.271 azimuth=35.399 (len=12)[0m
+[0;32mI (39442) BLE_HANDLER: Sending response to client[0m
+[0;32mI (39532) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (39532) BLE_HANDLER: Received roll=0.299 pitch=-0.267 azimuth=35.528 (len=12)[0m
+[0;32mI (39532) BLE_HANDLER: Sending response to client[0m
+[0;32mI (39622) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (39622) BLE_HANDLER: Received roll=0.301 pitch=-0.273 azimuth=35.666 (len=12)[0m
+[0;32mI (39622) BLE_HANDLER: Sending response to client[0m
+[0;32mI (39712) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (39712) BLE_HANDLER: Received roll=0.301 pitch=-0.282 azimuth=35.772 (len=12)[0m
+[0;32mI (39712) BLE_HANDLER: Sending response to client[0m
+[0;32mI (39852) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (39852) BLE_HANDLER: Received roll=0.311 pitch=-0.297 azimuth=35.943 (len=12)[0m
+[0;32mI (39852) BLE_HANDLER: Sending response to client[0m
+[0;32mI (39942) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (39942) BLE_HANDLER: Received roll=0.306 pitch=-0.298 azimuth=36.053 (len=12)[0m
+[0;32mI (39942) BLE_HANDLER: Sending response to client[0m
+[0;32mI (40032) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (40032) BLE_HANDLER: Received roll=0.310 pitch=-0.302 azimuth=36.175 (len=12)[0m
+[0;32mI (40032) BLE_HANDLER: Sending response to client[0m
+[0;32mI (40122) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (40122) BLE_HANDLER: Received roll=0.304 pitch=-0.298 azimuth=36.272 (len=12)[0m
+[0;32mI (40122) BLE_HANDLER: Sending response to client[0m
+[0;32mI (40252) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (40252) BLE_HANDLER: Received roll=0.305 pitch=-0.287 azimuth=36.410 (len=12)[0m
+[0;32mI (40252) BLE_HANDLER: Sending response to client[0m
+[0;32mI (40342) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (40342) BLE_HANDLER: Received roll=0.304 pitch=-0.284 azimuth=36.510 (len=12)[0m
+[0;32mI (40342) BLE_HANDLER: Sending response to client[0m
+[0;32mI (40432) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (40432) BLE_HANDLER: Received roll=0.304 pitch=-0.282 azimuth=36.573 (len=12)[0m
+[0;32mI (40432) BLE_HANDLER: Sending response to client[0m
+[0;32mI (40522) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (40522) BLE_HANDLER: Received roll=0.295 pitch=-0.278 azimuth=36.638 (len=12)[0m
+[0;32mI (40522) BLE_HANDLER: Sending response to client[0m
+[0;32mI (40612) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (40612) BLE_HANDLER: Received roll=0.302 pitch=-0.282 azimuth=36.649 (len=12)[0m
+[0;32mI (40612) BLE_HANDLER: Sending response to client[0m
+[0;32mI (40702) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (40702) BLE_HANDLER: Received roll=0.303 pitch=-0.284 azimuth=36.649 (len=12)[0m
+[0;32mI (40702) BLE_HANDLER: Sending response to client[0m
+[0;32mI (40792) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (40792) BLE_HANDLER: Received roll=0.303 pitch=-0.279 azimuth=36.649 (len=12)[0m
+[0;32mI (40792) BLE_HANDLER: Sending response to client[0m
+[0;32mI (40932) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (40932) BLE_HANDLER: Received roll=0.303 pitch=-0.282 azimuth=36.649 (len=12)[0m
+[0;32mI (40932) BLE_HANDLER: Sending response to client[0m
+[0;32mI (41022) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (41022) BLE_HANDLER: Received roll=0.301 pitch=-0.282 azimuth=36.649 (len=12)[0m
+[0;32mI (41022) BLE_HANDLER: Sending response to client[0m
+[0;32mI (41112) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (41112) BLE_HANDLER: Received roll=0.309 pitch=-0.292 azimuth=36.649 (len=12)[0m
+[0;32mI (41112) BLE_HANDLER: Sending response to client[0m
+[0;32mI (41202) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (41202) BLE_HANDLER: Received roll=0.315 pitch=-0.290 azimuth=36.649 (len=12)[0m
+[0;32mI (41202) BLE_HANDLER: Sending response to client[0m
+[0;32mI (41332) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (41332) BLE_HANDLER: Received roll=0.314 pitch=-0.285 azimuth=36.648 (len=12)[0m
+[0;32mI (41332) BLE_HANDLER: Sending response to client[0m
+[0;32mI (41422) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (41422) BLE_HANDLER: Received roll=0.312 pitch=-0.280 azimuth=36.648 (len=12)[0m
+[0;32mI (41422) BLE_HANDLER: Sending response to client[0m
+[0;32mI (41512) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (41512) BLE_HANDLER: Received roll=0.313 pitch=-0.279 azimuth=36.648 (len=12)[0m
+[0;32mI (41512) BLE_HANDLER: Sending response to client[0m
+[0;32mI (41602) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (41602) BLE_HANDLER: Received roll=0.307 pitch=-0.277 azimuth=36.648 (len=12)[0m
+[0;32mI (41602) BLE_HANDLER: Sending response to client[0m
+[0;32mI (41692) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (41692) BLE_HANDLER: Received roll=0.315 pitch=-0.286 azimuth=36.648 (len=12)[0m
+[0;32mI (41692) BLE_HANDLER: Sending response to client[0m
+[0;32mI (41782) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (41782) BLE_HANDLER: Received roll=0.325 pitch=-0.302 azimuth=36.648 (len=12)[0m
+[0;32mI (41782) BLE_HANDLER: Sending response to client[0m
+[0;32mI (41872) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (41872) BLE_HANDLER: Received roll=0.328 pitch=-0.302 azimuth=36.648 (len=12)[0m
+[0;32mI (41872) BLE_HANDLER: Sending response to client[0m
+[0;32mI (41962) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (41962) BLE_HANDLER: Received roll=0.253 pitch=-0.281 azimuth=36.768 (len=12)[0m
+[0;32mI (41962) BLE_HANDLER: Sending response to client[0m
+[0;32mI (42052) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (42052) BLE_HANDLER: Received roll=0.317 pitch=-0.275 azimuth=36.906 (len=12)[0m
+[0;32mI (42052) BLE_HANDLER: Sending response to client[0m
+[0;32mI (42142) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (42142) BLE_HANDLER: Received roll=0.308 pitch=-0.271 azimuth=37.003 (len=12)[0m
+[0;32mI (42142) BLE_HANDLER: Sending response to client[0m
+[0;32mI (42232) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (42232) BLE_HANDLER: Received roll=0.314 pitch=-0.265 azimuth=37.061 (len=12)[0m
+[0;32mI (42232) BLE_HANDLER: Sending response to client[0m
+[0;32mI (42322) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (42322) BLE_HANDLER: Received roll=0.303 pitch=-0.257 azimuth=37.125 (len=12)[0m
+[0;32mI (42322) BLE_HANDLER: Sending response to client[0m
+[0;32mI (42412) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (42412) BLE_HANDLER: Received roll=0.306 pitch=-0.263 azimuth=37.192 (len=12)[0m
+[0;32mI (42412) BLE_HANDLER: Sending response to client[0m
+[0;32mI (42502) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (42502) BLE_HANDLER: Received roll=0.309 pitch=-0.269 azimuth=37.260 (len=12)[0m
+[0;32mI (42502) BLE_HANDLER: Sending response to client[0m
+[0;32mI (42592) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (42592) BLE_HANDLER: Received roll=0.309 pitch=-0.266 azimuth=37.331 (len=12)[0m
+[0;32mI (42592) BLE_HANDLER: Sending response to client[0m
+[0;32mI (42772) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (42772) BLE_HANDLER: Received roll=0.306 pitch=-0.266 azimuth=37.430 (len=12)[0m
+[0;32mI (42772) BLE_HANDLER: Sending response to client[0m
+[0;32mI (42862) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (42862) BLE_HANDLER: Received roll=0.312 pitch=-0.267 azimuth=37.512 (len=12)[0m
+[0;32mI (42862) BLE_HANDLER: Sending response to client[0m
+[0;32mI (42952) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (42952) BLE_HANDLER: Received roll=0.307 pitch=-0.268 azimuth=37.565 (len=12)[0m
+[0;32mI (42952) BLE_HANDLER: Sending response to client[0m
+[0;32mI (43042) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (43042) BLE_HANDLER: Received roll=0.308 pitch=-0.271 azimuth=37.614 (len=12)[0m
+[0;32mI (43042) BLE_HANDLER: Sending response to client[0m
+[0;32mI (43182) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (43182) BLE_HANDLER: Received roll=0.304 pitch=-0.268 azimuth=37.669 (len=12)[0m
+[0;32mI (43182) BLE_HANDLER: Sending response to client[0m
+[0;32mI (43272) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (43272) BLE_HANDLER: Received roll=0.317 pitch=-0.272 azimuth=37.734 (len=12)[0m
+[0;32mI (43272) BLE_HANDLER: Sending response to client[0m
+[0;32mI (43362) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (43362) BLE_HANDLER: Received roll=0.310 pitch=-0.267 azimuth=37.790 (len=12)[0m
+[0;32mI (43362) BLE_HANDLER: Sending response to client[0m
+[0;32mI (43452) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (43452) BLE_HANDLER: Received roll=0.308 pitch=-0.267 azimuth=37.832 (len=12)[0m
+[0;32mI (43452) BLE_HANDLER: Sending response to client[0m
+[0;32mI (43542) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (43542) BLE_HANDLER: Received roll=0.314 pitch=-0.270 azimuth=37.875 (len=12)[0m
+[0;32mI (43542) BLE_HANDLER: Sending response to client[0m
+[0;32mI (43632) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (43632) BLE_HANDLER: Received roll=0.306 pitch=-0.269 azimuth=37.888 (len=12)[0m
+[0;32mI (43632) BLE_HANDLER: Sending response to client[0m
+[0;32mI (43722) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (43722) BLE_HANDLER: Received roll=0.310 pitch=-0.276 azimuth=37.888 (len=12)[0m
+[0;32mI (43722) BLE_HANDLER: Sending response to client[0m
+[0;32mI (43812) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (43812) BLE_HANDLER: Received roll=0.308 pitch=-0.284 azimuth=37.888 (len=12)[0m
+[0;32mI (43812) BLE_HANDLER: Sending response to client[0m
+[0;32mI (43902) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (43902) BLE_HANDLER: Received roll=0.309 pitch=-0.287 azimuth=37.888 (len=12)[0m
+[0;32mI (43902) BLE_HANDLER: Sending response to client[0m
+[0;32mI (43992) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (43992) BLE_HANDLER: Received roll=0.308 pitch=-0.288 azimuth=37.889 (len=12)[0m
+[0;32mI (43992) BLE_HANDLER: Sending response to client[0m
+[0;32mI (44082) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (44082) BLE_HANDLER: Received roll=0.310 pitch=-0.283 azimuth=37.888 (len=12)[0m
+[0;32mI (44082) BLE_HANDLER: Sending response to client[0m
+[0;32mI (44172) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (44172) BLE_HANDLER: Received roll=0.317 pitch=-0.284 azimuth=37.888 (len=12)[0m
+[0;32mI (44172) BLE_HANDLER: Sending response to client[0m
+[0;32mI (44262) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (44262) BLE_HANDLER: Received roll=0.311 pitch=-0.287 azimuth=37.888 (len=12)[0m
+[0;32mI (44262) BLE_HANDLER: Sending response to client[0m
+[0;32mI (44352) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (44352) BLE_HANDLER: Received roll=0.314 pitch=-0.289 azimuth=37.888 (len=12)[0m
+[0;32mI (44352) BLE_HANDLER: Sending response to client[0m
+[0;32mI (44442) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (44442) BLE_HANDLER: Received roll=0.312 pitch=-0.296 azimuth=37.889 (len=12)[0m
+[0;32mI (44442) BLE_HANDLER: Sending response to client[0m
+[0;32mI (44532) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (44532) BLE_HANDLER: Received roll=0.329 pitch=-0.320 azimuth=37.889 (len=12)[0m
+[0;32mI (44532) BLE_HANDLER: Sending response to client[0m
+[0;32mI (44622) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (44622) BLE_HANDLER: Received roll=0.333 pitch=-0.334 azimuth=37.890 (len=12)[0m
+[0;32mI (44622) BLE_HANDLER: Sending response to client[0m
+[0;32mI (44712) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (44712) BLE_HANDLER: Received roll=0.324 pitch=-0.322 azimuth=37.890 (len=12)[0m
+[0;32mI (44712) BLE_HANDLER: Sending response to client[0m
+[0;32mI (44802) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (44802) BLE_HANDLER: Received roll=0.281 pitch=-0.297 azimuth=37.891 (len=12)[0m
+[0;32mI (44802) BLE_HANDLER: Sending response to client[0m
+[0;32mI (44892) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (44892) BLE_HANDLER: Received roll=0.315 pitch=-0.294 azimuth=37.889 (len=12)[0m
+[0;32mI (44892) BLE_HANDLER: Sending response to client[0m
+[0;32mI (45022) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (45022) BLE_HANDLER: Received roll=0.319 pitch=-0.294 azimuth=37.888 (len=12)[0m
+[0;32mI (45022) BLE_HANDLER: Sending response to client[0m
+[0;32mI (45112) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (45112) BLE_HANDLER: Received roll=0.328 pitch=-0.314 azimuth=37.889 (len=12)[0m
+[0;32mI (45112) BLE_HANDLER: Sending response to client[0m
+[0;32mI (45202) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (45202) BLE_HANDLER: Received roll=0.342 pitch=-0.324 azimuth=37.888 (len=12)[0m
+[0;32mI (45202) BLE_HANDLER: Sending response to client[0m
+[0;32mI (45292) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (45292) BLE_HANDLER: Received roll=0.335 pitch=-0.319 azimuth=37.889 (len=12)[0m
+[0;32mI (45292) BLE_HANDLER: Sending response to client[0m
+[0;32mI (45382) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (45382) BLE_HANDLER: Received roll=0.331 pitch=-0.313 azimuth=37.889 (len=12)[0m
+[0;32mI (45382) BLE_HANDLER: Sending response to client[0m
+[0;32mI (45472) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (45472) BLE_HANDLER: Received roll=0.326 pitch=-0.298 azimuth=37.888 (len=12)[0m
+[0;32mI (45472) BLE_HANDLER: Sending response to client[0m
+[0;32mI (45562) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (45562) BLE_HANDLER: Received roll=0.328 pitch=-0.303 azimuth=37.888 (len=12)[0m
+[0;32mI (45562) BLE_HANDLER: Sending response to client[0m
+[0;32mI (45652) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (45652) BLE_HANDLER: Received roll=0.328 pitch=-0.309 azimuth=37.889 (len=12)[0m
+[0;32mI (45652) BLE_HANDLER: Sending response to client[0m
+[0;32mI (45742) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (45742) BLE_HANDLER: Received roll=0.329 pitch=-0.313 azimuth=37.889 (len=12)[0m
+[0;32mI (45742) BLE_HANDLER: Sending response to client[0m
+[0;32mI (45832) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (45832) BLE_HANDLER: Received roll=0.339 pitch=-0.311 azimuth=37.888 (len=12)[0m
+[0;32mI (45832) BLE_HANDLER: Sending response to client[0m
+[0;32mI (45922) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (45922) BLE_HANDLER: Received roll=0.330 pitch=-0.307 azimuth=37.888 (len=12)[0m
+[0;32mI (45922) BLE_HANDLER: Sending response to client[0m
+[0;32mI (46012) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (46012) BLE_HANDLER: Received roll=0.338 pitch=-0.315 azimuth=37.888 (len=12)[0m
+[0;32mI (46012) BLE_HANDLER: Sending response to client[0m
+[0;32mI (46102) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (46102) BLE_HANDLER: Received roll=0.330 pitch=-0.304 azimuth=37.888 (len=12)[0m
+[0;32mI (46102) BLE_HANDLER: Sending response to client[0m
+[0;32mI (46192) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (46192) BLE_HANDLER: Received roll=0.331 pitch=-0.304 azimuth=37.888 (len=12)[0m
+[0;32mI (46192) BLE_HANDLER: Sending response to client[0m
+[0;32mI (46282) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (46282) BLE_HANDLER: Received roll=0.334 pitch=-0.300 azimuth=37.887 (len=12)[0m
+[0;32mI (46282) BLE_HANDLER: Sending response to client[0m
+[0;32mI (46372) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (46372) BLE_HANDLER: Received roll=0.331 pitch=-0.295 azimuth=37.887 (len=12)[0m
+[0;32mI (46372) BLE_HANDLER: Sending response to client[0m
+[0;32mI (46512) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (46512) BLE_HANDLER: Received roll=0.333 pitch=-0.299 azimuth=37.887 (len=12)[0m
+[0;32mI (46512) BLE_HANDLER: Sending response to client[0m
+[0;32mI (46602) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (46602) BLE_HANDLER: Received roll=0.335 pitch=-0.296 azimuth=37.887 (len=12)[0m
+[0;32mI (46602) BLE_HANDLER: Sending response to client[0m
+[0;32mI (46692) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (46692) BLE_HANDLER: Received roll=0.337 pitch=-0.297 azimuth=37.887 (len=12)[0m
+[0;32mI (46692) BLE_HANDLER: Sending response to client[0m
+[0;32mI (46782) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (46782) BLE_HANDLER: Received roll=0.314 pitch=-0.282 azimuth=37.888 (len=12)[0m
+[0;32mI (46782) BLE_HANDLER: Sending response to client[0m
+[0;32mI (46872) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (46872) BLE_HANDLER: Received roll=0.303 pitch=-0.279 azimuth=37.889 (len=12)[0m
+[0;32mI (46872) BLE_HANDLER: Sending response to client[0m
+[0;32mI (46962) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (46962) BLE_HANDLER: Received roll=0.387 pitch=-0.342 azimuth=37.886 (len=12)[0m
+[0;32mI (46962) BLE_HANDLER: Sending response to client[0m
+[0;32mI (47052) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (47052) BLE_HANDLER: Received roll=0.405 pitch=-0.362 azimuth=36.792 (len=12)[0m
+[0;32mI (47052) BLE_HANDLER: Sending response to client[0m
+[0;32mI (47142) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (47142) BLE_HANDLER: Received roll=0.276 pitch=-0.306 azimuth=36.671 (len=12)[0m
+[0;32mI (47142) BLE_HANDLER: Sending response to client[0m
+[0;32mI (47272) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (47272) BLE_HANDLER: Received roll=0.297 pitch=-0.291 azimuth=36.669 (len=12)[0m
+[0;32mI (47272) BLE_HANDLER: Sending response to client[0m
+[0;32mI (47362) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (47362) BLE_HANDLER: Received roll=0.284 pitch=-0.307 azimuth=36.674 (len=12)[0m
+[0;32mI (47362) BLE_HANDLER: Sending response to client[0m
+[0;32mI (47452) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (47452) BLE_HANDLER: Received roll=0.296 pitch=-0.311 azimuth=36.671 (len=12)[0m
+[0;32mI (47452) BLE_HANDLER: Sending response to client[0m
+[0;32mI (47542) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (47542) BLE_HANDLER: Received roll=0.286 pitch=-0.301 azimuth=36.671 (len=12)[0m
+[0;32mI (47542) BLE_HANDLER: Sending response to client[0m
+[0;32mI (47632) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (47632) BLE_HANDLER: Received roll=0.290 pitch=-0.308 azimuth=36.761 (len=12)[0m
+[0;32mI (47632) BLE_HANDLER: Sending response to client[0m
+[0;32mI (47722) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (47722) BLE_HANDLER: Received roll=0.289 pitch=-0.312 azimuth=36.873 (len=12)[0m
+[0;32mI (47722) BLE_HANDLER: Sending response to client[0m
+[0;32mI (47812) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (47812) BLE_HANDLER: Received roll=0.288 pitch=-0.303 azimuth=37.014 (len=12)[0m
+[0;32mI (47812) BLE_HANDLER: Sending response to client[0m
+[0;32mI (47902) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (47902) BLE_HANDLER: Received roll=0.291 pitch=-0.302 azimuth=37.120 (len=12)[0m
+[0;32mI (47902) BLE_HANDLER: Sending response to client[0m
+[0;32mI (47992) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (47992) BLE_HANDLER: Received roll=0.298 pitch=-0.306 azimuth=37.220 (len=12)[0m
+[0;32mI (47992) BLE_HANDLER: Sending response to client[0m
+[0;32mI (48082) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (48082) BLE_HANDLER: Received roll=0.289 pitch=-0.305 azimuth=37.348 (len=12)[0m
+[0;32mI (48082) BLE_HANDLER: Sending response to client[0m
+[0;32mI (48172) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (48172) BLE_HANDLER: Received roll=0.289 pitch=-0.307 azimuth=37.442 (len=12)[0m
+[0;32mI (48172) BLE_HANDLER: Sending response to client[0m
+[0;32mI (48262) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (48262) BLE_HANDLER: Received roll=0.288 pitch=-0.305 azimuth=37.560 (len=12)[0m
+[0;32mI (48262) BLE_HANDLER: Sending response to client[0m
+[0;32mI (48352) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (48352) BLE_HANDLER: Received roll=0.289 pitch=-0.305 azimuth=37.649 (len=12)[0m
+[0;32mI (48352) BLE_HANDLER: Sending response to client[0m
+[0;32mI (48442) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (48442) BLE_HANDLER: Received roll=0.292 pitch=-0.302 azimuth=37.755 (len=12)[0m
+[0;32mI (48442) BLE_HANDLER: Sending response to client[0m
+[0;32mI (48532) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (48532) BLE_HANDLER: Received roll=0.296 pitch=-0.308 azimuth=37.837 (len=12)[0m
+[0;32mI (48532) BLE_HANDLER: Sending response to client[0m
+[0;32mI (48672) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (48672) BLE_HANDLER: Received roll=0.303 pitch=-0.311 azimuth=37.977 (len=12)[0m
+[0;32mI (48672) BLE_HANDLER: Sending response to client[0m
+[0;32mI (48762) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (48762) BLE_HANDLER: Received roll=0.302 pitch=-0.310 azimuth=37.998 (len=12)[0m
+[0;32mI (48762) BLE_HANDLER: Sending response to client[0m
+[0;32mI (48852) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (48852) BLE_HANDLER: Received roll=0.306 pitch=-0.307 azimuth=37.997 (len=12)[0m
+[0;32mI (48852) BLE_HANDLER: Sending response to client[0m
+[0;32mI (48942) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (48942) BLE_HANDLER: Received roll=0.307 pitch=-0.307 azimuth=37.997 (len=12)[0m
+[0;32mI (48942) BLE_HANDLER: Sending response to client[0m
+[0;32mI (49032) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (49032) BLE_HANDLER: Received roll=0.307 pitch=-0.300 azimuth=37.996 (len=12)[0m
+[0;32mI (49032) BLE_HANDLER: Sending response to client[0m
+[0;32mI (49122) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (49122) BLE_HANDLER: Received roll=0.310 pitch=-0.299 azimuth=37.996 (len=12)[0m
+[0;32mI (49122) BLE_HANDLER: Sending response to client[0m
+[0;32mI (49252) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (49252) BLE_HANDLER: Received roll=0.307 pitch=-0.304 azimuth=37.997 (len=12)[0m
+[0;32mI (49252) BLE_HANDLER: Sending response to client[0m
+[0;32mI (49342) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (49342) BLE_HANDLER: Received roll=0.304 pitch=-0.307 azimuth=37.997 (len=12)[0m
+[0;32mI (49342) BLE_HANDLER: Sending response to client[0m
+[0;32mI (49432) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (49432) BLE_HANDLER: Received roll=0.308 pitch=-0.316 azimuth=37.998 (len=12)[0m
+[0;32mI (49432) BLE_HANDLER: Sending response to client[0m
+[0;32mI (49522) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (49522) BLE_HANDLER: Received roll=0.316 pitch=-0.328 azimuth=37.998 (len=12)[0m
+[0;32mI (49522) BLE_HANDLER: Sending response to client[0m
+[0;32mI (49612) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (49612) BLE_HANDLER: Received roll=0.316 pitch=-0.326 azimuth=37.998 (len=12)[0m
+[0;32mI (49612) BLE_HANDLER: Sending response to client[0m
+[0;32mI (49702) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (49702) BLE_HANDLER: Received roll=0.317 pitch=-0.306 azimuth=37.996 (len=12)[0m
+[0;32mI (49702) BLE_HANDLER: Sending response to client[0m
+[0;32mI (49792) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (49792) BLE_HANDLER: Received roll=0.255 pitch=-0.277 azimuth=38.000 (len=12)[0m
+[0;32mI (49792) BLE_HANDLER: Sending response to client[0m
+[0;32mI (49882) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (49882) BLE_HANDLER: Received roll=0.304 pitch=-0.284 azimuth=38.363 (len=12)[0m
+[0;32mI (49882) BLE_HANDLER: Sending response to client[0m
+[0;32mI (49972) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (49972) BLE_HANDLER: Received roll=0.306 pitch=-0.307 azimuth=38.427 (len=12)[0m
+[0;32mI (49972) BLE_HANDLER: Sending response to client[0m
+[0;32mI (50062) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (50062) BLE_HANDLER: Received roll=0.310 pitch=-0.308 azimuth=38.446 (len=12)[0m
+[0;32mI (50062) BLE_HANDLER: Sending response to client[0m
+[0;32mI (50152) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (50152) BLE_HANDLER: Received roll=0.310 pitch=-0.317 azimuth=38.532 (len=12)[0m
+[0;32mI (50152) BLE_HANDLER: Sending response to client[0m
+[0;32mI (50242) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (50242) BLE_HANDLER: Received roll=0.316 pitch=-0.317 azimuth=38.635 (len=12)[0m
+[0;32mI (50242) BLE_HANDLER: Sending response to client[0m
+[0;32mI (50332) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (50332) BLE_HANDLER: Received roll=0.310 pitch=-0.317 azimuth=38.723 (len=12)[0m
+[0;32mI (50332) BLE_HANDLER: Sending response to client[0m
+[0;32mI (50422) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (50422) BLE_HANDLER: Received roll=0.316 pitch=-0.311 azimuth=38.819 (len=12)[0m
+[0;32mI (50422) BLE_HANDLER: Sending response to client[0m
+[0;32mI (50512) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (50512) BLE_HANDLER: Received roll=0.295 pitch=-0.297 azimuth=38.897 (len=12)[0m
+[0;32mI (50512) BLE_HANDLER: Sending response to client[0m
+[0;32mI (50602) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (50602) BLE_HANDLER: Received roll=0.306 pitch=-0.300 azimuth=38.994 (len=12)[0m
+[0;32mI (50602) BLE_HANDLER: Sending response to client[0m
+[0;32mI (50692) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (50692) BLE_HANDLER: Received roll=0.314 pitch=-0.318 azimuth=39.070 (len=12)[0m
+[0;32mI (50692) BLE_HANDLER: Sending response to client[0m
+[0;32mI (50782) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (50782) BLE_HANDLER: Received roll=0.325 pitch=-0.326 azimuth=39.153 (len=12)[0m
+[0;32mI (50782) BLE_HANDLER: Sending response to client[0m
+[0;32mI (50872) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (50872) BLE_HANDLER: Received roll=0.313 pitch=-0.314 azimuth=39.217 (len=12)[0m
+[0;32mI (50872) BLE_HANDLER: Sending response to client[0m
+[0;32mI (51002) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (51012) BLE_HANDLER: Received roll=0.314 pitch=-0.310 azimuth=39.314 (len=12)[0m
+[0;32mI (51012) BLE_HANDLER: Sending response to client[0m
+[0;32mI (51102) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (51102) BLE_HANDLER: Received roll=0.307 pitch=-0.302 azimuth=39.384 (len=12)[0m
+[0;32mI (51102) BLE_HANDLER: Sending response to client[0m
+[0;32mI (51192) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (51192) BLE_HANDLER: Received roll=0.303 pitch=-0.291 azimuth=39.453 (len=12)[0m
+[0;32mI (51192) BLE_HANDLER: Sending response to client[0m
+[0;32mI (51282) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (51282) BLE_HANDLER: Received roll=0.310 pitch=-0.306 azimuth=39.516 (len=12)[0m
+[0;32mI (51282) BLE_HANDLER: Sending response to client[0m
+[0;32mI (51372) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (51372) BLE_HANDLER: Received roll=0.314 pitch=-0.314 azimuth=39.589 (len=12)[0m
+[0;32mI (51372) BLE_HANDLER: Sending response to client[0m
+[0;32mI (51462) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (51462) BLE_HANDLER: Received roll=0.310 pitch=-0.321 azimuth=39.650 (len=12)[0m
+[0;32mI (51462) BLE_HANDLER: Sending response to client[0m
+[0;32mI (51552) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (51552) BLE_HANDLER: Received roll=0.311 pitch=-0.310 azimuth=39.677 (len=12)[0m
+[0;32mI (51552) BLE_HANDLER: Sending response to client[0m
+[0;32mI (51682) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (51682) BLE_HANDLER: Received roll=0.297 pitch=-0.287 azimuth=39.677 (len=12)[0m
+[0;32mI (51682) BLE_HANDLER: Sending response to client[0m
+[0;32mI (51772) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (51772) BLE_HANDLER: Received roll=0.295 pitch=-0.282 azimuth=39.676 (len=12)[0m
+[0;32mI (51772) BLE_HANDLER: Sending response to client[0m
+[0;32mI (51862) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (51862) BLE_HANDLER: Received roll=0.278 pitch=-0.268 azimuth=39.677 (len=12)[0m
+[0;32mI (51862) BLE_HANDLER: Sending response to client[0m
+[0;32mI (51952) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (51952) BLE_HANDLER: Received roll=0.274 pitch=-0.263 azimuth=39.677 (len=12)[0m
+[0;32mI (51952) BLE_HANDLER: Sending response to client[0m
+[0;32mI (52092) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (52092) BLE_HANDLER: Received roll=0.280 pitch=-0.262 azimuth=39.676 (len=12)[0m
+[0;32mI (52092) BLE_HANDLER: Sending response to client[0m
+[0;32mI (52182) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (52182) BLE_HANDLER: Received roll=0.273 pitch=-0.258 azimuth=39.676 (len=12)[0m
+[0;32mI (52182) BLE_HANDLER: Sending response to client[0m
+[0;32mI (52272) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (52272) BLE_HANDLER: Received roll=0.275 pitch=-0.258 azimuth=39.676 (len=12)[0m
+[0;32mI (52272) BLE_HANDLER: Sending response to client[0m
+[0;32mI (52362) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (52362) BLE_HANDLER: Received roll=0.271 pitch=-0.249 azimuth=39.676 (len=12)[0m
+[0;32mI (52362) BLE_HANDLER: Sending response to client[0m
+[0;32mI (52452) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (52452) BLE_HANDLER: Received roll=0.271 pitch=-0.252 azimuth=39.676 (len=12)[0m
+[0;32mI (52452) BLE_HANDLER: Sending response to client[0m
+[0;32mI (52542) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (52542) BLE_HANDLER: Received roll=0.263 pitch=-0.253 azimuth=39.677 (len=12)[0m
+[0;32mI (52542) BLE_HANDLER: Sending response to client[0m
+[0;32mI (52632) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (52632) BLE_HANDLER: Received roll=0.262 pitch=-0.251 azimuth=39.677 (len=12)[0m
+[0;32mI (52632) BLE_HANDLER: Sending response to client[0m
+[0;32mI (52722) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (52722) BLE_HANDLER: Received roll=0.261 pitch=-0.255 azimuth=39.677 (len=12)[0m
+[0;32mI (52722) BLE_HANDLER: Sending response to client[0m
+[0;32mI (52812) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (52812) BLE_HANDLER: Received roll=0.269 pitch=-0.250 azimuth=39.676 (len=12)[0m
+[0;32mI (52812) BLE_HANDLER: Sending response to client[0m
+[0;32mI (52902) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (52902) BLE_HANDLER: Received roll=0.273 pitch=-0.258 azimuth=39.676 (len=12)[0m
+[0;32mI (52902) BLE_HANDLER: Sending response to client[0m
+[0;32mI (52992) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (52992) BLE_HANDLER: Received roll=0.286 pitch=-0.284 azimuth=39.678 (len=12)[0m
+[0;32mI (52992) BLE_HANDLER: Sending response to client[0m
+[0;32mI (53082) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (53082) BLE_HANDLER: Received roll=0.286 pitch=-0.283 azimuth=39.677 (len=12)[0m
+[0;32mI (53082) BLE_HANDLER: Sending response to client[0m
+[0;32mI (53212) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (53212) BLE_HANDLER: Received roll=0.287 pitch=-0.279 azimuth=39.677 (len=12)[0m
+[0;32mI (53212) BLE_HANDLER: Sending response to client[0m
+[0;32mI (53302) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (53302) BLE_HANDLER: Received roll=0.292 pitch=-0.281 azimuth=39.677 (len=12)[0m
+[0;32mI (53302) BLE_HANDLER: Sending response to client[0m
+[0;32mI (53392) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (53392) BLE_HANDLER: Received roll=0.291 pitch=-0.286 azimuth=39.677 (len=12)[0m
+[0;32mI (53392) BLE_HANDLER: Sending response to client[0m
+[0;32mI (53482) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (53482) BLE_HANDLER: Received roll=0.299 pitch=-0.287 azimuth=39.676 (len=12)[0m
+[0;32mI (53482) BLE_HANDLER: Sending response to client[0m
+[0;32mI (53572) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (53572) BLE_HANDLER: Received roll=0.294 pitch=-0.285 azimuth=39.677 (len=12)[0m
+[0;32mI (53572) BLE_HANDLER: Sending response to client[0m
+[0;32mI (53662) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (53662) BLE_HANDLER: Received roll=0.301 pitch=-0.282 azimuth=39.676 (len=12)[0m
+[0;32mI (53662) BLE_HANDLER: Sending response to client[0m
+[0;32mI (53752) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (53752) BLE_HANDLER: Received roll=0.299 pitch=-0.277 azimuth=39.676 (len=12)[0m
+[0;32mI (53752) BLE_HANDLER: Sending response to client[0m
+[0;32mI (53842) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (53842) BLE_HANDLER: Received roll=0.297 pitch=-0.281 azimuth=39.676 (len=12)[0m
+[0;32mI (53842) BLE_HANDLER: Sending response to client[0m
+[0;32mI (53932) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (53932) BLE_HANDLER: Received roll=0.296 pitch=-0.280 azimuth=39.676 (len=12)[0m
+[0;32mI (53932) BLE_HANDLER: Sending response to client[0m
+[0;32mI (54022) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (54022) BLE_HANDLER: Received roll=0.298 pitch=-0.289 azimuth=39.677 (len=12)[0m
+[0;32mI (54022) BLE_HANDLER: Sending response to client[0m
+[0;32mI (54112) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (54112) BLE_HANDLER: Received roll=0.301 pitch=-0.293 azimuth=39.677 (len=12)[0m
+[0;32mI (54112) BLE_HANDLER: Sending response to client[0m
+[0;32mI (54202) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (54202) BLE_HANDLER: Received roll=0.300 pitch=-0.283 azimuth=39.676 (len=12)[0m
+[0;32mI (54202) BLE_HANDLER: Sending response to client[0m
+[0;32mI (54292) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (54292) BLE_HANDLER: Received roll=0.297 pitch=-0.281 azimuth=39.676 (len=12)[0m
+[0;32mI (54292) BLE_HANDLER: Sending response to client[0m
+[0;32mI (54382) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (54382) BLE_HANDLER: Received roll=0.296 pitch=-0.278 azimuth=39.676 (len=12)[0m
+[0;32mI (54382) BLE_HANDLER: Sending response to client[0m
+[0;32mI (54472) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (54472) BLE_HANDLER: Received roll=0.291 pitch=-0.275 azimuth=39.676 (len=12)[0m
+[0;32mI (54472) BLE_HANDLER: Sending response to client[0m
+[0;32mI (54562) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (54562) BLE_HANDLER: Received roll=0.286 pitch=-0.268 azimuth=39.676 (len=12)[0m
+[0;32mI (54562) BLE_HANDLER: Sending response to client[0m
+[0;32mI (54652) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (54652) BLE_HANDLER: Received roll=0.289 pitch=-0.268 azimuth=39.676 (len=12)[0m
+[0;32mI (54652) BLE_HANDLER: Sending response to client[0m
+[0;32mI (54792) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (54792) BLE_HANDLER: Received roll=0.279 pitch=-0.255 azimuth=39.676 (len=12)[0m
+[0;32mI (54792) BLE_HANDLER: Sending response to client[0m
+[0;32mI (54882) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (54882) BLE_HANDLER: Received roll=0.294 pitch=-0.277 azimuth=39.676 (len=12)[0m
+[0;32mI (54882) BLE_HANDLER: Sending response to client[0m
+[0;32mI (54972) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (54972) BLE_HANDLER: Received roll=0.280 pitch=-0.266 azimuth=39.676 (len=12)[0m
+[0;32mI (54972) BLE_HANDLER: Sending response to client[0m
+[0;32mI (55062) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (55062) BLE_HANDLER: Received roll=0.278 pitch=-0.260 azimuth=39.676 (len=12)[0m
+[0;32mI (55062) BLE_HANDLER: Sending response to client[0m
+[0;32mI (55152) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (55152) BLE_HANDLER: Received roll=0.268 pitch=-0.246 azimuth=39.676 (len=12)[0m
+[0;32mI (55152) BLE_HANDLER: Sending response to client[0m
+[0;32mI (55242) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (55242) BLE_HANDLER: Received roll=0.283 pitch=-0.267 azimuth=39.676 (len=12)[0m
+[0;32mI (55242) BLE_HANDLER: Sending response to client[0m
+[0;32mI (55332) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (55332) BLE_HANDLER: Received roll=0.163 pitch=-0.292 azimuth=39.756 (len=12)[0m
+[0;32mI (55332) BLE_HANDLER: Sending response to client[0m
+[0;32mI (55422) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (55422) BLE_HANDLER: Received roll=0.429 pitch=-0.545 azimuth=40.911 (len=12)[0m
+[0;32mI (55422) BLE_HANDLER: Sending response to client[0m
+[0;32mI (55512) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (55512) BLE_HANDLER: Received roll=0.630 pitch=-0.652 azimuth=41.180 (len=12)[0m
+[0;32mI (55512) BLE_HANDLER: Sending response to client[0m
+[0;32mI (55602) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (55602) BLE_HANDLER: Received roll=0.580 pitch=-0.363 azimuth=40.791 (len=12)[0m
+[0;32mI (55602) BLE_HANDLER: Sending response to client[0m
+[0;32mI (55692) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (55692) BLE_HANDLER: Received roll=0.402 pitch=0.102 azimuth=40.299 (len=12)[0m
+[0;32mI (55692) BLE_HANDLER: Sending response to client[0m
+[0;32mI (55782) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (55782) BLE_HANDLER: Received roll=0.237 pitch=0.388 azimuth=40.258 (len=12)[0m
+[0;32mI (55782) BLE_HANDLER: Sending response to client[0m
+[0;32mI (55872) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (55872) BLE_HANDLER: Received roll=0.262 pitch=0.344 azimuth=40.260 (len=12)[0m
+[0;32mI (55872) BLE_HANDLER: Sending response to client[0m
+[0;32mI (56042) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (56052) BLE_HANDLER: Received roll=0.254 pitch=0.316 azimuth=40.219 (len=12)[0m
+[0;32mI (56052) BLE_HANDLER: Sending response to client[0m
+[0;32mI (56142) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (56142) BLE_HANDLER: Received roll=0.244 pitch=0.303 azimuth=40.210 (len=12)[0m
+[0;32mI (56142) BLE_HANDLER: Sending response to client[0m
+[0;32mI (56232) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (56232) BLE_HANDLER: Received roll=0.245 pitch=0.285 azimuth=40.207 (len=12)[0m
+[0;32mI (56232) BLE_HANDLER: Sending response to client[0m
+[0;32mI (56322) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (56322) BLE_HANDLER: Received roll=0.249 pitch=0.272 azimuth=40.206 (len=12)[0m
+[0;32mI (56322) BLE_HANDLER: Sending response to client[0m
+[0;32mI (56412) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (56412) BLE_HANDLER: Received roll=0.258 pitch=0.260 azimuth=52.327 (len=12)[0m
+[0;32mI (56412) BLE_HANDLER: Sending response to client[0m
+[0;32mI (56502) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (56502) BLE_HANDLER: Received roll=0.261 pitch=0.251 azimuth=52.326 (len=12)[0m
+[0;32mI (56502) BLE_HANDLER: Sending response to client[0m
+[0;32mI (56592) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (56592) BLE_HANDLER: Received roll=0.265 pitch=0.240 azimuth=52.325 (len=12)[0m
+[0;32mI (56592) BLE_HANDLER: Sending response to client[0m
+[0;32mI (56682) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (56682) BLE_HANDLER: Received roll=0.269 pitch=0.238 azimuth=52.325 (len=12)[0m
+[0;32mI (56682) BLE_HANDLER: Sending response to client[0m
+[0;32mI (56772) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (56772) BLE_HANDLER: Received roll=0.273 pitch=0.235 azimuth=52.325 (len=12)[0m
+[0;32mI (56772) BLE_HANDLER: Sending response to client[0m
+[0;32mI (56862) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (56862) BLE_HANDLER: Received roll=0.274 pitch=0.236 azimuth=52.325 (len=12)[0m
+[0;32mI (56862) BLE_HANDLER: Sending response to client[0m
+[0;32mI (56952) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (56952) BLE_HANDLER: Received roll=0.269 pitch=0.235 azimuth=52.324 (len=12)[0m
+[0;32mI (56952) BLE_HANDLER: Sending response to client[0m
+[0;32mI (57042) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (57042) BLE_HANDLER: Received roll=0.275 pitch=0.227 azimuth=52.324 (len=12)[0m
+[0;32mI (57042) BLE_HANDLER: Sending response to client[0m
+[0;32mI (57132) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (57132) BLE_HANDLER: Received roll=0.272 pitch=0.223 azimuth=52.323 (len=12)[0m
+[0;32mI (57132) BLE_HANDLER: Sending response to client[0m
+[0;32mI (57222) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (57222) BLE_HANDLER: Received roll=0.274 pitch=0.220 azimuth=52.322 (len=12)[0m
+[0;32mI (57222) BLE_HANDLER: Sending response to client[0m
+[0;32mI (57352) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (57352) BLE_HANDLER: Received roll=0.273 pitch=0.218 azimuth=52.322 (len=12)[0m
+[0;32mI (57352) BLE_HANDLER: Sending response to client[0m
+[0;32mI (57442) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (57442) BLE_HANDLER: Received roll=0.270 pitch=0.220 azimuth=52.322 (len=12)[0m
+[0;32mI (57442) BLE_HANDLER: Sending response to client[0m
+[0;32mI (57532) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (57532) BLE_HANDLER: Received roll=0.268 pitch=0.219 azimuth=52.322 (len=12)[0m
+[0;32mI (57532) BLE_HANDLER: Sending response to client[0m
+[0;32mI (57672) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (57672) BLE_HANDLER: Received roll=0.264 pitch=0.217 azimuth=52.321 (len=12)[0m
+[0;32mI (57672) BLE_HANDLER: Sending response to client[0m
+[0;32mI (57762) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (57762) BLE_HANDLER: Received roll=0.264 pitch=0.217 azimuth=52.321 (len=12)[0m
+[0;32mI (57762) BLE_HANDLER: Sending response to client[0m
+[0;32mI (57852) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (57852) BLE_HANDLER: Received roll=0.271 pitch=0.216 azimuth=52.321 (len=12)[0m
+[0;32mI (57852) BLE_HANDLER: Sending response to client[0m
+[0;32mI (57942) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (57942) BLE_HANDLER: Received roll=0.278 pitch=0.212 azimuth=52.322 (len=12)[0m
+[0;32mI (57942) BLE_HANDLER: Sending response to client[0m
+[0;32mI (58032) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (58032) BLE_HANDLER: Received roll=0.275 pitch=0.207 azimuth=52.321 (len=12)[0m
+[0;32mI (58032) BLE_HANDLER: Sending response to client[0m
+[0;32mI (58122) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (58122) BLE_HANDLER: Received roll=0.276 pitch=0.205 azimuth=52.320 (len=12)[0m
+[0;32mI (58122) BLE_HANDLER: Sending response to client[0m
+[0;32mI (58212) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (58212) BLE_HANDLER: Received roll=0.270 pitch=0.209 azimuth=52.320 (len=12)[0m
+[0;32mI (58212) BLE_HANDLER: Sending response to client[0m
+[0;32mI (58302) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (58302) BLE_HANDLER: Received roll=0.275 pitch=0.207 azimuth=52.320 (len=12)[0m
+[0;32mI (58302) BLE_HANDLER: Sending response to client[0m
+[0;32mI (58392) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (58392) BLE_HANDLER: Received roll=0.275 pitch=0.206 azimuth=52.320 (len=12)[0m
+[0;32mI (58392) BLE_HANDLER: Sending response to client[0m
+[0;32mI (58482) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (58482) BLE_HANDLER: Received roll=0.273 pitch=0.207 azimuth=52.320 (len=12)[0m
+[0;32mI (58482) BLE_HANDLER: Sending response to client[0m
+[0;32mI (58572) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (58572) BLE_HANDLER: Received roll=0.273 pitch=0.207 azimuth=52.320 (len=12)[0m
+[0;32mI (58572) BLE_HANDLER: Sending response to client[0m
+[0;32mI (58702) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (58702) BLE_HANDLER: Received roll=0.269 pitch=0.212 azimuth=52.321 (len=12)[0m
+[0;32mI (58702) BLE_HANDLER: Sending response to client[0m
+[0;32mI (58792) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (58792) BLE_HANDLER: Received roll=0.273 pitch=0.209 azimuth=52.320 (len=12)[0m
+[0;32mI (58792) BLE_HANDLER: Sending response to client[0m
+[0;32mI (58882) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (58882) BLE_HANDLER: Received roll=0.273 pitch=0.211 azimuth=52.321 (len=12)[0m
+[0;32mI (58882) BLE_HANDLER: Sending response to client[0m
+[0;32mI (58972) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (58972) BLE_HANDLER: Received roll=0.271 pitch=0.211 azimuth=52.321 (len=12)[0m
+[0;32mI (58972) BLE_HANDLER: Sending response to client[0m
+[0;32mI (59062) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (59062) BLE_HANDLER: Received roll=0.269 pitch=0.213 azimuth=52.321 (len=12)[0m
+[0;32mI (59062) BLE_HANDLER: Sending response to client[0m
+[0;32mI (59202) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (59202) BLE_HANDLER: Received roll=0.266 pitch=0.213 azimuth=52.320 (len=12)[0m
+[0;32mI (59202) BLE_HANDLER: Sending response to client[0m
+[0;32mI (59292) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (59292) BLE_HANDLER: Received roll=0.272 pitch=0.212 azimuth=52.321 (len=12)[0m
+[0;32mI (59292) BLE_HANDLER: Sending response to client[0m
+[0;32mI (59382) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (59382) BLE_HANDLER: Received roll=0.272 pitch=0.215 azimuth=52.321 (len=12)[0m
+[0;32mI (59382) BLE_HANDLER: Sending response to client[0m
+[0;32mI (59512) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (59512) BLE_HANDLER: Received roll=0.275 pitch=0.215 azimuth=52.322 (len=12)[0m
+[0;32mI (59512) BLE_HANDLER: Sending response to client[0m
+[0;32mI (59602) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (59602) BLE_HANDLER: Received roll=0.272 pitch=0.223 azimuth=52.323 (len=12)[0m
+[0;32mI (59602) BLE_HANDLER: Sending response to client[0m
+[0;32mI (59692) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (59692) BLE_HANDLER: Received roll=0.270 pitch=0.219 azimuth=52.322 (len=12)[0m
+[0;32mI (59692) BLE_HANDLER: Sending response to client[0m
+[0;32mI (59782) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (59782) BLE_HANDLER: Received roll=0.270 pitch=0.223 azimuth=52.322 (len=12)[0m
+[0;32mI (59782) BLE_HANDLER: Sending response to client[0m
+[0;32mI (59872) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (59872) BLE_HANDLER: Received roll=0.268 pitch=0.211 azimuth=52.320 (len=12)[0m
+[0;32mI (59872) BLE_HANDLER: Sending response to client[0m
+[0;32mI (59962) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (59962) BLE_HANDLER: Received roll=0.274 pitch=0.209 azimuth=52.321 (len=12)[0m
+[0;32mI (59962) BLE_HANDLER: Sending response to client[0m
+[0;32mI (60052) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (60052) BLE_HANDLER: Received roll=0.274 pitch=0.206 azimuth=52.320 (len=12)[0m
+[0;32mI (60052) BLE_HANDLER: Sending response to client[0m
+[0;32mI (60142) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (60142) BLE_HANDLER: Received roll=0.272 pitch=0.204 azimuth=52.320 (len=12)[0m
+[0;32mI (60142) BLE_HANDLER: Sending response to client[0m
+[0;32mI (60282) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (60282) BLE_HANDLER: Received roll=0.274 pitch=0.203 azimuth=52.320 (len=12)[0m
+[0;32mI (60282) BLE_HANDLER: Sending response to client[0m
+[0;32mI (60372) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (60372) BLE_HANDLER: Received roll=0.271 pitch=0.205 azimuth=52.319 (len=12)[0m
+[0;32mI (60372) BLE_HANDLER: Sending response to client[0m
+[0;32mI (60462) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (60462) BLE_HANDLER: Received roll=0.273 pitch=0.201 azimuth=52.319 (len=12)[0m
+[0;32mI (60462) BLE_HANDLER: Sending response to client[0m
+[0;32mI (60552) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (60552) BLE_HANDLER: Received roll=0.278 pitch=0.197 azimuth=52.319 (len=12)[0m
+[0;32mI (60552) BLE_HANDLER: Sending response to client[0m
+[0;32mI (60642) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (60642) BLE_HANDLER: Received roll=0.267 pitch=0.215 azimuth=52.321 (len=12)[0m
+[0;32mI (60642) BLE_HANDLER: Sending response to client[0m
+[0;32mI (60732) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (60732) BLE_HANDLER: Received roll=0.264 pitch=0.219 azimuth=52.321 (len=12)[0m
+[0;32mI (60732) BLE_HANDLER: Sending response to client[0m
+[0;32mI (60822) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (60822) BLE_HANDLER: Received roll=0.334 pitch=0.174 azimuth=52.322 (len=12)[0m
+[0;32mI (60822) BLE_HANDLER: Sending response to client[0m
+[0;32mI (60912) BLE_HANDLER: 書き込み受信処理到達[0m
+[0;32mI (60912) BLE_HANDLER: Received roll=0.329 pitch=0.176 azimuth=51.758 (len=12)[0m
+[0;32mI (60912) BLE_HANDLER: Sending response to client[0m

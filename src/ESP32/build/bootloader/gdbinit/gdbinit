@@ -1,0 +1,2 @@
+source C:/GitHub/Firmware/src/ESP32/build/bootloader/gdbinit/symbols
+source C:/GitHub/Firmware/src/ESP32/build/bootloader/gdbinit/connect

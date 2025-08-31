@@ -1,0 +1,2 @@
+source C:/GitHub/Firmware/src/ExampleCode/BLE/build/gdbinit/symbols
+source C:/GitHub/Firmware/src/ExampleCode/BLE/build/gdbinit/connect

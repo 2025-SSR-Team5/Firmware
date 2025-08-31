@@ -24,7 +24,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -50,7 +49,8 @@ TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim3;
 
 /* USER CODE BEGIN PV */
-extern int nack_count;
+char flag = 'n';
+uint8_t instruction;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -105,6 +105,8 @@ int main(void)
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6,GPIO_PIN_SET);//VCC
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7,GPIO_PIN_RESET);//GND
 
+  HAL_I2C_Slave_Receive_IT(&hi2c1, &instruction, sizeof(instruction));
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -117,11 +119,15 @@ int main(void)
 	  move_anticlockwise(128, 1000); // 128 quarter revolution
 	  HAL_Delay(100);
 	  */
-	  do_instruction(0);
+	  if(flag == 'y'){
+		  do_instruction(0,instruction);
+		  flag = 'n';
+	  }
+	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);
 	  //if(nack_count >= 10){
 		  //HAL_NVIC_SystemReset();
 	  //}
-	  HAL_Delay(10);
+	  HAL_Delay(100);
 
     /* USER CODE END WHILE */
 
@@ -211,7 +217,8 @@ static void MX_I2C1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN I2C1_Init 2 */
-
+  HAL_NVIC_SetPriority(I2C1_IRQn, 1, 0);
+  HAL_NVIC_EnableIRQ(I2C1_IRQn);
   /* USER CODE END I2C1_Init 2 */
 
 }
@@ -353,6 +360,14 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_I2C_SlaveRxCpltCallback(I2C_HandleTypeDef *hi2c)
+{
+    if(hi2c->Instance == I2C1)
+    {
+    	flag = 'y';
+        HAL_I2C_Slave_Receive_IT(&hi2c1, &instruction, sizeof(instruction));
+    }
+}
 /* USER CODE END 4 */
 
 /**

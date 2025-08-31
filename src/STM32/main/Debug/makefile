@@ -60,8 +60,8 @@ all: main-build
 main-build: main.elf secondary-outputs
 
 # Tool invocations
-main.elf main.map: $(OBJS) $(USER_OBJS) D:\Firmware\src\STM32\main\STM32C011F4PX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "main.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"D:\Firmware\src\STM32\main\STM32C011F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+main.elf main.map: $(OBJS) $(USER_OBJS) C:\GitHub\Firmware\src\STM32\main\STM32C011F4PX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "main.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\GitHub\Firmware\src\STM32\main\STM32C011F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="main.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
