@@ -60,6 +60,7 @@ static void MX_I2C1_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
+void HAL_I2C_ErrorCallback(I2C_HandleTypeDef *hi2c);
 void HAL_I2C_SlaveTxCpltCallback(I2C_HandleTypeDef *hi2c);
 void HAL_I2C_SlaveRxCpltCallback(I2C_HandleTypeDef *hi2c);
 void HAL_I2C_ErrorCallback(I2C_HandleTypeDef *hi2c);
@@ -367,6 +368,30 @@ void HAL_I2C_SlaveRxCpltCallback(I2C_HandleTypeDef *hi2c)
     	flag = 'y';
         HAL_I2C_Slave_Receive_IT(&hi2c1, &instruction, sizeof(instruction));
     }
+}
+
+/**
+  * @brief  I2Cエラーコールバック。I2C通信でエラーが検知されると自動的に呼ばれる。
+  * @param  hi2c I2Cハンドル
+  * @retval None
+  */
+void HAL_I2C_ErrorCallback(I2C_HandleTypeDef *hi2c)
+{
+  // 自分の使っているI2Cペリフェラルかを確認 (例: I2C1)
+  if (hi2c->Instance == I2C1)
+  {
+    uint32_t error_code = HAL_I2C_GetError(hi2c);
+    if (error_code == HAL_I2C_ERROR_BERR) // バスエラーを検知した場合
+    {
+      // I2Cペリフェラルを再初期化して、不正な状態から復帰させる
+      HAL_I2C_DeInit(hi2c);
+      HAL_I2C_Init(hi2c); // MX_I2C1_Init() を呼んでも良い
+
+      // もし割り込みやDMAでデータ受信待機している場合は、再度有効にする
+      HAL_I2C_Slave_Receive_IT(&hi2c1, &instruction, sizeof(instruction));
+      // 例: HAL_I2C_EnableListen_IT(hi2c);
+    }
+  }
 }
 /* USER CODE END 4 */
 

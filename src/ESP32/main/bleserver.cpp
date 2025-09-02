@@ -45,7 +45,6 @@ void BleServer::handle_write_event(esp_ble_gatts_cb_param_t *param) {
         return;
     }
 
-    float roll = 0.0f, pitch = 0.0f, azimuth = 0.0f;
     memcpy(&roll,  param->write.value + 0, 4);
     memcpy(&pitch, param->write.value + 4, 4);
     memcpy(&azimuth,param->write.value + 8, 4);

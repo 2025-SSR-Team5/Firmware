@@ -1,0 +1,389 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ESP32\build\esp32.elf C:\GitHub\Firmware\src\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 31 2025 22:07:17[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d060h (184416) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=0003d088 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0003d0b0 vaddr=3ffbdb60 size=02f68h ( 12136) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a457ch (673148) map[0m
+[0;32mI (392) esp_image: segment 4: paddr=000e45a4 vaddr=3ffc0ac8 size=01a7ch (  6780) load[0m
+[0;32mI (395) esp_image: segment 5: paddr=000e6028 vaddr=40080000 size=1bb3ch (113468) load[0m
+[0;32mI (454) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (454) boot: Disabling RNG early entropy source...[0m
+[0;32mI (464) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) app_init: Application information:[0m
+[0;32mI (476) app_init: Project name:     esp32[0m
+[0;32mI (480) app_init: App version:      f56e411-dirty[0m
+[0;32mI (486) app_init: Compile time:     Sep  1 2025 00:37:33[0m
+[0;32mI (492) app_init: ELF file SHA256:  ca091d38b...[0m
+[0;32mI (497) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (502) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (506) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (511) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (516) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (529) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (542) heap_init: At 3FFCA5F0 len 00015A10 (86 KiB): DRAM[0m
+[0;32mI (548) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (554) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (561) heap_init: At 4009BB3C len 000044C4 (17 KiB): IRAM[0m
+[0;32mI (568) spi_flash: detected chip: generic[0m
+[0;32mI (571) spi_flash: flash io: dio[0m
+[0;33mW (575) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (591) coexist: coex firmware version: 831ec70[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (615) BTDM_INIT: BT controller compile version [b992c7d][0m
+[0;32mI (615) BTDM_INIT: Bluetooth MAC: ec:e3:34:90:d8:ee[0m
+[0;32mI (615) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (1285) BT_INIT: Bluetooth initialized successfully in dual mode.[0m
+[0;32mI (1295) BLE_HANDLER: create_service requested[0m
+[0;32mI (1295) BLE_HANDLER: Service created, handle=40[0m
+[0;32mI (1295) BLE_HANDLER: start_service ok[0m
+[0;32mI (1295) BLE_HANDLER: add_char requested[0m
+[0;32mI (1305) BLE_HANDLER: GATT service started[0m
+[0;32mI (1305) BLE_HANDLER: BLE advertising started[0m
+[0;32mI (1315) BLE_HANDLER: CHAR added: handle=42 (prop=0x0a)[0m
+[0;32mI (1315) BleServer: BLE GATT server init done[0m
+[0;32mI (1325) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDC Initialized[0m
+[0;32mI (1335) PS3_SPP: ESP_SPP_INIT_EVT[0m
+[0;32mI (1355) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDI Initialized[0m
+
+   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$        /$$$$$$   /$$$$$$ 
+  /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$__  $$|_  $$_/       /$$__  $$ /$$__  $$ 
+ | $$  \__/| $$  \ $$| $$  \__/| $$  \ $$| $$  \ $$  | $$        | $$  \ $$| $$  \__/ 
+ |  $$$$$$ | $$$$$$$$|  $$$$$$ | $$  | $$| $$$$$$$/  | $$        | $$  | $$|  $$$$$$  
+  \____  $$| $$__  $$ \____  $$| $$  | $$| $$__  $$  | $$        | $$  | $$ \____  $$ 
+  /$$  \ $$| $$  | $$ /$$  \ $$| $$  | $$| $$  \ $$  | $$        | $$  | $$ /$$  \ $$ 
+ |  $$$$$$/| $$  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$      |  $$$$$$/|  $$$$$$/ 
+  \______/ |__/  |__/ \______/  \______/ |__/  |__/|______/       \______/  \______/                                                                                    
+[0;33mW (1515) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (11555) BLE_HANDLER: Client connected, conn_id=0[0m
+[0;32mI (12925) BLE_HANDLER: Received roll=-5.684 pitch=-48.985 azimuth=109.865 (len=12)[0m
+[0;32mI (12965) BLE_HANDLER: Received roll=-6.116 pitch=-48.825 azimuth=109.679 (len=12)[0m
+[0;32mI (13035) BLE_HANDLER: Received roll=-6.149 pitch=-48.692 azimuth=109.668 (len=12)[0m
+[0;32mI (13125) BLE_HANDLER: Received roll=-6.524 pitch=-48.629 azimuth=109.588 (len=12)[0m
+[0;32mI (13215) BLE_HANDLER: Received roll=-6.868 pitch=-48.715 azimuth=109.223 (len=12)[0m
+[0;32mI (13305) BLE_HANDLER: Received roll=-6.656 pitch=-48.884 azimuth=109.135 (len=12)[0m
+[0;32mI (13395) BLE_HANDLER: Received roll=-6.423 pitch=-48.562 azimuth=109.311 (len=12)[0m
+[0;32mI (13525) BLE_HANDLER: Received roll=-5.423 pitch=-48.585 azimuth=109.175 (len=12)[0m
+[0;32mI (13615) BLE_HANDLER: Received roll=-0.865 pitch=-50.051 azimuth=108.275 (len=12)[0m
+[0;32mI (13755) BLE_HANDLER: Received roll=8.524 pitch=-50.465 azimuth=106.985 (len=12)[0m
+[0;32mI (13845) BLE_HANDLER: Received roll=18.498 pitch=-49.108 azimuth=105.603 (len=12)[0m
+[0;32mI (13935) BLE_HANDLER: Received roll=18.056 pitch=-47.077 azimuth=101.388 (len=12)[0m
+[0;32mI (14025) BLE_HANDLER: Received roll=13.260 pitch=-38.822 azimuth=91.852 (len=12)[0m
+[0;32mI (14115) BLE_HANDLER: Received roll=11.321 pitch=-34.541 azimuth=86.879 (len=12)[0m
+[0;32mI (14205) BLE_HANDLER: Received roll=4.991 pitch=-41.215 azimuth=91.964 (len=12)[0m
+[0;32mI (14295) BLE_HANDLER: Received roll=7.068 pitch=-48.967 azimuth=106.925 (len=12)[0m
+[0;32mI (14385) BLE_HANDLER: Received roll=9.745 pitch=-49.754 azimuth=118.522 (len=12)[0m
+[0;32mI (14475) BLE_HANDLER: Received roll=11.621 pitch=-45.630 azimuth=127.047 (len=12)[0m
+[0;32mI (14565) BLE_HANDLER: Received roll=10.547 pitch=-37.821 azimuth=130.484 (len=12)[0m
+[0;32mI (14655) BLE_HANDLER: Received roll=9.561 pitch=-27.252 azimuth=131.602 (len=12)[0m
+[0;32mI (14745) BLE_HANDLER: Received roll=7.841 pitch=-19.855 azimuth=130.352 (len=12)[0m
+[0;32mI (14835) BLE_HANDLER: Received roll=0.724 pitch=-12.437 azimuth=124.279 (len=12)[0m
+[0;32mI (14925) BLE_HANDLER: Received roll=-3.458 pitch=-5.776 azimuth=117.793 (len=12)[0m
+[0;32mI (15015) BLE_HANDLER: Received roll=-6.916 pitch=-2.766 azimuth=114.484 (len=12)[0m
+[0;32mI (15105) BLE_HANDLER: Received roll=-7.265 pitch=-0.018 azimuth=114.244 (len=12)[0m
+[0;32mI (15195) BLE_HANDLER: Received roll=-4.802 pitch=4.615 azimuth=115.911 (len=12)[0m
+[0;32mI (15285) BLE_HANDLER: Received roll=-5.054 pitch=4.238 azimuth=114.185 (len=12)[0m
+[0;32mI (15375) BLE_HANDLER: Received roll=-5.491 pitch=4.284 azimuth=111.782 (len=12)[0m
+[0;32mI (15505) BLE_HANDLER: Received roll=-5.138 pitch=2.153 azimuth=109.361 (len=12)[0m
+[0;32mI (15595) BLE_HANDLER: Received roll=-7.182 pitch=0.022 azimuth=107.132 (len=12)[0m
+[0;32mI (15685) BLE_HANDLER: Received roll=-5.194 pitch=0.105 azimuth=103.786 (len=12)[0m
+[0;32mI (15775) BLE_HANDLER: Received roll=-2.859 pitch=0.068 azimuth=103.715 (len=12)[0m
+[0;32mI (15865) BLE_HANDLER: Received roll=-0.838 pitch=0.067 azimuth=103.516 (len=12)[0m
+[0;32mI (15955) BLE_HANDLER: Received roll=0.055 pitch=-0.462 azimuth=102.120 (len=12)[0m
+[0;32mI (16045) BLE_HANDLER: Received roll=-0.133 pitch=-0.402 azimuth=101.853 (len=12)[0m
+[0;32mI (16135) BLE_HANDLER: Received roll=-0.077 pitch=-0.428 azimuth=101.862 (len=12)[0m
+[0;32mI (16225) BLE_HANDLER: Received roll=-0.081 pitch=-0.418 azimuth=101.875 (len=12)[0m
+[0;32mI (16315) BLE_HANDLER: Received roll=-0.087 pitch=-0.373 azimuth=101.912 (len=12)[0m
+[0;32mI (16405) BLE_HANDLER: Received roll=-0.085 pitch=-0.319 azimuth=101.957 (len=12)[0m
+[0;32mI (16495) BLE_HANDLER: Received roll=-0.098 pitch=-0.253 azimuth=102.013 (len=12)[0m
+[0;32mI (16585) BLE_HANDLER: Received roll=-0.096 pitch=-0.217 azimuth=102.043 (len=12)[0m
+[0;32mI (16675) BLE_HANDLER: Received roll=-0.099 pitch=-0.167 azimuth=102.080 (len=12)[0m
+[0;32mI (16765) BLE_HANDLER: Received roll=-0.105 pitch=-0.130 azimuth=102.105 (len=12)[0m
+[0;32mI (16855) BLE_HANDLER: Received roll=-0.101 pitch=-0.096 azimuth=102.127 (len=12)[0m
+[0;32mI (16945) BLE_HANDLER: Received roll=-0.105 pitch=-0.076 azimuth=102.141 (len=12)[0m
+[0;32mI (17085) BLE_HANDLER: Received roll=-0.108 pitch=-0.048 azimuth=102.160 (len=12)[0m
+[0;32mI (17175) BLE_HANDLER: Received roll=-0.106 pitch=-0.032 azimuth=102.170 (len=12)[0m
+[0;32mI (17265) BLE_HANDLER: Received roll=-0.105 pitch=-0.014 azimuth=102.182 (len=12)[0m
+[0;32mI (17355) BLE_HANDLER: Received roll=-0.110 pitch=-0.002 azimuth=102.190 (len=12)[0m
+[0;32mI (17445) BLE_HANDLER: Received roll=-0.109 pitch=0.015 azimuth=102.201 (len=12)[0m
+[0;32mI (17535) BLE_HANDLER: Received roll=-0.108 pitch=0.030 azimuth=102.211 (len=12)[0m
+[0;32mI (17625) BLE_HANDLER: Received roll=-0.106 pitch=0.041 azimuth=102.218 (len=12)[0m
+[0;32mI (17715) BLE_HANDLER: Received roll=-0.105 pitch=0.036 azimuth=102.215 (len=12)[0m
+[0;32mI (17805) BLE_HANDLER: Received roll=-0.108 pitch=0.039 azimuth=102.217 (len=12)[0m
+[0;32mI (17895) BLE_HANDLER: Received roll=-0.107 pitch=0.051 azimuth=102.225 (len=12)[0m
+[0;32mI (17985) BLE_HANDLER: Received roll=-0.112 pitch=0.051 azimuth=102.226 (len=12)[0m
+[0;32mI (18075) BLE_HANDLER: Received roll=-0.105 pitch=0.056 azimuth=102.228 (len=12)[0m
+[0;32mI (18165) BLE_HANDLER: Received roll=-0.105 pitch=0.058 azimuth=102.230 (len=12)[0m
+[0;32mI (18255) BLE_HANDLER: Received roll=-0.107 pitch=0.058 azimuth=102.230 (len=12)[0m
+[0;32mI (18345) BLE_HANDLER: Received roll=-0.101 pitch=0.063 azimuth=102.232 (len=12)[0m
+[0;32mI (18435) BLE_HANDLER: Received roll=-0.105 pitch=0.066 azimuth=102.234 (len=12)[0m
+[0;32mI (18525) BLE_HANDLER: Received roll=-0.107 pitch=0.067 azimuth=102.236 (len=12)[0m
+[0;32mI (18615) BLE_HANDLER: Received roll=-0.113 pitch=0.066 azimuth=102.236 (len=12)[0m
+[0;32mI (18705) BLE_HANDLER: Received roll=-0.116 pitch=0.068 azimuth=102.237 (len=12)[0m
+[0;32mI (18795) BLE_HANDLER: Received roll=-0.117 pitch=0.066 azimuth=102.236 (len=12)[0m
+[0;32mI (18875) BLE_HANDLER: Received roll=-0.114 pitch=0.075 azimuth=102.241 (len=12)[0m
+[0;32mI (18975) BLE_HANDLER: Received roll=-0.110 pitch=0.075 azimuth=102.241 (len=12)[0m
+[0;32mI (19065) BLE_HANDLER: Received roll=-0.111 pitch=0.075 azimuth=102.242 (len=12)[0m
+[0;32mI (19155) BLE_HANDLER: Received roll=-0.109 pitch=0.082 azimuth=102.246 (len=12)[0m
+[0;32mI (19245) BLE_HANDLER: Received roll=-0.111 pitch=0.084 azimuth=102.247 (len=12)[0m
+[0;32mI (19335) BLE_HANDLER: Received roll=-0.114 pitch=0.089 azimuth=102.251 (len=12)[0m
+[0;32mI (19425) BLE_HANDLER: Received roll=-0.118 pitch=0.087 azimuth=102.250 (len=12)[0m
+[0;32mI (19515) BLE_HANDLER: Received roll=-0.117 pitch=0.084 azimuth=102.248 (len=12)[0m
+[0;32mI (19605) BLE_HANDLER: Received roll=-0.117 pitch=0.086 azimuth=102.250 (len=12)[0m
+[0;32mI (19735) BLE_HANDLER: Received roll=-0.119 pitch=0.086 azimuth=102.250 (len=12)[0m
+[0;32mI (19825) BLE_HANDLER: Received roll=-0.119 pitch=0.088 azimuth=102.251 (len=12)[0m
+[0;32mI (19915) BLE_HANDLER: Received roll=-0.114 pitch=0.089 azimuth=102.251 (len=12)[0m
+[0;32mI (20055) BLE_HANDLER: Received roll=-0.117 pitch=0.088 azimuth=102.251 (len=12)[0m
+[0;32mI (20145) BLE_HANDLER: Received roll=-0.115 pitch=0.093 azimuth=102.254 (len=12)[0m
+[0;32mI (20225) BLE_HANDLER: Received roll=-0.119 pitch=0.098 azimuth=102.257 (len=12)[0m
+[0;32mI (20315) BLE_HANDLER: Received roll=-0.117 pitch=0.095 azimuth=102.255 (len=12)[0m
+[0;32mI (20405) BLE_HANDLER: Received roll=-0.116 pitch=0.096 azimuth=102.256 (len=12)[0m
+[0;33mW (20485) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;31mE (20495) BT_BTM: btm_sec_l2cap_access_req: (acceptor) remote features unknown!!sec_flags:0x80
+[0m
+[0;32mI (20505) BLE_HANDLER: Received roll=-0.121 pitch=0.095 azimuth=102.256 (len=12)[0m
+[0;32mI (20585) BLE_HANDLER: Received roll=-0.119 pitch=0.098 azimuth=102.258 (len=12)[0m
+[0;32mI (20675) BLE_HANDLER: Received roll=-0.115 pitch=0.095 azimuth=102.255 (len=12)[0m
+[0;32mI (20765) BLE_HANDLER: Received roll=-0.118 pitch=0.095 azimuth=102.255 (len=12)[0m
+[0;32mI (20855) BLE_HANDLER: Received roll=-0.116 pitch=0.099 azimuth=102.258 (len=12)[0m
+[0;32mI (20945) BLE_HANDLER: Received roll=-0.119 pitch=0.095 azimuth=102.255 (len=12)[0m
+[0;32mI (21035) BLE_HANDLER: Received roll=-0.118 pitch=0.099 azimuth=102.258 (len=12)[0m
+[0;32mI (21125) BLE_HANDLER: Received roll=-0.113 pitch=0.095 azimuth=102.255 (len=12)[0m
+[0;32mI (21215) BLE_HANDLER: Received roll=-0.115 pitch=0.097 azimuth=102.256 (len=12)[0m
+[0;32mI (21305) BLE_HANDLER: Received roll=-0.109 pitch=0.098 azimuth=102.256 (len=12)[0m
+[0;32mI (21395) BLE_HANDLER: Received roll=-0.113 pitch=0.101 azimuth=102.259 (len=12)[0m
+[0;32mI (21485) BLE_HANDLER: Received roll=-0.112 pitch=0.096 azimuth=102.255 (len=12)[0m
+[0;32mI (21575) BLE_HANDLER: Received roll=-0.116 pitch=0.097 azimuth=102.257 (len=12)[0m
+[0;32mI (21665) BLE_HANDLER: Received roll=-0.115 pitch=0.096 azimuth=102.256 (len=12)[0m
+[0;32mI (21755) BLE_HANDLER: Received roll=-0.114 pitch=0.090 azimuth=102.252 (len=12)[0m
+[0;32mI (21845) BLE_HANDLER: Received roll=-0.113 pitch=0.093 azimuth=102.253 (len=12)[0m
+[0;32mI (21935) BLE_HANDLER: Received roll=-0.109 pitch=0.095 azimuth=102.254 (len=12)[0m
+[0;32mI (22025) BLE_HANDLER: Received roll=-0.110 pitch=0.089 azimuth=102.251 (len=12)[0m
+[0;32mI (22115) BLE_HANDLER: Received roll=-0.109 pitch=0.089 azimuth=102.250 (len=12)[0m
+[0;32mI (22205) BLE_HANDLER: Received roll=-0.114 pitch=0.095 azimuth=102.255 (len=12)[0m
+[0;32mI (22295) BLE_HANDLER: Received roll=-0.111 pitch=0.095 azimuth=102.255 (len=12)[0m
+[0;32mI (22385) BLE_HANDLER: Received roll=-0.111 pitch=0.099 azimuth=102.257 (len=12)[0m
+[0;32mI (22475) BLE_HANDLER: Received roll=-0.115 pitch=0.100 azimuth=102.258 (len=12)[0m
+[0;32mI (22565) BLE_HANDLER: Received roll=-0.115 pitch=0.100 azimuth=102.259 (len=12)[0m
+[0;32mI (22705) BLE_HANDLER: Received roll=-0.112 pitch=0.101 azimuth=102.259 (len=12)[0m
+[0;32mI (22795) BLE_HANDLER: Received roll=-0.114 pitch=0.100 azimuth=102.258 (len=12)[0m
+[0;32mI (22885) BLE_HANDLER: Received roll=-0.111 pitch=0.102 azimuth=102.259 (len=12)[0m
+[0;32mI (22975) BLE_HANDLER: Received roll=-0.112 pitch=0.098 azimuth=102.256 (len=12)[0m
+[0;32mI (23065) BLE_HANDLER: Received roll=-0.111 pitch=0.102 azimuth=102.259 (len=12)[0m
+[0;32mI (23155) BLE_HANDLER: Received roll=-0.111 pitch=0.101 azimuth=102.258 (len=12)[0m
+[0;32mI (23245) BLE_HANDLER: Received roll=-0.111 pitch=0.105 azimuth=102.261 (len=12)[0m
+[0;32mI (23335) BLE_HANDLER: Received roll=-0.112 pitch=0.103 azimuth=102.260 (len=12)[0m
+[0;32mI (23425) BLE_HANDLER: Received roll=-0.110 pitch=0.101 azimuth=102.258 (len=12)[0m
+[0;32mI (23475) PS3_L2CAP: [ps3_l2cap_connect_ind_cback] bd_addr: Ksjc%
+  l2cap_cid: 0x40
+  psm: 17
+  id: 1[0m
+[0;32mI (23515) BLE_HANDLER: Received roll=-0.108 pitch=0.105 azimuth=102.260 (len=12)[0m
+[0;32mI (23525) PS3_L2CAP: [ps3_l2cap_config_ind_cback] l2cap_cid: 0x40
+  p_cfg->result: 0
+  p_cfg->mtu_present: 0
+  p_cfg->mtu: 0[0m
+[0;32mI (23605) BLE_HANDLER: Received roll=-0.103 pitch=0.104 azimuth=102.259 (len=12)[0m
+[0;32mI (23695) BLE_HANDLER: Received roll=-0.109 pitch=0.105 azimuth=102.261 (len=12)[0m
+[0;32mI (23785) BLE_HANDLER: Received roll=-0.108 pitch=0.111 azimuth=102.265 (len=12)[0m
+[0;32mI (23915) BLE_HANDLER: Received roll=-0.107 pitch=0.104 azimuth=102.260 (len=12)[0m
+[0;32mI (24005) BLE_HANDLER: Received roll=-0.104 pitch=0.103 azimuth=102.259 (len=12)[0m
+[0;32mI (24095) BLE_HANDLER: Received roll=-0.104 pitch=0.102 azimuth=102.258 (len=12)[0m
+[0;32mI (24185) BLE_HANDLER: Received roll=-0.111 pitch=0.099 azimuth=102.257 (len=12)[0m
+[0;32mI (24275) BLE_HANDLER: Received roll=-0.110 pitch=0.100 azimuth=102.258 (len=12)[0m
+[0;32mI (24365) BLE_HANDLER: Received roll=-0.115 pitch=0.100 azimuth=102.258 (len=12)[0m
+[0;32mI (24455) BLE_HANDLER: Received roll=-0.111 pitch=0.095 azimuth=102.255 (len=12)[0m
+[0;32mI (24545) BLE_HANDLER: Received roll=-0.110 pitch=0.092 azimuth=102.252 (len=12)[0m
+[0;32mI (24635) BLE_HANDLER: Received roll=-0.108 pitch=0.087 azimuth=102.248 (len=12)[0m
+[0;32mI (24725) BLE_HANDLER: Received roll=-0.106 pitch=0.094 azimuth=102.253 (len=12)[0m
+[0;32mI (24815) BLE_HANDLER: Received roll=-0.109 pitch=0.097 azimuth=102.256 (len=12)[0m
+[0;32mI (24905) BLE_HANDLER: Received roll=-0.108 pitch=0.097 azimuth=102.255 (len=12)[0m
+[0;32mI (24995) BLE_HANDLER: Received roll=-0.106 pitch=0.099 azimuth=102.256 (len=12)[0m
+[0;32mI (25085) BLE_HANDLER: Received roll=-0.106 pitch=0.100 azimuth=102.257 (len=12)[0m
+[0;32mI (25175) BLE_HANDLER: Received roll=-0.103 pitch=0.099 azimuth=102.256 (len=12)[0m
+[0;32mI (25265) BLE_HANDLER: Received roll=-0.104 pitch=0.096 azimuth=102.255 (len=12)[0m
+[0;32mI (25355) BLE_HANDLER: Received roll=-0.106 pitch=0.101 azimuth=102.258 (len=12)[0m
+[0;32mI (25445) BLE_HANDLER: Received roll=-0.110 pitch=0.102 azimuth=102.259 (len=12)[0m
+[0;32mI (25535) BLE_HANDLER: Received roll=-0.106 pitch=0.101 azimuth=102.258 (len=12)[0m
+[0;32mI (25625) BLE_HANDLER: Received roll=-0.103 pitch=0.102 azimuth=102.258 (len=12)[0m
+[0;32mI (25715) BLE_HANDLER: Received roll=-0.103 pitch=0.103 azimuth=102.258 (len=12)[0m
+[0;32mI (25805) BLE_HANDLER: Received roll=-0.103 pitch=0.104 azimuth=102.259 (len=12)[0m
+[0;32mI (25895) BLE_HANDLER: Received roll=-0.101 pitch=0.103 azimuth=102.259 (len=12)[0m
+[0;32mI (25985) BLE_HANDLER: Received roll=-0.105 pitch=0.103 azimuth=102.259 (len=12)[0m
+[0;32mI (26075) BLE_HANDLER: Received roll=-0.101 pitch=0.106 azimuth=102.260 (len=12)[0m
+[0;32mI (26165) BLE_HANDLER: Received roll=-0.103 pitch=0.107 azimuth=102.261 (len=12)[0m
+[0;32mI (26255) BLE_HANDLER: Received roll=-0.103 pitch=0.107 azimuth=102.261 (len=12)[0m
+[0;32mI (26345) BLE_HANDLER: Received roll=-0.098 pitch=0.105 azimuth=102.259 (len=12)[0m
+[0;32mI (26435) BLE_HANDLER: Received roll=-0.099 pitch=0.103 azimuth=102.258 (len=12)[0m
+[0;32mI (26525) BLE_HANDLER: Received roll=-0.101 pitch=0.101 azimuth=102.257 (len=12)[0m
+[0;32mI (26615) BLE_HANDLER: Received roll=-0.097 pitch=0.097 azimuth=102.254 (len=12)[0m
+[0;32mI (26705) BLE_HANDLER: Received roll=-0.101 pitch=0.093 azimuth=102.252 (len=12)[0m
+[0;32mI (26795) BLE_HANDLER: Received roll=-0.100 pitch=0.097 azimuth=102.255 (len=12)[0m
+[0;32mI (26885) BLE_HANDLER: Received roll=-0.101 pitch=0.095 azimuth=102.253 (len=12)[0m
+[0;32mI (26975) BLE_HANDLER: Received roll=-0.101 pitch=0.101 azimuth=102.257 (len=12)[0m
+[0;32mI (27065) BLE_HANDLER: Received roll=-0.101 pitch=0.099 azimuth=102.255 (len=12)[0m
+[0;32mI (27155) BLE_HANDLER: Received roll=-0.100 pitch=0.098 azimuth=102.255 (len=12)[0m
+[0;32mI (27245) BLE_HANDLER: Received roll=-0.102 pitch=0.097 azimuth=102.254 (len=12)[0m
+[0;32mI (27335) BLE_HANDLER: Received roll=-0.104 pitch=0.095 azimuth=102.253 (len=12)[0m
+[0;32mI (27475) BLE_HANDLER: Received roll=-0.104 pitch=0.096 azimuth=102.254 (len=12)[0m
+[0;32mI (27565) BLE_HANDLER: Received roll=-0.103 pitch=0.094 azimuth=102.253 (len=12)[0m
+[0;32mI (27655) BLE_HANDLER: Received roll=-0.100 pitch=0.096 azimuth=102.254 (len=12)[0m
+[0;32mI (27745) BLE_HANDLER: Received roll=-0.102 pitch=0.095 azimuth=102.253 (len=12)[0m
+[0;32mI (27835) BLE_HANDLER: Received roll=-0.098 pitch=0.093 azimuth=102.251 (len=12)[0m
+[0;32mI (27925) BLE_HANDLER: Received roll=-0.094 pitch=0.093 azimuth=102.250 (len=12)[0m
+[0;32mI (28015) BLE_HANDLER: Received roll=-0.096 pitch=0.091 azimuth=102.250 (len=12)[0m
+[0;32mI (28105) BLE_HANDLER: Received roll=-0.098 pitch=0.091 azimuth=102.250 (len=12)[0m
+[0;32mI (28195) BLE_HANDLER: Received roll=-0.098 pitch=0.090 azimuth=102.249 (len=12)[0m
+[0;32mI (28285) BLE_HANDLER: Received roll=-0.104 pitch=0.092 azimuth=102.252 (len=12)[0m
+[0;32mI (28375) BLE_HANDLER: Received roll=-0.102 pitch=0.091 azimuth=102.251 (len=12)[0m
+[0;32mI (28505) BLE_HANDLER: Received roll=-0.100 pitch=0.092 azimuth=102.251 (len=12)[0m
+[0;32mI (28595) BLE_HANDLER: Received roll=-0.100 pitch=0.096 azimuth=102.254 (len=12)[0m
+[0;32mI (28685) BLE_HANDLER: Received roll=-0.099 pitch=0.098 azimuth=102.255 (len=12)[0m
+[0;32mI (28775) BLE_HANDLER: Received roll=-0.103 pitch=0.099 azimuth=102.256 (len=12)[0m
+[0;32mI (28865) BLE_HANDLER: Received roll=-0.106 pitch=0.098 azimuth=102.256 (len=12)[0m
+[0;32mI (28955) BLE_HANDLER: Received roll=-0.105 pitch=0.099 azimuth=102.256 (len=12)[0m
+[0;32mI (29045) BLE_HANDLER: Received roll=-0.107 pitch=0.097 azimuth=102.255 (len=12)[0m
+[0;32mI (29135) BLE_HANDLER: Received roll=-0.101 pitch=0.098 azimuth=102.255 (len=12)[0m
+[0;32mI (29225) BLE_HANDLER: Received roll=-0.100 pitch=0.098 azimuth=102.255 (len=12)[0m
+[0;32mI (29315) BLE_HANDLER: Received roll=-0.103 pitch=0.098 azimuth=102.256 (len=12)[0m
+[0;32mI (29405) BLE_HANDLER: Received roll=-0.100 pitch=0.101 azimuth=102.257 (len=12)[0m
+[0;32mI (29495) BLE_HANDLER: Received roll=-0.102 pitch=0.097 azimuth=102.255 (len=12)[0m
+[0;32mI (29585) BLE_HANDLER: Received roll=-0.101 pitch=0.091 azimuth=102.251 (len=12)[0m
+[0;32mI (29725) BLE_HANDLER: Received roll=-0.105 pitch=0.095 azimuth=102.253 (len=12)[0m
+[0;32mI (29815) BLE_HANDLER: Received roll=-0.101 pitch=0.091 azimuth=102.250 (len=12)[0m
+[0;32mI (29905) BLE_HANDLER: Received roll=-0.104 pitch=0.091 azimuth=102.251 (len=12)[0m
+[0;32mI (30035) BLE_HANDLER: Received roll=-0.103 pitch=0.087 azimuth=102.248 (len=12)[0m
+[0;32mI (30125) BLE_HANDLER: Received roll=-0.097 pitch=0.088 azimuth=102.248 (len=12)[0m
+[0;32mI (30215) BLE_HANDLER: Received roll=-0.092 pitch=0.085 azimuth=102.245 (len=12)[0m
+[0;32mI (30305) BLE_HANDLER: Received roll=-0.094 pitch=0.085 azimuth=102.245 (len=12)[0m
+[0;32mI (30395) BLE_HANDLER: Received roll=-0.097 pitch=0.092 azimuth=102.251 (len=12)[0m
+[0;32mI (30485) BLE_HANDLER: Received roll=-0.097 pitch=0.091 azimuth=102.250 (len=12)[0m
+[0;32mI (30575) BLE_HANDLER: Received roll=-0.095 pitch=0.090 azimuth=102.249 (len=12)[0m
+[0;32mI (30665) BLE_HANDLER: Received roll=-0.092 pitch=0.091 azimuth=102.249 (len=12)[0m
+[0;32mI (30755) BLE_HANDLER: Received roll=-0.098 pitch=0.093 azimuth=102.251 (len=12)[0m
+[0;32mI (30845) BLE_HANDLER: Received roll=-0.099 pitch=0.091 azimuth=102.250 (len=12)[0m
+[0;32mI (30935) BLE_HANDLER: Received roll=-0.096 pitch=0.090 azimuth=102.249 (len=12)[0m
+[0;32mI (31025) BLE_HANDLER: Received roll=-0.099 pitch=0.098 azimuth=102.255 (len=12)[0m
+[0;32mI (31115) BLE_HANDLER: Received roll=-0.097 pitch=0.094 azimuth=102.252 (len=12)[0m
+[0;32mI (31205) BLE_HANDLER: Received roll=-0.094 pitch=0.093 azimuth=102.251 (len=12)[0m
+[0;32mI (31295) BLE_HANDLER: Received roll=-0.100 pitch=0.090 azimuth=102.250 (len=12)[0m
+[0;32mI (31385) BLE_HANDLER: Received roll=-0.102 pitch=0.082 azimuth=102.245 (len=12)[0m
+[0;32mI (31475) BLE_HANDLER: Received roll=-0.101 pitch=0.084 azimuth=102.246 (len=12)[0m
+[0;32mI (31565) BLE_HANDLER: Received roll=-0.102 pitch=0.081 azimuth=102.244 (len=12)[0m
+[0;32mI (31655) BLE_HANDLER: Received roll=-0.106 pitch=0.082 azimuth=102.245 (len=12)[0m
+[0;32mI (31745) BLE_HANDLER: Received roll=-0.102 pitch=0.083 azimuth=102.245 (len=12)[0m
+[0;32mI (31835) BLE_HANDLER: Received roll=-0.105 pitch=0.078 azimuth=102.242 (len=12)[0m
+[0;32mI (31925) BLE_HANDLER: Received roll=-0.107 pitch=0.078 azimuth=102.243 (len=12)[0m
+[0;32mI (32015) BLE_HANDLER: Received roll=-0.104 pitch=0.082 azimuth=102.245 (len=12)[0m
+[0;32mI (32105) BLE_HANDLER: Received roll=-0.106 pitch=0.083 azimuth=102.246 (len=12)[0m
+[0;32mI (32195) BLE_HANDLER: Received roll=-0.107 pitch=0.091 azimuth=102.251 (len=12)[0m
+[0;32mI (32285) BLE_HANDLER: Received roll=-0.105 pitch=0.095 azimuth=102.254 (len=12)[0m
+[0;32mI (32375) BLE_HANDLER: Received roll=-0.104 pitch=0.099 azimuth=102.256 (len=12)[0m
+[0;32mI (32465) BLE_HANDLER: Received roll=-0.107 pitch=0.092 azimuth=102.252 (len=12)[0m
+[0;32mI (32555) BLE_HANDLER: Received roll=-0.107 pitch=0.094 azimuth=102.253 (len=12)[0m
+[0;32mI (32645) BLE_HANDLER: Received roll=-0.103 pitch=0.087 azimuth=102.248 (len=12)[0m
+[0;32mI (32735) BLE_HANDLER: Received roll=-0.103 pitch=0.087 azimuth=102.248 (len=12)[0m
+[0;32mI (32825) BLE_HANDLER: Received roll=-0.103 pitch=0.090 azimuth=102.250 (len=12)[0m
+[0;32mI (32915) BLE_HANDLER: Received roll=-0.107 pitch=0.088 azimuth=102.249 (len=12)[0m
+[0;32mI (33055) BLE_HANDLER: Received roll=-0.107 pitch=0.092 azimuth=102.252 (len=12)[0m
+[0;32mI (33145) BLE_HANDLER: Received roll=-0.103 pitch=0.092 azimuth=102.252 (len=12)[0m
+[0;32mI (33235) BLE_HANDLER: Received roll=-0.100 pitch=0.103 azimuth=102.258 (len=12)[0m
+[0;32mI (33325) BLE_HANDLER: Received roll=-0.098 pitch=0.103 azimuth=102.258 (len=12)[0m
+[0;32mI (33415) BLE_HANDLER: Received roll=-0.100 pitch=0.098 azimuth=102.255 (len=12)[0m
+[0;32mI (33505) BLE_HANDLER: Received roll=-0.104 pitch=0.099 azimuth=102.256 (len=12)[0m
+[0;32mI (33595) BLE_HANDLER: Received roll=-0.101 pitch=0.097 azimuth=102.254 (len=12)[0m
+[0;32mI (33685) BLE_HANDLER: Received roll=-0.097 pitch=0.092 azimuth=102.251 (len=12)[0m
+[0;32mI (33775) BLE_HANDLER: Received roll=-0.098 pitch=0.087 azimuth=102.247 (len=12)[0m
+[0;32mI (33865) BLE_HANDLER: Received roll=-0.099 pitch=0.097 azimuth=102.254 (len=12)[0m
+[0;32mI (33955) BLE_HANDLER: Received roll=-0.096 pitch=0.094 azimuth=102.252 (len=12)[0m
+[0;32mI (34045) BLE_HANDLER: Received roll=-0.099 pitch=0.095 azimuth=102.252 (len=12)[0m
+[0;32mI (34135) BLE_HANDLER: Received roll=-0.098 pitch=0.098 azimuth=102.255 (len=12)[0m
+[0;32mI (34225) BLE_HANDLER: Received roll=-0.094 pitch=0.098 azimuth=102.254 (len=12)[0m
+[0;32mI (34315) BLE_HANDLER: Received roll=-0.094 pitch=0.101 azimuth=102.256 (len=12)[0m
+[0;32mI (34405) BLE_HANDLER: Received roll=-0.098 pitch=0.101 azimuth=102.257 (len=12)[0m
+[0;32mI (34495) BLE_HANDLER: Received roll=-0.098 pitch=0.099 azimuth=102.255 (len=12)[0m
+[0;32mI (34585) BLE_HANDLER: Received roll=-0.097 pitch=0.099 azimuth=102.255 (len=12)[0m
+[0;32mI (34675) BLE_HANDLER: Received roll=-0.097 pitch=0.102 azimuth=102.257 (len=12)[0m
+[0;32mI (34765) BLE_HANDLER: Received roll=-0.095 pitch=0.098 azimuth=102.254 (len=12)[0m
+[0;32mI (34855) BLE_HANDLER: Received roll=-0.093 pitch=0.098 azimuth=102.254 (len=12)[0m
+[0;32mI (34945) BLE_HANDLER: Received roll=-0.098 pitch=0.097 azimuth=102.254 (len=12)[0m
+[0;32mI (35035) BLE_HANDLER: Received roll=-0.098 pitch=0.098 azimuth=102.254 (len=12)[0m
+[0;32mI (35125) BLE_HANDLER: Received roll=-0.096 pitch=0.092 azimuth=102.251 (len=12)[0m
+[0;32mI (35215) BLE_HANDLER: Received roll=-0.097 pitch=0.095 azimuth=102.253 (len=12)[0m
+[0;32mI (35305) BLE_HANDLER: Received roll=-0.092 pitch=0.094 azimuth=102.251 (len=12)[0m
+[0;32mI (35395) BLE_HANDLER: Received roll=-0.097 pitch=0.093 azimuth=102.252 (len=12)[0m
+[0;32mI (35485) BLE_HANDLER: Received roll=-0.093 pitch=0.091 azimuth=102.249 (len=12)[0m
+[0;32mI (35575) BLE_HANDLER: Received roll=-0.095 pitch=0.092 azimuth=102.251 (len=12)[0m
+[0;32mI (35705) BLE_HANDLER: Received roll=-0.094 pitch=0.089 azimuth=102.248 (len=12)[0m
+[0;32mI (35795) BLE_HANDLER: Received roll=-0.097 pitch=0.089 azimuth=102.248 (len=12)[0m
+[0;32mI (35885) BLE_HANDLER: Received roll=-0.101 pitch=0.091 azimuth=102.251 (len=12)[0m
+[0;32mI (35975) BLE_HANDLER: Received roll=-0.099 pitch=0.094 azimuth=102.252 (len=12)[0m
+[0;32mI (36065) BLE_HANDLER: Received roll=-0.096 pitch=0.093 azimuth=102.251 (len=12)[0m
+[0;32mI (36155) BLE_HANDLER: Received roll=-0.094 pitch=0.091 azimuth=102.249 (len=12)[0m
+[0;32mI (36245) BLE_HANDLER: Received roll=-0.096 pitch=0.090 azimuth=102.249 (len=12)[0m
+[0;32mI (36335) BLE_HANDLER: Received roll=-0.097 pitch=0.092 azimuth=102.250 (len=12)[0m
+[0;32mI (36425) BLE_HANDLER: Received roll=-0.096 pitch=0.092 azimuth=102.250 (len=12)[0m
+[0;32mI (36515) BLE_HANDLER: Received roll=-0.095 pitch=0.094 azimuth=102.251 (len=12)[0m
+[0;32mI (36605) BLE_HANDLER: Received roll=-0.093 pitch=0.095 azimuth=102.252 (len=12)[0m
+[0;32mI (36785) BLE_HANDLER: Received roll=-0.088 pitch=0.089 azimuth=102.247 (len=12)[0m
+[0;32mI (36875) BLE_HANDLER: Received roll=-0.091 pitch=0.087 azimuth=102.246 (len=12)[0m
+[0;32mI (36965) BLE_HANDLER: Received roll=-0.092 pitch=0.089 azimuth=102.248 (len=12)[0m
+[0;32mI (37055) BLE_HANDLER: Received roll=-0.093 pitch=0.084 azimuth=102.245 (len=12)[0m
+[0;32mI (37145) BLE_HANDLER: Received roll=-0.095 pitch=0.081 azimuth=102.243 (len=12)[0m
+[0;32mI (37235) BLE_HANDLER: Received roll=-0.097 pitch=0.083 azimuth=102.244 (len=12)[0m
+[0;32mI (37325) BLE_HANDLER: Received roll=-0.099 pitch=0.087 azimuth=102.247 (len=12)[0m
+[0;32mI (37465) BLE_HANDLER: Received roll=-0.101 pitch=0.087 azimuth=102.248 (len=12)[0m
+[0;32mI (37555) BLE_HANDLER: Received roll=-0.098 pitch=0.091 azimuth=102.250 (len=12)[0m
+[0;32mI (37645) BLE_HANDLER: Received roll=-0.100 pitch=0.092 azimuth=102.251 (len=12)[0m
+[0;32mI (37735) BLE_HANDLER: Received roll=-0.096 pitch=0.091 azimuth=102.250 (len=12)[0m
+[0;32mI (37825) BLE_HANDLER: Received roll=-0.099 pitch=0.095 azimuth=102.253 (len=12)[0m
+[0;32mI (37915) BLE_HANDLER: Received roll=-0.096 pitch=0.095 azimuth=102.252 (len=12)[0m
+[0;32mI (38005) BLE_HANDLER: Received roll=-0.099 pitch=0.095 azimuth=102.253 (len=12)[0m
+[0;32mI (38095) BLE_HANDLER: Received roll=-0.107 pitch=0.097 azimuth=102.255 (len=12)[0m
+[0;32mI (38185) BLE_HANDLER: Received roll=-0.107 pitch=0.095 azimuth=102.254 (len=12)[0m
+[0;32mI (38275) BLE_HANDLER: Received roll=-0.104 pitch=0.097 azimuth=102.255 (len=12)[0m
+[0;32mI (38365) BLE_HANDLER: Received roll=-0.105 pitch=0.100 azimuth=102.257 (len=12)[0m
+[0;32mI (38455) BLE_HANDLER: Received roll=-0.102 pitch=0.101 azimuth=102.257 (len=12)[0m
+[0;32mI (38585) BLE_HANDLER: Received roll=-0.103 pitch=0.102 azimuth=102.258 (len=12)[0m
+[0;32mI (38675) BLE_HANDLER: Received roll=-0.095 pitch=0.100 azimuth=102.256 (len=12)[0m
+[0;32mI (38765) BLE_HANDLER: Received roll=-0.099 pitch=0.108 azimuth=102.261 (len=12)[0m
+[0;32mI (38855) BLE_HANDLER: Received roll=-0.098 pitch=0.107 azimuth=102.260 (len=12)[0m
+[0;32mI (38945) BLE_HANDLER: Received roll=-0.093 pitch=0.106 azimuth=102.259 (len=12)[0m
+[0;32mI (39035) BLE_HANDLER: Received roll=-0.093 pitch=0.107 azimuth=102.260 (len=12)[0m
+[0;32mI (39125) BLE_HANDLER: Received roll=-0.096 pitch=0.104 azimuth=102.258 (len=12)[0m
+[0;32mI (39215) BLE_HANDLER: Received roll=-0.097 pitch=0.107 azimuth=102.260 (len=12)[0m
+[0;32mI (39305) BLE_HANDLER: Received roll=-0.100 pitch=0.112 azimuth=102.264 (len=12)[0m
+[0;32mI (39395) BLE_HANDLER: Received roll=-0.104 pitch=0.117 azimuth=102.268 (len=12)[0m
+[0;32mI (39485) BLE_HANDLER: Received roll=-0.107 pitch=0.115 azimuth=102.267 (len=12)[0m
+[0;32mI (39575) BLE_HANDLER: Received roll=-0.107 pitch=0.110 azimuth=102.264 (len=12)[0m
+[0;32mI (39665) BLE_HANDLER: Received roll=-0.110 pitch=0.110 azimuth=102.264 (len=12)[0m
+[0;32mI (39805) BLE_HANDLER: Received roll=-0.101 pitch=0.109 azimuth=102.263 (len=12)[0m
+[0;32mI (39895) BLE_HANDLER: Received roll=-0.106 pitch=0.106 azimuth=102.261 (len=12)[0m

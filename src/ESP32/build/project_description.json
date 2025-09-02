@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32",
-    "project_version":    "ad2818d-dirty",
+    "project_version":    "f56e411-dirty",
     "project_path":       "C:/GitHub/Firmware/src/ESP32",
     "idf_path":           "C:/Users/takeu/esp/v5.5/esp-idf",
     "build_dir":          "C:/GitHub/Firmware/src/ESP32/build",

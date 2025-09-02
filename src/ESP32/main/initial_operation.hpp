@@ -10,5 +10,6 @@
 
 #define INITIAL_DELAY 10
 
-void hello_STM32(i2c_master_dev_handle_t dev_STM32);
+void i2c_master_bus_recover(gpio_num_t sda_pin, gpio_num_t scl_pin);
+void hello_STM32(i2c_master_bus_handle_t *bus_handle, i2c_master_dev_handle_t dev_STM32);
 void ESP_init(i2c_master_bus_handle_t *bus_handle);

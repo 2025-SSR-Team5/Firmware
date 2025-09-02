@@ -7,6 +7,10 @@
 #include "esp_vfs_fat.h"
 #include "driver/uart.h"
 
+#include "driver/gpio.h"
+#include "esp_log.h"
+#include "esp_rom_sys.h"
+
 i2c_master_dev_handle_t dev_STM32;
 
 const char *banner = R"(
@@ -20,8 +24,80 @@ const char *banner = R"(
   \______/ |__/  |__/ \______/  \______/ |__/  |__/|______/       \______/  \______/                                                                                    
 )";
 
-void hello_STM32(i2c_master_dev_handle_t dev_STM32){
-    constexpr int32_t Timeout = -1;
+static const char *TAG = "initial_operation";
+
+void i2c_master_bus_recover(gpio_num_t sda_pin, gpio_num_t scl_pin)
+{
+    // --- 1. GPIOの準備 ---
+    // I2Cドライバが制御する前に、ピンを汎用ポートとして設定
+    gpio_reset_pin(sda_pin);
+    gpio_reset_pin(scl_pin);
+    
+    // SDAピンは状態を読み取るため、プルアップ付き入力に設定
+    gpio_set_direction(sda_pin, GPIO_MODE_INPUT);
+    gpio_set_pull_mode(sda_pin, GPIO_PULLUP_ONLY);
+    
+    // SCLピンはクロックを生成するため、出力に設定
+    gpio_set_direction(scl_pin, GPIO_MODE_OUTPUT);
+
+    // --- 2. バスの状態を確認 ---
+    // 少し待ってからSDAの状態を確認
+    esp_rom_delay_us(5); 
+    if (gpio_get_level(sda_pin) == 1) {
+        ESP_LOGI(TAG, "Bus is clear. No recovery needed.");
+        // ドライバが使えるようにピンをリセットして終了
+        gpio_reset_pin(sda_pin);
+        gpio_reset_pin(scl_pin);
+        return;
+    }
+
+    ESP_LOGW(TAG, "SDA line is stuck low. Starting recovery sequence...");
+
+    // --- 3. ダミークロックの送出とSDAの監視 ---
+    bool recovered = false;
+    // 無限ループを防ぐため、最大でも18回程度クロックを送る
+    for (int i = 0; i < 18; i++) {
+        // SCLをLOW→HIGHとトグルしてクロックを1つ生成
+        gpio_set_level(scl_pin, 0);
+        esp_rom_delay_us(5);
+        gpio_set_level(scl_pin, 1);
+        esp_rom_delay_us(5);
+
+        // クロックをHIGHにしたタイミングでSDAの状態を監視
+        if (gpio_get_level(sda_pin) == 1) {
+            // ★★★ SDAがHighになった時がチャンス！ ★★★
+            ESP_LOGI(TAG, "Slave released SDA line after %d clock pulses.", i + 1);
+            recovered = true;
+            break; // ダミークロックの送出を終了
+        }
+    }
+
+    // --- 4. STOPコンディションの生成 ---
+    if (recovered) {
+        // SDAを操作するため、出力モードに切り替え
+        gpio_set_direction(sda_pin, GPIO_MODE_OUTPUT);
+        
+        // SCLがHIGHの状態で、SDAをLOWからHIGHに遷移させる (STOPコンディション)
+        gpio_set_level(scl_pin, 1); // SCLはHIGHのはずだが念のため
+        gpio_set_level(sda_pin, 0);
+        esp_rom_delay_us(5);
+        gpio_set_level(sda_pin, 1); // これがSTOP
+        esp_rom_delay_us(5);
+
+        ESP_LOGI(TAG, "STOP condition sent. Bus should be reset.");
+    } else {
+        ESP_LOGE(TAG, "Recovery failed. Slave did not release SDA line.");
+    }
+
+    // --- 5. クリーンアップ ---
+    // I2Cドライバが正しくピンを制御できるように、GPIO設定をリセット
+    gpio_reset_pin(sda_pin);
+    gpio_reset_pin(scl_pin);
+}
+
+void hello_STM32(i2c_master_bus_handle_t *bus_handle, i2c_master_dev_handle_t dev_STM32){
+
+    constexpr int32_t Timeout = 10000;
     constexpr uint8_t instruction = 0x00;
 
     printf(LOG_COLOR_D "\n>> STM32 scanning ..." LOG_RESET_COLOR "\n");
@@ -29,7 +105,7 @@ void hello_STM32(i2c_master_dev_handle_t dev_STM32){
     esp_err_t status;
     if((status = i2c_master_transmit(dev_STM32, &instruction, 1, Timeout)) != ESP_OK){
         printf(LOG_COLOR_E "- Cannot write to STM32 with error code %X!%s", status, LOG_RESET_COLOR "\n");
-        return;
+            return;
     }
 
     uint8_t buf[17];
@@ -47,6 +123,7 @@ void hello_STM32(i2c_master_dev_handle_t dev_STM32){
         printf(LOG_COLOR_I "- Unique_id:0x%lX 0x%lX 0x%lX%s", id_data[1],id_data[2],id_data[3], LOG_RESET_COLOR "\n");
     }else{
         printf(LOG_COLOR_E "- Cannot read a data from STM32 with error code %X!%s", status, LOG_RESET_COLOR "\n");
+        return;
     }
 }
 
@@ -63,6 +140,9 @@ void ESP_init(i2c_master_bus_handle_t *bus_handle){
     vTaskDelay(INITIAL_DELAY);
 
     printf("%s", banner);
+
+    ESP_LOGI(TAG, "Checking I2C bus status before initialization...");
+    i2c_master_bus_recover(static_cast<gpio_num_t>(I2C_SDA_IO), static_cast<gpio_num_t>(I2C_SCL_IO));
 
     i2c_master_bus_config_t bus_config = {};
     bus_config.i2c_port = I2C_PORT;
@@ -81,5 +161,7 @@ void ESP_init(i2c_master_bus_handle_t *bus_handle){
     };
     ESP_ERROR_CHECK(i2c_master_bus_add_device(*bus_handle, &dev_cfg, &dev_STM32));
 
-    //hello_STM32(dev_STM32);
+    vTaskDelay(pdMS_TO_TICKS(100));
+
+    //hello_STM32(bus_handle, dev_STM32);
 }

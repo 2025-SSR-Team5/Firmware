@@ -11,12 +11,11 @@
 #include "freertos/task.h"
 
 extern "C" {
-#include <stdio.h>
-#include <string.h>
 #include "esp_log.h"
 #include "esp_err.h"
 #include "esp_bt.h"
 #include "esp_bt_main.h"
+#include "esp_spp_api.h"
 #include "esp_gatts_api.h"
 #include "esp_gap_ble_api.h"
 #include "esp_bt_defs.h"
@@ -40,6 +39,7 @@ extern "C" {
 #define INSTRUCTION_DEFAULT 0xFF
 
 extern i2c_master_dev_handle_t dev_STM32;
+extern BleServer* bleServerInstance;
 
 using namespace rct;
 
@@ -148,8 +148,9 @@ void bluetooth_init() {
     ESP_LOGI(TAG, "Bluetooth initialized successfully in dual mode.");
 }
 
-bool last_button_up = false;
-bool last_button_down = false;
+bool r1_last_button_up = false;
+bool r1_last_button_down = false;
+bool l1_last_button_circle = false;
 
 extern "C" void app_main() {
     i2c_master_bus_handle_t bus_handle;
@@ -157,11 +158,11 @@ extern "C" void app_main() {
     BleServer bleServer;
     bluetooth_init();
 
-    vTaskDelay(pdMS_TO_TICKS(10));
-
-    bleServer.init();
-    init_ps3();
+    //vTaskDelay(pdMS_TO_TICKS(100));
     ESP_init(&bus_handle);
+
+    init_ps3();
+    bleServer.init();
 
     servo[0].attach(SERVO_A_PIN, 500, 2400, LEDC_CHANNEL_6, LEDC_TIMER_0);
     servo[1].attach(SERVO_B_PIN, 500, 2400, LEDC_CHANNEL_7, LEDC_TIMER_0);
@@ -182,28 +183,51 @@ extern "C" void app_main() {
         float analog_y_num = -analog_y/128.0;
         float analog_r_num = analog_r/128.0;
 
-        Velocity vel = {analog_x_num, analog_y_num, analog_r_num};
-        omni.move(vel);
-
         uint8_t instruction = INSTRUCTION_DEFAULT;
 
         if(button.r1){
             if(button.up){
-                last_button_up = true;
+                r1_last_button_up = true;
             }
             if(button.down){
-                last_button_down = true;
+                r1_last_button_down = true;
             }
         }
-        if((button.up == 0) && last_button_up){
-            instruction = 0x01;
-            last_button_up = false;
-        }
-        if((button.down == 0) && last_button_down){
-            instruction = 0x02;
-            last_button_down = false;
+
+        if(button.l1){
+          if(button.circle){
+            l1_last_button_circle = true;
+          }
         }
 
+        if((button.up == 0) && r1_last_button_up){
+            instruction = 0x01;
+            r1_last_button_up = false;
+        }
+
+        if((button.down == 0) && r1_last_button_down){
+            instruction = 0x02;
+            r1_last_button_down = false;
+        }
+
+         if(instruction != INSTRUCTION_DEFAULT){
+            i2c_master_transmit(dev_STM32, &instruction, sizeof(instruction), pdMS_TO_TICKS(1000));
+            printf("Send to STM32!\n");
+        }
+
+        if((button.circle == 0) && l1_last_button_circle){
+          //自動走行モード
+          ESP_LOGI("chassis", "自動走行モード");
+          float azimuth_f = bleServer.azimuth;
+          azimuth_f = azimuth_f + 180.0;
+          l1_last_button_circle = false;
+
+        }else{
+          //手動走行モード
+          Velocity vel = {analog_x_num, analog_y_num, analog_r_num};
+          omni.move(vel);
+        }
+        
         if(button.l2){
           servo[0].write(30);
         }else{
@@ -214,11 +238,6 @@ extern "C" void app_main() {
           servo[1].write(160);
         }else{
           servo[1].write(90);
-        }
-
-        if(instruction != INSTRUCTION_DEFAULT){
-            i2c_master_transmit(dev_STM32, &instruction, sizeof(instruction), pdMS_TO_TICKS(1000));
-            printf("Send to STM32!\n");
         }
 
         vTaskDelay(pdMS_TO_TICKS(100));

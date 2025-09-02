@@ -1,0 +1,109 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ESP32\build\esp32.elf C:\GitHub\Firmware\src\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 31 2025 22:07:17[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d2e8h (185064) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=0003d310 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0003d338 vaddr=3ffbdb60 size=02ce0h ( 11488) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4924h (674084) map[0m
+[0;32mI (393) esp_image: segment 4: paddr=000e494c vaddr=3ffc0840 size=01d04h (  7428) load[0m
+[0;32mI (396) esp_image: segment 5: paddr=000e6658 vaddr=40080000 size=1bb3ch (113468) load[0m
+[0;32mI (454) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (454) boot: Disabling RNG early entropy source...[0m
+[0;32mI (465) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) app_init: Application information:[0m
+[0;32mI (476) app_init: Project name:     esp32[0m
+[0;32mI (481) app_init: App version:      f56e411-dirty[0m
+[0;32mI (486) app_init: Compile time:     Sep  1 2025 00:37:33[0m
+[0;32mI (492) app_init: ELF file SHA256:  9d3f86990...[0m
+[0;32mI (498) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (502) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (507) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (512) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (542) heap_init: At 3FFCA5F0 len 00015A10 (86 KiB): DRAM[0m
+[0;32mI (548) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (555) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (561) heap_init: At 4009BB3C len 000044C4 (17 KiB): IRAM[0m
+[0;32mI (569) spi_flash: detected chip: generic[0m
+[0;32mI (572) spi_flash: flash io: dio[0m
+[0;33mW (576) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (592) coexist: coex firmware version: 831ec70[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (615) BTDM_INIT: BT controller compile version [b992c7d][0m
+[0;32mI (615) BTDM_INIT: Bluetooth MAC: ec:e3:34:90:d8:ee[0m
+[0;32mI (615) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (1285) BT_INIT: Bluetooth initialized successfully in dual mode.[0m
+
+   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$        /$$$$$$   /$$$$$$ 
+  /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$__  $$|_  $$_/       /$$__  $$ /$$__  $$ 
+ | $$  \__/| $$  \ $$| $$  \__/| $$  \ $$| $$  \ $$  | $$        | $$  \ $$| $$  \__/ 
+ |  $$$$$$ | $$$$$$$$|  $$$$$$ | $$  | $$| $$$$$$$/  | $$        | $$  | $$|  $$$$$$  
+  \____  $$| $$__  $$ \____  $$| $$  | $$| $$__  $$  | $$        | $$  | $$ \____  $$ 
+  /$$  \ $$| $$  | $$ /$$  \ $$| $$  | $$| $$  \ $$  | $$        | $$  | $$ /$$  \ $$ 
+ |  $$$$$$/| $$  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$      |  $$$$$$/|  $$$$$$/ 
+  \______/ |__/  |__/ \______/  \______/ |__/  |__/|______/       \______/  \______/                                                                                    
+[0;32mI (1455) initial_operation: Checking I2C bus status before initialization...[0m
+[0;32mI (1455) initial_operation: Bus is clear. No recovery needed.[0m
+[0;33mW (1465) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (1585) PS3_SPP: ESP_SPP_INIT_EVT[0m
+[0;32mI (1595) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDC Initialized[0m
+[0;32mI (1605) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDI Initialized[0m
+[0;32mI (1615) BLE_HANDLER: create_service requested[0m
+[0;32mI (1615) BLE_HANDLER: Service created, handle=40[0m
+[0;32mI (1615) BLE_HANDLER: start_service ok[0m
+[0;32mI (1615) BLE_HANDLER: add_char requested[0m
+[0;32mI (1635) BLE_HANDLER: GATT service started[0m
+[0;32mI (1635) BLE_HANDLER: BLE advertising started[0m
+[0;32mI (1635) BLE_HANDLER: CHAR added: handle=42 (prop=0x0a)[0m
+[0;32mI (1615) BleServer: BLE GATT server init done[0m
+[0;32mI (6325) BLE_HANDLER: Client connected, conn_id=0[0m
+[0;32mI (7245) BLE_HANDLER: Received roll=-0.995 pitch=-21.988 azimuth=-132.461 (len=12)[0m
+[0;32mI (7285) BLE_HANDLER: Received roll=-1.044 pitch=-22.050 azimuth=-132.459 (len=12)[0m
+[0;32mI (7355) BLE_HANDLER: Received roll=-1.011 pitch=-22.105 azimuth=-132.487 (len=12)[0m
+[0;32mI (7445) BLE_HANDLER: Received roll=-1.157 pitch=-22.225 azimuth=-132.538 (len=12)[0m
+[0;32mI (7535) BLE_HANDLER: Received roll=-1.128 pitch=-22.150 azimuth=-132.488 (len=12)[0m
+[0;32mI (7625) BLE_HANDLER: Received roll=-1.127 pitch=-22.307 azimuth=-132.315 (len=12)[0m
+[0;32mI (7715) BLE_HANDLER: Received roll=-1.124 pitch=-22.425 azimuth=-132.162 (len=12)[0m
+[0;32mI (7805) BLE_HANDLER: Received roll=-1.132 pitch=-22.462 azimuth=-132.145 (len=12)[0m
+[0;32mI (7895) BLE_HANDLER: Received roll=-0.846 pitch=-22.414 azimuth=-132.227 (len=12)[0m
+[0;32mI (7985) BLE_HANDLER: Received roll=-0.815 pitch=-21.906 azimuth=-132.195 (len=12)[0m
+[0;32mI (8075) BLE_HANDLER: Received roll=-1.119 pitch=-21.152 azimuth=-132.281 (len=12)[0m
+[0;32mI (8165) BLE_HANDLER: Received roll=-2.702 pitch=-17.318 azimuth=-132.466 (len=12)[0m
+[0;32mI (8255) BLE_HANDLER: Received roll=-3.810 pitch=-10.515 azimuth=-132.659 (len=12)[0m
+[0;32mI (8345) BLE_HANDLER: Received roll=-4.084 pitch=-4.169 azimuth=-131.928 (len=12)[0m
+[0;32mI (8435) BLE_HANDLER: Received roll=-5.568 pitch=1.727 azimuth=-129.536 (len=12)[0m
+[0;32mI (8525) BLE_HANDLER: Received roll=-6.974 pitch=2.961 azimuth=-127.190 (len=12)[0m
+[0;32mI (8615) BLE_HANDLER: Received roll=-8.316 pitch=4.107 azimuth=-125.026 (len=12)[0m
+[0;32mI (8705) BLE_HANDLER: Received roll=-10.642 pitch=5.492 azimuth=-122.378 (len=12)[0m
+[0;32mI (8845) BLE_HANDLER: Received roll=-18.533 pitch=5.452 azimuth=-116.613 (len=12)[0m
+[0;32mI (8935) BLE_HANDLER: Received roll=-30.849 pitch=2.462 azimuth=-108.088 (len=12)[0m
+[0;32mI (9025) BLE_HANDLER: Received roll=-33.335 pitch=1.829 azimuth=-100.733 (len=12)[0m

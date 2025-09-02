@@ -1,0 +1,934 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ESP32\build\esp32.elf C:\GitHub\Firmware\src\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 31 2025 22:07:17[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d4a0h (185504) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=0003d4c8 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0003d4f0 vaddr=3ffbdb60 size=02b28h ( 11048) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4c38h (674872) map[0m
+[0;32mI (393) esp_image: segment 4: paddr=000e4c60 vaddr=3ffc0688 size=01ebch (  7868) load[0m
+[0;32mI (396) esp_image: segment 5: paddr=000e6b24 vaddr=40080000 size=1bb3ch (113468) load[0m
+[0;32mI (455) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (455) boot: Disabling RNG early entropy source...[0m
+[0;32mI (465) cpu_start: Multicore app[0m
+[0;32mI (474) cpu_start: Pro cpu start user code[0m
+[0;32mI (474) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (477) app_init: Project name:     esp32[0m
+[0;32mI (481) app_init: App version:      f56e411-dirty[0m
+[0;32mI (487) app_init: Compile time:     Sep  1 2025 00:37:33[0m
+[0;32mI (493) app_init: ELF file SHA256:  80d539d54...[0m
+[0;32mI (498) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (503) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (507) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (512) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (517) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (543) heap_init: At 3FFCA5F0 len 00015A10 (86 KiB): DRAM[0m
+[0;32mI (549) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (555) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (562) heap_init: At 4009BB3C len 000044C4 (17 KiB): IRAM[0m
+[0;32mI (569) spi_flash: detected chip: generic[0m
+[0;32mI (572) spi_flash: flash io: dio[0m
+[0;33mW (576) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (592) coexist: coex firmware version: 831ec70[0m
+[0;32mI (596) main_task: Started on CPU0[0m
+[0;32mI (606) main_task: Calling app_main()[0m
+[0;32mI (616) BTDM_INIT: BT controller compile version [b992c7d][0m
+[0;32mI (616) BTDM_INIT: Bluetooth MAC: ec:e3:34:90:d8:ee[0m
+[0;32mI (616) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (1266) BT_INIT: Bluetooth initialized successfully in dual mode.[0m
+
+   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$        /$$$$$$   /$$$$$$ 
+  /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$__  $$|_  $$_/       /$$__  $$ /$$__  $$ 
+ | $$  \__/| $$  \ $$| $$  \__/| $$  \ $$| $$  \ $$  | $$        | $$  \ $$| $$  \__/ 
+ |  $$$$$$ | $$$$$$$$|  $$$$$$ | $$  | $$| $$$$$$$/  | $$        | $$  | $$|  $$$$$$  
+  \____  $$| $$__  $$ \____  $$| $$  | $$| $$__  $$  | $$        | $$  | $$ \____  $$ 
+  /$$  \ $$| $$  | $$ /$$  \ $$| $$  | $$| $$  \ $$  | $$        | $$  | $$ /$$  \ $$ 
+ |  $$$$$$/| $$  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$      |  $$$$$$/|  $$$$$$/ 
+  \______/ |__/  |__/ \______/  \______/ |__/  |__/|______/       \______/  \______/                                                                                    
+[0;32mI (1436) initial_operation: Checking I2C bus status before initialization...[0m
+[0;33mW (1436) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (1446) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (1446) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (2476) i2c.master: I2C software timeout[0m
+[0;31mE (2476) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2476) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (2486) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (2496) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (2506) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (3526) i2c.master: I2C software timeout[0m
+[0;31mE (3526) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3526) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (3536) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (3546) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (3546) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (4576) i2c.master: I2C software timeout[0m
+[0;31mE (4576) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4576) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (4586) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (4596) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (4596) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (5626) i2c.master: I2C software timeout[0m
+[0;31mE (5626) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5626) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (5636) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (5646) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (5646) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (6676) i2c.master: I2C software timeout[0m
+[0;31mE (6676) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6676) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (6686) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (6696) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (6696) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (7726) i2c.master: I2C software timeout[0m
+[0;31mE (7726) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7726) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (7736) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (7746) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (7746) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (8776) i2c.master: I2C software timeout[0m
+[0;31mE (8776) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8776) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (8786) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (8796) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (8796) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (9826) i2c.master: I2C software timeout[0m
+[0;31mE (9826) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9826) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (9836) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (9846) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (9846) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (10876) i2c.master: I2C software timeout[0m
+[0;31mE (10876) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10876) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (10886) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (10896) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (10896) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (11926) i2c.master: I2C software timeout[0m
+[0;31mE (11926) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11926) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (11936) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (11946) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (11956) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (12976) i2c.master: I2C software timeout[0m
+[0;31mE (12976) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12976) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (12986) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (12996) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (12996) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (14026) i2c.master: I2C software timeout[0m
+[0;31mE (14026) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (14026) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (14036) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (14046) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (14046) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (15076) i2c.master: I2C software timeout[0m
+[0;31mE (15076) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (15076) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (15086) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (15096) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (15096) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (16126) i2c.master: I2C software timeout[0m
+[0;31mE (16126) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (16126) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (16136) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (16146) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (16146) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (17176) i2c.master: I2C software timeout[0m
+[0;31mE (17176) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (17176) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (17186) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (17196) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (17196) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (18226) i2c.master: I2C software timeout[0m
+[0;31mE (18226) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (18226) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (18236) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (18246) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (18246) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (19276) i2c.master: I2C software timeout[0m
+[0;31mE (19276) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (19276) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (19286) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (19296) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (19296) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (20326) i2c.master: I2C software timeout[0m
+[0;31mE (20326) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (20326) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (20336) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (20346) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (20346) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (21376) i2c.master: I2C software timeout[0m
+[0;31mE (21376) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (21376) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (21386) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (21396) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (21406) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (22426) i2c.master: I2C software timeout[0m
+[0;31mE (22426) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (22426) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (22436) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (22446) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (22446) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (23476) i2c.master: I2C software timeout[0m
+[0;31mE (23476) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (23476) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (23486) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (23496) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (23496) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (24526) i2c.master: I2C software timeout[0m
+[0;31mE (24526) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (24526) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (24536) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (24546) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (24546) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (25576) i2c.master: I2C software timeout[0m
+[0;31mE (25576) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (25576) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (25586) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (25596) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (25596) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (26626) i2c.master: I2C software timeout[0m
+[0;31mE (26626) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (26626) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (26636) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (26646) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (26646) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (27676) i2c.master: I2C software timeout[0m
+[0;31mE (27676) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (27676) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (27686) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (27696) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (27696) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (28726) i2c.master: I2C software timeout[0m
+[0;31mE (28726) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (28726) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (28736) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (28746) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (28746) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (29776) i2c.master: I2C software timeout[0m
+[0;31mE (29776) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (29776) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (29786) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (29796) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (29796) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (30826) i2c.master: I2C software timeout[0m
+[0;31mE (30826) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (30826) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (30836) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (30846) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (30846) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (31876) i2c.master: I2C software timeout[0m
+[0;31mE (31876) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (31876) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (31886) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (31896) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (31906) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (32926) i2c.master: I2C software timeout[0m
+[0;31mE (32926) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (32926) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (32936) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (32946) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (32946) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (33976) i2c.master: I2C software timeout[0m
+[0;31mE (33976) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (33976) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (33986) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (33996) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (33996) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (35026) i2c.master: I2C software timeout[0m
+[0;31mE (35026) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (35026) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (35036) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (35046) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (35046) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (36076) i2c.master: I2C software timeout[0m
+[0;31mE (36076) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (36076) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (36086) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (36096) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (36096) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (37126) i2c.master: I2C software timeout[0m
+[0;31mE (37126) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (37126) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (37136) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (37146) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (37146) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (38176) i2c.master: I2C software timeout[0m
+[0;31mE (38176) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (38176) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (38186) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (38196) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (38196) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (39226) i2c.master: I2C software timeout[0m
+[0;31mE (39226) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (39226) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (39236) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (39246) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (39246) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (40276) i2c.master: I2C software timeout[0m
+[0;31mE (40276) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (40276) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (40286) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (40296) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (40296) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (41326) i2c.master: I2C software timeout[0m
+[0;31mE (41326) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (41326) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (41336) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (41346) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (41356) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (42376) i2c.master: I2C software timeout[0m
+[0;31mE (42376) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (42376) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (42386) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (42396) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (42396) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (43426) i2c.master: I2C software timeout[0m
+[0;31mE (43426) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (43426) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (43436) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (43446) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (43446) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (44476) i2c.master: I2C software timeout[0m
+[0;31mE (44476) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (44476) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (44486) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (44496) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (44496) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (45526) i2c.master: I2C software timeout[0m
+[0;31mE (45526) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (45526) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (45536) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (45546) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (45546) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (46576) i2c.master: I2C software timeout[0m
+[0;31mE (46576) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (46576) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (46586) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (46596) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (46596) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (47626) i2c.master: I2C software timeout[0m
+[0;31mE (47626) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (47626) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (47636) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (47646) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (47646) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (48676) i2c.master: I2C software timeout[0m
+[0;31mE (48676) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (48676) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (48686) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (48696) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (48696) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (49726) i2c.master: I2C software timeout[0m
+[0;31mE (49726) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (49726) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (49736) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (49746) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (49746) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (50776) i2c.master: I2C software timeout[0m
+[0;31mE (50776) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (50776) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (50786) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (50796) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (50796) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (51826) i2c.master: I2C software timeout[0m
+[0;31mE (51826) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (51826) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (51836) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (51846) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (51856) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (52876) i2c.master: I2C software timeout[0m
+[0;31mE (52876) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (52876) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (52886) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (52896) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (52896) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (53926) i2c.master: I2C software timeout[0m
+[0;31mE (53926) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (53926) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (53936) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (53946) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (53946) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (54976) i2c.master: I2C software timeout[0m
+[0;31mE (54976) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (54976) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (54986) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (54996) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (54996) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (56026) i2c.master: I2C software timeout[0m
+[0;31mE (56026) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (56026) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (56036) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (56046) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (56046) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (57076) i2c.master: I2C software timeout[0m
+[0;31mE (57076) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (57076) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (57086) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (57096) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (57096) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (58126) i2c.master: I2C software timeout[0m
+[0;31mE (58126) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (58126) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (58136) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (58146) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (58146) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (59176) i2c.master: I2C software timeout[0m
+[0;31mE (59176) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (59176) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (59186) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (59196) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (59196) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (60226) i2c.master: I2C software timeout[0m
+[0;31mE (60226) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (60226) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (60236) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (60246) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (60246) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (61276) i2c.master: I2C software timeout[0m
+[0;31mE (61276) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (61276) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (61286) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (61296) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (61306) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (62326) i2c.master: I2C software timeout[0m
+[0;31mE (62326) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (62326) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (62336) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (62346) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (62346) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (63376) i2c.master: I2C software timeout[0m
+[0;31mE (63376) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (63376) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (63386) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (63396) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (63396) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (64426) i2c.master: I2C software timeout[0m
+[0;31mE (64426) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (64426) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (64436) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (64446) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (64446) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (65476) i2c.master: I2C software timeout[0m
+[0;31mE (65476) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (65476) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (65486) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (65496) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (65496) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (66526) i2c.master: I2C software timeout[0m
+[0;31mE (66526) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (66526) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (66536) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (66546) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (66546) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (67576) i2c.master: I2C software timeout[0m
+[0;31mE (67576) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (67576) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (67586) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (67596) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (67596) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (68626) i2c.master: I2C software timeout[0m
+[0;31mE (68626) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (68626) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (68636) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (68646) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (68646) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (69676) i2c.master: I2C software timeout[0m
+[0;31mE (69676) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (69676) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (69686) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (69696) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (69696) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (70726) i2c.master: I2C software timeout[0m
+[0;31mE (70726) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (70726) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (70736) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (70746) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (70746) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (71776) i2c.master: I2C software timeout[0m
+[0;31mE (71776) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (71776) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (71786) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (71796) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (71806) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (72826) i2c.master: I2C software timeout[0m
+[0;31mE (72826) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (72826) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (72836) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (72846) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (72846) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (73876) i2c.master: I2C software timeout[0m
+[0;31mE (73876) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (73876) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (73886) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (73896) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (73896) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (74926) i2c.master: I2C software timeout[0m
+[0;31mE (74926) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (74926) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (74936) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (74946) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (74946) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (75976) i2c.master: I2C software timeout[0m
+[0;31mE (75976) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (75976) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (75986) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (75996) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (75996) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (77026) i2c.master: I2C software timeout[0m
+[0;31mE (77026) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (77026) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (77036) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (77046) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (77046) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (78076) i2c.master: I2C software timeout[0m
+[0;31mE (78076) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (78076) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (78086) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (78096) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (78096) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (79126) i2c.master: I2C software timeout[0m
+[0;31mE (79126) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (79126) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (79136) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (79146) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (79146) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (80176) i2c.master: I2C software timeout[0m
+[0;31mE (80176) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (80176) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (80186) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (80196) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (80196) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (81226) i2c.master: I2C software timeout[0m
+[0;31mE (81226) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (81226) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (81236) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (81246) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (81246) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (82276) i2c.master: I2C software timeout[0m
+[0;31mE (82276) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (82276) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (82286) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (82296) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (82306) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (83326) i2c.master: I2C software timeout[0m
+[0;31mE (83326) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (83326) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (83336) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (83346) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (83346) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (84376) i2c.master: I2C software timeout[0m
+[0;31mE (84376) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (84376) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (84386) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (84396) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (84396) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (85426) i2c.master: I2C software timeout[0m
+[0;31mE (85426) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (85426) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (85436) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (85446) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (85446) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (86476) i2c.master: I2C software timeout[0m
+[0;31mE (86476) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (86476) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (86486) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (86496) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (86496) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (87526) i2c.master: I2C software timeout[0m
+[0;31mE (87526) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (87526) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (87536) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (87546) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (87546) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (88576) i2c.master: I2C software timeout[0m
+[0;31mE (88576) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (88576) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (88586) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (88596) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (88596) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (89626) i2c.master: I2C software timeout[0m
+[0;31mE (89626) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (89626) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (89636) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (89646) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (89646) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (90676) i2c.master: I2C software timeout[0m
+[0;31mE (90676) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (90676) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (90686) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (90696) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (90696) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (91726) i2c.master: I2C software timeout[0m
+[0;31mE (91726) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (91726) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (91736) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (91746) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (91756) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (92776) i2c.master: I2C software timeout[0m
+[0;31mE (92776) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (92776) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (92786) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (92796) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (92796) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (93826) i2c.master: I2C software timeout[0m
+[0;31mE (93826) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (93826) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (93836) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (93846) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (93846) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (94876) i2c.master: I2C software timeout[0m
+[0;31mE (94876) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (94876) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (94886) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (94896) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (94896) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (95926) i2c.master: I2C software timeout[0m
+[0;31mE (95926) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (95926) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (95936) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (95946) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (95946) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (96976) i2c.master: I2C software timeout[0m
+[0;31mE (96976) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (96976) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (96986) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (96996) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (96996) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (98026) i2c.master: I2C software timeout[0m
+[0;31mE (98026) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (98026) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (98036) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (98046) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (98046) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (99076) i2c.master: I2C software timeout[0m
+[0;31mE (99076) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (99076) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (99086) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (99096) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (99096) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (100126) i2c.master: I2C software timeout[0m
+[0;31mE (100126) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (100126) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (100136) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (100146) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (100156) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m
+[0;31mE (101176) i2c.master: I2C software timeout[0m
+[0;31mE (101176) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (101176) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31m- Cannot write to STM32 with error code 103![0m
+[0;33mW (101186) initial_operation: SDA line is stuck low. Attempting recovery...[0m
+[0;32mI (101196) initial_operation: Bus recovery sequence completed.[0m
+[0;33mW (101206) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+
+>> STM32 scanning ...[0m

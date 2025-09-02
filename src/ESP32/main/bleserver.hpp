@@ -21,6 +21,12 @@ class BleServer
             instance = this;
         }
 
+        uint16_t service_handle = 0;
+
+        float roll  = 0.0f;
+        float pitch = 0.0f;
+        float azimuth = 0.0f;
+
         void print_ble_mac();
         void init();
         void handle_write_event(esp_ble_gatts_cb_param_t *param);
@@ -35,7 +41,6 @@ class BleServer
 
         static BleServer* instance; 
 
-        uint16_t service_handle = 0;
         uint16_t char_attr_handle = 0;
         esp_gatt_char_prop_t char_property = 0;
 

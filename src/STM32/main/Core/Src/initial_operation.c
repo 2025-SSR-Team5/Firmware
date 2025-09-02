@@ -34,7 +34,5 @@ HAL_StatusTypeDef Check_I2C_to_ESP32(uint8_t devstat){
 		for(int i=1;i < sizeof(buf);i++) buf[i] = '\0';
 	}
 
-	HAL_Delay(10);
-
-	return HAL_I2C_Slave_Transmit(&hi2c1, buf, 17, 1000);
+	return HAL_I2C_Slave_Transmit(&hi2c1, buf, 17, 10000);
 }

@@ -1,0 +1,1753 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ESP32\build\esp32.elf C:\GitHub\Firmware\src\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 31 2025 22:07:17[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d060h (184416) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=0003d088 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0003d0b0 vaddr=3ffbdb60 size=02f68h ( 12136) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a457ch (673148) map[0m
+[0;32mI (392) esp_image: segment 4: paddr=000e45a4 vaddr=3ffc0ac8 size=01a7ch (  6780) load[0m
+[0;32mI (395) esp_image: segment 5: paddr=000e6028 vaddr=40080000 size=1bb3ch (113468) load[0m
+[0;32mI (454) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (454) boot: Disabling RNG early entropy source...[0m
+[0;32mI (464) cpu_start: Multicore app[0m
+[0;32mI (473) cpu_start: Pro cpu start user code[0m
+[0;32mI (473) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) app_init: Application information:[0m
+[0;32mI (476) app_init: Project name:     esp32[0m
+[0;32mI (480) app_init: App version:      f56e411-dirty[0m
+[0;32mI (486) app_init: Compile time:     Sep  1 2025 00:37:33[0m
+[0;32mI (492) app_init: ELF file SHA256:  d4b3b60d1...[0m
+[0;32mI (497) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (502) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (506) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (511) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (516) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (524) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (529) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (542) heap_init: At 3FFCA5F0 len 00015A10 (86 KiB): DRAM[0m
+[0;32mI (548) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (554) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (561) heap_init: At 4009BB3C len 000044C4 (17 KiB): IRAM[0m
+[0;32mI (568) spi_flash: detected chip: generic[0m
+[0;32mI (571) spi_flash: flash io: dio[0m
+[0;33mW (575) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (591) coexist: coex firmware version: 831ec70[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (615) BTDM_INIT: BT controller compile version [b992c7d][0m
+[0;32mI (615) BTDM_INIT: Bluetooth MAC: ec:e3:34:90:d8:ee[0m
+[0;32mI (615) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (1275) BT_INIT: Bluetooth initialized successfully in dual mode.[0m
+[0;32mI (1295) PS3_SPP: ESP_SPP_INIT_EVT[0m
+[0;32mI (1305) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDC Initialized[0m
+[0;32mI (1305) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDI Initialized[0m
+[0;32mI (1315) BLE_HANDLER: create_service requested[0m
+[0;32mI (1315) BLE_HANDLER: Service created, handle=40[0m
+[0;32mI (1325) BLE_HANDLER: start_service ok[0m
+[0;32mI (1325) BLE_HANDLER: add_char requested[0m
+[0;32mI (1335) BLE_HANDLER: GATT service started[0m
+[0;32mI (1335) BLE_HANDLER: BLE advertising started[0m
+[0;32mI (1345) BLE_HANDLER: CHAR added: handle=42 (prop=0x0a)[0m
+[0;32mI (1345) BleServer: BLE GATT server init done[0m
+
+   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$        /$$$$$$   /$$$$$$ 
+  /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$__  $$|_  $$_/       /$$__  $$ /$$__  $$ 
+ | $$  \__/| $$  \ $$| $$  \__/| $$  \ $$| $$  \ $$  | $$        | $$  \ $$| $$  \__/ 
+ |  $$$$$$ | $$$$$$$$|  $$$$$$ | $$  | $$| $$$$$$$/  | $$        | $$  | $$|  $$$$$$  
+  \____  $$| $$__  $$ \____  $$| $$  | $$| $$__  $$  | $$        | $$  | $$ \____  $$ 
+  /$$  \ $$| $$  | $$ /$$  \ $$| $$  | $$| $$  \ $$  | $$        | $$  | $$ /$$  \ $$ 
+ |  $$$$$$/| $$  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$      |  $$$$$$/|  $$$$$$/ 
+  \______/ |__/  |__/ \______/  \______/ |__/  |__/|______/       \______/  \______/                                                                                    
+[0;33mW (1515) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;33mW (9775) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;31mE (9785) BT_BTM: btm_sec_l2cap_access_req: (acceptor) remote features unknown!!sec_flags:0x80
+[0m
+[0;32mI (12775) PS3_L2CAP: [ps3_l2cap_connect_ind_cback] bd_addr: Ksjc%
+  l2cap_cid: 0x40
+  psm: 17
+  id: 1[0m
+[0;32mI (12805) PS3_L2CAP: [ps3_l2cap_config_ind_cback] l2cap_cid: 0x40
+  p_cfg->result: 0
+  p_cfg->mtu_present: 0
+  p_cfg->mtu: 0[0m
+[0;32mI (12805) PS3_L2CAP: [ps3_l2cap_config_cfm_cback] l2cap_cid: 0x40
+  p_cfg->result: 0[0m
+[0;32mI (12835) PS3_L2CAP: [ps3_l2cap_connect_ind_cback] bd_addr: Ksjc%
+  l2cap_cid: 0x41
+  psm: 19
+  id: 3[0m
+[0;32mI (12855) PS3_L2CAP: [ps3_l2cap_config_ind_cback] l2cap_cid: 0x41
+  p_cfg->result: 0
+  p_cfg->mtu_present: 0
+  p_cfg->mtu: 0[0m
+[0;32mI (12855) PS3_L2CAP: [ps3_l2cap_config_cfm_cback] l2cap_cid: 0x41
+  p_cfg->result: 0[0m
+[0;32mI (12875) PS3_L2CAP: [ps3_l2cap_send_hid] sending command: success[0m
+[0;33mW (12885) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 3200[0m
+[0;32mI (12905) PS3_L2CAP: [ps3_l2cap_send_hid] sending command: success[0m
+PS3 controller connected
+[0;32mI (12905) PS3_L2CAP: [ps3_l2cap_send_hid] sending command: success[0m
+The controller battery is LOW
+[0;32mI (12935) INPUT: Buttons:[0m
+[0;32mI (12935) INPUT:   select: 0[0m
+[0;32mI (12935) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (12935) INPUT:   start: 0, ps: 0[0m
+[0;32mI (12945) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (12955) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (12955) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (12965) INPUT: Analog Stick:[0m
+[0;32mI (12965) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (12965) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (12975) INPUT: Battery: 3[0m
+[0;32mI (13085) INPUT: Buttons:[0m
+[0;32mI (13085) INPUT:   select: 0[0m
+[0;32mI (13085) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (13085) INPUT:   start: 0, ps: 0[0m
+[0;32mI (13085) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (13095) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (13095) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (13115) INPUT: Analog Stick:[0m
+[0;32mI (13115) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (13115) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (13115) INPUT: Battery: 3[0m
+[0;32mI (13225) INPUT: Buttons:[0m
+[0;32mI (13225) INPUT:   select: 0[0m
+[0;32mI (13225) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (13225) INPUT:   start: 0, ps: 0[0m
+[0;32mI (13225) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (13235) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (13235) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (13255) INPUT: Analog Stick:[0m
+[0;32mI (13255) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (13255) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (13255) INPUT: Battery: 3[0m
+[0;32mI (13365) INPUT: Buttons:[0m
+[0;32mI (13365) INPUT:   select: 0[0m
+[0;32mI (13365) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (13365) INPUT:   start: 0, ps: 0[0m
+[0;32mI (13365) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (13375) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (13385) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (13385) INPUT: Analog Stick:[0m
+[0;32mI (13395) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (13395) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (13395) INPUT: Battery: 3[0m
+[0;32mI (13495) INPUT: Buttons:[0m
+[0;32mI (13495) INPUT:   select: 0[0m
+[0;32mI (13495) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (13495) INPUT:   start: 0, ps: 0[0m
+[0;32mI (13495) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (13505) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (13505) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (13515) INPUT: Analog Stick:[0m
+[0;32mI (13525) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (13525) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (13535) INPUT: Battery: 3[0m
+[0;32mI (13635) INPUT: Buttons:[0m
+[0;32mI (13635) INPUT:   select: 0[0m
+[0;32mI (13635) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (13635) INPUT:   start: 0, ps: 0[0m
+[0;32mI (13645) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (13645) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (13645) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (13665) INPUT: Analog Stick:[0m
+[0;32mI (13665) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (13665) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (13675) INPUT: Battery: 3[0m
+[0;32mI (13775) INPUT: Buttons:[0m
+[0;32mI (13775) INPUT:   select: 0[0m
+[0;32mI (13775) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (13775) INPUT:   start: 0, ps: 0[0m
+[0;32mI (13775) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (13785) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (13785) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (13805) INPUT: Analog Stick:[0m
+[0;32mI (13805) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (13805) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (13805) INPUT: Battery: 3[0m
+[0;32mI (13915) INPUT: Buttons:[0m
+[0;32mI (13915) INPUT:   select: 0[0m
+[0;32mI (13915) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (13915) INPUT:   start: 0, ps: 0[0m
+[0;32mI (13915) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (13925) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (13925) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (13945) INPUT: Analog Stick:[0m
+[0;32mI (13945) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (13945) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (13945) INPUT: Battery: 3[0m
+[0;32mI (14055) INPUT: Buttons:[0m
+[0;32mI (14055) INPUT:   select: 0[0m
+[0;32mI (14055) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (14055) INPUT:   start: 0, ps: 0[0m
+[0;32mI (14055) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (14065) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (14065) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (14085) INPUT: Analog Stick:[0m
+[0;32mI (14085) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (14085) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (14085) INPUT: Battery: 3[0m
+[0;32mI (14205) INPUT: Buttons:[0m
+[0;32mI (14205) INPUT:   select: 0[0m
+[0;32mI (14205) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (14205) INPUT:   start: 0, ps: 0[0m
+[0;32mI (14205) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (14215) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (14215) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (14225) INPUT: Analog Stick:[0m
+[0;32mI (14235) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (14235) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (14235) INPUT: Battery: 3[0m
+[0;32mI (14345) INPUT: Buttons:[0m
+[0;32mI (14345) INPUT:   select: 0[0m
+[0;32mI (14345) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (14345) INPUT:   start: 0, ps: 0[0m
+[0;32mI (14345) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (14355) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (14355) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (14375) INPUT: Analog Stick:[0m
+[0;32mI (14375) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (14375) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (14385) INPUT: Battery: 3[0m
+[0;32mI (14485) INPUT: Buttons:[0m
+[0;32mI (14485) INPUT:   select: 0[0m
+[0;32mI (14485) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (14485) INPUT:   start: 0, ps: 0[0m
+[0;32mI (14485) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (14495) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (14495) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (14515) INPUT: Analog Stick:[0m
+[0;32mI (14515) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (14515) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (14525) INPUT: Battery: 3[0m
+[0;32mI (14625) INPUT: Buttons:[0m
+[0;32mI (14625) INPUT:   select: 0[0m
+[0;32mI (14625) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (14625) INPUT:   start: 0, ps: 0[0m
+[0;32mI (14625) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (14635) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (14635) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (14655) INPUT: Analog Stick:[0m
+[0;32mI (14655) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (14655) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (14655) INPUT: Battery: 3[0m
+[0;32mI (14755) INPUT: Buttons:[0m
+[0;32mI (14755) INPUT:   select: 0[0m
+[0;32mI (14755) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (14755) INPUT:   start: 0, ps: 0[0m
+[0;32mI (14755) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (14765) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (14765) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (14775) INPUT: Analog Stick:[0m
+[0;32mI (14785) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (14785) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (14795) INPUT: Battery: 3[0m
+[0;32mI (14895) INPUT: Buttons:[0m
+[0;32mI (14895) INPUT:   select: 0[0m
+[0;32mI (14895) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (14895) INPUT:   start: 0, ps: 0[0m
+[0;32mI (14895) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (14905) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (14905) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (14925) INPUT: Analog Stick:[0m
+[0;32mI (14925) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (14925) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (14925) INPUT: Battery: 3[0m
+[0;32mI (15035) INPUT: Buttons:[0m
+[0;32mI (15035) INPUT:   select: 0[0m
+[0;32mI (15035) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (15035) INPUT:   start: 0, ps: 0[0m
+[0;32mI (15035) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (15045) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (15045) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (15055) INPUT: Analog Stick:[0m
+[0;32mI (15065) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (15065) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (15075) INPUT: Battery: 3[0m
+[0;32mI (15175) INPUT: Buttons:[0m
+[0;32mI (15175) INPUT:   select: 0[0m
+[0;32mI (15175) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (15175) INPUT:   start: 0, ps: 0[0m
+[0;32mI (15175) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (15185) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (15185) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (15205) INPUT: Analog Stick:[0m
+[0;32mI (15205) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (15205) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (15205) INPUT: Battery: 3[0m
+[0;32mI (15315) INPUT: Buttons:[0m
+[0;32mI (15315) INPUT:   select: 0[0m
+[0;32mI (15315) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (15315) INPUT:   start: 0, ps: 0[0m
+[0;32mI (15315) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (15325) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (15325) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (15345) INPUT: Analog Stick:[0m
+[0;32mI (15345) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (15345) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (15345) INPUT: Battery: 3[0m
+[0;32mI (15455) INPUT: Buttons:[0m
+[0;32mI (15455) INPUT:   select: 0[0m
+[0;32mI (15455) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (15455) INPUT:   start: 0, ps: 0[0m
+[0;32mI (15455) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (15465) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (15465) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (15485) INPUT: Analog Stick:[0m
+[0;32mI (15485) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (15485) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (15495) INPUT: Battery: 3[0m
+[0;32mI (15595) INPUT: Buttons:[0m
+[0;32mI (15595) INPUT:   select: 0[0m
+[0;32mI (15595) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (15595) INPUT:   start: 0, ps: 0[0m
+[0;32mI (15595) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (15605) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (15605) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (15625) INPUT: Analog Stick:[0m
+[0;32mI (15625) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (15625) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (15635) INPUT: Battery: 3[0m
+[0;32mI (15735) INPUT: Buttons:[0m
+[0;32mI (15735) INPUT:   select: 0[0m
+[0;32mI (15735) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (15735) INPUT:   start: 0, ps: 0[0m
+[0;32mI (15745) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (15745) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (15755) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (15765) INPUT: Analog Stick:[0m
+[0;32mI (15765) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (15765) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (15775) INPUT: Battery: 3[0m
+[0;32mI (15875) INPUT: Buttons:[0m
+[0;32mI (15875) INPUT:   select: 0[0m
+[0;32mI (15875) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (15875) INPUT:   start: 0, ps: 0[0m
+[0;32mI (15875) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (15885) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (15885) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (15905) INPUT: Analog Stick:[0m
+[0;32mI (15905) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (15905) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (15905) INPUT: Battery: 3[0m
+[0;32mI (16015) INPUT: Buttons:[0m
+[0;32mI (16015) INPUT:   select: 0[0m
+[0;32mI (16015) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (16015) INPUT:   start: 0, ps: 0[0m
+[0;32mI (16015) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (16025) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (16025) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (16045) INPUT: Analog Stick:[0m
+[0;32mI (16045) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (16045) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (16055) INPUT: Battery: 3[0m
+[0;32mI (16155) INPUT: Buttons:[0m
+[0;32mI (16155) INPUT:   select: 0[0m
+[0;32mI (16155) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (16155) INPUT:   start: 0, ps: 0[0m
+[0;32mI (16155) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (16165) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (16165) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (16175) INPUT: Analog Stick:[0m
+[0;32mI (16185) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (16185) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (16185) INPUT: Battery: 3[0m
+[0;32mI (16295) INPUT: Buttons:[0m
+[0;32mI (16295) INPUT:   select: 0[0m
+[0;32mI (16295) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (16295) INPUT:   start: 0, ps: 0[0m
+[0;32mI (16295) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (16305) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (16315) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (16325) INPUT: Analog Stick:[0m
+[0;32mI (16325) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (16325) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (16325) INPUT: Battery: 3[0m
+[0;32mI (16435) INPUT: Buttons:[0m
+[0;32mI (16435) INPUT:   select: 0[0m
+[0;32mI (16435) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (16435) INPUT:   start: 0, ps: 0[0m
+[0;32mI (16435) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (16445) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (16445) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (16455) INPUT: Analog Stick:[0m
+[0;32mI (16465) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (16465) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (16475) INPUT: Battery: 3[0m
+[0;32mI (16575) INPUT: Buttons:[0m
+[0;32mI (16575) INPUT:   select: 0[0m
+[0;32mI (16575) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (16575) INPUT:   start: 0, ps: 0[0m
+[0;32mI (16575) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (16585) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (16585) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (16605) INPUT: Analog Stick:[0m
+[0;32mI (16605) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (16605) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (16605) INPUT: Battery: 3[0m
+[0;32mI (16715) INPUT: Buttons:[0m
+[0;32mI (16715) INPUT:   select: 0[0m
+[0;32mI (16715) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (16715) INPUT:   start: 0, ps: 0[0m
+[0;32mI (16715) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (16725) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (16725) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (16745) INPUT: Analog Stick:[0m
+[0;32mI (16745) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (16745) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (16755) INPUT: Battery: 3[0m
+[0;32mI (16855) INPUT: Buttons:[0m
+[0;32mI (16855) INPUT:   select: 0[0m
+[0;32mI (16855) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (16855) INPUT:   start: 0, ps: 0[0m
+[0;32mI (16855) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (16865) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (16865) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (16885) INPUT: Analog Stick:[0m
+[0;32mI (16885) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (16885) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (16885) INPUT: Battery: 3[0m
+[0;32mI (16995) INPUT: Buttons:[0m
+[0;32mI (16995) INPUT:   select: 0[0m
+[0;32mI (16995) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (16995) INPUT:   start: 0, ps: 0[0m
+[0;32mI (16995) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (17005) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (17005) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (17025) INPUT: Analog Stick:[0m
+[0;32mI (17025) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (17025) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (17025) INPUT: Battery: 3[0m
+[0;32mI (17135) INPUT: Buttons:[0m
+[0;32mI (17135) INPUT:   select: 0[0m
+[0;32mI (17135) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (17135) INPUT:   start: 0, ps: 0[0m
+[0;32mI (17145) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (17145) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (17145) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (17155) INPUT: Analog Stick:[0m
+[0;32mI (17155) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (17165) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (17175) INPUT: Battery: 3[0m
+[0;32mI (17275) INPUT: Buttons:[0m
+[0;32mI (17275) INPUT:   select: 0[0m
+[0;32mI (17275) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (17275) INPUT:   start: 0, ps: 0[0m
+[0;32mI (17275) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (17285) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (17285) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (17305) INPUT: Analog Stick:[0m
+[0;32mI (17305) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (17305) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (17305) INPUT: Battery: 3[0m
+[0;32mI (17415) INPUT: Buttons:[0m
+[0;32mI (17415) INPUT:   select: 0[0m
+[0;32mI (17415) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (17415) INPUT:   start: 0, ps: 0[0m
+[0;32mI (17415) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (17425) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (17425) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (17445) INPUT: Analog Stick:[0m
+[0;32mI (17445) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (17445) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (17445) INPUT: Battery: 3[0m
+[0;32mI (17555) INPUT: Buttons:[0m
+[0;32mI (17555) INPUT:   select: 0[0m
+[0;32mI (17555) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (17555) INPUT:   start: 0, ps: 0[0m
+[0;32mI (17555) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (17565) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (17565) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (17585) INPUT: Analog Stick:[0m
+[0;32mI (17585) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (17585) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (17585) INPUT: Battery: 3[0m
+[0;32mI (17695) INPUT: Buttons:[0m
+[0;32mI (17695) INPUT:   select: 0[0m
+[0;32mI (17695) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (17695) INPUT:   start: 0, ps: 0[0m
+[0;32mI (17695) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (17705) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (17705) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (17725) INPUT: Analog Stick:[0m
+[0;32mI (17725) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (17725) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (17735) INPUT: Battery: 3[0m
+[0;32mI (17835) INPUT: Buttons:[0m
+[0;32mI (17835) INPUT:   select: 0[0m
+[0;32mI (17835) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (17835) INPUT:   start: 0, ps: 0[0m
+[0;32mI (17835) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (17845) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (17845) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (17865) INPUT: Analog Stick:[0m
+[0;32mI (17865) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (17865) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (17865) INPUT: Battery: 3[0m
+[0;32mI (17965) INPUT: Buttons:[0m
+[0;32mI (17965) INPUT:   select: 0[0m
+[0;32mI (17965) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (17965) INPUT:   start: 0, ps: 0[0m
+[0;32mI (17965) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (17975) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (17975) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (17995) INPUT: Analog Stick:[0m
+[0;32mI (17995) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (17995) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (17995) INPUT: Battery: 3[0m
+[0;32mI (18105) INPUT: Buttons:[0m
+[0;32mI (18105) INPUT:   select: 0[0m
+[0;32mI (18105) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (18105) INPUT:   start: 0, ps: 0[0m
+[0;32mI (18105) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (18115) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (18115) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (18135) INPUT: Analog Stick:[0m
+[0;32mI (18135) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (18135) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (18135) INPUT: Battery: 3[0m
+[0;32mI (18245) INPUT: Buttons:[0m
+[0;32mI (18245) INPUT:   select: 0[0m
+[0;32mI (18245) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (18245) INPUT:   start: 0, ps: 0[0m
+[0;32mI (18245) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (18255) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (18255) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (18275) INPUT: Analog Stick:[0m
+[0;32mI (18275) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (18275) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (18275) INPUT: Battery: 3[0m
+[0;32mI (18385) INPUT: Buttons:[0m
+[0;32mI (18385) INPUT:   select: 0[0m
+[0;32mI (18385) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (18385) INPUT:   start: 0, ps: 0[0m
+[0;32mI (18385) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (18395) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (18395) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (18415) INPUT: Analog Stick:[0m
+[0;32mI (18415) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (18415) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (18425) INPUT: Battery: 3[0m
+[0;32mI (18525) INPUT: Buttons:[0m
+[0;32mI (18525) INPUT:   select: 0[0m
+[0;32mI (18525) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (18525) INPUT:   start: 0, ps: 0[0m
+[0;32mI (18525) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (18535) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (18535) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (18555) INPUT: Analog Stick:[0m
+[0;32mI (18555) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (18555) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (18555) INPUT: Battery: 3[0m
+[0;32mI (18665) INPUT: Buttons:[0m
+[0;32mI (18665) INPUT:   select: 0[0m
+[0;32mI (18665) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (18665) INPUT:   start: 0, ps: 0[0m
+[0;32mI (18665) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (18675) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (18675) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (18685) INPUT: Analog Stick:[0m
+[0;32mI (18695) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (18695) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (18705) INPUT: Battery: 3[0m
+[0;32mI (18805) INPUT: Buttons:[0m
+[0;32mI (18805) INPUT:   select: 0[0m
+[0;32mI (18805) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (18805) INPUT:   start: 0, ps: 0[0m
+[0;32mI (18805) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (18815) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (18815) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (18825) INPUT: Analog Stick:[0m
+[0;32mI (18835) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (18835) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (18845) INPUT: Battery: 3[0m
+[0;32mI (18945) INPUT: Buttons:[0m
+[0;32mI (18945) INPUT:   select: 0[0m
+[0;32mI (18945) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (18945) INPUT:   start: 0, ps: 0[0m
+[0;32mI (18945) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (18955) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (18955) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (18975) INPUT: Analog Stick:[0m
+[0;32mI (18975) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (18975) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (18985) INPUT: Battery: 3[0m
+[0;32mI (19085) INPUT: Buttons:[0m
+[0;32mI (19085) INPUT:   select: 0[0m
+[0;32mI (19085) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (19085) INPUT:   start: 0, ps: 0[0m
+[0;32mI (19085) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (19095) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (19105) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (19105) INPUT: Analog Stick:[0m
+[0;32mI (19115) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (19115) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (19115) INPUT: Battery: 3[0m
+[0;32mI (19225) INPUT: Buttons:[0m
+[0;32mI (19225) INPUT:   select: 0[0m
+[0;32mI (19225) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (19225) INPUT:   start: 0, ps: 0[0m
+[0;32mI (19225) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (19235) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (19235) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (19255) INPUT: Analog Stick:[0m
+[0;32mI (19255) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (19255) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (19255) INPUT: Battery: 3[0m
+[0;32mI (19355) INPUT: Buttons:[0m
+[0;32mI (19355) INPUT:   select: 0[0m
+[0;32mI (19355) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (19355) INPUT:   start: 0, ps: 0[0m
+[0;32mI (19355) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (19365) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (19375) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (19375) INPUT: Analog Stick:[0m
+[0;32mI (19385) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (19385) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (19385) INPUT: Battery: 3[0m
+[0;32mI (19485) INPUT: Buttons:[0m
+[0;32mI (19485) INPUT:   select: 0[0m
+[0;32mI (19485) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (19485) INPUT:   start: 0, ps: 0[0m
+[0;32mI (19485) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (19495) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (19495) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (19515) INPUT: Analog Stick:[0m
+[0;32mI (19515) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (19515) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (19515) INPUT: Battery: 3[0m
+[0;32mI (19625) INPUT: Buttons:[0m
+[0;32mI (19625) INPUT:   select: 0[0m
+[0;32mI (19625) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (19625) INPUT:   start: 0, ps: 0[0m
+[0;32mI (19625) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (19635) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (19635) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (19655) INPUT: Analog Stick:[0m
+[0;32mI (19655) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (19655) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (19665) INPUT: Battery: 3[0m
+[0;32mI (19765) INPUT: Buttons:[0m
+[0;32mI (19765) INPUT:   select: 0[0m
+[0;32mI (19765) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (19765) INPUT:   start: 0, ps: 0[0m
+[0;32mI (19765) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (19775) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (19775) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (19795) INPUT: Analog Stick:[0m
+[0;32mI (19795) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (19795) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (19795) INPUT: Battery: 3[0m
+[0;32mI (19905) INPUT: Buttons:[0m
+[0;32mI (19905) INPUT:   select: 0[0m
+[0;32mI (19905) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (19905) INPUT:   start: 0, ps: 0[0m
+[0;32mI (19905) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (19915) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (19925) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (19925) INPUT: Analog Stick:[0m
+[0;32mI (19935) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (19935) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (19935) INPUT: Battery: 3[0m
+[0;32mI (20055) INPUT: Buttons:[0m
+[0;32mI (20055) INPUT:   select: 0[0m
+[0;32mI (20055) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (20055) INPUT:   start: 0, ps: 0[0m
+[0;32mI (20055) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (20065) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (20065) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (20085) INPUT: Analog Stick:[0m
+[0;32mI (20085) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (20085) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (20095) INPUT: Battery: 3[0m
+[0;32mI (20195) INPUT: Buttons:[0m
+[0;32mI (20195) INPUT:   select: 0[0m
+[0;32mI (20195) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (20195) INPUT:   start: 0, ps: 0[0m
+[0;32mI (20195) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (20205) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (20215) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (20215) INPUT: Analog Stick:[0m
+[0;32mI (20225) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (20225) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (20225) INPUT: Battery: 3[0m
+[0;32mI (20335) INPUT: Buttons:[0m
+[0;32mI (20335) INPUT:   select: 0[0m
+[0;32mI (20335) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (20335) INPUT:   start: 0, ps: 0[0m
+[0;32mI (20335) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (20345) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (20345) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (20365) INPUT: Analog Stick:[0m
+[0;32mI (20365) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (20365) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (20375) INPUT: Battery: 3[0m
+[0;32mI (20475) INPUT: Buttons:[0m
+[0;32mI (20475) INPUT:   select: 0[0m
+[0;32mI (20475) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (20475) INPUT:   start: 0, ps: 0[0m
+[0;32mI (20475) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (20485) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (20485) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (20505) INPUT: Analog Stick:[0m
+[0;32mI (20505) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (20505) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (20505) INPUT: Battery: 3[0m
+[0;32mI (20615) INPUT: Buttons:[0m
+[0;32mI (20615) INPUT:   select: 0[0m
+[0;32mI (20615) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (20615) INPUT:   start: 0, ps: 0[0m
+[0;32mI (20615) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (20625) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (20635) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (20645) INPUT: Analog Stick:[0m
+[0;32mI (20645) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (20645) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (20645) INPUT: Battery: 3[0m
+[0;32mI (20755) INPUT: Buttons:[0m
+[0;32mI (20755) INPUT:   select: 0[0m
+[0;32mI (20755) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (20755) INPUT:   start: 0, ps: 0[0m
+[0;32mI (20755) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (20765) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (20765) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (20785) INPUT: Analog Stick:[0m
+[0;32mI (20785) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (20785) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (20785) INPUT: Battery: 3[0m
+[0;32mI (20885) INPUT: Buttons:[0m
+[0;32mI (20885) INPUT:   select: 0[0m
+[0;32mI (20885) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (20885) INPUT:   start: 0, ps: 0[0m
+[0;32mI (20885) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (20895) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (20895) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (20915) INPUT: Analog Stick:[0m
+[0;32mI (20915) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (20915) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (20915) INPUT: Battery: 3[0m
+[0;32mI (21025) INPUT: Buttons:[0m
+[0;32mI (21025) INPUT:   select: 0[0m
+[0;32mI (21025) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (21025) INPUT:   start: 0, ps: 0[0m
+[0;32mI (21025) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (21035) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (21035) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (21055) INPUT: Analog Stick:[0m
+[0;32mI (21055) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (21055) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (21065) INPUT: Battery: 3[0m
+[0;32mI (21165) INPUT: Buttons:[0m
+[0;32mI (21165) INPUT:   select: 0[0m
+[0;32mI (21165) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (21165) INPUT:   start: 0, ps: 0[0m
+[0;32mI (21175) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (21175) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (21175) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (21185) INPUT: Analog Stick:[0m
+[0;32mI (21195) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (21195) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (21205) INPUT: Battery: 3[0m
+[0;32mI (21305) INPUT: Buttons:[0m
+[0;32mI (21305) INPUT:   select: 0[0m
+[0;32mI (21305) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (21305) INPUT:   start: 0, ps: 0[0m
+[0;32mI (21305) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (21315) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (21315) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (21335) INPUT: Analog Stick:[0m
+[0;32mI (21335) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (21335) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (21335) INPUT: Battery: 3[0m
+[0;32mI (21445) INPUT: Buttons:[0m
+[0;32mI (21445) INPUT:   select: 0[0m
+[0;32mI (21445) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (21445) INPUT:   start: 0, ps: 0[0m
+[0;32mI (21445) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (21455) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (21455) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (21475) INPUT: Analog Stick:[0m
+[0;32mI (21475) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (21475) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (21475) INPUT: Battery: 3[0m
+[0;32mI (21585) INPUT: Buttons:[0m
+[0;32mI (21585) INPUT:   select: 0[0m
+[0;32mI (21585) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (21585) INPUT:   start: 0, ps: 0[0m
+[0;32mI (21585) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (21595) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (21595) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (21605) INPUT: Analog Stick:[0m
+[0;32mI (21615) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (21615) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (21615) INPUT: Battery: 3[0m
+[0;32mI (21725) INPUT: Buttons:[0m
+[0;32mI (21725) INPUT:   select: 0[0m
+[0;32mI (21725) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (21725) INPUT:   start: 0, ps: 0[0m
+[0;32mI (21725) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (21735) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (21745) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (21755) INPUT: Analog Stick:[0m
+[0;32mI (21755) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (21755) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (21755) INPUT: Battery: 3[0m
+[0;32mI (21855) INPUT: Buttons:[0m
+[0;32mI (21855) INPUT:   select: 0[0m
+[0;32mI (21855) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (21855) INPUT:   start: 0, ps: 0[0m
+[0;32mI (21855) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (21865) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (21875) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (21875) INPUT: Analog Stick:[0m
+[0;32mI (21885) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (21885) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (21885) INPUT: Battery: 3[0m
+[0;32mI (21985) INPUT: Buttons:[0m
+[0;32mI (21985) INPUT:   select: 0[0m
+[0;32mI (21985) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (21985) INPUT:   start: 0, ps: 0[0m
+[0;32mI (21985) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (21995) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (21995) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (22015) INPUT: Analog Stick:[0m
+[0;32mI (22015) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (22015) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (22015) INPUT: Battery: 3[0m
+[0;32mI (22125) INPUT: Buttons:[0m
+[0;32mI (22125) INPUT:   select: 0[0m
+[0;32mI (22125) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (22125) INPUT:   start: 0, ps: 0[0m
+[0;32mI (22125) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (22135) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (22135) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (22145) INPUT: Analog Stick:[0m
+[0;32mI (22155) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (22155) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (22155) INPUT: Battery: 3[0m
+[0;32mI (22265) INPUT: Buttons:[0m
+[0;32mI (22265) INPUT:   select: 0[0m
+[0;32mI (22265) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (22265) INPUT:   start: 0, ps: 0[0m
+[0;32mI (22265) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (22275) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (22275) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (22295) INPUT: Analog Stick:[0m
+[0;32mI (22295) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (22295) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (22295) INPUT: Battery: 3[0m
+[0;32mI (22405) INPUT: Buttons:[0m
+[0;32mI (22405) INPUT:   select: 0[0m
+[0;32mI (22405) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (22405) INPUT:   start: 0, ps: 0[0m
+[0;32mI (22405) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (22415) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (22425) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (22435) INPUT: Analog Stick:[0m
+[0;32mI (22435) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (22435) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (22435) INPUT: Battery: 3[0m
+[0;32mI (22535) INPUT: Buttons:[0m
+[0;32mI (22535) INPUT:   select: 0[0m
+[0;32mI (22535) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (22535) INPUT:   start: 0, ps: 0[0m
+[0;32mI (22535) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (22545) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (22545) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (22565) INPUT: Analog Stick:[0m
+[0;32mI (22565) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (22565) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (22575) INPUT: Battery: 3[0m
+[0;32mI (22675) INPUT: Buttons:[0m
+[0;32mI (22675) INPUT:   select: 0[0m
+[0;32mI (22675) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (22675) INPUT:   start: 0, ps: 0[0m
+[0;32mI (22675) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (22685) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (22685) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (22705) INPUT: Analog Stick:[0m
+[0;32mI (22705) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (22705) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (22705) INPUT: Battery: 3[0m
+[0;32mI (22815) INPUT: Buttons:[0m
+[0;32mI (22815) INPUT:   select: 0[0m
+[0;32mI (22815) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (22815) INPUT:   start: 0, ps: 0[0m
+[0;32mI (22815) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (22825) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (22825) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (22835) INPUT: Analog Stick:[0m
+[0;32mI (22845) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (22845) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (22845) INPUT: Battery: 3[0m
+[0;32mI (22955) INPUT: Buttons:[0m
+[0;32mI (22955) INPUT:   select: 0[0m
+[0;32mI (22955) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (22955) INPUT:   start: 0, ps: 0[0m
+[0;32mI (22955) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (22965) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (22975) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (22975) INPUT: Analog Stick:[0m
+[0;32mI (22985) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (22985) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (22985) INPUT: Battery: 3[0m
+[0;32mI (23085) INPUT: Buttons:[0m
+[0;32mI (23085) INPUT:   select: 0[0m
+[0;32mI (23085) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (23085) INPUT:   start: 0, ps: 0[0m
+[0;32mI (23085) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (23095) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (23105) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (23115) INPUT: Analog Stick:[0m
+[0;32mI (23115) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (23115) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (23115) INPUT: Battery: 3[0m
+[0;32mI (23235) INPUT: Buttons:[0m
+[0;32mI (23235) INPUT:   select: 0[0m
+[0;32mI (23235) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (23235) INPUT:   start: 0, ps: 0[0m
+[0;32mI (23245) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (23245) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (23245) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (23265) INPUT: Analog Stick:[0m
+[0;32mI (23265) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (23265) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (23265) INPUT: Battery: 3[0m
+[0;32mI (23375) INPUT: Buttons:[0m
+[0;32mI (23375) INPUT:   select: 0[0m
+[0;32mI (23375) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (23375) INPUT:   start: 0, ps: 0[0m
+[0;32mI (23375) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (23385) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (23385) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (23405) INPUT: Analog Stick:[0m
+[0;32mI (23405) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (23405) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (23405) INPUT: Battery: 3[0m
+[0;32mI (23515) INPUT: Buttons:[0m
+[0;32mI (23515) INPUT:   select: 0[0m
+[0;32mI (23515) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (23515) INPUT:   start: 0, ps: 0[0m
+[0;32mI (23515) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (23525) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (23525) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (23545) INPUT: Analog Stick:[0m
+[0;32mI (23545) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (23545) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (23545) INPUT: Battery: 3[0m
+[0;32mI (23655) INPUT: Buttons:[0m
+[0;32mI (23655) INPUT:   select: 0[0m
+[0;32mI (23655) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (23655) INPUT:   start: 0, ps: 0[0m
+[0;32mI (23655) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (23665) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (23675) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (23675) INPUT: Analog Stick:[0m
+[0;32mI (23685) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (23685) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (23685) INPUT: Battery: 3[0m
+[0;32mI (23795) INPUT: Buttons:[0m
+[0;32mI (23795) INPUT:   select: 0[0m
+[0;32mI (23795) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (23795) INPUT:   start: 0, ps: 0[0m
+[0;32mI (23795) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (23805) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (23805) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (23825) INPUT: Analog Stick:[0m
+[0;32mI (23825) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (23825) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (23825) INPUT: Battery: 3[0m
+[0;32mI (23945) INPUT: Buttons:[0m
+[0;32mI (23945) INPUT:   select: 0[0m
+[0;32mI (23945) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (23945) INPUT:   start: 0, ps: 0[0m
+[0;32mI (23945) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (23955) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (23955) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (23975) INPUT: Analog Stick:[0m
+[0;32mI (23975) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (23975) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (23975) INPUT: Battery: 3[0m
+[0;32mI (24085) INPUT: Buttons:[0m
+[0;32mI (24085) INPUT:   select: 0[0m
+[0;32mI (24085) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (24085) INPUT:   start: 0, ps: 0[0m
+[0;32mI (24085) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (24095) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (24095) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (24115) INPUT: Analog Stick:[0m
+[0;32mI (24115) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (24115) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (24115) INPUT: Battery: 3[0m
+[0;32mI (24225) INPUT: Buttons:[0m
+[0;32mI (24225) INPUT:   select: 0[0m
+[0;32mI (24225) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (24225) INPUT:   start: 0, ps: 0[0m
+[0;32mI (24225) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (24235) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (24245) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (24255) INPUT: Analog Stick:[0m
+[0;32mI (24255) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (24255) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (24255) INPUT: Battery: 3[0m
+[0;32mI (24365) INPUT: Buttons:[0m
+[0;32mI (24365) INPUT:   select: 0[0m
+[0;32mI (24365) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (24365) INPUT:   start: 0, ps: 0[0m
+[0;32mI (24365) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (24375) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (24375) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (24395) INPUT: Analog Stick:[0m
+[0;32mI (24395) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (24395) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (24395) INPUT: Battery: 3[0m
+[0;32mI (24505) INPUT: Buttons:[0m
+[0;32mI (24505) INPUT:   select: 0[0m
+[0;32mI (24505) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (24505) INPUT:   start: 0, ps: 0[0m
+[0;32mI (24505) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (24515) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (24525) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (24525) INPUT: Analog Stick:[0m
+[0;32mI (24535) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (24535) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (24545) INPUT: Battery: 3[0m
+[0;32mI (24645) INPUT: Buttons:[0m
+[0;32mI (24645) INPUT:   select: 0[0m
+[0;32mI (24645) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (24645) INPUT:   start: 0, ps: 0[0m
+[0;32mI (24645) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (24655) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (24655) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (24675) INPUT: Analog Stick:[0m
+[0;32mI (24675) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (24675) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (24685) INPUT: Battery: 3[0m
+[0;32mI (24785) INPUT: Buttons:[0m
+[0;32mI (24785) INPUT:   select: 0[0m
+[0;32mI (24785) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (24785) INPUT:   start: 0, ps: 0[0m
+[0;32mI (24785) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (24795) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (24805) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (24805) INPUT: Analog Stick:[0m
+[0;32mI (24815) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (24815) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (24815) INPUT: Battery: 3[0m
+[0;32mI (24925) INPUT: Buttons:[0m
+[0;32mI (24925) INPUT:   select: 0[0m
+[0;32mI (24925) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (24925) INPUT:   start: 0, ps: 0[0m
+[0;32mI (24925) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (24935) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (24935) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (24955) INPUT: Analog Stick:[0m
+[0;32mI (24955) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (24955) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (24965) INPUT: Battery: 3[0m
+[0;32mI (25065) INPUT: Buttons:[0m
+[0;32mI (25065) INPUT:   select: 0[0m
+[0;32mI (25065) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (25065) INPUT:   start: 0, ps: 0[0m
+[0;32mI (25065) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (25075) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (25075) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (25095) INPUT: Analog Stick:[0m
+[0;32mI (25095) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (25095) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (25105) INPUT: Battery: 3[0m
+[0;32mI (25205) INPUT: Buttons:[0m
+[0;32mI (25205) INPUT:   select: 0[0m
+[0;32mI (25205) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (25205) INPUT:   start: 0, ps: 0[0m
+[0;32mI (25215) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (25215) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (25215) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (25225) INPUT: Analog Stick:[0m
+[0;32mI (25225) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (25235) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (25245) INPUT: Battery: 3[0m
+[0;32mI (25345) INPUT: Buttons:[0m
+[0;32mI (25345) INPUT:   select: 0[0m
+[0;32mI (25345) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (25345) INPUT:   start: 0, ps: 0[0m
+[0;32mI (25345) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (25355) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (25355) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (25375) INPUT: Analog Stick:[0m
+[0;32mI (25375) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (25375) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (25375) INPUT: Battery: 3[0m
+[0;32mI (25485) INPUT: Buttons:[0m
+[0;32mI (25485) INPUT:   select: 0[0m
+[0;32mI (25485) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (25485) INPUT:   start: 0, ps: 0[0m
+[0;32mI (25485) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (25495) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (25495) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (25515) INPUT: Analog Stick:[0m
+[0;32mI (25515) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (25515) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (25515) INPUT: Battery: 3[0m
+[0;32mI (25625) INPUT: Buttons:[0m
+[0;32mI (25625) INPUT:   select: 0[0m
+[0;32mI (25625) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (25625) INPUT:   start: 0, ps: 0[0m
+[0;32mI (25625) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (25635) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (25635) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (25655) INPUT: Analog Stick:[0m
+[0;32mI (25655) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (25655) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (25655) INPUT: Battery: 3[0m
+[0;32mI (25765) INPUT: Buttons:[0m
+[0;32mI (25765) INPUT:   select: 0[0m
+[0;32mI (25765) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (25765) INPUT:   start: 0, ps: 0[0m
+[0;32mI (25765) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (25775) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (25775) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (25795) INPUT: Analog Stick:[0m
+[0;32mI (25795) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (25795) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (25805) INPUT: Battery: 3[0m
+[0;32mI (25905) INPUT: Buttons:[0m
+[0;32mI (25905) INPUT:   select: 0[0m
+[0;32mI (25905) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (25905) INPUT:   start: 0, ps: 0[0m
+[0;32mI (25905) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (25915) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (25915) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (25935) INPUT: Analog Stick:[0m
+[0;32mI (25935) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (25935) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (25945) INPUT: Battery: 3[0m
+[0;32mI (26045) INPUT: Buttons:[0m
+[0;32mI (26045) INPUT:   select: 0[0m
+[0;32mI (26045) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (26045) INPUT:   start: 0, ps: 0[0m
+[0;32mI (26045) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (26055) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (26055) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (26075) INPUT: Analog Stick:[0m
+[0;32mI (26075) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (26075) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (26085) INPUT: Battery: 3[0m
+[0;32mI (26185) INPUT: Buttons:[0m
+[0;32mI (26185) INPUT:   select: 0[0m
+[0;32mI (26185) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (26185) INPUT:   start: 0, ps: 0[0m
+[0;32mI (26185) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (26195) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (26195) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (26215) INPUT: Analog Stick:[0m
+[0;32mI (26215) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (26215) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (26215) INPUT: Battery: 3[0m
+[0;32mI (26315) INPUT: Buttons:[0m
+[0;32mI (26315) INPUT:   select: 0[0m
+[0;32mI (26315) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (26315) INPUT:   start: 0, ps: 0[0m
+[0;32mI (26315) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (26325) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (26325) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (26345) INPUT: Analog Stick:[0m
+[0;32mI (26345) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (26345) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (26345) INPUT: Battery: 3[0m
+[0;32mI (26445) INPUT: Buttons:[0m
+[0;32mI (26445) INPUT:   select: 0[0m
+[0;32mI (26445) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (26445) INPUT:   start: 0, ps: 0[0m
+[0;32mI (26445) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (26455) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (26455) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (26475) INPUT: Analog Stick:[0m
+[0;32mI (26475) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (26475) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (26475) INPUT: Battery: 3[0m
+[0;32mI (26585) INPUT: Buttons:[0m
+[0;32mI (26585) INPUT:   select: 0[0m
+[0;32mI (26585) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (26585) INPUT:   start: 0, ps: 0[0m
+[0;32mI (26585) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (26595) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (26595) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (26615) INPUT: Analog Stick:[0m
+[0;32mI (26615) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (26615) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (26625) INPUT: Battery: 3[0m
+[0;32mI (26725) INPUT: Buttons:[0m
+[0;32mI (26725) INPUT:   select: 0[0m
+[0;32mI (26725) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (26725) INPUT:   start: 0, ps: 0[0m
+[0;32mI (26725) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (26735) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (26735) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (26745) INPUT: Analog Stick:[0m
+[0;32mI (26755) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (26755) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (26765) INPUT: Battery: 3[0m
+[0;32mI (26865) INPUT: Buttons:[0m
+[0;32mI (26865) INPUT:   select: 0[0m
+[0;32mI (26865) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (26865) INPUT:   start: 0, ps: 0[0m
+[0;32mI (26865) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (26875) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (26875) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (26885) INPUT: Analog Stick:[0m
+[0;32mI (26895) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (26895) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (26905) INPUT: Battery: 3[0m
+[0;32mI (27005) INPUT: Buttons:[0m
+[0;32mI (27005) INPUT:   select: 0[0m
+[0;32mI (27005) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (27005) INPUT:   start: 0, ps: 0[0m
+[0;32mI (27015) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (27015) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (27015) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (27035) INPUT: Analog Stick:[0m
+[0;32mI (27035) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (27035) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (27035) INPUT: Battery: 3[0m
+[0;32mI (27145) INPUT: Buttons:[0m
+[0;32mI (27145) INPUT:   select: 0[0m
+[0;32mI (27145) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (27145) INPUT:   start: 0, ps: 0[0m
+[0;32mI (27145) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (27155) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (27155) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (27165) INPUT: Analog Stick:[0m
+[0;32mI (27175) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (27175) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (27175) INPUT: Battery: 3[0m
+[0;32mI (27285) INPUT: Buttons:[0m
+[0;32mI (27285) INPUT:   select: 0[0m
+[0;32mI (27285) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (27285) INPUT:   start: 0, ps: 0[0m
+[0;32mI (27285) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (27295) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (27295) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (27315) INPUT: Analog Stick:[0m
+[0;32mI (27315) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (27315) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (27325) INPUT: Battery: 3[0m
+[0;32mI (27435) INPUT: Buttons:[0m
+[0;32mI (27435) INPUT:   select: 0[0m
+[0;32mI (27435) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (27435) INPUT:   start: 0, ps: 0[0m
+[0;32mI (27435) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (27445) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (27445) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (27465) INPUT: Analog Stick:[0m
+[0;32mI (27465) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (27465) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (27475) INPUT: Battery: 3[0m
+[0;32mI (27575) INPUT: Buttons:[0m
+[0;32mI (27575) INPUT:   select: 0[0m
+[0;32mI (27575) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (27575) INPUT:   start: 0, ps: 0[0m
+[0;32mI (27575) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (27585) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (27595) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (27605) INPUT: Analog Stick:[0m
+[0;32mI (27605) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (27605) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (27605) INPUT: Battery: 3[0m
+[0;32mI (27715) INPUT: Buttons:[0m
+[0;32mI (27715) INPUT:   select: 0[0m
+[0;32mI (27715) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (27715) INPUT:   start: 0, ps: 0[0m
+[0;32mI (27715) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (27725) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (27725) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (27745) INPUT: Analog Stick:[0m
+[0;32mI (27745) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (27745) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (27745) INPUT: Battery: 3[0m
+[0;32mI (27855) INPUT: Buttons:[0m
+[0;32mI (27855) INPUT:   select: 0[0m
+[0;32mI (27855) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (27855) INPUT:   start: 0, ps: 0[0m
+[0;32mI (27855) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (27865) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (27865) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (27885) INPUT: Analog Stick:[0m
+[0;32mI (27885) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (27885) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (27885) INPUT: Battery: 3[0m
+[0;32mI (27985) INPUT: Buttons:[0m
+[0;32mI (27985) INPUT:   select: 0[0m
+[0;32mI (27985) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (27985) INPUT:   start: 0, ps: 0[0m
+[0;32mI (27985) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (27995) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (27995) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (28015) INPUT: Analog Stick:[0m
+[0;32mI (28015) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (28015) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (28015) INPUT: Battery: 3[0m
+[0;32mI (28125) INPUT: Buttons:[0m
+[0;32mI (28125) INPUT:   select: 0[0m
+[0;32mI (28125) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (28125) INPUT:   start: 0, ps: 0[0m
+[0;32mI (28125) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (28135) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (28135) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (28155) INPUT: Analog Stick:[0m
+[0;32mI (28155) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (28155) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (28155) INPUT: Battery: 3[0m
+[0;32mI (28265) INPUT: Buttons:[0m
+[0;32mI (28265) INPUT:   select: 0[0m
+[0;32mI (28265) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (28265) INPUT:   start: 0, ps: 0[0m
+[0;32mI (28265) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (28275) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (28275) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (28295) INPUT: Analog Stick:[0m
+[0;32mI (28295) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (28295) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (28305) INPUT: Battery: 3[0m
+[0;32mI (28405) INPUT: Buttons:[0m
+[0;32mI (28405) INPUT:   select: 0[0m
+[0;32mI (28405) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (28405) INPUT:   start: 0, ps: 0[0m
+[0;32mI (28405) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (28415) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (28415) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (28435) INPUT: Analog Stick:[0m
+[0;32mI (28435) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (28435) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (28445) INPUT: Battery: 3[0m
+[0;32mI (28545) INPUT: Buttons:[0m
+[0;32mI (28545) INPUT:   select: 0[0m
+[0;32mI (28545) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (28545) INPUT:   start: 0, ps: 0[0m
+[0;32mI (28545) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (28555) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (28555) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (28565) INPUT: Analog Stick:[0m
+[0;32mI (28575) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (28575) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (28575) INPUT: Battery: 3[0m
+[0;32mI (28685) INPUT: Buttons:[0m
+[0;32mI (28685) INPUT:   select: 0[0m
+[0;32mI (28685) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (28685) INPUT:   start: 0, ps: 0[0m
+[0;32mI (28685) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (28695) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (28695) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (28715) INPUT: Analog Stick:[0m
+[0;32mI (28715) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (28715) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (28715) INPUT: Battery: 3[0m
+[0;32mI (28825) INPUT: Buttons:[0m
+[0;32mI (28825) INPUT:   select: 0[0m
+[0;32mI (28825) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (28825) INPUT:   start: 0, ps: 0[0m
+[0;32mI (28825) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (28835) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (28835) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (28855) INPUT: Analog Stick:[0m
+[0;32mI (28855) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (28855) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (28855) INPUT: Battery: 3[0m
+[0;32mI (28965) INPUT: Buttons:[0m
+[0;32mI (28965) INPUT:   select: 0[0m
+[0;32mI (28965) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (28965) INPUT:   start: 0, ps: 0[0m
+[0;32mI (28965) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (28975) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (28975) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (28995) INPUT: Analog Stick:[0m
+[0;32mI (28995) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (28995) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (28995) INPUT: Battery: 3[0m
+[0;32mI (29095) INPUT: Buttons:[0m
+[0;32mI (29095) INPUT:   select: 0[0m
+[0;32mI (29095) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (29095) INPUT:   start: 0, ps: 0[0m
+[0;32mI (29095) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (29105) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (29105) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (29125) INPUT: Analog Stick:[0m
+[0;32mI (29125) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (29125) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (29125) INPUT: Battery: 3[0m
+[0;32mI (29235) INPUT: Buttons:[0m
+[0;32mI (29235) INPUT:   select: 0[0m
+[0;32mI (29235) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (29235) INPUT:   start: 0, ps: 0[0m
+[0;32mI (29235) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (29245) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (29245) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (29265) INPUT: Analog Stick:[0m
+[0;32mI (29265) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (29265) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (29275) INPUT: Battery: 3[0m
+[0;32mI (29375) INPUT: Buttons:[0m
+[0;32mI (29375) INPUT:   select: 0[0m
+[0;32mI (29375) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (29375) INPUT:   start: 0, ps: 0[0m
+[0;32mI (29375) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (29385) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (29385) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (29395) INPUT: Analog Stick:[0m
+[0;32mI (29405) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (29405) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (29415) INPUT: Battery: 3[0m
+[0;32mI (29515) INPUT: Buttons:[0m
+[0;32mI (29515) INPUT:   select: 0[0m
+[0;32mI (29515) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (29515) INPUT:   start: 0, ps: 0[0m
+[0;32mI (29515) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (29525) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (29525) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (29545) INPUT: Analog Stick:[0m
+[0;32mI (29545) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (29545) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (29545) INPUT: Battery: 3[0m
+[0;32mI (29655) INPUT: Buttons:[0m
+[0;32mI (29655) INPUT:   select: 0[0m
+[0;32mI (29655) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (29655) INPUT:   start: 0, ps: 0[0m
+[0;32mI (29655) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (29665) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (29665) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (29685) INPUT: Analog Stick:[0m
+[0;32mI (29685) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (29685) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (29685) INPUT: Battery: 3[0m
+[0;32mI (29785) INPUT: Buttons:[0m
+[0;32mI (29785) INPUT:   select: 0[0m
+[0;32mI (29785) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (29785) INPUT:   start: 0, ps: 0[0m
+[0;32mI (29785) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (29795) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (29795) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (29815) INPUT: Analog Stick:[0m
+[0;32mI (29815) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (29815) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (29815) INPUT: Battery: 3[0m
+[0;32mI (29925) INPUT: Buttons:[0m
+[0;32mI (29925) INPUT:   select: 0[0m
+[0;32mI (29925) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (29925) INPUT:   start: 0, ps: 0[0m
+[0;32mI (29925) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (29935) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (29935) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (29955) INPUT: Analog Stick:[0m
+[0;32mI (29955) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (29955) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (29955) INPUT: Battery: 3[0m
+[0;32mI (30055) INPUT: Buttons:[0m
+[0;32mI (30055) INPUT:   select: 0[0m
+[0;32mI (30055) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (30055) INPUT:   start: 0, ps: 0[0m
+[0;32mI (30055) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (30065) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (30075) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (30085) INPUT: Analog Stick:[0m
+[0;32mI (30085) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (30085) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (30085) INPUT: Battery: 3[0m
+[0;32mI (30195) INPUT: Buttons:[0m
+[0;32mI (30195) INPUT:   select: 0[0m
+[0;32mI (30195) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (30195) INPUT:   start: 0, ps: 0[0m
+[0;32mI (30195) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (30205) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (30205) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (30225) INPUT: Analog Stick:[0m
+[0;32mI (30225) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (30225) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (30225) INPUT: Battery: 3[0m
+[0;32mI (30335) INPUT: Buttons:[0m
+[0;32mI (30335) INPUT:   select: 0[0m
+[0;32mI (30335) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (30335) INPUT:   start: 0, ps: 0[0m
+[0;32mI (30335) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (30345) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (30345) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (30355) INPUT: Analog Stick:[0m
+[0;32mI (30365) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (30365) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (30365) INPUT: Battery: 3[0m
+[0;32mI (30465) INPUT: Buttons:[0m
+[0;32mI (30465) INPUT:   select: 0[0m
+[0;32mI (30465) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (30465) INPUT:   start: 0, ps: 0[0m
+[0;32mI (30465) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (30475) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (30475) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (30495) INPUT: Analog Stick:[0m
+[0;32mI (30495) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (30495) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (30505) INPUT: Battery: 3[0m
+[0;32mI (30605) INPUT: Buttons:[0m
+[0;32mI (30605) INPUT:   select: 0[0m
+[0;32mI (30605) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (30605) INPUT:   start: 0, ps: 0[0m
+[0;32mI (30605) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (30615) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (30615) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (30635) INPUT: Analog Stick:[0m
+[0;32mI (30635) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (30635) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (30645) INPUT: Battery: 3[0m
+[0;32mI (30745) INPUT: Buttons:[0m
+[0;32mI (30745) INPUT:   select: 0[0m
+[0;32mI (30745) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (30745) INPUT:   start: 0, ps: 0[0m
+[0;32mI (30745) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (30755) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (30755) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (30775) INPUT: Analog Stick:[0m
+[0;32mI (30775) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (30775) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (30775) INPUT: Battery: 3[0m
+[0;32mI (30885) INPUT: Buttons:[0m
+[0;32mI (30885) INPUT:   select: 0[0m
+[0;32mI (30885) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (30885) INPUT:   start: 0, ps: 0[0m
+[0;32mI (30885) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (30895) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (30905) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (30905) INPUT: Analog Stick:[0m
+[0;32mI (30915) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (30915) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (30915) INPUT: Battery: 3[0m
+[0;32mI (31025) INPUT: Buttons:[0m
+[0;32mI (31025) INPUT:   select: 0[0m
+[0;32mI (31025) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (31025) INPUT:   start: 0, ps: 0[0m
+[0;32mI (31025) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (31035) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (31035) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (31055) INPUT: Analog Stick:[0m
+[0;32mI (31055) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (31055) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (31055) INPUT: Battery: 3[0m
+[0;32mI (31165) INPUT: Buttons:[0m
+[0;32mI (31165) INPUT:   select: 0[0m
+[0;32mI (31165) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (31165) INPUT:   start: 0, ps: 0[0m
+[0;32mI (31175) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (31175) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (31175) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (31195) INPUT: Analog Stick:[0m
+[0;32mI (31195) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (31195) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (31195) INPUT: Battery: 3[0m
+[0;32mI (31305) INPUT: Buttons:[0m
+[0;32mI (31305) INPUT:   select: 0[0m
+[0;32mI (31305) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (31305) INPUT:   start: 0, ps: 0[0m
+[0;32mI (31305) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (31315) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (31325) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (31335) INPUT: Analog Stick:[0m
+[0;32mI (31335) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (31335) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (31335) INPUT: Battery: 3[0m
+[0;32mI (31445) INPUT: Buttons:[0m
+[0;32mI (31445) INPUT:   select: 0[0m
+[0;32mI (31445) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (31445) INPUT:   start: 0, ps: 0[0m
+[0;32mI (31445) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (31455) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (31455) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (31475) INPUT: Analog Stick:[0m
+[0;32mI (31475) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (31475) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (31475) INPUT: Battery: 3[0m
+[0;32mI (31585) INPUT: Buttons:[0m
+[0;32mI (31585) INPUT:   select: 0[0m
+[0;32mI (31585) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (31585) INPUT:   start: 0, ps: 0[0m
+[0;32mI (31585) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (31595) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (31595) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (31605) INPUT: Analog Stick:[0m
+[0;32mI (31615) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (31615) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (31615) INPUT: Battery: 3[0m
+[0;32mI (31735) INPUT: Buttons:[0m
+[0;32mI (31735) INPUT:   select: 0[0m
+[0;32mI (31735) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (31735) INPUT:   start: 0, ps: 0[0m
+[0;32mI (31735) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (31745) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (31755) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (31755) INPUT: Analog Stick:[0m
+[0;32mI (31765) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (31765) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (31765) INPUT: Battery: 3[0m
+[0;32mI (31865) INPUT: Buttons:[0m
+[0;32mI (31865) INPUT:   select: 0[0m
+[0;32mI (31865) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (31865) INPUT:   start: 0, ps: 0[0m
+[0;32mI (31865) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (31875) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (31875) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (31895) INPUT: Analog Stick:[0m
+[0;32mI (31895) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (31895) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (31905) INPUT: Battery: 3[0m
+[0;32mI (32005) INPUT: Buttons:[0m
+[0;32mI (32005) INPUT:   select: 0[0m
+[0;32mI (32005) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (32005) INPUT:   start: 0, ps: 0[0m
+[0;32mI (32005) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (32015) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (32015) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (32035) INPUT: Analog Stick:[0m
+[0;32mI (32035) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (32035) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (32035) INPUT: Battery: 3[0m
+[0;32mI (32135) INPUT: Buttons:[0m
+[0;32mI (32135) INPUT:   select: 0[0m
+[0;32mI (32135) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (32135) INPUT:   start: 0, ps: 0[0m
+[0;32mI (32135) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (32145) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (32145) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (32155) INPUT: Analog Stick:[0m
+[0;32mI (32165) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (32165) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (32175) INPUT: Battery: 3[0m
+[0;32mI (32275) INPUT: Buttons:[0m
+[0;32mI (32275) INPUT:   select: 0[0m
+[0;32mI (32275) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (32275) INPUT:   start: 0, ps: 0[0m
+[0;32mI (32275) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (32285) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (32285) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (32305) INPUT: Analog Stick:[0m
+[0;32mI (32305) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (32305) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (32305) INPUT: Battery: 3[0m
+[0;32mI (32415) INPUT: Buttons:[0m
+[0;32mI (32415) INPUT:   select: 0[0m
+[0;32mI (32415) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (32415) INPUT:   start: 0, ps: 0[0m
+[0;32mI (32415) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (32425) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (32425) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (32445) INPUT: Analog Stick:[0m
+[0;32mI (32445) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (32445) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (32445) INPUT: Battery: 3[0m
+[0;32mI (32555) INPUT: Buttons:[0m
+[0;32mI (32555) INPUT:   select: 0[0m
+[0;32mI (32555) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (32555) INPUT:   start: 0, ps: 0[0m
+[0;32mI (32555) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (32565) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (32565) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (32585) INPUT: Analog Stick:[0m
+[0;32mI (32585) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (32585) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (32585) INPUT: Battery: 3[0m
+[0;32mI (32695) INPUT: Buttons:[0m
+[0;32mI (32695) INPUT:   select: 0[0m
+[0;32mI (32695) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (32695) INPUT:   start: 0, ps: 0[0m
+[0;32mI (32695) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (32705) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (32705) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (32725) INPUT: Analog Stick:[0m
+[0;32mI (32725) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (32725) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (32725) INPUT: Battery: 3[0m
+[0;32mI (32835) INPUT: Buttons:[0m
+[0;32mI (32835) INPUT:   select: 0[0m
+[0;32mI (32835) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (32835) INPUT:   start: 0, ps: 0[0m
+[0;32mI (32845) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (32845) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (32845) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (32855) INPUT: Analog Stick:[0m
+[0;32mI (32865) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (32865) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (32865) INPUT: Battery: 3[0m
+[0;32mI (32975) INPUT: Buttons:[0m
+[0;32mI (32975) INPUT:   select: 0[0m
+[0;32mI (32975) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (32975) INPUT:   start: 0, ps: 0[0m
+[0;32mI (32975) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (32985) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (32995) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (33005) INPUT: Analog Stick:[0m
+[0;32mI (33005) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (33005) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (33005) INPUT: Battery: 3[0m
+[0;32mI (33105) INPUT: Buttons:[0m
+[0;32mI (33105) INPUT:   select: 0[0m
+[0;32mI (33105) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (33105) INPUT:   start: 0, ps: 0[0m
+[0;32mI (33105) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (33115) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (33125) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (33125) INPUT: Analog Stick:[0m
+[0;32mI (33135) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (33135) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (33135) INPUT: Battery: 3[0m
+[0;32mI (33245) INPUT: Buttons:[0m
+[0;32mI (33245) INPUT:   select: 0[0m
+[0;32mI (33245) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (33245) INPUT:   start: 0, ps: 0[0m
+[0;32mI (33245) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (33255) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (33255) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (33265) INPUT: Analog Stick:[0m
+[0;32mI (33275) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (33275) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (33285) INPUT: Battery: 3[0m
+[0;32mI (33385) INPUT: Buttons:[0m
+[0;32mI (33385) INPUT:   select: 0[0m
+[0;32mI (33385) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (33385) INPUT:   start: 0, ps: 0[0m
+[0;32mI (33395) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (33395) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (33395) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (33415) INPUT: Analog Stick:[0m
+[0;32mI (33415) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (33415) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (33415) INPUT: Battery: 3[0m
+[0;32mI (33525) INPUT: Buttons:[0m
+[0;32mI (33525) INPUT:   select: 0[0m
+[0;32mI (33525) INPUT:   l3: 0, r3: 0[0m
+[0;32mI (33525) INPUT:   start: 0, ps: 0[0m
+[0;32mI (33525) INPUT:   d-pad: up:0 right:0 down:0 left:0[0m
+[0;32mI (33535) INPUT:   shoulder: l1:0 r1:0 l2:0 r2:0[0m
+[0;32mI (33535) INPUT:   shapes: triangle:0 circle:0 cross:0 square:0[0m
+[0;32mI (33555) INPUT: Analog Stick:[0m
+[0;32mI (33555) INPUT:   Left  (lx: -1, ly: -1)[0m
+[0;32mI (33555) INPUT:   Right (rx: -1, ry: -1)[0m
+[0;32mI (33555) INPUT: Battery: 3[0m
