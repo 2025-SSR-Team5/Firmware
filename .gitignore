@@ -42,3 +42,5 @@
 
 # Eclipse metadata
 /src/STM32/.metadata/
+
+/src/ESP32/build/
