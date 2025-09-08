@@ -30,7 +30,7 @@ void BleServer::print_ble_mac() {
 
 /**
  * @brief クライアントから書き込みイベントが来た時の処理
- * @note roll,pitch,azimuthを更新する
+ * @note roll,pitch,azimuth または width, centerLine を更新する
  * 
  * @param param 
  */
@@ -40,17 +40,27 @@ void BleServer::handle_write_event(esp_ble_gatts_cb_param_t *param) {
         return;
     }
 
-    if (param->write.len != 12) {
-        ESP_LOGW(TAG, "Unexpected data length: %d (expected 12)", param->write.len);
+    if (param->write.len != 12 && param->write.len != 8) {
+        ESP_LOGW(TAG, "Unexpected data length: %d (expected 8 or 12)", param->write.len);
         return;
     }
 
-    memcpy(&roll,  param->write.value + 0, 4);
-    memcpy(&pitch, param->write.value + 4, 4);
-    memcpy(&azimuth,param->write.value + 8, 4);
+    switch (param->write.len) {
+        case 8:
+            memcpy(&centerLine, param->write.value + 0, 4);
+            memcpy(&width, param->write.value + 4, 4);
+            ESP_LOGI(TAG, "Received centerLine=%.1f width=%.1f (len=%d)",
+             centerLine, width, param->write.len);
+            break;
 
-    ESP_LOGI(TAG, "Received roll=%.3f pitch=%.3f azimuth=%.3f (len=%d)",
+        case 12:
+            memcpy(&roll,  param->write.value + 0, 4);
+            memcpy(&pitch, param->write.value + 4, 4);
+            memcpy(&azimuth,param->write.value + 8, 4);
+            ESP_LOGI(TAG, "Received roll=%.3f pitch=%.3f azimuth=%.3f (len=%d)",
              roll, pitch, azimuth, param->write.len);
+            break;
+    }
 }
 
 /**

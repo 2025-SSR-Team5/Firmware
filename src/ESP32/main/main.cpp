@@ -1,7 +1,9 @@
 #include <../../../../components/Chassis/snippets/Motor.h>
 #include <../../../../components/Chassis/src/Omni.h>
+#include <../../../../components/Chassis/src/Chassis.h>
 #include <../../../../components/ps3_controller_host/src/Ps3Controller.cpp>
 #include <../../../../components/ESP32Servo/include/servoControl.h>
+#include <../../../../components/ToF_Lidar/include/Lidar.hpp>
 
 #include <initial_operation.hpp>
 #include <bleserver.hpp>
@@ -35,23 +37,37 @@ extern "C" {
 
 #define SERVO_A_PIN GPIO_NUM_14
 #define SERVO_B_PIN GPIO_NUM_12 
+#define SERVO_C_PIN GPIO_NUM_13
+
+#define TOF_XSHUTA_PIN GPIO_NUM_33
+#define TOF_XSHUTB_PIN GPIO_NUM_26
 
 #define INSTRUCTION_DEFAULT 0xFF
 
 extern i2c_master_dev_handle_t dev_STM32;
-extern BleServer* bleServerInstance;
 
 using namespace rct;
 
 Motor motors[3] = {{MOTOR_A_PWM, MOTOR_A_DIR},{MOTOR_B_PWM, MOTOR_B_DIR},{MOTOR_C_PWM, MOTOR_C_DIR}};
 
-Omni<3> omni{[](std::array<float, 3> pwm) {
+Chassis<Omni<3>> chassis{
+  [](std::array<float,3> pwm) {
   motors[0] = pwm[0];
   motors[1] = pwm[1];
   motors[2] = -pwm[2];
-}};
+  },
+  PidGain{0},//速度のゲイン
+  PidGain{0.1}//位置のゲイン
+};
 
 servoControl servo[2];
+
+/**
+ * @brief 移動正面モード（0：ボールねじ正面、1：ピック機構＆カメラ正面、2：回路ボックス正面）
+ * 
+ */
+int direction_mode = 0;
+bool is_automatic_mode = false;
 
 int battery = 0;
 const auto& button = Ps3.data.button;
@@ -151,21 +167,72 @@ void bluetooth_init() {
 bool r1_last_button_up = false;
 bool r1_last_button_down = false;
 bool l1_last_button_circle = false;
+bool last_select_button = false;
+
+Velocity rotation_velocity(Velocity v){
+  float v_x_new;
+  float v_y_new;
+  Velocity v_new;
+  switch(direction_mode){
+    case 0:
+      return v;
+    case 1:
+      v_x_new = v.x_milli * cos(M_PI * 2.0 / 3.0) - v.y_milli * sin(M_PI * 2.0 / 3.0);
+      v_y_new = v.x_milli * sin(M_PI * 2.0 / 3.0) + v.y_milli * cos(M_PI * 2.0 / 3.0);
+      v_new = {v_x_new, v_y_new, v.ang_rad};
+      return v_new;
+    case 2:
+      v_x_new = v.x_milli * cos(-M_PI * 2.0 / 3.0) - v.y_milli * sin(-M_PI * 2.0 / 3.0);
+      v_y_new = v.x_milli * sin(-M_PI * 2.0 / 3.0) + v.y_milli * cos(-M_PI * 2.0 / 3.0);
+      v_new = {v_x_new, v_y_new, v.ang_rad};
+      return v_new;
+  }
+  return v;
+}
+
+Coordinate rotation_pos(Coordinate p){
+  float p_x_new;
+  float p_y_new;
+  Coordinate p_new;
+  switch(direction_mode){
+    case 0:
+      return p;
+    case 1:
+      p_x_new = p.x_milli * cos(M_PI * 2.0 / 3.0) - p.y_milli * sin(M_PI * 2.0 / 3.0);
+      p_y_new = p.x_milli * sin(M_PI * 2.0 / 3.0) + p.y_milli * cos(M_PI * 2.0 / 3.0);
+      p_new = {p_x_new, p_y_new, p.ang_rad};
+      return p_new;
+    case 2:
+      p_x_new = p.x_milli * cos(-M_PI * 2.0 / 3.0) - p.y_milli * sin(-M_PI * 2.0 / 3.0);
+      p_y_new = p.x_milli * sin(-M_PI * 2.0 / 3.0) + p.y_milli * cos(-M_PI * 2.0 / 3.0);
+      p_new = {p_x_new, p_y_new, p.ang_rad};
+      return p_new;
+  }
+  return p;
+}
 
 extern "C" void app_main() {
     i2c_master_bus_handle_t bus_handle;
     
     BleServer bleServer;
+    ToF_Lidar tof(TOF_XSHUTA_PIN, TOF_XSHUTB_PIN, SERVO_C_PIN);
     bluetooth_init();
+
+    int rotation_count = 0;
+    int stay_theta = 17;
+    int64_t prev_time = esp_timer_get_time();
 
     //vTaskDelay(pdMS_TO_TICKS(100));
     ESP_init(&bus_handle);
+    if(tof.init(bus_handle)){
+        tof.start_task();
+    }
 
     init_ps3();
     bleServer.init();
 
-    servo[0].attach(SERVO_A_PIN, 500, 2400, LEDC_CHANNEL_6, LEDC_TIMER_0);
-    servo[1].attach(SERVO_B_PIN, 500, 2400, LEDC_CHANNEL_7, LEDC_TIMER_0);
+    servo[0].attach(SERVO_A_PIN, 500, 2400, LEDC_CHANNEL_5, LEDC_TIMER_0);
+    servo[1].attach(SERVO_B_PIN, 500, 2400, LEDC_CHANNEL_6, LEDC_TIMER_0);
 
     servo[0].write(90);
     servo[1].write(90);
@@ -173,6 +240,11 @@ extern "C" void app_main() {
     while(true){
         if(Ps3.isConnected()){
           DataUpdate();
+          if(!is_automatic_mode) ps3SetLed(direction_mode + 1);
+        }
+
+        if(tof.is_task_finished() && rotation_count <= 2){
+          tof.start_task();
         }
 
         int analog_x = analog.lx;
@@ -200,6 +272,10 @@ extern "C" void app_main() {
           }
         }
 
+        if(button.select){
+          last_select_button = true;
+        }
+
         if((button.up == 0) && r1_last_button_up){
             instruction = 0x01;
             r1_last_button_up = false;
@@ -215,17 +291,68 @@ extern "C" void app_main() {
             printf("Send to STM32!\n");
         }
 
+        if((button.select == 0) && last_select_button){
+          direction_mode = (direction_mode + 1) % 3;
+          printf("direction_mode: %d\n",direction_mode);
+          last_select_button = false;
+        }
+
         if((button.circle == 0) && l1_last_button_circle){
           //自動走行モード
-          ESP_LOGI("chassis", "自動走行モード");
-          float azimuth_f = bleServer.azimuth;
-          azimuth_f = azimuth_f + 180.0;
-          l1_last_button_circle = false;
+          direction_mode = 1;
+          is_automatic_mode = true;
+          if(tof.vertical_distance > 308.5){
+            //ライントレースの処理
+            int64_t now = esp_timer_get_time();
+            auto delta_us = std::chrono::microseconds(now - prev_time);
+            float centerline = bleServer.centerLine;
+            float width = bleServer.width;
+            float coefficient = 0.8;
+            float deviation = coefficient * ((centerline - width/2) / (width/2));
+            Coordinate dst = {0.3,0,0};
+            Coordinate pos = {0.3,0,deviation};
+            chassis.auto_move(rotation_pos(dst), rotation_pos(pos), delta_us);
+            prev_time = now;
+            if(Ps3.isConnected()){
+              if(rotation_count >= 2){
+                ps3SetLed(10);
+              }else{
+                ps3SetLed(5);
+              }
+            }
+          }else{
+            if(rotation_count < 2){
+              //旋回処理
+              if(Ps3.isConnected()){
+                ps3SetLed(8);
+              }
+              float azimuth_init = bleServer.azimuth;
+              while(fabsf(bleServer.azimuth - azimuth_init) < 90.0){
+                Velocity vel = {0,0,0.5};
+                chassis.move(rotation_velocity(vel));
+                if(tof.is_task_finished()){
+                  tof.start_task();
+                }
+                vTaskDelay(pdMS_TO_TICKS(10));
+              }
+              rotation_count++;
+            }
+          }
 
+          if(rotation_count >= 2){
+            if(tof.scan(&stay_theta)){
+              servo[0].write(30);
+              servo[1].write(160);
+              vTaskDelay(pdMS_TO_TICKS(1000));
+              l1_last_button_circle = false;
+              is_automatic_mode = false;
+              rotation_count = 0;
+            }
+          }
         }else{
           //手動走行モード
           Velocity vel = {analog_x_num, analog_y_num, analog_r_num};
-          omni.move(vel);
+          chassis.move(rotation_velocity(vel));
         }
         
         if(button.l2){

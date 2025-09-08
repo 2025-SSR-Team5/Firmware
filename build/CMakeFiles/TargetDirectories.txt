@@ -1,2 +1,0 @@
-/home/issaimaru/esp/2025-SSR-Team5/Firmware/build/CMakeFiles/edit_cache.dir
-/home/issaimaru/esp/2025-SSR-Team5/Firmware/build/CMakeFiles/rebuild_cache.dir

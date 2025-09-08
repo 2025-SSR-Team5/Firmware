@@ -579,11 +579,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/GitHub/Firmware/src/ESP32/build/esp-idf/ToF_Lidar/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/GitHub/Firmware/src/ESP32/build/esp-idf/main/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("C:/GitHub/Firmware/src/ESP32/build/esp-idf/ESP32-SG90/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/GitHub/Firmware/src/ESP32/build/esp-idf/Tri_omni_control/cmake_install.cmake")
 endif()
 

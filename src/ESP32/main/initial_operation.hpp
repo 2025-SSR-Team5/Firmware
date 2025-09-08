@@ -1,3 +1,5 @@
+#pragma once
+
 #include "driver/i2c_master.h"
 #include <stdio.h>
 
@@ -10,6 +12,11 @@
 
 #define INITIAL_DELAY 10
 
-void i2c_master_bus_recover(gpio_num_t sda_pin, gpio_num_t scl_pin);
+extern i2c_master_bus_handle_t *_bus_handle;
+
+bool i2c_master_bus_recover();
+void i2c_master_stm_register();
+void remove_i2c_master_stm_register();
+void delete_i2c_bus();
 void hello_STM32(i2c_master_bus_handle_t *bus_handle, i2c_master_dev_handle_t dev_STM32);
 void ESP_init(i2c_master_bus_handle_t *bus_handle);

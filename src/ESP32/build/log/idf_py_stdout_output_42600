@@ -1,0 +1,30 @@
+Command: ninja all
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\GitHub\Firmware\src\ESP32\build\bootloader\esp-idf\esptool_py && C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/takeu/esp/v5.5/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/GitHub/Firmware/src/ESP32/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/bleserver.cpp.obj
+In file included from C:/GitHub/Firmware/src/ESP32/main/bleserver.cpp:1:
+C:/GitHub/Firmware/src/ESP32/main/bleserver.hpp:59:9: warning: missing initializer for member 'esp_ble_adv_params_t::peer_addr' [-Wmissing-field-initializers]
+   59 |         };
+      |         ^
+C:/GitHub/Firmware/src/ESP32/main/bleserver.hpp:59:9: warning: missing initializer for member 'esp_ble_adv_params_t::peer_addr_type' [-Wmissing-field-initializers]
+[5/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj
+In file included from C:/GitHub/Firmware/src/ESP32/main/main.cpp:8:
+C:/GitHub/Firmware/src/ESP32/main/bleserver.hpp:59:9: warning: missing initializer for member 'esp_ble_adv_params_t::peer_addr' [-Wmissing-field-initializers]
+   59 |         };
+      |         ^
+C:/GitHub/Firmware/src/ESP32/main/bleserver.hpp:59:9: warning: missing initializer for member 'esp_ble_adv_params_t::peer_addr_type' [-Wmissing-field-initializers]
+[6/10] Linking C static library esp-idf\main\libmain.a
+[7/10] Generating esp-idf/esp_system/ld/sections.ld
+[8/10] Linking CXX executable esp32.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.10.dev2
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/GitHub/Firmware/src/ESP32/build/esp32.bin
+[10/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\GitHub\Firmware\src\ESP32\build\esp-idf\esptool_py && C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/takeu/esp/v5.5/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/GitHub/Firmware/src/ESP32/build/partition_table/partition-table.bin C:/GitHub/Firmware/src/ESP32/build/esp32.bin"
+esp32.bin binary size 0xf3980 bytes. Smallest app partition is 0x100000 bytes. 0xc680 bytes (5%) free.
+Warning: The smallest app partition is nearly full (5% free space left)!

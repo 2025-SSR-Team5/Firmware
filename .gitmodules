@@ -16,3 +16,9 @@
 [submodule "components/ESP32Servo"]
 	path = components/ESP32Servo
 	url = https://github.com/2025-SSR-Team5/ESP32Servo.git
+[submodule "components/ToF_Lidar"]
+	path = components/ToF_Lidar
+	url = https://github.com/2025-SSR-Team5/ToF_Lidar
+[submodule "components/Tri_omni_control"]
+	path = components/Tri_omni_control
+	url = https://github.com/2025-SSR-Team5/Tri_omni_control.git

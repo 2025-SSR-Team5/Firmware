@@ -26,6 +26,8 @@ class BleServer
         float roll  = 0.0f;
         float pitch = 0.0f;
         float azimuth = 0.0f;
+        float width = 0.0f;
+        float centerLine = 0.0f;
 
         void print_ble_mac();
         void init();

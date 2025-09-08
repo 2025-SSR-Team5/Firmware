@@ -163,10 +163,13 @@ C:/GitHub/Firmware/src/ESP32/build/esp-idf/ps3_controller_host/libps3_controller
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/Chassis/libChassis.a
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/vl53l1x-arduino/libvl53l1x-arduino.a
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/ESP32Servo/libESP32Servo.a
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/ToF_Lidar/libToF_Lidar.a
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/ESP32Servo/libESP32Servo.a
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/vl53l1x-arduino/libvl53l1x-arduino.a
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/main/libmain.a
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/fatfs/libfatfs.a
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/ps3_controller_host/libps3_controller_host.a
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/Chassis/libChassis.a
-C:/GitHub/Firmware/src/ESP32/build/esp-idf/vl53l1x-arduino/libvl53l1x-arduino.a
-C:/GitHub/Firmware/src/ESP32/build/esp-idf/ESP32Servo/libESP32Servo.a
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/ToF_Lidar/libToF_Lidar.a
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/ESP32-SG90/libESP32-SG90.a
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/Tri_omni_control/libTri_omni_control.a

@@ -1,0 +1,34 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ESP32\build\esp32.elf C:\GitHub\Firmware\src\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.7.0 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40084aaa: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x400839b9: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x40172b57: [0;33mi2c_ll_is_bus_busy[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/hal/esp32/include/hal/i2c_ll.h[0m[0m:[1;31m463[0m
+[0m--- (inlined by) [0;33ms_i2c_send_commands[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m543[0m
+[0m--- 0x40172d10: [0;33ms_i2c_transaction_start[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m649[0m
+[0m--- 0x40172dfe: [0;33ms_i2c_synchronous_transaction[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m945[0m
+[0m--- 0x401739f6: [0;33mi2c_master_multi_buffer_transmit[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m1214[0m
+[0m--- 0x40173ad2: [0;33mi2c_master_transmit[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m1229[0m
+[0m--- 0x40130d7e: [0;33mVL53L1X::readResults()[0m[0m at [0;32mC:/GitHub/Firmware/components/vl53l1x-arduino/src/VL53L1X.cpp[0m[0m:[1;31m748[0m
+[0m--- 0x40130fbb: [0;33mVL53L1X::read(bool)[0m[0m at [0;32mC:/GitHub/Firmware/components/vl53l1x-arduino/src/VL53L1X.cpp[0m[0m:[1;31m617[0m
+[0m--- 0x401305c1: [0;33mToF_Lidar::read_sensors(int)[0m[0m at [0;32mC:/GitHub/Firmware/components/ToF_Lidar/Lidar.cpp[0m[0m:[1;31m84[0m
+[0m--- 0x40130ad1: [0;33mToF_Lidar::lidar_task(void*)[0m[0m at [0;32mC:/GitHub/Firmware/components/ToF_Lidar/Lidar.cpp[0m[0m:[1;31m63[0m
+[0m--- 0x400930bd: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40084aaa: [0;33mesp_crosscore_isr[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x400839b9: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x40172b57: [0;33mi2c_ll_is_bus_busy[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/hal/esp32/include/hal/i2c_ll.h[0m[0m:[1;31m463[0m
+[0m--- (inlined by) [0;33ms_i2c_send_commands[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m543[0m
+[0m--- 0x40172d10: [0;33ms_i2c_transaction_start[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m649[0m
+[0m--- 0x40172dfe: [0;33ms_i2c_synchronous_transaction[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m945[0m
+[0m--- 0x401739f6: [0;33mi2c_master_multi_buffer_transmit[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m1214[0m
+[0m--- 0x40173ad2: [0;33mi2c_master_transmit[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m1229[0m
+[0m--- 0x40130d7e: [0;33mVL53L1X::readResults()[0m[0m at [0;32mC:/GitHub/Firmware/components/vl53l1x-arduino/src/VL53L1X.cpp[0m[0m:[1;31m748[0m
+[0m--- 0x40130fbb: [0;33mVL53L1X::read(bool)[0m[0m at [0;32mC:/GitHub/Firmware/components/vl53l1x-arduino/src/VL53L1X.cpp[0m[0m:[1;31m617[0m
+[0m--- 0x401305c1: [0;33mToF_Lidar::read_sensors(int)[0m[0m at [0;32mC:/GitHub/Firmware/components/ToF_Lidar/Lidar.cpp[0m[0m:[1;31m84[0m
+[0m--- 0x40130ad1: [0;33mToF_Lidar::lidar_task(void*)[0m[0m at [0;32mC:/GitHub/Firmware/components/ToF_Lidar/Lidar.cpp[0m[0m:[1;31m63[0m
+[0m--- 0x400930bd: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m

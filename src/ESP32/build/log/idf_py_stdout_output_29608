@@ -1,0 +1,1414 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ESP32\build\esp32.elf C:\GitHub\Firmware\src\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 31 2025 22:07:17[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d4c8h (185544) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=0003d4f0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (152) esp_image: segment 2: paddr=0003d518 vaddr=3ffbdb60 size=02b00h ( 11008) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a6774h (681844) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e679c vaddr=3ffc0660 size=01ee4h (  7908) load[0m
+[0;32mI (399) esp_image: segment 5: paddr=000e8688 vaddr=40080000 size=1bb3ch (113468) load[0m
+[0;32mI (457) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (457) boot: Disabling RNG early entropy source...[0m
+[0;32mI (468) cpu_start: Multicore app[0m
+[0;32mI (476) cpu_start: Pro cpu start user code[0m
+[0;32mI (476) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (476) app_init: Application information:[0m
+[0;32mI (479) app_init: Project name:     esp32[0m
+[0;32mI (484) app_init: App version:      5b23221-dirty[0m
+[0;32mI (489) app_init: Compile time:     Sep  3 2025 12:04:59[0m
+[0;32mI (495) app_init: ELF file SHA256:  88d60d769...[0m
+[0;32mI (500) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (505) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (510) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (515) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (527) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (545) heap_init: At 3FFCA638 len 000159C8 (86 KiB): DRAM[0m
+[0;32mI (551) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (558) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (564) heap_init: At 4009BB3C len 000044C4 (17 KiB): IRAM[0m
+[0;32mI (572) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;33mW (579) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (595) coexist: coex firmware version: 831ec70[0m
+[0;32mI (598) main_task: Started on CPU0[0m
+[0;32mI (608) main_task: Calling app_main()[0m
+[0;32mI (618) BTDM_INIT: BT controller compile version [b992c7d][0m
+[0;32mI (618) BTDM_INIT: Bluetooth MAC: ec:e3:34:90:d8:ee[0m
+[0;32mI (618) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (1278) BT_INIT: Bluetooth initialized successfully in dual mode.[0m
+
+   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$        /$$$$$$   /$$$$$$ 
+  /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$__  $$|_  $$_/       /$$__  $$ /$$__  $$ 
+ | $$  \__/| $$  \ $$| $$  \__/| $$  \ $$| $$  \ $$  | $$        | $$  \ $$| $$  \__/ 
+ |  $$$$$$ | $$$$$$$$|  $$$$$$ | $$  | $$| $$$$$$$/  | $$        | $$  | $$|  $$$$$$  
+  \____  $$| $$__  $$ \____  $$| $$  | $$| $$__  $$  | $$        | $$  | $$ \____  $$ 
+  /$$  \ $$| $$  | $$ /$$  \ $$| $$  | $$| $$  \ $$  | $$        | $$  | $$ /$$  \ $$ 
+ |  $$$$$$/| $$  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$      |  $$$$$$/|  $$$$$$/ 
+  \______/ |__/  |__/ \______/  \______/ |__/  |__/|______/       \______/  \______/                                                                                    
+[0;32mI (1448) initial_operation: Checking I2C bus status before initialization...[0m
+[0;32mI (1448) initial_operation: Bus is clear. No recovery needed.[0m
+[0;33mW (1458) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (1678) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1678) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1688) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1688) i2c.master: I2C hardware timeout detected[0m
+[0;31mE (1698) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1708) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1838) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1838) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1848) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+setting i2c finished
+[0;32mI (1868) PS3_SPP: ESP_SPP_INIT_EVT[0m
+[0;31mE (1868) i2c.master: I2C hardware timeout detected[0m
+[0;31mE (1868) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1888) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (1888) i2c.master: I2C hardware timeout detected[0m
+[0;31mE (1898) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1898) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1908) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (1918) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1928) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1928) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1938) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1938) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1948) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1958) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1968) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1978) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1978) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1988) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1988) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2008) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2008) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2018) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2018) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2028) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2028) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2038) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2048) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2058) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2068) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2068) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2078) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2078) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2098) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2098) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2108) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2108) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2118) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2118) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2128) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2148) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2148) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2158) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2158) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2168) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2168) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2188) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2188) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2198) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2198) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2208) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2218) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2228) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (2238) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2238) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2248) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2248) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2258) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2258) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2278) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2278) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2288) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2288) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2298) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2308) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2318) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2328) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2328) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2338) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2338) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2348) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2348) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2368) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2378) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2378) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2378) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2388) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2398) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2408) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2418) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2418) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2428) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2428) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2438) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2448) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2458) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2458) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2468) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2478) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+2.4,-1.6,0.5,3.4
+[0;32mI (1888) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDC Initialized[0m
+[0;32mI (2498) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDI Initialized[0m
+[0;32mI (2498) BLE_HANDLER: create_service requested[0m
+[0;32mI (2508) BLE_HANDLER: Service created, handle=40[0m
+[0;32mI (2508) BLE_HANDLER: start_service ok[0m
+[0;32mI (2508) BLE_HANDLER: add_char requested[0m
+[0;32mI (2528) BLE_HANDLER: GATT service started[0m
+[0;32mI (2528) BLE_HANDLER: BLE advertising started[0m
+[0;32mI (2528) BLE_HANDLER: CHAR added: handle=42 (prop=0x0a)[0m
+[0;32mI (2498) BleServer: BLE GATT server init done[0m
+[0;31mE (2548) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2548) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2548) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2568) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2578) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2578) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2588) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2588) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2608) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (2608) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2618) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2618) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2628) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2628) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2648) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2648) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2658) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2668) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2668) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2668) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2688) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2698) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2698) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2698) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2708) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2728) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (2728) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2728) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2738) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2748) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2748) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2768) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2768) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2778) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+3.8,-2.6,0.5,5.7
+[0;31mE (2858) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2858) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2858) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2868) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2868) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2888) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2888) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2898) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2908) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (2908) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2908) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2928) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2938) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2938) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2948) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2948) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2968) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2968) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (2978) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (2978) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2988) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2988) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3008) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3008) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3018) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3018) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (3028) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3028) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3048) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3048) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3058) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3058) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3068) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3078) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+4.7,-3.1,0.5,8.0
+[0;31mE (3158) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3158) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3158) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3168) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3178) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3178) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3178) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3198) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3208) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (3208) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3218) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3218) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3238) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3238) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3248) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3248) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3258) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3258) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3278) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3278) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3288) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3298) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3298) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3298) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3318) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3328) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (3328) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3328) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3338) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3358) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3358) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3368) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3368) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3378) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+5.2,-3.5,1.0,9.1
+[0;31mE (3458) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3458) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3458) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3468) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3478) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3478) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3488) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3498) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3508) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (3508) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3508) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3528) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3538) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3538) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3548) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3548) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3558) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3568) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3578) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3578) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3588) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3588) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3598) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3608) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3618) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3618) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (3628) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3628) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3648) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3648) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3658) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3658) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3668) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3668) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+5.5,-3.7,1.0,9.1
+[0;31mE (3758) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3758) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3758) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3768) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3778) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3778) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3788) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3798) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3808) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (3808) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3818) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3818) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3838) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3838) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3848) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3848) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3858) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3858) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3878) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3878) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3888) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3888) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3898) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3898) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3918) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3928) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (3928) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3928) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3938) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3958) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3958) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (3968) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (3968) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3978) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+5.7,-3.8,1.0,9.1
+[0;31mE (4058) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4058) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4058) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4068) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4078) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4078) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4088) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4098) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4108) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (4108) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4108) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4128) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4138) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4138) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4148) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4148) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4158) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4168) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4178) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4178) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4188) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4188) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4198) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4208) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4218) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4218) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (4228) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4228) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4238) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4248) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4258) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4258) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4268) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4278) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+5.8,-3.9,1.0,9.1
+[0;31mE (4358) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4358) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4358) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4368) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4378) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4378) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4388) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4398) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4408) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (4408) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4418) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4428) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4438) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4438) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4448) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4448) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4468) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4468) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4478) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4478) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4488) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4498) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4508) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4508) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4518) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4518) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (4528) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4538) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4548) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4548) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4558) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4558) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4568) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4578) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+5.9,-3.9,1.0,9.1
+[0;31mE (4658) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4658) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4658) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4668) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4678) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4678) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4688) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4698) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4708) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (4708) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4708) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4718) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4738) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4738) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4748) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4748) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4758) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4768) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4778) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4778) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4788) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4788) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4798) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4808) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4818) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4818) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (4828) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4828) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4848) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4848) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4858) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4858) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4868) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4868) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+5.9,-4.0,1.0,9.1
+[0;31mE (4958) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4958) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4958) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4968) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4978) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4978) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4988) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4998) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5008) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (5008) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5008) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5018) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5028) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5038) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5038) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5048) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5068) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5068) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5078) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5078) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5088) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5088) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5108) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5108) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5118) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5118) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (5128) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5128) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5148) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5148) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5158) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5158) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5168) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5168) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (5258) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5258) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5258) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5268) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5268) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5288) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5288) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5298) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5308) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (5308) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5308) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5328) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5328) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5338) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5338) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5348) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5358) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5368) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5378) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5378) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5388) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5388) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5408) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5408) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5418) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5418) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (5428) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5428) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5448) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5448) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5458) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5458) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5468) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5478) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (5558) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5558) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5558) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5568) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5578) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5578) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5578) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5598) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5608) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (5608) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5618) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5618) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5638) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5638) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5638) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5648) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5658) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5668) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5678) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5678) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5688) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5688) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5708) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5708) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5718) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5718) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (5728) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5728) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5748) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5748) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5758) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5758) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5768) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5778) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (5858) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5858) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5858) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5868) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5878) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5888) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5888) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5898) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5908) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (5908) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5918) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5928) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5938) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5938) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5948) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5948) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5958) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5968) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5978) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5978) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5988) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5988) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6008) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6008) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6018) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6028) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (6028) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6028) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6038) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6058) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6058) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6068) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6068) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6078) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (6158) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6158) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6158) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6168) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6168) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6188) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6188) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6198) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6208) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (6208) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6218) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6228) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6228) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6238) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6238) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6248) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6268) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6268) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6278) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6278) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6288) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6288) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6308) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6308) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6318) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6318) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (6328) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6328) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6348) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6348) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6358) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6358) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6368) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6378) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (6458) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6458) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6458) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6468) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6478) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6478) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6478) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6498) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6508) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (6508) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6518) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6518) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6538) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6538) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6548) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6548) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6558) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6558) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6578) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6578) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6588) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6588) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6598) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6598) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6618) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6618) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (6628) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6628) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6638) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6648) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6658) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6658) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6668) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6678) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (6758) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6758) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6758) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6768) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6778) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6788) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6788) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6798) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6808) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (6808) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6818) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6828) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6838) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6838) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6848) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6848) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6868) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6868) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6878) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6878) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6888) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6888) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6908) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6908) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6918) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6928) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (6928) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6928) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6948) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6948) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6958) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6958) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6968) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6978) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (7058) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7058) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7058) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7068) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7068) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7078) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7088) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7098) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7108) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (7108) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7108) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7118) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7138) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7138) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7148) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7148) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7158) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7168) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7178) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7178) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7188) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7188) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7198) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7208) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7218) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7228) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (7228) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7238) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7238) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7258) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7258) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7268) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7268) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7278) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (7358) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7358) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7358) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7368) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7378) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7378) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7388) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7398) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7408) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (7408) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7408) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7418) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7438) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7438) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7448) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7448) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7458) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7468) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7478) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7478) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7488) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7488) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7498) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7508) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7518) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7518) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (7528) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7528) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7538) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7548) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7558) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7568) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7568) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7578) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (7658) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7658) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7658) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7668) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7678) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7678) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7688) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7698) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7708) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (7708) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7718) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7718) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7738) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7738) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7748) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7748) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7758) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7768) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7778) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7778) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7788) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7788) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7798) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7808) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7818) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7818) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (7828) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7828) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7838) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7848) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7858) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7858) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7868) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7878) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (7958) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7958) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7958) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7968) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7978) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7978) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7988) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7998) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8008) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (8008) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8018) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8018) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8038) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8038) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8048) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8048) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8058) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8058) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8078) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8078) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8088) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8098) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8098) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8098) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8118) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8128) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (8128) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8138) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8138) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8148) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8158) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8168) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8168) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8178) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (8258) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8258) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8258) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8268) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8278) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8278) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8288) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8298) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8308) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (8308) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8308) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8318) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8338) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8338) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8348) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8348) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8358) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8368) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8378) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8378) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8388) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8388) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8398) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8408) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8418) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8418) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (8428) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8428) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8448) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8448) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8458) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8458) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8468) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8468) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (8558) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8558) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8558) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8568) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8568) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8578) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8588) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8598) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8608) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (8608) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8608) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8628) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8628) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8638) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8638) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8648) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8658) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8668) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8678) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8678) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8688) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8688) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8708) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8708) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8718) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8728) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (8728) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8728) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8748) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8748) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8758) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8758) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8768) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8788) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (8858) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8858) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8858) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8868) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8878) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8878) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8888) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8898) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8908) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (8908) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8918) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8918) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8938) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8938) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8948) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8948) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8958) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8968) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8978) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8978) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8988) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8988) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8998) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9008) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9018) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9028) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (9028) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9028) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9038) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9058) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9058) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9068) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9068) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9068) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (9158) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9158) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9158) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9168) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9168) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9188) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9188) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9198) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9208) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (9208) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9208) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9228) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9238) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9238) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9248) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9248) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9258) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9268) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9278) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9278) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9288) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9288) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9298) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9308) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9318) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9318) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (9328) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9328) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9338) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9348) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9358) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9358) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9368) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9368) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (9458) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9458) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9458) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9468) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9478) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9478) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9478) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9498) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9508) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (9508) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9518) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9518) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9538) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9538) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9548) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9548) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9558) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9568) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9578) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9578) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9588) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9588) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9598) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9608) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9618) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9618) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (9628) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9628) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9638) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9648) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9658) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9658) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9668) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9668) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (9758) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9758) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9758) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9768) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9778) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9778) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9778) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9798) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9808) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (9808) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9818) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9818) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9838) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9838) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9848) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9848) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9858) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9858) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9878) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9878) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9888) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9898) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9898) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9898) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9918) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9928) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (9928) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9928) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9938) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9958) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9958) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9968) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9968) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9978) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (10058) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10058) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10058) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10068) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10078) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10078) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10088) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10098) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10108) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (10108) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10118) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10118) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10138) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10138) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10148) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10148) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10158) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10168) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10178) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10178) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10188) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10198) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10198) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10208) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10218) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10228) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (10228) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10238) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10248) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10258) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10258) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10268) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10268) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10278) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (10358) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10358) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10358) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10368) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10378) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10378) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10388) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10398) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10408) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (10408) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10418) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10428) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10438) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10438) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10448) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10448) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10458) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10468) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10478) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10478) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10488) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10488) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10508) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10508) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10518) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10528) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (10528) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10528) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10548) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10558) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10558) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10558) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10568) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10588) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (10658) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10658) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10658) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10668) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10678) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10678) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10688) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10698) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10708) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (10708) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10708) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10728) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10738) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10738) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10748) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10748) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10768) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10768) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10778) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10778) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10788) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10788) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10808) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10808) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10818) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10828) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (10828) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10838) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10848) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10858) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10858) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10868) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10868) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10888) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (10958) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10958) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10958) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10968) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10978) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10978) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10978) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10998) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11008) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (11008) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11018) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11018) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11038) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11038) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11048) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11048) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11058) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11078) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11078) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11078) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11088) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11098) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11098) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11108) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11118) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11128) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (11128) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11138) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11138) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11158) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11158) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11168) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11168) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11178) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (11258) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11258) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11258) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11268) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11278) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11278) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11288) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11298) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11308) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (11308) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11318) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11318) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11338) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11338) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11348) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11348) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11358) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11368) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11378) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11378) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11388) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11398) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11408) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11408) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11418) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11418) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (11438) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11438) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11448) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11448) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11458) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11458) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11468) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11478) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (11558) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11558) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11558) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11568) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11578) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11578) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11588) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11598) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11608) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (11608) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11608) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11628) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11638) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11638) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11648) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11648) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11658) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11668) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11678) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11678) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11688) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11698) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11698) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11708) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11718) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11728) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (11728) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11738) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11738) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11758) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11758) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11768) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11768) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11778) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (11858) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11858) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11858) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11868) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11878) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11878) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11888) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11898) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11908) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (11908) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11918) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11918) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11938) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11938) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11948) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11948) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11958) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11968) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11978) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11978) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11988) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11998) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11998) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12008) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12018) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12028) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (12028) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12038) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12038) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12058) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12058) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12068) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12068) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12078) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (12158) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12158) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12158) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12168) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12178) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12178) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12198) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12198) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12208) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (12208) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12218) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12218) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12238) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12238) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12248) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12248) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12258) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12268) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12278) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12278) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12288) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12288) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12308) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12308) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12318) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12318) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (12328) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12328) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12348) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12358) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12358) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12368) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12368) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12388) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (12458) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12458) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12458) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12468) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12478) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12478) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12488) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12498) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12508) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (12508) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12518) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12518) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12538) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12538) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12548) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12548) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12558) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12568) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12578) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12578) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12588) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12598) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12598) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12608) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12618) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12628) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (12628) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12638) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12638) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12658) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12658) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12668) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12668) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12678) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1
+[0;31mE (12758) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12758) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12758) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12768) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12778) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12778) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12788) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12798) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12808) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (12808) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12818) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12818) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12838) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12838) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12848) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12848) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12858) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12878) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12878) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12878) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12888) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12898) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12898) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12908) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12918) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12928) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (12928) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12938) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12938) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12958) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12958) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12968) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12968) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12978) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+6.0,-4.0,1.0,9.1

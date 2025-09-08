@@ -163,10 +163,13 @@ $<TARGET_FILE:idf::ps3_controller_host>
 $<TARGET_FILE:idf::Chassis>
 $<TARGET_FILE:idf::vl53l1x-arduino>
 $<TARGET_FILE:idf::ESP32Servo>
+$<TARGET_FILE:idf::ToF_Lidar>
+$<TARGET_FILE:__idf_ESP32Servo>
+$<TARGET_FILE:__idf_vl53l1x-arduino>
 $<TARGET_FILE:idf::main>
 $<TARGET_FILE:__idf_fatfs>
 $<TARGET_FILE:__idf_ps3_controller_host>
 $<TARGET_FILE:__idf_Chassis>
-$<TARGET_FILE:__idf_vl53l1x-arduino>
-$<TARGET_FILE:__idf_ESP32Servo>
+$<TARGET_FILE:__idf_ToF_Lidar>
 $<TARGET_FILE:idf::ESP32-SG90>
+$<TARGET_FILE:idf::Tri_omni_control>

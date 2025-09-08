@@ -1,0 +1,1556 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ESP32\build\esp32.elf C:\GitHub\Firmware\src\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 31 2025 22:07:17[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d4c8h (185544) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=0003d4f0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (152) esp_image: segment 2: paddr=0003d518 vaddr=3ffbdb60 size=02b00h ( 11008) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a6d34h (683316) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e6d5c vaddr=3ffc0660 size=01ee4h (  7908) load[0m
+[0;32mI (399) esp_image: segment 5: paddr=000e8c48 vaddr=40080000 size=1bb3ch (113468) load[0m
+[0;32mI (458) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (458) boot: Disabling RNG early entropy source...[0m
+[0;32mI (468) cpu_start: Multicore app[0m
+[0;32mI (477) cpu_start: Pro cpu start user code[0m
+[0;32mI (477) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (477) app_init: Application information:[0m
+[0;32mI (480) app_init: Project name:     esp32[0m
+[0;32mI (484) app_init: App version:      5b23221-dirty[0m
+[0;32mI (490) app_init: Compile time:     Sep  3 2025 12:04:59[0m
+[0;32mI (496) app_init: ELF file SHA256:  488a65894...[0m
+[0;32mI (501) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (506) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (510) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (515) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (527) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (546) heap_init: At 3FFCA638 len 000159C8 (86 KiB): DRAM[0m
+[0;32mI (552) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (558) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (565) heap_init: At 4009BB3C len 000044C4 (17 KiB): IRAM[0m
+[0;32mI (572) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;33mW (579) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (595) coexist: coex firmware version: 831ec70[0m
+[0;32mI (599) main_task: Started on CPU0[0m
+[0;32mI (609) main_task: Calling app_main()[0m
+[0;32mI (619) BTDM_INIT: BT controller compile version [b992c7d][0m
+[0;32mI (619) BTDM_INIT: Bluetooth MAC: ec:e3:34:90:d8:ee[0m
+[0;32mI (619) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (1299) BT_INIT: Bluetooth initialized successfully in dual mode.[0m
+
+   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$        /$$$$$$   /$$$$$$ 
+  /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$__  $$|_  $$_/       /$$__  $$ /$$__  $$ 
+ | $$  \__/| $$  \ $$| $$  \__/| $$  \ $$| $$  \ $$  | $$        | $$  \ $$| $$  \__/ 
+ |  $$$$$$ | $$$$$$$$|  $$$$$$ | $$  | $$| $$$$$$$/  | $$        | $$  | $$|  $$$$$$  
+  \____  $$| $$__  $$ \____  $$| $$  | $$| $$__  $$  | $$        | $$  | $$ \____  $$ 
+  /$$  \ $$| $$  | $$ /$$  \ $$| $$  | $$| $$  \ $$  | $$        | $$  | $$ /$$  \ $$ 
+ |  $$$$$$/| $$  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$      |  $$$$$$/|  $$$$$$/ 
+  \______/ |__/  |__/ \______/  \______/ |__/  |__/|______/       \______/  \______/                                                                                    
+[0;32mI (1459) initial_operation: Checking I2C bus status before initialization...[0m
+[0;32mI (1459) initial_operation: Bus is clear. No recovery needed.[0m
+[0;33mW (1469) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (1689) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1689) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1819) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1819) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1829) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+setting i2c finished
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1989) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1989) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (1889) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1899) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1899) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1909) i2c.master: I2C software timeout[0m
+[0;31mE (1939) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1979) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2049) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (1889) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1999) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2009) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2019) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2019) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2019) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2039) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2109) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2059) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2069) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2079) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2089) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2089) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2089) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2099) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2099) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2199) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2109) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2109) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2119) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2229) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2129) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2139) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2139) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2159) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2169) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+2994.2,110.2,1552.0,-89.0
+2055.7,140.5,1097.5,-88.5
+4558.4,59.6,2308.5,-89.4
+[0;31mE (2209) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2219) i2c.master: I2C software timeout[0m
+[0;31mE (2229) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1879) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2269) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2289) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2289) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2289) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2299) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2299) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2299) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2299) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2309) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2319) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2329) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2339) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2339) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2339) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+1492.6,157.5,824.5,-87.9
+[0;31mE (2349) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+1154.8,167.7,660.5,-87.1
+[0;31mE (2349) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2359) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+952.1,169.4,560.5,-86.3
+[0;31mE (2459) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2459) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2389) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2409) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2479) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2429) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2439) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2439) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2389) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2379) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2469) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2469) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2469) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+193958.4,171.3,97064.5,-90.0
+116634.3,172.4,58403.0,-90.0
+70239.8,173.0,35206.0,-90.0
+[0;31mE (2489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2569) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+42403.1,173.4,21288.0,-89.9
+25701.0,173.6,12937.0,-89.9
+[0;31mE (2539) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2559) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2559) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2559) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+208807.8,171.8,104489.0,-90.0
+125543.5,170.7,62856.5,-90.0
+75585.3,170.0,37877.5,-90.0
+[0;31mE (2569) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2409) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2579) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2579) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2579) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+45610.4,169.6,22889.5,-89.9
+220753.4,169.4,110461.0,-90.0
+[0;31mE (2609) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2609) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+325839.3,169.2,163004.0,-90.0
+[0;31mE (2649) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2649) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2649) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+388890.8,169.5,194529.5,-90.0
+233593.7,169.7,116881.0,-90.0
+333543.4,169.8,166856.0,-90.0
+[0;31mE (2689) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+393513.2,169.9,196841.0,-90.0
+236366.7,169.9,118267.5,-90.0
+[0;31mE (2699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2709) i2c.master: I2C software timeout[0m
+[0;31mE (2719) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2729) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2739) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2739) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2749) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2749) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2749) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2759) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2839) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2769) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2769) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2789) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2789) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2799) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2819) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2819) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+146378.4,170.0,73273.5,-90.0
+[0;31mE (2829) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2839) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2919) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2929) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+281214.3,170.0,140691.5,-90.0
+[0;31mE (2869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2869) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2879) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2879) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2889) i2c.master: I2C software timeout[0m
+[0;31mE (2889) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2899) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2909) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2909) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2919) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2769) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3029) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2959) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3049) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (2959) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2979) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2979) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3009) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3019) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (2859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3109) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3069) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3069) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3139) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3079) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+362115.8,168.8,181141.5,-90.0
+410656.7,168.1,205412.0,-90.0
+[0;31mE (3169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3099) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3109) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3119) i2c.master: I2C software timeout[0m
+[0;31mE (2959) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3129) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3219) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3069) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3089) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3179) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3179) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3189) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3199) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3199) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3309) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3239) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3249) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3259) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3279) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3289) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3289) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3289) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3289) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+439781.2,167.6,219974.0,-90.0
+457255.9,167.4,228711.0,-90.0
+467740.7,167.2,233953.5,-90.0
+[0;31mE (3129) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+474031.6,167.5,237099.0,-90.0
+477806.2,167.7,238986.5,-90.0
+[0;31mE (3329) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3329) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3339) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3409) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3359) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+480070.9,167.8,240118.5,-90.0
+481429.7,167.9,240798.0,-90.0
+482245.0,167.9,241206.0,-90.0
+[0;31mE (3369) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3389) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+482734.2,168.0,241450.5,-90.0
+483027.7,168.0,241597.0,-90.0
+[0;31mE (3399) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3399) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3399) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483203.8,168.8,241685.5,-90.0
+483309.5,169.3,241739.0,-90.0
+483372.9,169.6,241770.5,-90.0
+483410.9,169.7,241789.5,-90.0
+[0;31mE (3359) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3419) i2c.master: I2C software timeout[0m
+[0;31mE (3449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3469) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3479) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3509) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3509) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3509) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3509) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3519) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3519) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3539) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3619) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3559) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3579) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3579) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483433.8,169.4,241801.0,-90.0
+[0;31mE (3599) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483447.5,169.3,241808.0,-90.0
+[0;31mE (3609) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3609) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3619) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3619) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3549) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3629) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3629) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3639) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3659) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3659) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3679) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3689) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3689) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483455.7,169.6,241812.0,-90.0
+483460.6,169.7,241814.5,-90.0
+483463.6,169.8,241816.0,-90.0
+483465.3,169.9,241817.0,-90.0
+483466.4,169.9,241817.5,-90.0
+[0;31mE (3719) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3729) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3749) i2c.master: I2C software timeout[0m
+[0;31mE (3809) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (3799) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3799) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3799) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3789) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3889) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3819) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3899) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3849) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3849) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3849) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3849) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (3859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483467.4,168.9,241817.5,-90.0
+483467.7,168.9,241817.5,-90.0
+[0;31mE (3879) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3889) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3889) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3819) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3899) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483467.0,168.8,241817.5,-90.0
+[0;31mE (3909) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3939) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483467.8,168.9,241817.5,-90.0
+483467.9,169.0,241817.5,-90.0
+483467.9,169.0,241817.5,-90.0
+[0;31mE (3959) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,170.6,241818.5,-90.0
+[0;31mE (3979) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (3979) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,171.6,241819.0,-90.0
+483468.0,172.1,241819.5,-90.0
+483468.0,172.5,241819.5,-90.0
+[0;31mE (4009) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4029) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,170.3,241818.5,-90.0
+483468.0,169.0,241817.5,-90.0
+483468.0,168.2,241817.5,-90.0
+[0;31mE (4069) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4069) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,167.7,241817.0,-90.0
+[0;31mE (4079) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4079) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,167.4,241817.0,-90.0
+483468.0,167.3,241817.0,-90.0
+[0;31mE (4129) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+483468.0,167.2,241817.0,-90.0
+[0;31mE (4149) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4149) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4149) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4149) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,165.5,241816.0,-90.0
+[0;31mE (4159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4259) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4199) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4199) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4199) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4239) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4249) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+483468.0,167.3,241817.0,-90.0
+483468.0,168.4,241817.5,-90.0
+483468.0,169.0,241818.0,-90.0
+[0;31mE (4329) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4179) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,169.6,241818.0,-90.0
+[0;31mE (4279) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,173.7,241820.0,-90.0
+483468.0,169.8,241818.0,-90.0
+[0;31mE (4319) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4379) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,169.9,241818.0,-90.0
+483468.0,169.9,241818.0,-90.0
+483468.0,170.0,241818.0,-90.0
+483468.0,169.4,241818.0,-90.0
+[0;31mE (4339) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4339) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4339) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,171.6,241819.0,-90.0
+483468.0,172.5,241819.5,-90.0
+483468.0,173.1,241820.0,-90.0
+483468.0,173.5,241820.0,-90.0
+[0;31mE (4309) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,173.8,241820.0,-90.0
+[0;31mE (4379) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4319) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4389) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4399) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4399) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4399) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4409) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4429) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4429) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4429) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,173.9,241820.0,-90.0
+483468.0,171.5,241819.0,-90.0
+[0;31mE (4439) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4439) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4439) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4439) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,170.1,241818.5,-90.0
+[0;31mE (4449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,169.3,241818.0,-90.0
+[0;31mE (4479) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4499) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4509) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,168.0,241817.0,-90.0
+[0;31mE (4539) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4549) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4569) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4569) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4579) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4669) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (4619) i2c.master: I2C software timeout[0m
+[0;31mE (4679) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4639) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4659) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4709) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (4669) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4719) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (4679) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4739) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (4699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4749) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,167.6,241817.0,-90.0
+[0;31mE (4709) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4769) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (4709) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4609) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4789) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,167.7,241817.0,-90.0
+483468.0,167.9,241817.0,-90.0
+483468.0,167.9,241817.0,-90.0
+483468.0,634.0,242050.0,-90.0
+[0;31mE (4679) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4819) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,447.6,241957.0,-90.0
+[0;31mE (4639) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4839) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (4779) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,167.8,241817.0,-90.0
+483468.0,335.7,241901.0,-90.0
+483468.0,267.0,241867.0,-90.0
+483468.0,225.8,241846.0,-90.0
+[0;31mE (4819) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4819) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4819) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4819) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4829) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,201.1,241834.0,-90.0
+483468.0,186.3,241826.5,-90.0
+483468.0,177.4,241822.0,-90.0
+483468.0,172.0,241819.5,-90.0
+[0;31mE (4929) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4709) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,166.9,241816.5,-90.0
+[0;31mE (4859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,165.3,241816.0,-90.0
+[0;31mE (4909) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4919) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4929) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4929) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,168.8,241817.5,-90.0
+[0;31mE (4939) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4939) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4949) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4949) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4979) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4989) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4989) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4999) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4999) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5089) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,168.3,241817.5,-90.0
+483468.0,167.2,241817.0,-90.0
+483468.0,169.4,241818.0,-90.0
+483468.0,169.6,241818.0,-90.0
+[0;31mE (5019) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5029) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5079) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5089) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,168.2,241817.5,-90.0
+483468.0,167.3,241817.0,-90.0
+483468.0,169.0,241817.5,-90.0
+[0;31mE (5099) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,166.8,241816.5,-90.0
+[0;31mE (5109) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5119) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5119) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5119) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5119) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5129) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5249) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (5199) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (5259) VL53L1X: Failed to read result data: ESP_ERR_TIMEOUT[0m
+[0;31mE (5199) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (5209) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (5219) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5289) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (5229) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5299) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (5249) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5249) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,165.7,241816.0,-90.0
+[0;31mE (5259) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5339) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (5259) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5199) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5269) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,164.2,241815.5,-90.0
+[0;31mE (5219) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5379) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (5309) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5309) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5259) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5349) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5369) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5369) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,164.9,241815.5,-90.0
+483468.0,165.4,241816.0,-90.0
+483468.0,165.6,241816.0,-90.0
+[0;31mE (5239) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5449) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,165.9,241816.0,-90.0
+483468.0,165.9,241816.0,-90.0
+483468.0,165.9,241816.0,-90.0
+483468.0,166.0,241816.0,-90.0
+[0;31mE (5409) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5509) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,164.4,241815.5,-90.0
+483468.0,163.4,241815.0,-90.0
+483468.0,162.9,241814.5,-90.0
+483468.0,162.5,241814.5,-90.0
+[0;31mE (5479) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5479) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5499) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5559) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,165.8,241816.0,-90.0
+[0;31mE (5519) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5519) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5559) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5639) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5559) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5509) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5659) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,164.7,241815.5,-90.0
+483468.0,165.2,241816.0,-90.0
+483468.0,165.5,241816.0,-90.0
+483468.0,165.7,241816.0,-90.0
+[0;31mE (5689) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5619) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (5639) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5559) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5649) i2c.master: I2C software timeout[0m
+483468.0,163.9,241815.0,-90.0
+[0;31mE (5679) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5689) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5689) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5689) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,165.8,241816.0,-90.0
+[0;31mE (5699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5709) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5719) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5729) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (5739) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5739) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5749) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5829) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (5759) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5759) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (5769) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5789) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (5799) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5799) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+483468.0,165.1,241816.0,-90.0
+[0;31mE (5809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5899) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (5819) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5829) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5759) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5929) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,162.0,241814.0,-90.0
+483468.0,164.8,241815.5,-90.0
+[0;31mE (5889) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5899) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5899) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,164.7,241815.5,-90.0
+483468.0,160.4,241813.5,-90.0
+[0;31mE (5919) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5839) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,162.6,241814.5,-90.0
+483468.0,164.0,241815.0,-90.0
+[0;31mE (5869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5949) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5949) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5949) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5979) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5979) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,165.3,241816.0,-90.0
+[0;31mE (5989) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6009) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6009) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6009) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6079) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,165.6,241816.0,-90.0
+[0;31mE (6019) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,163.3,241815.0,-90.0
+483468.0,631.2,242049.0,-90.0
+[0;31mE (6049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6069) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6009) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6089) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6159) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6099) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,905.5,242186.0,-90.0
+483468.0,1070.1,242268.5,-90.0
+[0;31mE (6099) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6109) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6109) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,1168.9,242317.5,-90.0
+[0;31mE (6149) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6099) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6229) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6169) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (6189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6219) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6219) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6229) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6229) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6169) i2c.master: I2C software timeout[0m
+[0;31mE (6309) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6309) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6259) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,554.1,242010.5,-90.0
+[0;31mE (6269) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6279) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6289) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6299) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,192.5,241829.5,-90.0
+[0;31mE (6239) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6369) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6259) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (6389) VL53L1X: Failed to read result data: ESP_ERR_TIMEOUT[0m
+483468.0,1263.7,242365.0,-90.0
+483468.0,820.2,242143.5,-90.0
+[0;31mE (6269) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6329) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6339) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6349) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,397.3,241932.0,-90.0
+483468.0,303.2,241885.0,-90.0
+483468.0,246.7,241856.5,-90.0
+483468.0,212.8,241839.5,-90.0
+[0;31mE (6359) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6309) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6369) i2c.master: I2C software timeout[0m
+[0;31mE (6379) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,1228.1,242347.5,-90.0
+[0;31mE (6319) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6409) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6409) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6449) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6459) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6539) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6509) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,172.3,241819.5,-90.0
+[0;31mE (6519) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6479) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,179.9,241823.0,-90.0
+[0;31mE (6549) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6559) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6569) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6569) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6579) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6649) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6589) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6619) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6629) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6639) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,168.2,241817.5,-90.0
+483468.0,165.7,241816.0,-90.0
+483468.0,164.2,241815.5,-90.0
+483468.0,163.3,241815.0,-90.0
+[0;31mE (6509) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6729) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,162.8,241814.5,-90.0
+483468.0,162.5,241814.5,-90.0
+[0;31mE (6719) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (6719) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6719) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,162.3,241814.5,-90.0
+[0;31mE (6729) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6779) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,161.8,241814.0,-90.0
+[0;31mE (6739) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6739) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6739) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6749) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6749) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6759) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6769) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6779) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transactio[0;31mE (6849) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (6849) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (6849) task_wdt: Tasks currently running:[0m
+[0;31mE (6849) task_wdt: CPU 0: main[0m
+[0;31mE (6849) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (6849) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x40133AA6:0x3FFBED60 0x40133EBC:0x3FFBED80 0x400839B9:0x3FFBEDB0 0x4000BFED:0x3FFBB940 0x4009341A:0x3FFBB950 0x4009767E:0x3FFBB970 0x400976CA:0x3FFBB990 0x40082361:0x3FFBB9B0 0x40082485:0x3FFBB9D0 0x400824B5:0x3FFBBA00 0x40082144:0x3FFBBA20 0x40093701:0x3FFBBA40 0x40095B21:0x3FFBBA60 0x40130BD6:0x3FFBBAA0 0x400DB349:0x3FFBBAD0 0x40174D54:0x3FFBBC50 0x400930BD:0x3FFBBC80
+
+n failed[0m
+[0;31mE (6779) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6649) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6789) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6809) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,161.9,241814.0,-90.0
+483468.0,161.9,241814.0,-90.0
+483468.0,162.0,241814.0,-90.0
+[0;31mE (6839) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6839) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6909) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6909) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7009) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,160.0,241813.0,-90.0
+483468.0,158.8,241812.5,-90.0
+483468.0,158.1,241812.5,-90.0
+[0;31mE (6919) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6939) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (6949) i2c.master: I2C software timeout[0m
+[0;31mE (7039) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6989) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6989) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6999) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6919) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7029) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7039) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6949) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,159.6,241813.0,-90.0
+483468.0,160.6,241813.5,-90.0
+483468.0,161.2,241814.0,-90.0
+483468.0,161.5,241814.0,-90.0
+[0;31mE (7109) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,161.3,241814.0,-90.0
+483468.0,161.2,241814.0,-90.0
+[0;31mE (7119) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7139) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7149) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7159) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (7159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7179) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7179) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7179) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7199) i2c.master: I2C software timeout[0m
+[0;31mE (7269) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7289) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7219) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7299) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7229) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7239) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7259) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7269) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7339) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7199) VL53L1X: Failed to read result data: ESP_ERR_TIMEOUT[0m
+[0;31mE (7209) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,161.1,241814.0,-90.0
+[0;31mE (7299) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,159.5,241813.0,-90.0
+[0;31mE (7229) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7379) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,158.5,241812.5,-90.0
+[0;31mE (7329) i2c.master: I2C software timeout[0m
+[0;31mE (7279) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7349) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7419) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7379) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7309) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7389) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7399) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7449) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7399) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7399) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,157.9,241812.0,-90.0
+[0;31mE (7409) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7369) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7429) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7429) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7439) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7439) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+483468.0,157.5,241812.0,-90.0
+[0;31mE (7399) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7459) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,159.7,241813.0,-90.0
+[0;31mE (7469) i2c.master: I2C software timeout[0m
+[0;31mE (7489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7489) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7579) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7549) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7549) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7559) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7559) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7569) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7569) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7569) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7569) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7579) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7539) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7609) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7609) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,161.3,241814.0,-90.0
+[0;31mE (7619) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,160.8,241813.5,-90.0
+[0;31mE (7639) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,161.4,241814.0,-90.0
+483468.0,162.5,241814.5,-90.0
+483468.0,163.1,241815.0,-90.0
+483468.0,163.4,241815.0,-90.0
+483468.0,163.7,241815.0,-90.0
+[0;31mE (7649) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,162.2,241814.5,-90.0
+[0;31mE (7679) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7689) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7629) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7629) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7719) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7719) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7729) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7729) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7729) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7729) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7739) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7739) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7759) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,160.5,241813.5,-90.0
+483468.0,160.3,241813.5,-90.0
+483468.0,161.0,241813.5,-90.0
+[0;31mE (7769) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7769) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,629.8,242048.0,-90.0
+483468.0,442.7,241954.5,-90.0
+[0;31mE (7769) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,330.4,241898.5,-90.0
+[0;31mE (7809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7829) i2c.master: I2C software timeout[0m
+[0;31mE (7869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7879) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7879) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7899) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7899) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7909) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7909) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7909) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7919) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7919) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7929) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7939) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7949) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7959) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7959) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7959) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7969) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8039) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7979) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,262.6,241864.5,-90.0
+[0;31mE (7989) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,222.0,241844.0,-90.0
+483468.0,197.6,241832.0,-90.0
+[0;31mE (7999) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7999) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7999) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7999) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7999) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8009) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8009) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8029) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (7969) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,182.6,241824.5,-90.0
+[0;31mE (8069) i2c.master: I2C software timeout[0m
+[0;31mE (8069) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8079) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8089) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8149) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8149) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8159) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8179) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8229) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8249) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8209) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8209) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,174.7,241820.5,-90.0
+483468.0,170.0,241818.5,-90.0
+[0;31mE (8219) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8219) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8299) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8239) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8309) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8249) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8199) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8249) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8259) i2c.master: I2C software timeout[0m
+[0;31mE (8349) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8289) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8289) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,165.2,241816.0,-90.0
+[0;31mE (8309) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,162.3,241814.5,-90.0
+[0;31mE (8329) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8289) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8359) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8359) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8359) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,159.8,241813.0,-90.0
+483468.0,158.3,241812.5,-90.0
+483468.0,157.4,241812.0,-90.0
+483468.0,156.8,241811.5,-90.0
+483468.0,156.5,241811.5,-90.0
+483468.0,156.3,241811.5,-90.0
+483468.0,156.2,241811.5,-90.0
+483468.0,156.1,241811.5,-90.0
+[0;31mE (8389) i2c.master: I2C software timeout[0m
+[0;31mE (8449) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8409) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8409) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8409) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8429) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8439) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8389) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (8459) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8459) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8459) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8459) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+483468.0,156.1,241811.5,-90.0
+483468.0,156.0,241811.5,-90.0
+483468.0,156.0,241811.5,-90.0
+483468.0,158.4,241812.5,-90.0
+483468.0,159.0,241813.0,-90.0
+483468.0,159.4,241813.0,-90.0
+483468.0,159.7,241813.0,-90.0
+[0;31mE (8529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8539) i2c.master: I2C software timeout[0m
+[0;31mE (8579) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8579) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8609) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8609) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8609) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8609) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8629) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8629) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8639) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8639) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8659) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8669) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8749) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,158.2,241812.5,-90.0
+[0;31mE (8699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8619) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8789) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,160.6,241813.5,-90.0
+483468.0,629.6,242048.0,-90.0
+[0;31mE (8709) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8719) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8719) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8719) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8739) i2c.master: I2C software timeout[0m
+[0;31mE (8739) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8749) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8679) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (8779) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,159.7,241813.0,-90.0
+[0;31mE (8799) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8879) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8829) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8919) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,910.9,242188.5,-90.0
+[0;31mE (8889) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8899) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8899) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+348467.2,610.6,174538.5,-90.0
+[0;31mE (8919) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8919) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8999) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8949) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9009) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8959) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8959) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8979) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+402467.5,430.3,201448.5,-90.0
+[0;31mE (8989) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+434867.7,322.2,217594.5,-90.0
+[0;31mE (8939) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8999) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (8999) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+413592.4,171.0,206881.5,-90.0
+319307.0,257.3,159782.0,-90.0
+[0;31mE (9019) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9019) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9049) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+384971.4,218.4,192594.5,-90.0
+[0;31mE (9119) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+289369.2,195.0,144782.0,-90.0
+367008.7,181.0,183594.5,-90.0
+[0;31mE (9069) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9079) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8949) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+441542.7,165.0,220853.5,-90.0
+458312.8,161.4,229236.5,-90.0
+468374.9,159.2,234266.5,-90.0
+345207.1,156.7,172681.5,-90.0
+474412.1,157.9,237284.5,-90.0
+400511.5,156.4,200333.5,-90.0
+[0;31mE (9059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9129) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9139) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9199) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (9149) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9149) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9089) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+478034.5,157.2,239095.5,-90.0
+433694.1,155.9,216924.5,-90.0
+[0;31mE (9179) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9179) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9179) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9149) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9219) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9229) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9239) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9319) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9259) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+453603.6,156.3,226879.5,-90.0
+465549.4,156.6,232852.5,-90.0
+472716.8,156.8,236436.0,-90.0
+[0;31mE (9279) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9279) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9279) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9369) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9259) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9329) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9399) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9359) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9359) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9359) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9429) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9319) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9379) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9399) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9459) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9399) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9479) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9419) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9369) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9499) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9439) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9449) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9459) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9459) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9539) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9349) i2c.master: I2C software timeout[0m
+[0;31mE (9549) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9549) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9489) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9499) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9449) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9509) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9509) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9519) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9529) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9539) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+479597.6,156.9,239876.5,-90.0
+[0;31mE (9409) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9649) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9659) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9589) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9609) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9619) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9629) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (9489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9639) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+481145.7,154.1,240649.5,-90.0
+482074.6,152.5,241113.0,-90.0
+482632.0,151.5,241391.0,-90.0
+482966.4,150.9,241558.0,-90.0
+[0;31mE (9649) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483167.0,150.5,241658.5,-90.0
+477017.3,156.9,238586.5,-90.0
+483287.4,150.3,241718.5,-90.0
+[0;31mE (9589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9669) i2c.master: I2C software timeout[0m
+[0;31mE (9719) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9729) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9729) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9729) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9739) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9749) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9749) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9749) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9759) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9759) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9759) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9779) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9779) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9789) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9859) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (9799) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9799) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483359.7,152.2,241755.5,-90.0
+483459.6,155.7,241807.0,-90.0
+483403.0,153.3,241777.5,-90.0
+[0;31mE (9819) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9819) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9829) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+483429.0,154.4,241791.0,-90.0
+483444.6,155.0,241799.5,-90.0
+483454.0,155.4,241804.0,-90.0
+[0;31mE (9789) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (9809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9889) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9889) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483462.9,155.8,241808.5,-90.0
+[0;31mE (9909) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9909) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483465.0,155.9,241809.5,-90.0
+483466.2,155.9,241810.5,-90.0
+483466.9,156.0,241810.5,-90.0
+[0;31mE (9919) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9919) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483467.3,156.0,241811.0,-90.0
+483467.6,156.4,241811.5,-90.0
+483467.8,156.6,241811.5,-90.0
+[0;31mE (9929) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (9939) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483467.9,156.8,241811.5,-90.0
+483467.9,156.9,241811.5,-90.0
+[0;31mE (9989) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9989) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9989) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10019) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10019) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10019) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483467.9,158.9,241812.5,-90.0
+483468.0,160.2,241813.5,-90.0
+[0;31mE (10029) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10039) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10039) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10039) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9989) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (10059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10159) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10069) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10089) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10179) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10099) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10109) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10109) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,158.5,241812.5,-90.0
+[0;31mE (10119) i2c.master: I2C software timeout[0m
+[0;31mE (10219) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10229) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10129) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10069) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10259) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10209) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (10219) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10279) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10129) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,156.7,241811.5,-90.0
+[0;31mE (10249) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10249) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10249) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10249) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10109) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10269) i2c.master: I2C software timeout[0m
+[0;31mE (10349) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10349) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10279) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10119) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10299) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10389) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10319) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10339) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10339) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10349) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10349) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10439) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10269) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10449) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10359) i2c.master: I2C software timeout[0m
+[0;31mE (10389) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10309) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10479) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10489) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10419) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10439) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10499) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,155.6,241811.0,-90.0
+[0;31mE (10459) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10459) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10469) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,154.6,241810.5,-90.0
+[0;31mE (10409) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10549) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10499) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10569) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10269) VL53L1X: Failed to read result data: ESP_ERR_TIMEOUT[0m
+[0;31mE (10509) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10529) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10529) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10529) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+483468.0,155.0,241810.5,-90.0
+[0;31mE (10409) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10549) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10499) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10559) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10569) i2c.master: I2C software timeout[0m
+[0;31mE (10499) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10579) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,154.3,241810.5,-90.0
+[0;31mE (10609) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10639) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10649) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10659) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10669) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,154.2,241810.5,-90.0
+[0;31mE (10689) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10699) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10709) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10719) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10719) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10679) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10729) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,154.1,241810.5,-90.0
+483468.0,154.0,241810.5,-90.0
+[0;31mE (10739) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10739) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10739) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10749) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10769) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10769) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,154.1,241810.5,-90.0
+483468.0,154.0,241810.5,-90.0
+483468.0,154.0,241810.5,-90.0
+483468.0,154.0,241810.5,-90.0
+[0;31mE (10769) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10789) i2c.master: I2C software timeout[0m
+[0;31mE (10869) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,154.0,241810.5,-90.0
+[0;31mE (10869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10869) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10739) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,150.8,241808.5,-90.0
+[0;31mE (10809) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10909) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10909) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10919) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10919) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10999) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (10929) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11009) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,152.0,241809.5,-90.0
+483468.0,154.0,241810.5,-90.0
+[0;31mE (10969) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,150.1,241808.5,-90.0
+483468.0,154.0,241810.5,-90.0
+[0;31mE (11009) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11009) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11009) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (10929) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11019) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,149.6,241808.0,-90.0
+[0;31mE (11029) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;31mE (11029) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11029) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,149.4,241808.0,-90.0
+483468.0,149.2,241808.0,-90.0
+483468.0,149.1,241808.0,-90.0
+[0;31mE (11039) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11039) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11049) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,151.5,241809.0,-90.0
+[0;31mE (11089) i2c.master: I2C software timeout[0m
+[0;31mE (11099) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11099) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (11119) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11129) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11129) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11149) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11199) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (11159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11159) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11229) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,908.6,242187.5,-90.0
+[0;31mE (11189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11209) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11269) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (11229) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11279) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,154.1,241810.5,-90.0
+[0;31mE (11239) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,154.1,241810.5,-90.0
+483468.0,625.6,242046.0,-90.0
+[0;31mE (11249) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11319) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11259) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11339) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (11259) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11269) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (11219) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,1078.3,242272.5,-90.0
+[0;31mE (11169) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11309) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11249) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11389) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,708.6,242087.5,-90.0
+483468.0,353.7,241910.0,-90.0
+[0;31mE (11329) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11329) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,274.6,241870.5,-90.0
+483468.0,227.2,241847.0,-90.0
+483468.0,198.7,241832.5,-90.0
+[0;31mE (11159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11429) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (11379) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (11389) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,486.8,241976.5,-90.0
+[0;31mE (11419) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11419) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11429) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11369) i2c.master: I2C software timeout[0m
+[0;31mE (11439) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11439) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11439) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11449) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11469) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11469) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11479) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11489) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11509) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11519) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11529) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (11539) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11539) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11559) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11559) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (11569) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11639) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+483468.0,181.2,241824.0,-90.0
+[0;31mE (11579) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (11589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11599) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11599) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (11599) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11609) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,171.9,241819.0,-90.0
+483468.0,166.4,241816.5,-90.0
+483468.0,163.0,241815.0,-90.0
+[0;31mE (11619) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,159.8,241813.0,-90.0
+[0;31mE (11619) VL53L1X: Failed to write reg addr: ESP_ERR_TIMEOUT[0m
+[0;31mE (11569) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11649) i2c.master: I2C software timeout[0m
+[0;31mE (11659) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11709) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11709) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11709) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11709) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+483468.0,161.0,241814.0,-90.0
+[0;31mE (11719) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m

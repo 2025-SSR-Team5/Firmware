@@ -1,0 +1,483 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ESP32\build\esp32.elf C:\GitHub\Firmware\src\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 31 2025 22:07:17[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d610h (185872) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=0003d638 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (152) esp_image: segment 2: paddr=0003d660 vaddr=3ffbdb60 size=029b8h ( 10680) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a6bc0h (682944) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e6be8 vaddr=3ffc0518 size=0202ch (  8236) load[0m
+[0;32mI (399) esp_image: segment 5: paddr=000e8c1c vaddr=40080000 size=1bb3ch (113468) load[0m
+[0;32mI (457) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (458) boot: Disabling RNG early entropy source...[0m
+[0;32mI (468) cpu_start: Multicore app[0m
+[0;32mI (477) cpu_start: Pro cpu start user code[0m
+[0;32mI (477) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (477) app_init: Application information:[0m
+[0;32mI (480) app_init: Project name:     esp32[0m
+[0;32mI (484) app_init: App version:      5b23221-dirty[0m
+[0;32mI (490) app_init: Compile time:     Sep  3 2025 12:04:59[0m
+[0;32mI (496) app_init: ELF file SHA256:  afb1f1412...[0m
+[0;32mI (501) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (505) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (510) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (515) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (527) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (546) heap_init: At 3FFCA638 len 000159C8 (86 KiB): DRAM[0m
+[0;32mI (552) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (558) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (564) heap_init: At 4009BB3C len 000044C4 (17 KiB): IRAM[0m
+[0;32mI (572) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;33mW (579) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (595) coexist: coex firmware version: 831ec70[0m
+[0;32mI (598) main_task: Started on CPU0[0m
+[0;32mI (608) main_task: Calling app_main()[0m
+[0;32mI (618) BTDM_INIT: BT controller compile version [b992c7d][0m
+[0;32mI (618) BTDM_INIT: Bluetooth MAC: ec:e3:34:90:d8:ee[0m
+[0;32mI (618) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (1308) BT_INIT: Bluetooth initialized successfully in dual mode.[0m
+
+   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$        /$$$$$$   /$$$$$$ 
+  /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$__  $$|_  $$_/       /$$__  $$ /$$__  $$ 
+ | $$  \__/| $$  \ $$| $$  \__/| $$  \ $$| $$  \ $$  | $$        | $$  \ $$| $$  \__/ 
+ |  $$$$$$ | $$$$$$$$|  $$$$$$ | $$  | $$| $$$$$$$/  | $$        | $$  | $$|  $$$$$$  
+  \____  $$| $$__  $$ \____  $$| $$  | $$| $$__  $$  | $$        | $$  | $$ \____  $$ 
+  /$$  \ $$| $$  | $$ /$$  \ $$| $$  | $$| $$  \ $$  | $$        | $$  | $$ /$$  \ $$ 
+ |  $$$$$$/| $$  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$      |  $$$$$$/|  $$$$$$/ 
+  \______/ |__/  |__/ \______/  \______/ |__/  |__/|______/       \______/  \______/                                                                                    
+[0;32mI (1478) initial_operation: Checking I2C bus status before initialization...[0m
+[0;32mI (1478) initial_operation: Bus is clear. No recovery needed.[0m
+[0;33mW (1488) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (1708) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1708) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1718) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1838) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1838) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1848) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+setting i2c finished
+[0;32mI (1868) PS3_SPP: ESP_SPP_INIT_EVT[0m
+[0;32mI (1898) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDC Initialized[0m
+[0;32mI (1898) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDI Initialized[0m
+[0;32mI (1898) BLE_HANDLER: create_service requested[0m
+[0;32mI (1918) BLE_HANDLER: Service created, handle=40[0m
+[0;32mI (1918) BLE_HANDLER: start_service ok[0m
+[0;32mI (1918) BLE_HANDLER: add_char requested[0m
+[0;32mI (1918) BLE_HANDLER: GATT service started[0m
+23.2,11.6,17.0,-13.5
+[0;32mI (1938) BLE_HANDLER: BLE advertising started[0m
+i2c_nack_flag: 0
+[0;32mI (1938) BLE_HANDLER: CHAR added: handle=42 (prop=0x0a)[0m
+[0;32mI (1898) BleServer: BLE GATT server init done[0m
+46.7,32.2,39.0,-15.6
+i2c_nack_flag: 0
+59.6,43.7,51.0,-17.7
+i2c_nack_flag: 0
+66.2,50.6,58.0,-17.7
+i2c_nack_flag: 0
+70.9,54.8,62.0,-17.7
+i2c_nack_flag: 0
+74.1,58.5,66.0,-17.7
+i2c_nack_flag: 0
+75.7,61.9,68.0,-15.6
+i2c_nack_flag: 0
+77.0,62.7,69.5,-16.7
+i2c_nack_flag: 0
+78.2,62.8,70.0,-17.7
+i2c_nack_flag: 0
+77.7,63.7,70.0,-15.6
+i2c_nack_flag: 0
+78.6,64.6,71.0,-15.6
+i2c_nack_flag: 0
+78.0,62.4,69.5,-16.7
+i2c_nack_flag: 0
+80.0,61.8,70.0,-19.8
+i2c_nack_flag: 0
+78.8,62.3,70.0,-17.7
+i2c_nack_flag: 0
+78.1,63.0,70.0,-17.7
+i2c_nack_flag: 0
+78.4,62.2,70.0,-17.7
+i2c_nack_flag: 0
+78.7,62.5,70.0,-17.7
+i2c_nack_flag: 0
+78.4,63.1,70.5,-16.7
+i2c_nack_flag: 0
+79.0,64.3,71.5,-16.7
+i2c_nack_flag: 0
+78.6,63.8,70.5,-16.7
+i2c_nack_flag: 0
+77.6,63.5,70.0,-15.6
+i2c_nack_flag: 0
+77.7,62.5,69.5,-16.7
+i2c_nack_flag: 0
+78.6,61.1,69.5,-18.8
+i2c_nack_flag: 0
+78.8,62.7,70.0,-17.7
+i2c_nack_flag: 0
+78.5,63.2,70.5,-16.7
+i2c_nack_flag: 0
+78.7,63.9,70.5,-16.7
+i2c_nack_flag: 0
+78.4,63.5,70.5,-16.7
+i2c_nack_flag: 0
+78.6,61.7,69.5,-18.8
+i2c_nack_flag: 0
+79.2,62.2,70.5,-18.8
+i2c_nack_flag: 0
+78.3,61.3,69.5,-18.8
+i2c_nack_flag: 0
+79.8,60.8,69.5,-20.8
+i2c_nack_flag: 0
+80.7,61.7,70.5,-20.8
+i2c_nack_flag: 0
+79.6,62.6,70.5,-18.8
+i2c_nack_flag: 0
+79.4,61.2,70.0,-19.8
+i2c_nack_flag: 0
+79.6,61.9,70.0,-19.8
+i2c_nack_flag: 0
+78.6,60.3,69.0,-19.8
+i2c_nack_flag: 0
+79.1,62.6,70.5,-18.8
+i2c_nack_flag: 0
+78.7,63.6,70.5,-16.7
+i2c_nack_flag: 0
+79.2,63.7,71.0,-17.7
+i2c_nack_flag: 0
+78.7,63.8,70.5,-16.7
+i2c_nack_flag: 0
+78.0,62.3,70.0,-17.7
+i2c_nack_flag: 0
+78.8,63.0,70.0,-17.7
+i2c_nack_flag: 0
+78.9,61.0,69.0,-19.8
+i2c_nack_flag: 0
+78.9,62.2,70.0,-17.7
+i2c_nack_flag: 0
+78.2,62.9,70.0,-17.7
+i2c_nack_flag: 0
+78.5,63.3,70.5,-16.7
+i2c_nack_flag: 0
+79.9,62.4,70.5,-18.8
+i2c_nack_flag: 0
+78.7,61.0,69.5,-18.8
+i2c_nack_flag: 0
+77.6,61.8,69.0,-17.7
+i2c_nack_flag: 0
+77.4,62.3,69.5,-16.7
+i2c_nack_flag: 0
+79.2,61.8,70.0,-19.8
+i2c_nack_flag: 0
+79.1,62.7,70.5,-18.8
+i2c_nack_flag: 0
+80.3,61.6,70.5,-20.8
+i2c_nack_flag: 0
+80.2,61.4,70.5,-20.8
+i2c_nack_flag: 0
+78.9,62.4,70.0,-17.7
+i2c_nack_flag: 0
+78.5,62.6,70.0,-17.7
+i2c_nack_flag: 0
+79.1,62.0,70.0,-19.8
+i2c_nack_flag: 0
+79.5,63.6,71.0,-17.7
+i2c_nack_flag: 0
+79.3,61.8,70.0,-19.8
+i2c_nack_flag: 0
+78.8,61.5,69.5,-18.8
+i2c_nack_flag: 0
+78.5,60.9,69.0,-19.8
+i2c_nack_flag: 0
+77.9,60.9,68.5,-18.8
+i2c_nack_flag: 0
+78.3,61.0,69.0,-19.8
+i2c_nack_flag: 0
+78.2,60.6,69.0,-19.8
+i2c_nack_flag: 0
+77.7,61.5,69.0,-17.7
+i2c_nack_flag: 0
+78.6,61.3,69.5,-18.8
+i2c_nack_flag: 0
+78.8,62.4,70.0,-17.7
+i2c_nack_flag: 0
+80.5,63.4,71.5,-18.8
+i2c_nack_flag: 0
+80.3,64.1,72.0,-17.7
+i2c_nack_flag: 0
+79.8,64.8,71.5,-16.7
+i2c_nack_flag: 0
+79.9,64.5,71.5,-16.7
+i2c_nack_flag: 0
+79.1,64.3,71.5,-16.7
+i2c_nack_flag: 0
+78.3,64.6,71.0,-15.6
+i2c_nack_flag: 0
+81.4,61.1,71.0,-21.8
+i2c_nack_flag: 0
+80.0,49.9,64.5,-31.8
+i2c_nack_flag: 0
+95.2,62.7,78.5,-33.4
+i2c_nack_flag: 0
+145.5,118.0,131.5,-28.4
+i2c_nack_flag: 0
+195.3,280.4,237.5,59.5
+i2c_nack_flag: 0
+356.8,406.7,381.0,45.0
+i2c_nack_flag: 0
+528.1,454.4,491.0,-56.0
+i2c_nack_flag: 0
+698.4,563.4,630.5,-69.7
+i2c_nack_flag: 0
+455.1,658.1,556.5,76.2
+i2c_nack_flag: 0
+325.0,630.4,477.5,80.7
+i2c_nack_flag: 0
+245.8,377.5,311.0,69.3
+i2c_nack_flag: 0
+191.9,254.9,222.5,51.6
+i2c_nack_flag: 0
+148.7,575.3,361.5,83.3
+i2c_nack_flag: 0
+118.8,351.2,234.5,77.9
+i2c_nack_flag: 0
+97.7,218.7,157.5,67.5
+i2c_nack_flag: 0
+82.6,147.2,114.5,52.4
+i2c_nack_flag: 0
+76.4,290.3,183.0,76.8
+i2c_nack_flag: 0
+69.8,212.2,140.5,70.7
+i2c_nack_flag: 0
+61.9,156.9,108.5,62.2
+i2c_nack_flag: 0
+55.9,440.6,247.5,82.6
+i2c_nack_flag: 0
+55.2,702.3,378.5,85.6
+i2c_nack_flag: 0
+57.1,860.2,458.5,86.4
+i2c_nack_flag: 0
+59.1,954.1,506.5,86.8
+i2c_nack_flag: 0
+61.4,1012.5,536.5,87.0
+i2c_nack_flag: 0
+76.1,1049.5,562.5,87.1
+i2c_nack_flag: 0
+78.4,1075.7,576.5,87.1
+i2c_nack_flag: 0
+97.9,1089.8,593.0,87.1
+i2c_nack_flag: 0
+89.9,1099.5,594.0,87.2
+i2c_nack_flag: 0
+76.8,1105.7,590.5,87.2
+i2c_nack_flag: 0
+90.5,1111.4,600.5,87.2
+i2c_nack_flag: 0
+433.5,1116.0,774.5,85.8
+i2c_nack_flag: 0
+860.5,1121.2,990.5,79.2
+i2c_nack_flag: 0
+1121.5,1122.7,1121.5,1.1
+i2c_nack_flag: 0
+697.7,1124.8,910.5,83.3
+i2c_nack_flag: 0
+450.2,1127.3,788.5,85.8
+i2c_nack_flag: 0
+315.3,1129.2,722.0,86.5
+i2c_nack_flag: 0
+234.4,1131.1,682.5,86.8
+i2c_nack_flag: 0
+173.8,1130.3,651.5,87.0
+i2c_nack_flag: 0
+137.1,1127.8,632.0,87.1
+i2c_nack_flag: 0
+120.7,1127.9,623.5,87.2
+i2c_nack_flag: 0
+118.0,1130.7,623.5,87.2
+i2c_nack_flag: 0
+845.6,1131.2,988.0,80.1
+i2c_nack_flag: 0
+1127.4,1127.1,1127.0,-0.0
+i2c_nack_flag: 0
+1295.6,1123.5,1209.0,-73.8
+i2c_nack_flag: 0
+1389.0,1120.5,1254.0,-79.4
+i2c_nack_flag: 0
+1445.4,1114.3,1279.5,-81.4
+i2c_nack_flag: 0
+1474.4,1101.0,1287.0,-82.4
+i2c_nack_flag: 0
+1003.1,1101.8,1052.0,63.0
+i2c_nack_flag: 0
+1085.8,1107.5,1096.0,23.7
+i2c_nack_flag: 0
+829.1,1107.7,968.0,79.8
+i2c_nack_flag: 0
+1107.5,1109.4,1108.0,2.3
+i2c_nack_flag: 0
+1265.7,1109.2,1187.0,-72.2
+i2c_nack_flag: 0
+1359.8,1110.3,1234.5,-78.6
+i2c_nack_flag: 0
+1409.5,1107.8,1258.0,-80.6
+i2c_nack_flag: 0
+1419.3,1085.9,1252.0,-81.5
+i2c_nack_flag: 0
+1378.4,983.9,1180.5,-82.8
+i2c_nack_flag: 0
+1361.8,936.4,1148.5,-83.3
+i2c_nack_flag: 0
+1365.1,903.4,1134.0,-83.8
+i2c_nack_flag: 0
+1113.1,884.4,998.5,-77.7
+i2c_nack_flag: 0
+673.0,864.7,768.5,75.3
+i2c_nack_flag: 0
+415.0,608.0,511.5,75.5
+i2c_nack_flag: 0
+255.0,365.6,310.0,65.6
+i2c_nack_flag: 0
+170.2,231.4,200.5,50.7
+i2c_nack_flag: 0
+i2c_nack_flag: 1
+[0;31mE (16258) i2c.master: Cannot delete I2C bus(0): devices are still attached, please remove all devices and then delete bus[0m
+[0;32mI (16258) initial_operation: Bus is clear. No recovery needed.[0m
+[0;31mE (16268) i2c.common: I2C bus id(0) has already been acquired[0m
+[0;31mE (16278) i2c.common: acquire bus failed[0m
+[0;31mE (16288) i2c.master: i2c_new_master_bus(976): I2C bus acquire failed[0m
+[0;31mE (16288) i2c.common: i2c_release_bus_handle(248): Bus not freed entirely[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x103 (ESP_ERR_INVALID_STATE) at 0x400db7e1
+file: "./main/initial_operation.cpp" line 128
+func: void i2c_master_stm_register()
+expression: i2c_new_master_bus(&bus_config, _bus_handle)
+
+abort() was called at PC 0x400925fb on core 0
+
+
+Backtrace: 0x40081c51:0x3ffd75c0 0x40092605:0x3ffd75e0 0x40098dad:0x3ffd7600 0x400925fb:0x3ffd7670 0x400db7e1:0x3ffd76a0 0x4013098b:0x3ffd7700 0x401309d7:0x3ffd7720 0x400930bd:0x3ffd7740
+
+
+
+
+ELF file SHA256: afb1f1412
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 31 2025 22:07:17[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d610h (185872) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=0003d638 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (152) esp_image: segment 2: paddr=0003d660 vaddr=3ffbdb60 size=029b8h ( 10680) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a6bc0h (682944) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e6be8 vaddr=3ffc0518 size=0202ch (  8236) load[0m
+[0;32mI (399) esp_image: segment 5: paddr=000e8c1c vaddr=40080000 size=1bb3ch (113468) load[0m
+[0;32mI (457) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (457) boot: Disabling RNG early entropy source...[0m
+[0;32mI (468) cpu_start: Multicore app[0m
+[0;32mI (476) cpu_start: Pro cpu start user code[0m
+[0;32mI (476) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (477) app_init: Application information:[0m
+[0;32mI (479) app_init: Project name:     esp32[0m
+[0;32mI (484) app_init: App version:      5b23221-dirty[0m
+[0;32mI (489) app_init: Compile time:     Sep  3 2025 12:04:59[0m
+[0;32mI (495) app_init: ELF file SHA256:  afb1f1412...[0m
+[0;32mI (501) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (505) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (510) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (515) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (520) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (527) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (545) heap_init: At 3FFCA638 len 000159C8 (86 KiB): DRAM[0m
+[0;32mI (552) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (558) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (564) heap_init: At 4009BB3C len 000044C4 (17 KiB): IRAM[0m
+[0;32mI (572) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;33mW (579) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (595) coexist: coex firmware version: 831ec70[0m
+[0;32mI (598) main_task: Started on CPU0[0m
+[0;32mI (608) main_task: Calling app_main()[0m
+[0;32mI (618) BTDM_INIT: BT controller compile version [b992c7d][0m
+[0;32mI (618) BTDM_INIT: Bluetooth MAC: ec:e3:34:90:d8:ee[0m
+[0;32mI (618) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (1278) BT_INIT: Bluetooth initialized successfully in dual mode.[0m
+
+   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$        /$$$$$$   /$$$$$$ 
+  /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$__  $$|_  $$_/       /$$__  $$ /$$__  $$ 
+ | $$  \__/| $$  \ $$| $$  \__/| $$  \ $$| $$  \ $$  | $$        | $$  \ $$| $$  \__/ 
+ |  $$$$$$ | $$$$$$$$|  $$$$$$ | $$  | $$| $$$$$$$/  | $$        | $$  | $$|  $$$$$$  
+  \____  $$| $$__  $$ \____  $$| $$  | $$| $$__  $$  | $$        | $$  | $$ \____  $$ 
+  /$$  \ $$| $$  | $$ /$$  \ $$| $$  | $$| $$  \ $$  | $$        | $$  | $$ /$$  \ $$ 
+ |  $$$$$$/| $$  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$      |  $$$$$$/|  $$$$$$/ 
+  \______/ |__/  |__/ \______/  \______/ |__/  |__/|______/       \______/  \______/                                                                                    
+[0;32mI (1438) initial_operation: Checking I2C bus status before initialization...[0m
+[0;32mI (1438) initial_operation: Bus is clear. No recovery needed.[0m
+[0;33mW (1448) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (1668) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (1668) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1668) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1678) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to detect and initialize sensor0!
+[0;32mI (1688) PS3_SPP: ESP_SPP_INIT_EVT[0m
+[0;32mI (1708) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDC Initialized[0m
+[0;32mI (1718) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDI Initialized[0m
+[0;32mI (1718) BLE_HANDLER: create_service requested[0m
+[0;32mI (1718) BLE_HANDLER: Service created, handle=40[0m
+[0;32mI (1728) BLE_HANDLER: start_service ok[0m
+[0;32mI (1728) BLE_HANDLER: add_char requested[0m
+[0;32mI (1738) BLE_HANDLER: GATT service started[0m
+[0;32mI (1748) BLE_HANDLER: BLE advertising started[0m
+[0;32mI (1748) BLE_HANDLER: CHAR added: handle=42 (prop=0x0a)[0m
+[0;32mI (1718) BleServer: BLE GATT server init done[0m

@@ -1,0 +1,433 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ESP32\build\esp32.elf C:\GitHub\Firmware\src\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 31 2025 22:07:17[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d7c0h (186304) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=0003d7e8 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (152) esp_image: segment 2: paddr=0003d810 vaddr=3ffbdb60 size=02808h ( 10248) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a6d3ch (683324) map[0m
+[0;32mI (396) esp_image: segment 4: paddr=000e6d64 vaddr=3ffc0368 size=021dch (  8668) load[0m
+[0;32mI (400) esp_image: segment 5: paddr=000e8f48 vaddr=40080000 size=1bb3ch (113468) load[0m
+[0;32mI (458) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (458) boot: Disabling RNG early entropy source...[0m
+[0;32mI (468) cpu_start: Multicore app[0m
+[0;32mI (477) cpu_start: Pro cpu start user code[0m
+[0;32mI (477) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (477) app_init: Application information:[0m
+[0;32mI (480) app_init: Project name:     esp32[0m
+[0;32mI (485) app_init: App version:      5b23221-dirty[0m
+[0;32mI (490) app_init: Compile time:     Sep  3 2025 12:04:59[0m
+[0;32mI (496) app_init: ELF file SHA256:  b5713ec77...[0m
+[0;32mI (501) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (506) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (511) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (515) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (521) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (528) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (534) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (540) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (546) heap_init: At 3FFCA638 len 000159C8 (86 KiB): DRAM[0m
+[0;32mI (552) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (558) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (565) heap_init: At 4009BB3C len 000044C4 (17 KiB): IRAM[0m
+[0;32mI (573) spi_flash: detected chip: generic[0m
+[0;32mI (576) spi_flash: flash io: dio[0m
+[0;33mW (580) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (595) coexist: coex firmware version: 831ec70[0m
+[0;32mI (599) main_task: Started on CPU0[0m
+[0;32mI (609) main_task: Calling app_main()[0m
+[0;32mI (619) BTDM_INIT: BT controller compile version [b992c7d][0m
+[0;32mI (619) BTDM_INIT: Bluetooth MAC: ec:e3:34:90:d8:ee[0m
+[0;32mI (619) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (1279) BT_INIT: Bluetooth initialized successfully in dual mode.[0m
+
+   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$        /$$$$$$   /$$$$$$ 
+  /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$__  $$|_  $$_/       /$$__  $$ /$$__  $$ 
+ | $$  \__/| $$  \ $$| $$  \__/| $$  \ $$| $$  \ $$  | $$        | $$  \ $$| $$  \__/ 
+ |  $$$$$$ | $$$$$$$$|  $$$$$$ | $$  | $$| $$$$$$$/  | $$        | $$  | $$|  $$$$$$  
+  \____  $$| $$__  $$ \____  $$| $$  | $$| $$__  $$  | $$        | $$  | $$ \____  $$ 
+  /$$  \ $$| $$  | $$ /$$  \ $$| $$  | $$| $$  \ $$  | $$        | $$  | $$ /$$  \ $$ 
+ |  $$$$$$/| $$  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$      |  $$$$$$/|  $$$$$$/ 
+  \______/ |__/  |__/ \______/  \______/ |__/  |__/|______/       \______/  \______/                                                                                    
+[0;32mI (1449) initial_operation: Checking I2C bus status before initialization...[0m
+[0;32mI (1449) initial_operation: Bus is clear. No recovery needed.[0m
+[0;33mW (1459) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+Initialization with _bus_handle: 0x3ffd540c
+[0;31mE (1679) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1679) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1689) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1809) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1809) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1819) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+setting i2c finished
+[0;32mI (1839) PS3_SPP: ESP_SPP_INIT_EVT[0m
+[0;32mI (1869) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDC Initialized[0m
+[0;32mI (1869) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDI Initialized[0m
+[0;32mI (1869) BLE_HANDLER: create_service requested[0m
+[0;31mE (1879) i2c.master: I2C software timeout[0m
+[0;31mE (1889) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;32mI (1889) BLE_HANDLER: Service created, handle=40[0m
+[0;31mE (1899) i2c.master: i2c_master_receive(1268): I2C transaction failed[0m
+[0;32mI (1899) BLE_HANDLER: start_service ok[0m
+[0;32mI (1909) BLE_HANDLER: add_char requested[0m
+[0;32mI (1909) BLE_HANDLER: GATT service started[0m
+[0;32mI (1909) BLE_HANDLER: BLE advertising started[0m
+874.0,515.6,694.5,-82.1
+[0;32mI (1929) BLE_HANDLER: CHAR added: handle=42 (prop=0x0a)[0m
+i2c_nack_flag: 0
+[0;32mI (1869) BleServer: BLE GATT server init done[0m
+1392.4,824.6,1108.0,-85.0
+i2c_nack_flag: 0
+1710.6,1010.3,1360.0,-85.9
+i2c_nack_flag: 0
+1897.6,1121.4,1509.0,-86.3
+i2c_nack_flag: 0
+2009.4,1188.0,1598.5,-86.5
+i2c_nack_flag: 0
+2077.2,1228.4,1652.5,-86.6
+i2c_nack_flag: 0
+2117.9,1252.7,1684.5,-86.7
+i2c_nack_flag: 0
+2142.4,1266.8,1704.0,-86.7
+i2c_nack_flag: 0
+2157.0,1274.9,1715.5,-86.8
+i2c_nack_flag: 0
+2165.4,1280.1,1722.5,-86.8
+i2c_nack_flag: 0
+2172.8,1284.1,1728.0,-86.8
+i2c_nack_flag: 0
+2173.7,1286.0,1729.5,-86.8
+i2c_nack_flag: 0
+2178.2,1286.8,1732.0,-86.8
+i2c_nack_flag: 0
+1323.7,847.3,1085.0,-84.0
+i2c_nack_flag: 0
+i2c_nack_flag: 1
+[0;32mI (3649) initial_operation: Bus is clear. No recovery needed.[0m
+I2C bus recovery succeeded.
+[0;33mW (3649) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (4259) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4259) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4259) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4269) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (4289) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4289) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4299) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4299) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (4279) VL53L1X: Failed to find expected ID register value. ID=0x0000[0m
+Failed to detect and initialize sensor0!
+Initialization with _bus_handle: 0x3ffd540c
+[0;31mE (4449) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4449) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4449) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4459) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4469) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (4469) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (4479) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (4489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (4499) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (4499) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (4509) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (4509) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_ARG[0m
+i2c_nack_flag: 1
+[0;33mW (4729) VL53L1X: Bus is already removed[0m
+[0;32mI (4729) initial_operation: Bus is clear. No recovery needed.[0m
+I2C bus recovery succeeded.
+[0;33mW (4729) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (5349) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5349) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5349) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5359) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (5369) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5369) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5389) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5389) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (5369) VL53L1X: Failed to find expected ID register value. ID=0x0000[0m
+Failed to detect and initialize sensor0!
+Initialization with _bus_handle: 0x3ffd540c
+[0;31mE (5549) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5549) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5549) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5559) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5569) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (5569) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (5579) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (5589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (5599) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (5599) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (5609) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (5619) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_ARG[0m
+i2c_nack_flag: 1
+[0;33mW (5829) VL53L1X: Bus is already removed[0m
+[0;32mI (5829) initial_operation: Bus is clear. No recovery needed.[0m
+I2C bus recovery succeeded.
+[0;33mW (5829) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (6449) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6449) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6449) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6459) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (6469) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6479) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6489) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6489) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (6469) VL53L1X: Failed to find expected ID register value. ID=0x0000[0m
+Failed to detect and initialize sensor0!
+Initialization with _bus_handle: 0x3ffd540c
+[0;31mE (6649) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6649) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6649) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6659) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6659) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (6679) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (6679) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (6689) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (6699) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (6699) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (6709) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (6719) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_ARG[0m
+i2c_nack_flag: 1
+[0;33mW (6929) VL53L1X: Bus is already removed[0m
+[0;32mI (6929) initial_operation: Bus is clear. No recovery needed.[0m
+I2C bus recovery succeeded.
+[0;33mW (6929) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (7549) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7549) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7549) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7559) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (7579) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7579) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7589) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7589) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (7579) VL53L1X: Failed to find expected ID register value. ID=0x0000[0m
+Failed to detect and initialize sensor0!
+Initialization with _bus_handle: 0x3ffd540c
+[0;31mE (7749) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7749) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7749) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7759) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7769) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (7769) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (7769) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (7789) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (7799) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (7799) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (7809) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (7809) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_ARG[0m
+i2c_nack_flag: 1
+[0;33mW (8029) VL53L1X: Bus is already removed[0m
+[0;32mI (8029) initial_operation: Bus is clear. No recovery needed.[0m
+I2C bus recovery succeeded.
+[0;33mW (8029) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (8649) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8649) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8649) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8659) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (8669) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8679) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8689) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8689) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (8669) VL53L1X: Failed to find expected ID register value. ID=0x0000[0m
+Failed to detect and initialize sensor0!
+Initialization with _bus_handle: 0x3ffd540c
+[0;31mE (8849) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8849) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8849) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8859) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (8879) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (8879) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (8889) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (8899) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (8899) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (8919) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (8919) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_ARG[0m
+i2c_nack_flag: 1
+[0;33mW (9129) VL53L1X: Bus is already removed[0m
+[0;32mI (9129) initial_operation: Bus is clear. No recovery needed.[0m
+I2C bus recovery succeeded.
+[0;33mW (9129) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (9749) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9749) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9749) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9759) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (9769) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9769) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9789) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9789) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (9769) VL53L1X: Failed to find expected ID register value. ID=0x0000[0m
+Failed to detect and initialize sensor0!
+Initialization with _bus_handle: 0x3ffd540c
+[0;31mE (9949) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9949) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9949) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9959) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9959) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (9979) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (9979) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (9989) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (9999) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (9999) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (10009) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (10019) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_ARG[0m
+i2c_nack_flag: 1
+[0;33mW (10229) VL53L1X: Bus is already removed[0m
+[0;32mI (10229) initial_operation: Bus is clear. No recovery needed.[0m
+I2C bus recovery succeeded.
+[0;33mW (10229) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (10849) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10849) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10849) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10859) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (10869) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (10869) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (10889) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (10889) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (10869) VL53L1X: Failed to find expected ID register value. ID=0x0000[0m
+Failed to detect and initialize sensor0!
+Initialization with _bus_handle: 0x3ffd540c
+[0;31mE (11049) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11049) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11049) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11059) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11079) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11079) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11089) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (11099) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (11099) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (11119) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (11119) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_ARG[0m
+i2c_nack_flag: 1
+[0;33mW (11329) VL53L1X: Bus is already removed[0m
+[0;32mI (11329) initial_operation: Bus is clear. No recovery needed.[0m
+I2C bus recovery succeeded.
+[0;33mW (11329) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (11949) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11949) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11949) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11959) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (11969) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (11979) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (11989) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (11989) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (11969) VL53L1X: Failed to find expected ID register value. ID=0x0000[0m
+Failed to detect and initialize sensor0!
+Initialization with _bus_handle: 0x3ffd540c
+[0;31mE (12149) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12149) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12149) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12169) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (12169) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (12179) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (12189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (12199) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (12199) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (12209) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (12219) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_ARG[0m
+i2c_nack_flag: 1
+[0;33mW (12429) VL53L1X: Bus is already removed[0m
+[0;32mI (12429) initial_operation: Bus is clear. No recovery needed.[0m
+I2C bus recovery succeeded.
+[0;33mW (12429) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (13049) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (13049) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (13049) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (13059) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (13079) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (13079) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (13089) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (13089) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (13069) VL53L1X: Failed to find expected ID register value. ID=0x0000[0m
+Failed to detect and initialize sensor0!
+Initialization with _bus_handle: 0x3ffd540c
+[0;31mE (13249) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (13249) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (13249) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (13259) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (13269) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (13269) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (13279) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (13289) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (13299) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (13299) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (13309) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (13309) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_ARG[0m
+i2c_nack_flag: 1
+[0;33mW (13529) VL53L1X: Bus is already removed[0m
+[0;32mI (13529) initial_operation: Bus is clear. No recovery needed.[0m
+I2C bus recovery succeeded.
+[0;33mW (13529) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (14149) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (14149) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (14149) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (14159) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (14169) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (14179) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (14189) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (14189) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+Failed to write register address 0x010F with error code 103
+[0;31mE (14169) VL53L1X: Failed to find expected ID register value. ID=0x0000[0m
+Failed to detect and initialize sensor0!
+Initialization with _bus_handle: 0x3ffd540c
+[0;31mE (14349) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (14349) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (14349) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (14359) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (14369) i2c.master: I2C hardware NACK detected[0m
+[0;31mE (14369) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (14379) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (14389) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (14399) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_STATE[0m
+[0;31mE (14399) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (14409) i2c.master: i2c_master_transmit(1223): i2c handle not initialized[0m
+[0;31mE (14419) VL53L1X: Failed to write reg addr: ESP_ERR_INVALID_ARG[0m
+i2c_nack_flag: 1
+[0;33mW (14629) VL53L1X: Bus is already removed[0m
+[0;32mI (14629) initial_operation: Bus is clear. No recovery needed.[0m
+I2C bus recovery succeeded.
+[0;33mW (14629) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m

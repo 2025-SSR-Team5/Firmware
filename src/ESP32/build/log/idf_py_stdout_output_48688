@@ -1,0 +1,404 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ESP32\build\esp32.elf C:\GitHub\Firmware\src\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 31 2025 22:07:17[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d488h (185480) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=0003d4b0 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0003d4d8 vaddr=3ffbdb60 size=02b40h ( 11072) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a5704h (677636) map[0m
+[0;32mI (394) esp_image: segment 4: paddr=000e572c vaddr=3ffc06a0 size=01ea4h (  7844) load[0m
+[0;32mI (397) esp_image: segment 5: paddr=000e75d8 vaddr=40080000 size=1bb3ch (113468) load[0m
+[0;32mI (456) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (456) boot: Disabling RNG early entropy source...[0m
+[0;32mI (466) cpu_start: Multicore app[0m
+[0;32mI (475) cpu_start: Pro cpu start user code[0m
+[0;32mI (475) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (475) app_init: Application information:[0m
+[0;32mI (478) app_init: Project name:     esp32[0m
+[0;32mI (482) app_init: App version:      5b23221-dirty[0m
+[0;32mI (488) app_init: Compile time:     Sep  3 2025 12:04:59[0m
+[0;32mI (494) app_init: ELF file SHA256:  d53fcfb76...[0m
+[0;32mI (499) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (504) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (508) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (513) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (518) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (525) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (537) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (544) heap_init: At 3FFCA5F0 len 00015A10 (86 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (556) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (563) heap_init: At 4009BB3C len 000044C4 (17 KiB): IRAM[0m
+[0;32mI (570) spi_flash: detected chip: generic[0m
+[0;32mI (573) spi_flash: flash io: dio[0m
+[0;33mW (577) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (593) coexist: coex firmware version: 831ec70[0m
+[0;32mI (597) main_task: Started on CPU0[0m
+[0;32mI (607) main_task: Calling app_main()[0m
+[0;32mI (617) BTDM_INIT: BT controller compile version [b992c7d][0m
+[0;32mI (617) BTDM_INIT: Bluetooth MAC: ec:e3:34:90:d8:ee[0m
+[0;32mI (617) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (1277) BT_INIT: Bluetooth initialized successfully in dual mode.[0m
+
+   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$        /$$$$$$   /$$$$$$ 
+  /$$__  $$ /$$__  $$ /$$__  $$ /$$__  $$| $$__  $$|_  $$_/       /$$__  $$ /$$__  $$ 
+ | $$  \__/| $$  \ $$| $$  \__/| $$  \ $$| $$  \ $$  | $$        | $$  \ $$| $$  \__/ 
+ |  $$$$$$ | $$$$$$$$|  $$$$$$ | $$  | $$| $$$$$$$/  | $$        | $$  | $$|  $$$$$$  
+  \____  $$| $$__  $$ \____  $$| $$  | $$| $$__  $$  | $$        | $$  | $$ \____  $$ 
+  /$$  \ $$| $$  | $$ /$$  \ $$| $$  | $$| $$  \ $$  | $$        | $$  | $$ /$$  \ $$ 
+ |  $$$$$$/| $$  | $$|  $$$$$$/|  $$$$$$/| $$  | $$ /$$$$$$      |  $$$$$$/|  $$$$$$/ 
+  \______/ |__/  |__/ \______/  \______/ |__/  |__/|______/       \______/  \______/                                                                                    
+[0;32mI (1447) initial_operation: Checking I2C bus status before initialization...[0m
+[0;32mI (1447) initial_operation: Bus is clear. No recovery needed.[0m
+[0;33mW (1457) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;31mE (1677) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1677) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1687) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[0;31mE (1807) i2c.master: I2C transaction unexpected nack detected[0m
+[0;31mE (1807) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (1817) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+setting i2c finished
+[0;32mI (1837) PS3_SPP: ESP_SPP_INIT_EVT[0m
+[0;32mI (1857) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDC Initialized[0m
+[0;32mI (1867) PS3_L2CAP: [ps3_l2cap_init_service] Service PS3-HIDI Initialized[0m
+[0;32mI (1867) BLE_HANDLER: create_service requested[0m
+[0;32mI (1887) BLE_HANDLER: Service created, handle=40[0m
+[0;32mI (1887) BLE_HANDLER: start_service ok[0m
+[0;32mI (1887) BLE_HANDLER: add_char requested[0m
+[0;32mI (1897) BLE_HANDLER: GATT service started[0m
+[0;32mI (1897) BLE_HANDLER: BLE advertising started[0m
+858769830,9 
+[0;32mI (1897) BLE_HANDLER: CHAR added: handle=42 (prop=0x0a)[0m
+[0;32mI (1867) BleServer: BLE GATT server init done[0m
+687015864,7 
+[0;31mE (2067) i2c.master: I2C software timeout[0m
+[0;31mE (2067) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2067) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+549612693,7 
+439690156,7 
+[0;31mE (2257) i2c.master: I2C software timeout[0m
+[0;31mE (2257) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2257) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+351752130,7 
+281401709,7 
+[0;31mE (2447) i2c.master: I2C software timeout[0m
+[0;31mE (2447) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[0;31mE (2447) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+225121372,7 
+180097103,7 
+144077687,7 
+115262155,7 
+92209729,7 
+73767788,7 
+59014235,7 
+47211393,7 
+37769120,8 
+30215301,8 
+24172246,8 
+19337801,8 
+15470246,8 
+12376202,8 
+9900967,8 
+7920779,8 
+6336628,8 
+5069308,8 
+4055452,8 
+3244367,8 
+2595499,8 
+2076404,8 
+1661128,8 
+1328907,8 
+1063131,8 
+850510,9 
+680413,9 
+544335,9 
+435473,9 
+348384,9 
+278713,9 
+222975,8 
+178385,8 
+142713,8 
+114175,8 
+91346,8 
+73082,8 
+58471,8 
+46782,8 
+37431,8 
+29950,8 
+23965,8 
+19178,8 
+15348,8 
+12283,8 
+9831,8 
+7870,8 
+6301,8 
+5046,8 
+4042,8 
+3239,8 
+2596,8 
+2082,8 
+1671,8 
+1342,8 
+1079,8 
+868,8 
+699,8 
+564,8 
+456,8 
+370,8 
+301,8 
+246,8 
+202,8 
+166,8 
+138,8 
+116,8 
+98,8 
+84,8 
+72,8 
+63,8 
+55,8 
+49,8 
+44,8 
+40,8 
+37,8 
+34,8 
+32,8 
+31,8 
+30,8 
+29,8 
+29,8 
+28,8 
+28,8 
+27,8 
+27,8 
+27,8 
+26,7 
+26,7 
+26,7 
+26,7 
+26,7 
+26,7 
+26,7 
+26,7 
+26,7 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,9 
+26,9 
+26,9 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,8 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,8 
+26,8 
+26,8 
+26,8 
+26,9 
+26,8 
+26,8 
+25,8 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,10 
+25,10 
+25,10 
+25,10 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,8 
+25,8 
+25,8 
+25,8 
+25,8 
+25,8 
+25,8 
+25,8 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,9 
+25,8 
+25,8 
+25,8 
+25,8 
+25,8 
+25,8 
+25,8 
+25,8 
+25,8 
+25,8 
+25,8 
+25,8 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 
+26,9 

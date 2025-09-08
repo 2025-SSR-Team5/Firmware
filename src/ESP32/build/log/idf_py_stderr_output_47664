@@ -1,0 +1,28 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ESP32\build\esp32.elf C:\GitHub\Firmware\src\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.7.0 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40081c51: [0;33mpanic_abort[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x40092605: [0;33mesp_system_abort[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x40093466: [0;33mvApplicationStackOverflowHook[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m563[0m
+[0m--- 0x400947ab: [0;33mvTaskSwitchContext[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m3698[0m
+[0m--- 0x40093570: [0;33m_frxt_dispatch[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S[0m[0m:[1;31m451[0m
+[0m--- 0x40093522: [0;33m_frxt_int_exit[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S[0m[0m:[1;31m246[0m
+[0m--- 0x40163a09: [0;33m_vfprintf_r[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c[0m[0m:[1;31m861[0m
+[0m--- 0x4015bdc9: [0;33mvprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c[0m[0m:[1;31m34[0m
+[0m--- 0x40098bfb: [0;33mesp_log_va[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/log/src/log.c[0m[0m:[1;31m43[0m
+[0m--- (inlined by) [0;33mesp_log[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/log/src/log.c[0m[0m:[1;31m88[0m
+[0m--- 0x40172b21: [0;33mi2c_master_multi_buffer_transmit[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m1214[0m
+[0m--- 0x40172bd6: [0;33mi2c_master_transmit[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m1229[0m
+[0m--- 0x40130452: [0;33mVL53L1X::readReg(VL53L1X::regAddr)[0m[0m at [0;32mC:/GitHub/Firmware/components/vl53l1x-arduino/src/VL53L1X.cpp[0m[0m:[1;31m225[0m
+[0m--- 0x4013078a: [0;33mVL53L1X::dataReady()[0m[0m at [0;32mC:/GitHub/Firmware/components/vl53l1x-arduino/src/include/VL53L1X.hpp[0m[0m:[1;31m1310[0m
+[0m--- (inlined by) [0;33mVL53L1X::read(bool)[0m[0m at [0;32mC:/GitHub/Firmware/components/vl53l1x-arduino/src/VL53L1X.cpp[0m[0m:[1;31m587[0m
+[0m--- 0x4013015e: [0;33mToF_Lidar::read_sensors()[0m[0m at [0;32mC:/GitHub/Firmware/components/ToF_Lidar/Lidar.cpp[0m[0m:[1;31m94[0m
+[0m--- 0x401302f9: [0;33mToF_Lidar::lidar_task(void*)[0m[0m at [0;32mC:/GitHub/Firmware/components/ToF_Lidar/Lidar.cpp[0m[0m:[1;31m66[0m
+[0m--- 0x400930bd: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m

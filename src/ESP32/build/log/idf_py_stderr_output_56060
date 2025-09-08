@@ -1,0 +1,20 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ESP32\build\esp32.elf C:\GitHub\Firmware\src\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.7.0 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x400db7f5: [0;33mi2c_master_stm_register()[0m[0m at [0;32mC:/GitHub/Firmware/src/ESP32/main/initial_operation.cpp[0m[0m:[1;31m128[0m
+[0m--- 0x400925fb: [0;33m_esp_error_check_failed[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0m--- 0x40081c51: [0;33mpanic_abort[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x40092605: [0;33mesp_system_abort[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x40098dad: [0;33mabort[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/newlib/src/abort.c[0m[0m:[1;31m38[0m
+[0m--- 0x400925fb: [0;33m_esp_error_check_failed[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_system/esp_err.c[0m[0m:[1;31m49[0m
+[0m--- 0x400db7f5: [0;33mi2c_master_stm_register()[0m[0m at [0;32mC:/GitHub/Firmware/src/ESP32/main/initial_operation.cpp[0m[0m:[1;31m128[0m
+[0m--- 0x40130a42: [0;33mToF_Lidar::reset_i2c_bus()[0m[0m at [0;32mC:/GitHub/Firmware/components/ToF_Lidar/Lidar.cpp[0m[0m:[1;31m187[0m
+[0m--- 0x40130a8f: [0;33mToF_Lidar::lidar_task(void*)[0m[0m at [0;32mC:/GitHub/Firmware/components/ToF_Lidar/Lidar.cpp[0m[0m:[1;31m54[0m
+[0m--- 0x400930bd: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m

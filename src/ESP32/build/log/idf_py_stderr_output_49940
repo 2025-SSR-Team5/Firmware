@@ -1,0 +1,28 @@
+Command: C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\takeu\esp\v5.5\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\GitHub\Firmware\src\ESP32\build\esp32.elf C:\GitHub\Firmware\src\ESP32\build\bootloader\bootloader.elf --force-color -m 'C:\Users\takeu\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\takeu\esp\v5.5\esp-idf\tools\idf.py'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.7.0 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x40133aa6: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x40133ebc: [0;33mtask_wdt_isr[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x400839b9: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4000bfed: [0;33m_xtos_set_intlevel[0m[0m in [0;32mROM[0m
+[0m--- 0x4009341a: [0;33mvPortClearInterruptMaskFromISR[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h[0m[0m:[1;31m560[0m
+[0m--- (inlined by) [0;33mvPortExitCritical[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m514[0m
+[0m--- 0x4009767e: [0;33mvPortExitCriticalSafe[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h[0m[0m:[1;31m596[0m
+[0m--- (inlined by) [0;33mmulti_heap_internal_unlock[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/heap/multi_heap.c[0m[0m:[1;31m176[0m
+[0m--- 0x400976ca: [0;33mmulti_heap_malloc_impl[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/heap/multi_heap.c[0m[0m:[1;31m224[0m
+[0m--- 0x40082361: [0;33maligned_or_unaligned_alloc[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/heap/heap_caps_base.c[0m[0m:[1;31m93[0m
+[0m--- 0x40082485: [0;33mheap_caps_aligned_alloc_base[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/heap/heap_caps_base.c[0m[0m:[1;31m175[0m
+[0m--- 0x400824b5: [0;33mheap_caps_malloc_base[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/heap/heap_caps_base.c[0m[0m:[1;31m202[0m
+[0m--- 0x40082144: [0;33mheap_caps_malloc[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/heap/heap_caps.c[0m[0m:[1;31m84[0m
+[0m--- 0x40093701: [0;33mpvPortMalloc[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/heap_idf.c[0m[0m:[1;31m55[0m
+[0m--- 0x40095b21: [0;33mxTaskCreatePinnedToCore[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/esp_additions/freertos_tasks_c_additions.h[0m[0m:[1;31m231[0m
+[0m--- 0x40130bd6: [0;33mToF_Lidar::start_task()[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h[0m[0m:[1;31m394[0m
+[0m--- (inlined by) [0;33mToF_Lidar::start_task()[0m[0m at [0;32mC:/GitHub/Firmware/components/ToF_Lidar/Lidar.cpp[0m[0m:[1;31m225[0m
+[0m--- 0x400db349: [0;33mapp_main[0m[0m at [0;32mC:/GitHub/Firmware/src/ESP32/main/main.cpp[0m[0m:[1;31m178[0m
+[0m--- 0x40174d54: [0;33mmain_task[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x400930bd: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/takeu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m

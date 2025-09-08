@@ -12,6 +12,7 @@
 #include "esp_rom_sys.h"
 
 i2c_master_dev_handle_t dev_STM32;
+i2c_master_bus_handle_t *_bus_handle = nullptr;
 
 const char *banner = R"(
    /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$        /$$$$$$   /$$$$$$ 
@@ -26,62 +27,51 @@ const char *banner = R"(
 
 static const char *TAG = "initial_operation";
 
-void i2c_master_bus_recover(gpio_num_t sda_pin, gpio_num_t scl_pin)
+bool i2c_master_bus_recover()
 {
-    // --- 1. GPIOの準備 ---
-    // I2Cドライバが制御する前に、ピンを汎用ポートとして設定
+    gpio_num_t sda_pin = static_cast<gpio_num_t>(I2C_SDA_IO);
+    gpio_num_t scl_pin = static_cast<gpio_num_t>(I2C_SCL_IO);
+
     gpio_reset_pin(sda_pin);
     gpio_reset_pin(scl_pin);
     
-    // SDAピンは状態を読み取るため、プルアップ付き入力に設定
     gpio_set_direction(sda_pin, GPIO_MODE_INPUT);
     gpio_set_pull_mode(sda_pin, GPIO_PULLUP_ONLY);
     
-    // SCLピンはクロックを生成するため、出力に設定
     gpio_set_direction(scl_pin, GPIO_MODE_OUTPUT);
 
-    // --- 2. バスの状態を確認 ---
-    // 少し待ってからSDAの状態を確認
     esp_rom_delay_us(5); 
     if (gpio_get_level(sda_pin) == 1) {
         ESP_LOGI(TAG, "Bus is clear. No recovery needed.");
-        // ドライバが使えるようにピンをリセットして終了
         gpio_reset_pin(sda_pin);
         gpio_reset_pin(scl_pin);
-        return;
+        return true;
     }
 
     ESP_LOGW(TAG, "SDA line is stuck low. Starting recovery sequence...");
 
-    // --- 3. ダミークロックの送出とSDAの監視 ---
     bool recovered = false;
-    // 無限ループを防ぐため、最大でも18回程度クロックを送る
+
     for (int i = 0; i < 18; i++) {
-        // SCLをLOW→HIGHとトグルしてクロックを1つ生成
-        gpio_set_level(scl_pin, 0);
-        esp_rom_delay_us(5);
         gpio_set_level(scl_pin, 1);
         esp_rom_delay_us(5);
+        gpio_set_level(scl_pin, 0);
+        esp_rom_delay_us(5);
 
-        // クロックをHIGHにしたタイミングでSDAの状態を監視
         if (gpio_get_level(sda_pin) == 1) {
-            // ★★★ SDAがHighになった時がチャンス！ ★★★
             ESP_LOGI(TAG, "Slave released SDA line after %d clock pulses.", i + 1);
             recovered = true;
-            break; // ダミークロックの送出を終了
+            break;
         }
     }
 
-    // --- 4. STOPコンディションの生成 ---
     if (recovered) {
-        // SDAを操作するため、出力モードに切り替え
         gpio_set_direction(sda_pin, GPIO_MODE_OUTPUT);
         
-        // SCLがHIGHの状態で、SDAをLOWからHIGHに遷移させる (STOPコンディション)
-        gpio_set_level(scl_pin, 1); // SCLはHIGHのはずだが念のため
         gpio_set_level(sda_pin, 0);
         esp_rom_delay_us(5);
-        gpio_set_level(sda_pin, 1); // これがSTOP
+        gpio_set_level(scl_pin, 1);
+        gpio_set_level(sda_pin, 1);
         esp_rom_delay_us(5);
 
         ESP_LOGI(TAG, "STOP condition sent. Bus should be reset.");
@@ -89,10 +79,10 @@ void i2c_master_bus_recover(gpio_num_t sda_pin, gpio_num_t scl_pin)
         ESP_LOGE(TAG, "Recovery failed. Slave did not release SDA line.");
     }
 
-    // --- 5. クリーンアップ ---
-    // I2Cドライバが正しくピンを制御できるように、GPIO設定をリセット
     gpio_reset_pin(sda_pin);
     gpio_reset_pin(scl_pin);
+
+    return recovered;
 }
 
 void hello_STM32(i2c_master_bus_handle_t *bus_handle, i2c_master_dev_handle_t dev_STM32){
@@ -127,8 +117,45 @@ void hello_STM32(i2c_master_bus_handle_t *bus_handle, i2c_master_dev_handle_t de
     }
 }
 
+void i2c_master_stm_register(){
+    i2c_master_bus_config_t bus_config = {};
+    bus_config.i2c_port = I2C_PORT;
+    bus_config.clk_source = I2C_CLK_SRC_DEFAULT;
+    bus_config.sda_io_num = static_cast<gpio_num_t>(I2C_SDA_IO);
+    bus_config.scl_io_num = static_cast<gpio_num_t>(I2C_SCL_IO);
+    bus_config.glitch_ignore_cnt = 7;
+
+    ESP_ERROR_CHECK(i2c_new_master_bus(&bus_config, _bus_handle));
+
+    //i2c_master_dev_handle_t dev_STM32;
+    i2c_device_config_t dev_cfg = {
+        .dev_addr_length = I2C_ADDR_BIT_LEN_7,
+        .device_address = STM32ADDR,
+        .scl_speed_hz = STM32_CLK_SPEED,
+    };
+    ESP_ERROR_CHECK(i2c_master_bus_add_device(*_bus_handle, &dev_cfg, &dev_STM32));
+}
+
+void remove_i2c_master_stm_register(){
+    if (dev_STM32 != NULL) {
+        if(i2c_master_bus_rm_device(dev_STM32) != ESP_OK) {
+            ESP_LOGE(TAG, "Failed to remove I2C device from bus with address 0x%02X", STM32ADDR);
+        }
+        dev_STM32 = NULL;
+    }else{
+        ESP_LOGW(TAG, "STM32 device is already removed");
+    }
+}
+
+void delete_i2c_bus(){
+    if (_bus_handle != NULL) {
+        i2c_del_master_bus(*_bus_handle);
+    }
+}
+
 void ESP_init(i2c_master_bus_handle_t *bus_handle){
     //stdを使うためのコード
+    _bus_handle = bus_handle;
     setvbuf(stdin, NULL, _IONBF, 0);
     setvbuf(stdout, NULL, _IONBF, 0);
     uart_port_t uart_num = static_cast<uart_port_t>(CONFIG_ESP_CONSOLE_UART_NUM);
@@ -142,24 +169,9 @@ void ESP_init(i2c_master_bus_handle_t *bus_handle){
     printf("%s", banner);
 
     ESP_LOGI(TAG, "Checking I2C bus status before initialization...");
-    i2c_master_bus_recover(static_cast<gpio_num_t>(I2C_SDA_IO), static_cast<gpio_num_t>(I2C_SCL_IO));
+    i2c_master_bus_recover();
 
-    i2c_master_bus_config_t bus_config = {};
-    bus_config.i2c_port = I2C_PORT;
-    bus_config.clk_source = I2C_CLK_SRC_DEFAULT;
-    bus_config.sda_io_num = static_cast<gpio_num_t>(I2C_SDA_IO);
-    bus_config.scl_io_num = static_cast<gpio_num_t>(I2C_SCL_IO);
-    bus_config.glitch_ignore_cnt = 7;
-
-    ESP_ERROR_CHECK(i2c_new_master_bus(&bus_config, bus_handle));
-
-    //i2c_master_dev_handle_t dev_STM32;
-    i2c_device_config_t dev_cfg = {
-        .dev_addr_length = I2C_ADDR_BIT_LEN_7,
-        .device_address = STM32ADDR,
-        .scl_speed_hz = STM32_CLK_SPEED,
-    };
-    ESP_ERROR_CHECK(i2c_master_bus_add_device(*bus_handle, &dev_cfg, &dev_STM32));
+    i2c_master_stm_register();
 
     vTaskDelay(pdMS_TO_TICKS(100));
 

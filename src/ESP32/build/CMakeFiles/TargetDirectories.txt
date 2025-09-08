@@ -867,6 +867,13 @@ C:/GitHub/Firmware/src/ESP32/build/esp-idf/ESP32Servo/CMakeFiles/list_install_co
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/ESP32Servo/CMakeFiles/install.dir
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/ESP32Servo/CMakeFiles/install/local.dir
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/ESP32Servo/CMakeFiles/install/strip.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/ToF_Lidar/CMakeFiles/__idf_ToF_Lidar.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/ToF_Lidar/CMakeFiles/edit_cache.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/ToF_Lidar/CMakeFiles/rebuild_cache.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/ToF_Lidar/CMakeFiles/list_install_components.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/ToF_Lidar/CMakeFiles/install.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/ToF_Lidar/CMakeFiles/install/local.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/ToF_Lidar/CMakeFiles/install/strip.dir
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/main/CMakeFiles/__idf_main.dir
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/main/CMakeFiles/edit_cache.dir
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/main/CMakeFiles/rebuild_cache.dir
@@ -881,3 +888,10 @@ C:/GitHub/Firmware/src/ESP32/build/esp-idf/ESP32-SG90/CMakeFiles/list_install_co
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/ESP32-SG90/CMakeFiles/install.dir
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/ESP32-SG90/CMakeFiles/install/local.dir
 C:/GitHub/Firmware/src/ESP32/build/esp-idf/ESP32-SG90/CMakeFiles/install/strip.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/Tri_omni_control/CMakeFiles/__idf_Tri_omni_control.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/Tri_omni_control/CMakeFiles/edit_cache.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/Tri_omni_control/CMakeFiles/rebuild_cache.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/Tri_omni_control/CMakeFiles/list_install_components.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/Tri_omni_control/CMakeFiles/install.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/Tri_omni_control/CMakeFiles/install/local.dir
+C:/GitHub/Firmware/src/ESP32/build/esp-idf/Tri_omni_control/CMakeFiles/install/strip.dir
