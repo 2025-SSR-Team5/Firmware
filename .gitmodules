@@ -22,3 +22,5 @@
 [submodule "components/Tri_omni_control"]
 	path = components/Tri_omni_control
 	url = https://github.com/2025-SSR-Team5/Tri_omni_control.git
+[submodule "components/chassis"]
+	url = https://github.com/2025-SSR-Team5/Chassis.git
