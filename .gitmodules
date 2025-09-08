@@ -1,6 +1,6 @@
 [submodule "components/Chassis"]
 	path = components/Chassis
-	url = https://github.com/teruyamato0731/Chassis.git
+	url = https://github.com/2025-SSR-Team5/Chassis.git
 [submodule "components/Stepper-STM32"]
 	path = components/Stepper-STM32
 	url = https://github.com/2025-SSR-Team5/Stepper-STM32.git
@@ -22,5 +22,3 @@
 [submodule "components/Tri_omni_control"]
 	path = components/Tri_omni_control
 	url = https://github.com/2025-SSR-Team5/Tri_omni_control.git
-[submodule "components/chassis"]
-	url = https://github.com/2025-SSR-Team5/Chassis.git
